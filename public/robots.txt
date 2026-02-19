@@ -4,4 +4,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_astro/
 
-Sitemap: https://visareadyguide.com/sitemap-index.xml
+Sitemap: https://durian.travel/sitemap-index.xml

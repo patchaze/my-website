@@ -21,7 +21,7 @@ const {
   title,
   description,
   canonical,
-  ogImage = 'https://visareadyguide.com/og-default.png',
+  ogImage = 'https://durian.travel/og-default.png',
   ogType = 'website',
   article,
   breadcrumb,
@@ -39,9 +39,9 @@ const schemas: object[] = [];
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Visa Ready Guide",
-  "url": "https://visareadyguide.com",
-  "logo": "https://visareadyguide.com/favicon.svg",
+  "name": "DURIAN",
+  "url": "https://durian.travel",
+  "logo": "https://durian.travel/favicon.svg",
   "description": "Educational visa document strategy and preparation guidance. Not a law firm. Not a visa agent.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -57,13 +57,13 @@ if (Astro.url.pathname === '/') {
   schemas.push({
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Visa Ready Guide",
-    "url": "https://visareadyguide.com",
+    "name": "DURIAN",
+    "url": "https://durian.travel",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://visareadyguide.com/blog/?q={search_term_string}"
+        "urlTemplate": "https://durian.travel/blog/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -80,7 +80,7 @@ if (breadcrumb && breadcrumb.length > 0) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://visareadyguide.com/"
+        "item": "https://durian.travel/"
       },
       ...breadcrumb.map((item, index) => ({
         "@type": "ListItem",
@@ -103,15 +103,15 @@ if (article) {
     "author": {
       "@type": "Person",
       "name": article.author,
-      "url": "https://visareadyguide.com/about/"
+      "url": "https://durian.travel/about/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Visa Ready Guide",
-      "url": "https://visareadyguide.com",
+      "name": "DURIAN",
+      "url": "https://durian.travel",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://visareadyguide.com/favicon.svg"
+        "url": "https://durian.travel/favicon.svg"
       }
     },
     "datePublished": article.datePublished,
@@ -155,7 +155,7 @@ if (schema) {
 <meta property="og:image" content={ogImage} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:site_name" content="Visa Ready Guide" />
+<meta property="og:site_name" content="DURIAN" />
 <meta property="og:locale" content="en_US" />
 {article && <meta property="article:published_time" content={article.datePublished} />}
 {article && <meta property="article:modified_time" content={article.dateModified} />}

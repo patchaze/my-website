@@ -19,7 +19,7 @@ const pubDateFormatted  = post.data.pubDate.toLocaleDateString('en-US', { year: 
 const modDateFormatted  = (post.data.modDate ?? post.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 const modDateISO        = (post.data.modDate ?? post.data.pubDate).toISOString();
 const pubDateISO        = post.data.pubDate.toISOString();
-const canonicalURL      = `https://visareadyguide.com/blog/${post.slug}/`;
+const canonicalURL      = `https://durian.travel/blog/${post.slug}/`;
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -27,13 +27,13 @@ const faqSchema = {
   "mainEntity": [{
     "@type": "Question",
     "name": "Is this visa guidance legal advice?",
-    "acceptedAnswer": { "@type": "Answer", "text": "No. Visa Ready Guide provides educational content only. We are not immigration lawyers and do not provide legal advice or representation." }
+    "acceptedAnswer": { "@type": "Answer", "text": "No. DURIAN provides educational content only. We are not immigration lawyers and do not provide legal advice or representation." }
   }]
 };
 ---
 
 <BaseLayout
-  title={`${post.data.title} — Visa Ready Guide`}
+  title={`${post.data.title} — DURIAN`}
   description={post.data.description}
   canonical={canonicalURL}
   ogType="article"
@@ -44,7 +44,7 @@ const faqSchema = {
     tags: post.data.tags
   }}
   breadcrumb={[
-    { name: 'Blog', url: 'https://visareadyguide.com/blog/' },
+    { name: 'Blog', url: 'https://durian.travel/blog/' },
     { name: post.data.title, url: canonicalURL }
   ]}
 >
@@ -101,7 +101,7 @@ const faqSchema = {
         <div class="author-box__info">
           <strong class="author-box__name">{post.data.author}</strong>
           <p class="author-box__bio">
-            Visa Application Strategy Consultant at Visa Ready Guide. Specialises in
+            Visa Application Strategy Consultant at DURIAN. Specialises in
             document preparation guidance, cover letter strategy, and refusal analysis.
             <strong>Not a lawyer.</strong> Educational guidance only.
           </p>
