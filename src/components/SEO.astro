@@ -21,7 +21,7 @@ const {
   title,
   description,
   canonical,
-  ogImage = 'https://durian.travel/og-default.png',
+  ogImage = 'https://duriantravel.com/og-default.png',
   ogType = 'website',
   article,
   breadcrumb,
@@ -40,8 +40,8 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "DURIAN",
-  "url": "https://durian.travel",
-  "logo": "https://durian.travel/favicon.svg",
+  "url": "https://duriantravel.com",
+  "logo": "https://duriantravel.com/favicon.svg",
   "description": "Educational visa document strategy and preparation guidance. Not a law firm. Not a visa agent.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -58,12 +58,12 @@ if (Astro.url.pathname === '/') {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "DURIAN",
-    "url": "https://durian.travel",
+    "url": "https://duriantravel.com",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://durian.travel/blog/?q={search_term_string}"
+        "urlTemplate": "https://duriantravel.com/blog/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -80,7 +80,7 @@ if (breadcrumb && breadcrumb.length > 0) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://durian.travel/"
+        "item": "https://duriantravel.com/"
       },
       ...breadcrumb.map((item, index) => ({
         "@type": "ListItem",
@@ -103,15 +103,15 @@ if (article) {
     "author": {
       "@type": "Person",
       "name": article.author,
-      "url": "https://durian.travel/about/"
+      "url": "https://duriantravel.com/about/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "DURIAN",
-      "url": "https://durian.travel",
+      "url": "https://duriantravel.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://durian.travel/favicon.svg"
+        "url": "https://duriantravel.com/favicon.svg"
       }
     },
     "datePublished": article.datePublished,

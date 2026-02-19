@@ -4,4 +4,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_astro/
 
-Sitemap: https://durian.travel/sitemap-index.xml
+Sitemap: https://duriantravel.com/sitemap-index.xml
