@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Free Visa Readiness Audit — 20-Minute Application Review"
+  description="Book a free 20-minute Visa Readiness Audit to identify gaps in your application strategy before you apply. No commitment. No sales pressure. Educational guidance only."
+  breadcrumb={[{ name: 'Free Visa Audit', url: 'https://visareadyguide.com/free-visa-audit/' }]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Free Visa Readiness Audit' }]} />
+  </div>
+
+  <section class="audit-hero section hero-gradient">
+    <div class="container">
+      <div class="audit-hero__inner">
+        <div>
+          <div class="badge badge--accent" style="margin-bottom:var(--space-5)">🎁 Completely Free · No commitment</div>
+          <h1 class="audit-hero__title">Free Visa Readiness Audit</h1>
+          <p class="audit-hero__subtitle">
+            A focused 20-minute consultation to review your current visa preparation and
+            identify specific gaps you need to address before submitting your application.
+          </p>
+          <ul class="audit-benefits">
+            <li>✓ Identify gaps in your document package</li>
+            <li>✓ Understand what's missing from your cover letter</li>
+            <li>✓ Get a clear priority list of what to fix</li>
+            <li>✓ Zero cost, zero commitment</li>
+          </ul>
+        </div>
+        <div class="audit-hero__form-wrap">
+          <div class="audit-form-card">
+            <h2 class="audit-form-card__title">Book Your Free 20-Min Audit</h2>
+            <form
+              name="free-audit"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="audit-form"
+              action="/thank-you/"
+            >
+              <input type="hidden" name="form-name" value="free-audit" />
+              <p hidden><label>Bot field: <input name="bot-field" /></label></p>
+
+              <div class="form-field">
+                <label for="audit-name" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="audit-name" name="name" class="form-input" required autocomplete="name" placeholder="Your name" />
+              </div>
+
+              <div class="form-field">
+                <label for="audit-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="audit-email" name="email" class="form-input" required autocomplete="email" placeholder="you@example.com" />
+              </div>
+
+              <div class="form-field">
+                <label for="audit-visa" class="form-label">Visa Type <span class="required" aria-hidden="true">*</span></label>
+                <select id="audit-visa" name="visa-type" class="form-select" required>
+                  <option value="" disabled selected>Select visa type</option>
+                  <option value="schengen-tourist">Schengen Tourist Visa</option>
+                  <option value="uk-visitor">UK Visitor Visa</option>
+                  <option value="us-tourist">US Tourist Visa (B-2)</option>
+                  <option value="canada-visitor">Canada Visitor Visa</option>
+                  <option value="other">Other / Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="audit-nationality" class="form-label">Your Nationality <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="audit-nationality" name="nationality" class="form-input" required placeholder="e.g. Brazilian, Indian, Filipino" />
+              </div>
+
+              <div class="form-field">
+                <label for="audit-timeline" class="form-label">When do you plan to apply?</label>
+                <select id="audit-timeline" name="timeline" class="form-select">
+                  <option value="" disabled selected>Select timeline</option>
+                  <option value="under-2-weeks">Under 2 weeks (urgent)</option>
+                  <option value="2-4-weeks">2–4 weeks</option>
+                  <option value="1-3-months">1–3 months</option>
+                  <option value="3-plus-months">3+ months</option>
+                  <option value="planning">Still planning</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="audit-situation" class="form-label">Briefly describe your situation</label>
+                <textarea id="audit-situation" name="situation" class="form-textarea" rows="3" placeholder="e.g. First-time applicant, self-employed, previous refusal..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--accent btn--lg w-full" style="justify-content:center">
+                Request Free Audit →
+              </button>
+
+              <p class="form-disclaimer">
+                We'll respond within 1 business day to confirm your audit time.
+                <a href="/privacy-policy/" class="link">Privacy Policy</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to expect -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2 class="text-center" style="margin-bottom:var(--space-10)">What to Expect in Your Audit</h2>
+      <div class="expect-steps">
+        {[
+          { num: '01', title: 'Quick Profile Review (5 min)', desc: "We'll start by understanding your situation: nationality, visa type, timeline, and any previous history." },
+          { num: '02', title: 'Document Gaps Identified (10 min)', desc: "We'll walk through the standard document checklist for your visa type and flag any gaps or likely issues." },
+          { num: '03', title: 'Priority Action List (5 min)', desc: "We'll close with a clear list of the 3–5 most important things to address before you apply." },
+        ].map(s => (
+          <div class="expect-step">
+            <div class="expect-step__num">{s.num}</div>
+            <div>
+              <h3 class="expect-step__title">{s.title}</h3>
+              <p class="expect-step__desc">{s.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="notice notice--warning mt-8">
+        <span aria-hidden="true">⚠️</span>
+        <span>
+          The audit is educational guidance only — not legal advice, not a guarantee of approval.
+          <a href="/disclaimer/" class="link">Read full disclaimer →</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    title="Have a quick question first?"
+    subtitle="Browse our FAQ or the Schengen guide before booking."
+    primaryCta="Read the FAQ"
+    primaryHref="/faq/"
+    secondaryCta="Schengen Guide →"
+    secondaryHref="/schengen-visa-guide/"
+    dark={false}
+  />
+</BaseLayout>
+
+<style>
+.audit-hero { color: white; padding-block: var(--space-16); }
+.audit-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: var(--space-12);
+  align-items: start;
+}
+@media (max-width: 960px) { .audit-hero__inner { grid-template-columns: 1fr; } }
+.audit-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); color: white; line-height: 1.2; }
+.audit-hero__subtitle { font-size: var(--text-xl); color: hsl(220 30% 80%); line-height: var(--leading-relaxed); margin-bottom: var(--space-6); }
+.audit-benefits { display: flex; flex-direction: column; gap: var(--space-3); color: hsl(220 30% 85%); font-size: var(--text-base); }
+.audit-benefits li::marker { content: ''; }
+.audit-form-card {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+}
+.audit-form-card__title { font-size: var(--text-xl); margin-bottom: var(--space-6); color: var(--color-text); }
+.audit-form { display: flex; flex-direction: column; gap: var(--space-4); }
+.form-disclaimer { font-size: var(--text-xs); color: var(--color-text-muted); text-align: center; line-height: var(--leading-relaxed); }
+.expect-steps { display: flex; flex-direction: column; gap: var(--space-5); }
+.expect-step { display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-6); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-xl); }
+.expect-step__num { font-size: var(--text-2xl); font-weight: var(--font-extrabold); color: var(--color-surface-3); font-family: var(--font-serif); flex-shrink: 0; line-height: 1; }
+.expect-step__title { font-size: var(--text-lg); font-weight: var(--font-semibold); margin-bottom: var(--space-2); }
+.expect-step__desc  { color: var(--color-text-muted); font-size: var(--text-base); line-height: var(--leading-relaxed); }
+</style>

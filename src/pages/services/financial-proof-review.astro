@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Financial Proof Review for Visa Applications — Bank Statement Guidance"
+  description="Understand what embassies look for in financial proof. We review your bank statements and advise on how to present financial documents clearly and credibly. Not legal advice."
+  breadcrumb={[
+    { name: 'Services', url: 'https://visareadyguide.com/services/' },
+    { name: 'Financial Proof Review', url: 'https://visareadyguide.com/services/financial-proof-review/' }
+  ]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Services', href: '/services/' }, { name: 'Financial Proof Review' }]} />
+  </div>
+
+  <header class="service-hero section--tinted section">
+    <div class="container">
+      <div class="service-hero__label">
+        <span class="service-icon" aria-hidden="true">💰</span>
+        <span class="section-label">Financial Documentation</span>
+      </div>
+      <h1 class="service-hero__title">Financial Proof Review</h1>
+      <p class="service-hero__subtitle">
+        Financial documentation is one of the most common reasons visa applications fail.
+        We help you understand what embassies look for and how to present your financial picture credibly.
+      </p>
+      <div class="service-hero__actions">
+        <a href="/free-visa-audit/" class="btn btn--primary btn--lg">Start with Free Audit</a>
+        <a href="/blog/" class="btn btn--secondary btn--lg">Read Free Guides →</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-content-grid">
+        <div class="service-main">
+          <h2>What Embassies Typically Look For</h2>
+          <p>
+            Financial proof isn't just about having money — it's about demonstrating
+            consistent, legitimate income or savings that can credibly fund your trip.
+            Embassy officers look for patterns: stable balances, regular income credits,
+            and an absence of suspicious activity.
+          </p>
+
+          <h3>What We Review</h3>
+          <ul class="check-list mt-4">
+            <li>Bank statement period coverage (minimum 3–6 months)</li>
+            <li>Balance consistency and trend (stable vs. volatile)</li>
+            <li>Recent large deposits (timing and explanation)</li>
+            <li>Income sources and regularity</li>
+            <li>Match between statement balance and trip cost estimates</li>
+            <li>Self-employed financial proof (tax returns, accountant letters)</li>
+            <li>Sponsorship letter format and supporting documents</li>
+          </ul>
+
+          <h3 class="mt-8">Common Financial Proof Issues We Find</h3>
+          <div class="issues-grid mt-4">
+            {[
+              { icon: '⚠️', issue: 'Sudden large deposit', fix: 'Explain origin in cover letter with supporting proof' },
+              { icon: '⚠️', issue: 'Balance too low near application date', fix: 'Address with supplemental income proof or sponsorship' },
+              { icon: '⚠️', issue: 'Statements too old', fix: 'Request fresh statements from bank before applying' },
+              { icon: '⚠️', issue: 'Self-employment not documented', fix: 'Add business registration, tax filings, or accountant letter' },
+            ].map(i => (
+              <div class="issue-card">
+                <span class="issue-card__icon">{i.icon}</span>
+                <div>
+                  <strong class="issue-card__title">{i.issue}</strong>
+                  <p class="issue-card__fix">Fix: {i.fix}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h3 class="mt-8">What This Service Does NOT Include</h3>
+          <ul class="x-list mt-4">
+            <li>Advice on how to inflate or misrepresent your finances</li>
+            <li>Legal advice on your financial eligibility</li>
+            <li>Specific monetary thresholds (these vary by embassy and are subject to change)</li>
+            <li>Guarantees that your financial proof will be accepted</li>
+          </ul>
+          <div class="notice notice--warning mt-6">
+            <span aria-hidden="true">⚠️</span>
+            <span>We only advise on how to present genuine financial information clearly. We never assist with document fraud or misrepresentation. <a href="/disclaimer/" class="link">Disclaimer →</a></span>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Ideal For</h3>
+            <ul class="check-list">
+              <li>Applicants with variable income</li>
+              <li>Freelancers and self-employed applicants</li>
+              <li>Those using sponsorship financial support</li>
+              <li>Applicants previously refused for financial reasons</li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Services</h3>
+            <ul class="sidebar-links">
+              <li><a href="/services/document-review/" class="link">→ Full Document Review</a></li>
+              <li><a href="/services/refusal-analysis/" class="link">→ Refusal Analysis</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box sidebar-box--cta">
+            <h3>Uncertain about your financials?</h3>
+            <p>Start with a free audit to identify the core issues.</p>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-4)">Book Free Audit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .service-hero { padding-block: var(--space-16); }
+  .service-hero__label { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .service-icon { font-size: 2rem; }
+  .service-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+  .service-hero__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); margin-bottom: var(--space-8); }
+  .service-hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .service-content-grid { display: grid; grid-template-columns: 1fr 320px; gap: var(--space-12); align-items: start; }
+  @media (max-width: 960px) { .service-content-grid { grid-template-columns: 1fr; } }
+  .service-main h2 { margin-bottom: var(--space-4); }
+  .service-main h3 { margin-top: var(--space-8); margin-bottom: 0; }
+  .service-main p  { color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-top: var(--space-3); }
+  .service-sidebar { display: flex; flex-direction: column; gap: var(--space-5); }
+  .sidebar-box { background: var(--color-surface-2); border-radius: var(--radius-xl); padding: var(--space-6); border: 1px solid var(--color-border); }
+  .sidebar-box--cta { background: var(--color-primary); color: white; }
+  .sidebar-box--cta h3 { color: white; margin-bottom: var(--space-2); }
+  .sidebar-box--cta p  { color: hsl(220 30% 80%); font-size: var(--text-sm); }
+  .sidebar-box__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-4); }
+  .sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+  .sidebar-links li { font-size: var(--text-sm); }
+  .issues-grid { display: flex; flex-direction: column; gap: var(--space-3); }
+  .issue-card { display: flex; gap: var(--space-3); align-items: flex-start; background: var(--color-surface-2); border-radius: var(--radius-lg); padding: var(--space-4); border: 1px solid var(--color-border); }
+  .issue-card__icon { font-size: 1.1rem; flex-shrink: 0; }
+  .issue-card__title { display: block; font-size: var(--text-sm); font-weight: var(--font-semibold); margin-bottom: var(--space-1); }
+  .issue-card__fix { font-size: var(--text-xs); color: var(--color-text-muted); }
+</style>

@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const services = [
+  { icon: '📄', title: 'Document Review Guidance',     description: 'We review your visa document package against official embassy requirements and flag every gap before submission.', href: '/services/document-review/', tags: ['Checklist', 'Pre-submission'] },
+  { icon: '✉️', title: 'Cover Letter Strategy Support', description: 'Structure a compelling cover letter that addresses travel purpose, financial capacity, and return intent — credibly.', href: '/services/cover-letter-strategy/', tags: ['Letter', 'Framing'] },
+  { icon: '🗺️', title: 'Travel Itinerary Structuring',  description: 'Build a visa-compliant travel itinerary demonstrating genuine travel purpose, aligned with accommodations and proof.', href: '/services/itinerary-structuring/', tags: ['Planning', 'Structure'] },
+  { icon: '💰', title: 'Financial Proof Review',        description: "Understand what embassy officers look for in financial documents — and how to present yours clearly and credibly.", href: '/services/financial-proof-review/', tags: ['Finance', 'Bank Statements'] },
+  { icon: '🚫', title: 'Refusal Analysis Consultation', description: 'Decode your visa refusal letter, identify the root cause, and build a stronger evidence-based reapplication strategy.', href: '/services/refusal-analysis/', tags: ['Refusal', 'Reapplication'] },
+  { icon: '📞', title: 'Visa Readiness Strategy Call',  description: 'A focused 60-minute deep dive into your full application — documents, cover letter, finances, and timeline.', href: '/services/strategy-call/', tags: ['Consultation', '60 min'] },
+];
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Visa Application Strategy Services",
+  "description": "Educational visa document strategy and preparation guidance services",
+  "itemListElement": services.map((s, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": s.title,
+    "url": `https://visareadyguide.com${s.href}`
+  }))
+};
+---
+
+<BaseLayout
+  title="Visa Strategy Services — Document Guidance & Preparation"
+  description="Explore our educational visa services: document review, cover letter strategy, itinerary structuring, financial proof review, refusal analysis, and strategy calls. Not legal advice."
+  breadcrumb={[{ name: 'Services', url: 'https://visareadyguide.com/services/' }]}
+  schema={itemListSchema}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Services' }]} />
+  </div>
+
+  <section class="page-hero section--tinted section">
+    <div class="container text-center">
+      <span class="section-label">What We Offer</span>
+      <h1 class="page-hero__title">Visa Strategy &amp; Document Preparation Services</h1>
+      <p class="page-hero__subtitle">
+        Each service is framed exclusively as educational guidance. We do not submit
+        applications on your behalf, provide legal advice, or guarantee outcomes.
+      </p>
+      <div class="notice notice--warning" style="max-width:60ch;margin:var(--space-8) auto 0">
+        <span aria-hidden="true">⚠️</span>
+        <span>All services are educational in nature. Not legal advice. Not visa agency services.
+          <a href="/disclaimer/" class="link">Read our full disclaimer →</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        {services.map(s => <ServiceCard {...s} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process section -->
+  <section class="section section--tinted">
+    <div class="container container--narrow">
+      <div class="text-center section-header">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">Our Simple 3-Step Process</h2>
+      </div>
+      <div class="process-steps">
+        {[
+          { num: '01', title: 'Book Your Free Audit', desc: 'Start with a free 20-minute Visa Readiness Audit. We assess your current preparation and identify the key areas to strengthen.' },
+          { num: '02', title: 'Choose Your Service', desc: 'Based on the audit, we recommend the most relevant service — whether that\'s a document review, cover letter strategy, or a full strategy call.' },
+          { num: '03', title: 'Apply with Confidence', desc: 'Walk into your visa appointment knowing your documentation is as strong as it can be — with a clear narrative and no gaps.' },
+        ].map(step => (
+          <div class="process-step">
+            <div class="process-step__num" aria-hidden="true">{step.num}</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title">{step.title}</h3>
+              <p class="process-step__desc">{step.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Not sure which service you need?" subtitle="Start with the free Visa Readiness Audit — we'll help you identify exactly what to focus on." />
+
+</BaseLayout>
+
+<style>
+.page-hero__title   { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-block: var(--space-4); max-width: 22ch; margin-inline: auto; }
+.page-hero__subtitle { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 56ch; margin-inline: auto; line-height: var(--leading-relaxed); }
+.process-steps { display: flex; flex-direction: column; gap: var(--space-6); }
+.process-step {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+.process-step__num {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-surface-3);
+  font-family: var(--font-serif);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 3rem;
+}
+.process-step__title { font-size: var(--text-xl); font-weight: var(--font-bold); margin-bottom: var(--space-2); }
+.process-step__desc  { color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+</style>

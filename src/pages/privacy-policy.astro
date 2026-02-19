@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const lastUpdated = '19 February 2026';
+---
+
+<BaseLayout
+  title="Privacy Policy — Visa Ready Guide"
+  description="How Visa Ready Guide collects, uses, and protects your personal data. GDPR-compliant. We do not sell your data."
+  breadcrumb={[{ name: 'Privacy Policy', url: 'https://visareadyguide.com/privacy-policy/' }]}
+  noindex={true}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Privacy Policy' }]} />
+  </div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <header class="legal-header">
+        <h1 class="legal-header__title">Privacy Policy</h1>
+        <p class="legal-header__meta">Last updated: {lastUpdated}</p>
+      </header>
+
+      <div class="prose">
+        <h2>1. Who We Are</h2>
+        <p>
+          Visa Ready Guide ("we", "us", "our") is a visa application strategy consultancy
+          providing educational guidance. For data protection purposes, we are the data controller
+          of your personal information collected through this website.
+        </p>
+
+        <h2>2. What Data We Collect</h2>
+        <p>We collect the following personal data when you use our website or services:</p>
+        <ul>
+          <li><strong>Contact information:</strong> name, email address</li>
+          <li><strong>Application information:</strong> nationality, visa type, general situation (only what you voluntarily provide)</li>
+          <li><strong>Communication records:</strong> your messages and our responses</li>
+          <li><strong>Usage data:</strong> pages visited (via privacy-respecting analytics, if applicable)</li>
+        </ul>
+        <p>
+          We do not collect sensitive visa application data such as passport numbers, financial account
+          details, or visa refusal letters unless explicitly shared by you in session communications.
+        </p>
+
+        <h2>3. How We Use Your Data</h2>
+        <p>We use your personal data only for:</p>
+        <ul>
+          <li>Responding to your enquiries and booking requests</li>
+          <li>Delivering the service you engaged us for</li>
+          <li>Communicating about your consultation or audit</li>
+          <li>Sending relevant content updates (only with your consent)</li>
+        </ul>
+
+        <h2>4. Legal Basis</h2>
+        <p>We process your data on the following legal bases:</p>
+        <ul>
+          <li><strong>Contract performance:</strong> to deliver services you've requested</li>
+          <li><strong>Legitimate interests:</strong> to respond to enquiries and improve our services</li>
+          <li><strong>Consent:</strong> for any marketing communications (you can withdraw at any time)</li>
+        </ul>
+
+        <h2>5. Data Sharing</h2>
+        <p>
+          We do not sell, rent, or share your personal data with third parties for marketing purposes.
+          We may share data with service providers (e.g., form hosting, email providers) under strict
+          data processing agreements, only as necessary to deliver our service.
+        </p>
+
+        <h2>6. Data Retention</h2>
+        <p>
+          We retain your data for as long as necessary to deliver the service and for a reasonable period
+          thereafter. Contact form submissions are retained for up to 2 years. You may request deletion
+          at any time.
+        </p>
+
+        <h2>7. Your Rights</h2>
+        <p>Under applicable data protection law (including GDPR), you have the right to:</p>
+        <ul>
+          <li>Access the personal data we hold about you</li>
+          <li>Request correction of inaccurate data</li>
+          <li>Request deletion of your data</li>
+          <li>Object to or restrict processing of your data</li>
+          <li>Withdraw consent at any time</li>
+          <li>Lodge a complaint with your supervisory authority</li>
+        </ul>
+        <p>To exercise your rights, please <a href="/contact/" class="link">contact us</a>.</p>
+
+        <h2>8. Cookies</h2>
+        <p>
+          This website uses no third-party advertising cookies. We may use technically necessary
+          cookies for form functionality. We do not track visitors for advertising purposes.
+        </p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>
+          We may update this policy periodically. We will notify you of significant changes by
+          updating the "last updated" date at the top.
+        </p>
+
+        <h2>10. Contact</h2>
+        <p>
+          For any privacy-related questions, please <a href="/contact/" class="link">contact us</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.legal-header { margin-bottom: var(--space-10); }
+.legal-header__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-2); }
+.legal-header__meta  { color: var(--color-text-muted); font-size: var(--text-sm); }
+</style>

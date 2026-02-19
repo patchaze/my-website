@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Visa Document Review Guidance — Identify Gaps Before You Apply"
+  description="We review your visa document package against official embassy requirements and flag gaps, inconsistencies, or missing items before you submit. Educational service only."
+  breadcrumb={[
+    { name: 'Services', url: 'https://visareadyguide.com/services/' },
+    { name: 'Document Review', url: 'https://visareadyguide.com/services/document-review/' }
+  ]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Services', href: '/services/' }, { name: 'Document Review Guidance' }]} />
+  </div>
+
+  <header class="service-hero section--tinted section">
+    <div class="container">
+      <div class="service-hero__label">
+        <span class="service-icon" aria-hidden="true">📄</span>
+        <span class="section-label">Document Strategy</span>
+      </div>
+      <h1 class="service-hero__title">Document Review Guidance</h1>
+      <p class="service-hero__subtitle">
+        We review your complete visa document package against official embassy requirements
+        and tell you exactly what's missing, inconsistent, or needs strengthening — before you submit.
+      </p>
+      <div class="service-hero__actions">
+        <a href="/free-visa-audit/" class="btn btn--primary btn--lg">Start with Free Audit</a>
+        <a href="/contact/" class="btn btn--secondary btn--lg">Ask a Question</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-content-grid">
+        <div class="service-main">
+          <h2>What This Service Covers</h2>
+          <p>
+            Every visa application tells a story through documents. Embassy officers look for a consistent,
+            credible narrative across all materials. A single inconsistency — a date mismatch, a missing
+            document, or an unexplained financial change — can raise doubt and trigger a refusal.
+          </p>
+          <p>
+            Our Document Review service is structured around the same framework embassy officers use:
+            completeness, consistency, and credibility.
+          </p>
+
+          <h3>What We Review</h3>
+          <ul class="check-list mt-4">
+            <li>Passport validity and blank pages</li>
+            <li>Application form completeness</li>
+            <li>Financial documentation (bank statements, income proof)</li>
+            <li>Travel health insurance compliance</li>
+            <li>Accommodation proof for all nights</li>
+            <li>Flight reservation format and validity</li>
+            <li>Cover letter structure and completeness</li>
+            <li>Proof of employment or income</li>
+            <li>Ties to home country documentation</li>
+            <li>Cross-document consistency (names, dates, addresses)</li>
+          </ul>
+
+          <h3 class="mt-8">What We Deliver</h3>
+          <p>After the review session, you receive a written summary including:</p>
+          <ul class="check-list mt-4">
+            <li>A gap analysis (missing documents identified)</li>
+            <li>Consistency flags (mismatches found)</li>
+            <li>Prioritised recommendations for strengthening</li>
+            <li>Notes on how to address each issue</li>
+          </ul>
+
+          <h3 class="mt-8">What This Service Does NOT Include</h3>
+          <ul class="x-list mt-4">
+            <li>Legal advice on your visa eligibility</li>
+            <li>Submission of documents on your behalf</li>
+            <li>Guarantees of visa approval</li>
+            <li>Predictions of specific consular decisions</li>
+          </ul>
+          <div class="notice notice--info mt-6">
+            <span aria-hidden="true">ℹ️</span>
+            <span>This is an educational review service. Our feedback is guidance — all decisions on your documents remain yours. <a href="/disclaimer/" class="link">Read full disclaimer →</a></span>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Ideal For</h3>
+            <ul class="check-list">
+              <li>First-time visa applicants</li>
+              <li>Applicants with complex financial situations</li>
+              <li>Those with previous refusals</li>
+              <li>Self-employed or freelance applicants</li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Services</h3>
+            <ul class="sidebar-links">
+              <li><a href="/services/cover-letter-strategy/" class="link">→ Cover Letter Strategy</a></li>
+              <li><a href="/services/financial-proof-review/" class="link">→ Financial Proof Review</a></li>
+              <li><a href="/services/refusal-analysis/" class="link">→ Refusal Analysis</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box sidebar-box--cta">
+            <h3>Ready to review your documents?</h3>
+            <p>Start with a free 20-min audit to assess where you stand.</p>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-4)">Book Free Audit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .service-hero { padding-block: var(--space-16); }
+  .service-hero__label { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .service-icon { font-size: 2rem; }
+  .service-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+  .service-hero__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); margin-bottom: var(--space-8); }
+  .service-hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .service-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+  @media (max-width: 960px) { .service-content-grid { grid-template-columns: 1fr; } }
+  .service-main h2 { margin-bottom: var(--space-4); }
+  .service-main h3 { margin-top: var(--space-8); margin-bottom: 0; }
+  .service-main p  { color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-top: var(--space-3); }
+  .service-sidebar { display: flex; flex-direction: column; gap: var(--space-5); }
+  .sidebar-box {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+  }
+  .sidebar-box--cta { background: var(--color-primary); color: white; }
+  .sidebar-box--cta h3 { color: white; margin-bottom: var(--space-2); }
+  .sidebar-box--cta p  { color: hsl(220 30% 80%); font-size: var(--text-sm); }
+  .sidebar-box__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-4); }
+  .sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+  .sidebar-links li { font-size: var(--text-sm); }
+</style>

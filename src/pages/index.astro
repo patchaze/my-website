@@ -1,0 +1,457 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import BlogCard from '../components/BlogCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const services = [
+  { icon: '📄', title: 'Document Review Guidance',    description: 'We review your visa document package against official embassy requirements and flag gaps before you submit.', href: '/services/document-review/', tags: ['Checklist', 'Pre-submission'] },
+  { icon: '✉️', title: 'Cover Letter Strategy',       description: 'Learn how to structure a compelling cover letter that addresses travel purpose, finances, and return intent credibly.', href: '/services/cover-letter-strategy/', tags: ['Letter', 'Strategy'] },
+  { icon: '🗺️', title: 'Itinerary Structuring',       description: 'Build a visa-compliant travel itinerary that demonstrates genuine travel purpose aligned with your documents.', href: '/services/itinerary-structuring/', tags: ['Planning', 'Structure'] },
+  { icon: '💰', title: 'Financial Proof Review',      description: "Understand what embassies look for in bank statements and financial documents — and how to present yours clearly.", href: '/services/financial-proof-review/', tags: ['Finance', 'Documents'] },
+  { icon: '🚫', title: 'Refusal Analysis',            description: 'Decode your visa refusal letter, identify the root cause, and build a stronger reapplication strategy.', href: '/services/refusal-analysis/', tags: ['Refusal', 'Reapplication'] },
+  { icon: '📞', title: 'Strategy Call',               description: 'A focused 60-minute deep dive into your full visa application plan — documents, letter, finances, and timeline.', href: '/services/strategy-call/', tags: ['Consultation', '60 min'] },
+];
+
+const recentPosts = [
+  { title: 'Schengen Visa Document Checklist 2026 — Complete & Updated', description: 'Everything you need in your Schengen visa document package, explained step by step with official embassy references.', slug: 'schengen-document-checklist', pubDate: '2026-02-01', tags: ['Schengen', 'Documents'], readTime: 8 },
+  { title: 'How to Write a Schengen Visa Cover Letter (With Examples)', description: 'A strategic guide to writing a visa cover letter that clearly communicates your travel purpose, ties, and financial proof.', slug: 'how-to-write-visa-cover-letter', pubDate: '2026-02-10', tags: ['Cover Letter', 'Strategy'], readTime: 7 },
+  { title: 'Top 7 Reasons Schengen Visa Applications Are Refused',       description: 'Real reasons embassies deny tourist visa applications — and what you can do to prevent each one.', slug: 'visa-refusal-reasons', pubDate: '2026-02-15', tags: ['Refusal', 'Tips'], readTime: 6 },
+];
+
+const testimonials = [
+  { quote: "The document review was incredibly thorough. I had three gaps I never would have spotted. My application was much stronger because of it.", name: "Maria S.", country: "Brazil", visa: "Schengen Tourist Visa" },
+  { quote: "After my first refusal I was lost. The refusal analysis session helped me understand exactly what went wrong and how to reapply correctly.", name: "Aarav P.", country: "India", visa: "Schengen Tourist Visa" },
+  { quote: "I didn't know how to structure my financial proof as a freelancer. The guidance completely changed how I presented my documents.", name: "Ana R.", country: "Philippines", visa: "UK Visitor Visa" },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Visa Ready Guide a law firm?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Visa Ready Guide is an educational consultancy. We provide document strategy guidance only and do not offer legal advice or immigration representation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you guarantee my visa approval?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No — and you should be suspicious of anyone who does. No one can guarantee consular decisions. We help you present the strongest possible application." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Free Visa Readiness Audit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A free 20-minute session where we review your current application strategy and identify specific areas to strengthen before submission." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Visa Ready Guide — Expert Visa Application Strategy & Document Guidance"
+  description="Get clear, structured guidance on how to prepare your visa documents, cover letters, and financial proof. Education-first visa strategy consultation. Not a law firm."
+  schema={faqSchema}
+>
+
+  <!-- HERO -->
+  <section class="hero hero-gradient" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <div class="badge badge--accent hero__badge">
+            📋 Educational Guidance Only — Not Legal Advice
+          </div>
+          <h1 id="hero-heading" class="hero__title">
+            Don't Let a Weak Application<br />
+            <span class="hero__title-accent">Cost You Your Visa</span>
+          </h1>
+          <p class="hero__subtitle">
+            We help visa applicants understand exactly what documents, proof, and narrative
+            they need — so you walk into any embassy with confidence.
+          </p>
+          <div class="hero__actions">
+            <a href="/free-visa-audit/" class="btn btn--primary btn--lg">
+              Book Free 20-Min Audit
+            </a>
+            <a href="/schengen-visa-guide/" class="btn btn--ghost btn--lg">
+              Schengen Complete Guide →
+            </a>
+          </div>
+          <div class="hero__trust">
+            <div class="hero__stars" aria-label="5 stars rating">★★★★★</div>
+            <span>Trusted by applicants from 40+ countries</span>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__card-stack">
+            <div class="hero__doc-card hero__doc-card--1">
+              <div class="hero__doc-icon">📄</div>
+              <div class="hero__doc-text">
+                <span>Document Package</span>
+                <span class="hero__doc-status hero__doc-status--ok">✓ Complete</span>
+              </div>
+            </div>
+            <div class="hero__doc-card hero__doc-card--2">
+              <div class="hero__doc-icon">✉️</div>
+              <div class="hero__doc-text">
+                <span>Cover Letter</span>
+                <span class="hero__doc-status hero__doc-status--ok">✓ Strong</span>
+              </div>
+            </div>
+            <div class="hero__doc-card hero__doc-card--3">
+              <div class="hero__doc-icon">💰</div>
+              <div class="hero__doc-text">
+                <span>Financial Proof</span>
+                <span class="hero__doc-status hero__doc-status--warn">⚠ Review needed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__items">
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon">🎓</span>
+          <span>Education-first approach</span>
+        </div>
+        <div class="trust-bar__divider" aria-hidden="true"></div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon">📋</span>
+          <span>Based on official embassy requirements</span>
+        </div>
+        <div class="trust-bar__divider" aria-hidden="true"></div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon">🚫</span>
+          <span>No guarantees — no false promises</span>
+        </div>
+        <div class="trust-bar__divider" aria-hidden="true"></div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon">🌍</span>
+          <span>Serving applicants in 6 languages</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <header class="section-header text-center">
+        <span class="section-label">How We Help</span>
+        <h2 id="services-heading" class="section-title">Visa Strategy Services</h2>
+        <p class="section-subtitle" style="margin-inline:auto">
+          Each service is designed to educate and empower — not to submit applications on your behalf.
+        </p>
+      </header>
+      <div class="grid-3">
+        {services.map(s => <ServiceCard {...s} />)}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/services/" class="btn btn--secondary">View All Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE ARE NOT -->
+  <section class="section section--tinted" aria-labelledby="not-heading">
+    <div class="container container--narrow">
+      <header class="section-header text-center">
+        <span class="section-label">Transparency</span>
+        <h2 id="not-heading" class="section-title">What We Are — And What We're Not</h2>
+      </header>
+      <div class="not-grid">
+        <div class="not-col">
+          <h3 class="not-col__title not-col__title--yes">✅ We Are</h3>
+          <ul class="check-list">
+            <li>An educational visa document strategy consultancy</li>
+            <li>Specialists in document preparation guidance</li>
+            <li>Advocates for applicant transparency and clarity</li>
+            <li>A resource to help you understand embassy requirements</li>
+            <li>An honest partner — no guarantees, no false promises</li>
+          </ul>
+        </div>
+        <div class="not-col">
+          <h3 class="not-col__title not-col__title--no">🚫 We Are NOT</h3>
+          <ul class="x-list">
+            <li>An immigration law firm</li>
+            <li>A visa agent or submission service</li>
+            <li>A government or embassy-affiliated body</li>
+            <li>A guarantee of visa approval</li>
+            <li>A replacement for qualified legal counsel</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="/disclaimer/" class="btn btn--secondary">Read Full Disclaimer →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <header class="section-header text-center">
+        <span class="section-label">Social Proof</span>
+        <h2 id="testimonials-heading" class="section-title">Real Applicants. Real Experiences.</h2>
+        <p class="section-subtitle" style="margin-inline:auto">
+          We never ask clients whether they were approved. These are honest accounts of the preparation experience.
+        </p>
+      </header>
+      <div class="grid-3">
+        {testimonials.map(t => (
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__quote">"{t.quote}"</p>
+            <footer class="testimonial-card__footer">
+              <strong class="testimonial-card__name">{t.name}</strong>
+              <span class="testimonial-card__meta">{t.country} · {t.visa}</span>
+            </footer>
+          </blockquote>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHENGEN FEATURE -->
+  <section class="section section--tinted" aria-labelledby="guide-heading">
+    <div class="container">
+      <div class="feature-row">
+        <div class="feature-row__content">
+          <span class="section-label">Free Resource</span>
+          <h2 id="guide-heading" class="section-title">Schengen Tourist Visa:<br />The Complete 2026 Guide</h2>
+          <p style="font-size:var(--text-lg);color:var(--color-text-muted);line-height:var(--leading-relaxed);margin-bottom:var(--space-6)">
+            Our most comprehensive free resource — everything you need to understand
+            Schengen visa requirements, document strategy, financial proof standards,
+            cover letter structure, and refusal prevention.
+          </p>
+          <ul class="check-list" style="margin-bottom:var(--space-8)">
+            <li>Complete document checklist with official source citations</li>
+            <li>Financial proof standards explained clearly</li>
+            <li>Cover letter framework and what to include</li>
+            <li>Common refusal reasons and how to prevent them</li>
+          </ul>
+          <a href="/schengen-visa-guide/" class="btn btn--primary btn--lg">Read the Complete Guide →</a>
+        </div>
+        <div class="feature-row__visual" aria-hidden="true">
+          <div class="guide-preview">
+            <div class="guide-preview__header">
+              <span>🇪🇺 Schengen Visa Guide 2026</span>
+              <span class="badge badge--success">Free</span>
+            </div>
+            <ul class="guide-preview__toc">
+              <li>→ Document Requirements</li>
+              <li>→ Financial Proof Standards</li>
+              <li>→ Cover Letter Strategy</li>
+              <li>→ Travel Itinerary</li>
+              <li>→ Interview Tips</li>
+              <li>→ Refusal Prevention</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section" aria-labelledby="blog-heading">
+    <div class="container">
+      <header class="section-header">
+        <div class="flex-between" style="flex-wrap:wrap;gap:var(--space-4)">
+          <div>
+            <span class="section-label">Latest Insights</span>
+            <h2 id="blog-heading" class="section-title">From the Visa Strategy Blog</h2>
+          </div>
+          <a href="/blog/" class="btn btn--secondary">View All Posts →</a>
+        </div>
+      </header>
+      <div class="grid-3">
+        {recentPosts.map(p => <BlogCard {...p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTABanner />
+
+</BaseLayout>
+
+<style>
+/* Hero */
+.hero { padding-block: var(--space-20); color: white; }
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__visual { display: none; }
+}
+.hero__badge { margin-bottom: var(--space-5); }
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: var(--font-extrabold);
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+  color: white;
+}
+.hero__title-accent { color: var(--color-accent); }
+.hero__subtitle {
+  font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
+  color: hsl(220 30% 80%);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 52ch;
+}
+.hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-8); }
+.hero__trust {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: hsl(220 30% 70%);
+}
+.hero__stars { color: var(--color-accent); font-size: var(--text-lg); }
+
+/* Hero visual card stack */
+.hero__visual { display: flex; justify-content: center; align-items: center; }
+.hero__card-stack { display: flex; flex-direction: column; gap: var(--space-3); width: 100%; max-width: 320px; }
+.hero__doc-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: hsl(220 30% 98% / 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsl(220 30% 100% / 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-5);
+  transition: transform var(--transition-normal);
+}
+.hero__doc-card:hover { transform: translateX(4px); }
+.hero__doc-card--1 { animation: slideIn 0.5s ease 0s both; }
+.hero__doc-card--2 { animation: slideIn 0.5s ease 0.1s both; }
+.hero__doc-card--3 { animation: slideIn 0.5s ease 0.2s both; }
+@keyframes slideIn { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
+.hero__doc-icon { font-size: 1.5rem; }
+.hero__doc-text { display: flex; flex-direction: column; gap: 2px; color: white; font-size: var(--text-sm); font-weight: var(--font-medium); }
+.hero__doc-status { font-size: var(--text-xs); }
+.hero__doc-status--ok   { color: hsl(145 60% 65%); }
+.hero__doc-status--warn { color: var(--color-accent-light); }
+
+/* Trust bar */
+.trust-bar {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-5);
+}
+.trust-bar__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.trust-bar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-medium);
+}
+.trust-bar__icon { font-size: 1rem; }
+.trust-bar__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border);
+}
+@media (max-width: 700px) {
+  .trust-bar__divider { display: none; }
+  .trust-bar__items { gap: var(--space-4); }
+}
+
+/* Not grid */
+.not-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+@media (max-width: 640px) { .not-grid { grid-template-columns: 1fr; } }
+.not-col { background: white; border-radius: var(--radius-xl); padding: var(--space-8); border: 1px solid var(--color-border); }
+.not-col__title { font-size: var(--text-xl); font-weight: var(--font-bold); margin-bottom: var(--space-5); }
+.not-col__title--yes { color: var(--color-success); }
+.not-col__title--no  { color: var(--color-danger); }
+
+/* Testimonials */
+.testimonial-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.testimonial-card__stars { color: var(--color-accent); font-size: var(--text-lg); }
+.testimonial-card__quote {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  font-style: italic;
+  flex: 1;
+}
+.testimonial-card__footer { display: flex; flex-direction: column; gap: 2px; }
+.testimonial-card__name { font-weight: var(--font-semibold); font-size: var(--text-sm); color: var(--color-text); }
+.testimonial-card__meta { font-size: var(--text-xs); color: var(--color-text-muted); }
+
+/* Feature row */
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .feature-row { grid-template-columns: 1fr; }
+  .feature-row__visual { display: none; }
+}
+
+/* Guide preview */
+.guide-preview {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.guide-preview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-navy);
+  color: white;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+}
+.guide-preview__toc {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.guide-preview__toc li {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+.guide-preview__toc li:last-child { border-bottom: none; padding-bottom: 0; }
+</style>

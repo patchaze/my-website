@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Visa Cover Letter Strategy — What to Say and What to Avoid"
+  description="Learn how to structure a compelling visa cover letter that addresses travel purpose, financial capacity, ties to home country, and return intent clearly and credibly."
+  breadcrumb={[
+    { name: 'Services', url: 'https://visareadyguide.com/services/' },
+    { name: 'Cover Letter Strategy', url: 'https://visareadyguide.com/services/cover-letter-strategy/' }
+  ]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Services', href: '/services/' }, { name: 'Cover Letter Strategy Support' }]} />
+  </div>
+
+  <header class="service-hero section--tinted section">
+    <div class="container">
+      <div class="service-hero__label">
+        <span class="service-icon" aria-hidden="true">✉️</span>
+        <span class="section-label">Letter Strategy</span>
+      </div>
+      <h1 class="service-hero__title">Cover Letter Strategy Support</h1>
+      <p class="service-hero__subtitle">
+        Discover how to structure a visa cover letter that tells a coherent, credible story —
+        addressing every concern an embassy officer is trained to look for.
+      </p>
+      <div class="service-hero__actions">
+        <a href="/free-visa-audit/" class="btn btn--primary btn--lg">Start with Free Audit</a>
+        <a href="/blog/how-to-write-visa-cover-letter/" class="btn btn--secondary btn--lg">Read Free Guide →</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-content-grid">
+        <div class="service-main">
+          <h2>Why Cover Letter Strategy Matters</h2>
+          <p>
+            Your cover letter bridges the gap between the documents you submit and the story they tell.
+            Embassy officers read hundreds of applications. A vague or generic letter blends into the pile.
+            A specific, well-structured letter demonstrates intent, transparency, and credibility.
+          </p>
+          <p>
+            The most common cause of avoidable refusals is not missing documents — it's missing context.
+            Your cover letter is where that context lives.
+          </p>
+
+          <h3>What This Service Covers</h3>
+          <ul class="check-list mt-4">
+            <li>Audit of your existing cover letter or draft</li>
+            <li>Framework for structuring the four pillars (purpose, finances, ties, itinerary)</li>
+            <li>Language review for clarity and credibility</li>
+            <li>Identification of gaps or vague statements</li>
+            <li>Tailored recommendations for your specific visa type</li>
+            <li>Understanding what officers typically look for in each section</li>
+          </ul>
+
+          <h3 class="mt-8">The Four Pillars We Focus On</h3>
+          <div class="pillars-grid mt-4">
+            {[
+              { num: '01', title: 'Travel Purpose', desc: 'Why are you visiting? What specifically? What will you do? Vagueness here is the #1 avoidable mistake.' },
+              { num: '02', title: 'Financial Capacity', desc: 'Reference your financial documents actively. Show you understand what the officer will look for.' },
+              { num: '03', title: 'Ties to Home Country', desc: 'Employment, property, family — every tie must be named and documented. This is the "will they return" section.' },
+              { num: '04', title: 'Itinerary Reference', desc: 'Link your letter to your travel itinerary. Show the trip is planned with intention and specificity.' },
+            ].map(p => (
+              <div class="pillar-card">
+                <span class="pillar-card__num">{p.num}</span>
+                <strong class="pillar-card__title">{p.title}</strong>
+                <p class="pillar-card__desc">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 class="mt-8">What This Service Does NOT Include</h3>
+          <ul class="x-list mt-4">
+            <li>Writing your letter for you (we guide you on what to write)</li>
+            <li>Legal advice on your case</li>
+            <li>Submission on your behalf</li>
+            <li>Guarantees that a strong letter will result in approval</li>
+          </ul>
+          <div class="notice notice--info mt-6">
+            <span aria-hidden="true">ℹ️</span>
+            <span>This is educational strategy guidance. You write and own your final letter. <a href="/disclaimer/" class="link">Disclaimer →</a></span>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Ideal For</h3>
+            <ul class="check-list">
+              <li>First-time visa applicants unsure what to write</li>
+              <li>Applicants who've been refused before</li>
+              <li>Applicants with complex situations (self-employed, sponsorship)</li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Free Resource</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3)">Read our free cover letter guide before booking:</p>
+            <a href="/blog/how-to-write-visa-cover-letter/" class="link" style="font-size:var(--text-sm)">→ How to Write a Visa Cover Letter</a>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Services</h3>
+            <ul class="sidebar-links">
+              <li><a href="/services/document-review/" class="link">→ Document Review</a></li>
+              <li><a href="/services/itinerary-structuring/" class="link">→ Itinerary Structuring</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box sidebar-box--cta">
+            <h3>Ready to strengthen your letter?</h3>
+            <p>Start with the free audit to see where you stand first.</p>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-4)">Book Free Audit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .service-hero { padding-block: var(--space-16); }
+  .service-hero__label { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .service-icon { font-size: 2rem; }
+  .service-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+  .service-hero__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); margin-bottom: var(--space-8); }
+  .service-hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .service-content-grid { display: grid; grid-template-columns: 1fr 320px; gap: var(--space-12); align-items: start; }
+  @media (max-width: 960px) { .service-content-grid { grid-template-columns: 1fr; } }
+  .service-main h2 { margin-bottom: var(--space-4); }
+  .service-main h3 { margin-top: var(--space-8); margin-bottom: 0; }
+  .service-main p  { color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-top: var(--space-3); }
+  .service-sidebar { display: flex; flex-direction: column; gap: var(--space-5); }
+  .sidebar-box { background: var(--color-surface-2); border-radius: var(--radius-xl); padding: var(--space-6); border: 1px solid var(--color-border); }
+  .sidebar-box--cta { background: var(--color-primary); color: white; }
+  .sidebar-box--cta h3 { color: white; margin-bottom: var(--space-2); }
+  .sidebar-box--cta p  { color: hsl(220 30% 80%); font-size: var(--text-sm); }
+  .sidebar-box__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-4); }
+  .sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+  .sidebar-links li { font-size: var(--text-sm); }
+  .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+  @media (max-width: 640px) { .pillars-grid { grid-template-columns: 1fr; } }
+  .pillar-card { background: var(--color-surface-2); border-radius: var(--radius-lg); padding: var(--space-5); border: 1px solid var(--color-border); }
+  .pillar-card__num { font-size: var(--text-xs); font-weight: var(--font-bold); color: var(--color-accent-dark); text-transform: uppercase; letter-spacing: 0.1em; }
+  .pillar-card__title { display: block; font-size: var(--text-base); font-weight: var(--font-semibold); margin-block: var(--space-2); }
+  .pillar-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+</style>

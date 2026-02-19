@@ -1,0 +1,76 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  cta?: string;
+  ctaHref?: string;
+  ctaSecondary?: string;
+  ctaSecondaryHref?: string;
+  dark?: boolean;
+}
+
+const {
+  title = "Ready to apply with confidence?",
+  subtitle = "Book your free 20-minute Visa Readiness Audit. We'll review your strategy and identify exactly where to strengthen your application.",
+  cta = "Book Free Audit",
+  ctaHref = "/free-visa-audit/",
+  ctaSecondary,
+  ctaSecondaryHref,
+  dark = true,
+} = Astro.props;
+---
+
+<section class={`cta-banner ${dark ? 'cta-banner--dark' : 'cta-banner--light'}`}>
+  <div class="container">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__title">{title}</h2>
+        <p class="cta-banner__subtitle">{subtitle}</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href={ctaHref} class="btn btn--primary btn--lg">{cta}</a>
+        {ctaSecondary && ctaSecondaryHref && (
+          <a href={ctaSecondaryHref} class="btn btn--ghost btn--lg">{ctaSecondary}</a>
+        )}
+      </div>
+    </div>
+    <p class="cta-banner__disclaimer">
+      Educational guidance only. Not legal advice. <a href="/disclaimer/">Disclaimer →</a>
+    </p>
+  </div>
+</section>
+
+<style>
+.cta-banner { padding-block: var(--space-16); }
+.cta-banner--dark  { background: var(--color-navy); color: white; }
+.cta-banner--light { background: var(--color-surface-2); color: var(--color-text); }
+
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.cta-banner__content { max-width: 55ch; }
+.cta-banner__title   { font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl)); font-weight: var(--font-bold); margin-bottom: var(--space-3); }
+.cta-banner__subtitle { font-size: var(--text-lg); opacity: 0.8; line-height: var(--leading-relaxed); }
+
+.cta-banner--dark .cta-banner__title    { color: white; }
+.cta-banner--dark .cta-banner__subtitle { color: hsl(220 20% 75%); }
+
+.cta-banner__actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.cta-banner__disclaimer {
+  margin-top: var(--space-6);
+  font-size: var(--text-xs);
+  opacity: 0.5;
+  text-align: center;
+}
+.cta-banner__disclaimer a { text-decoration: underline; opacity: 0.8; }
+.cta-banner__disclaimer a:hover { opacity: 1; }
+</style>

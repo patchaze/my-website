@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Contact Visa Ready Guide — Get in Touch"
+  description="Contact Visa Ready Guide for educational visa strategy guidance. Ask a question, book a session, or start with a free 20-minute Visa Readiness Audit."
+  breadcrumb={[{ name: 'Contact', url: 'https://visareadyguide.com/contact/' }]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Contact' }]} />
+  </div>
+
+  <section class="section--tinted section--sm">
+    <div class="container">
+      <span class="section-label">Get in Touch</span>
+      <h1 class="contact-hero__title">Contact Us</h1>
+      <p class="contact-hero__subtitle">
+        Have a question? Want to book a service? Start with the free audit — or send us a message below.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="contact-form-wrap">
+          <h2 class="contact-form-wrap__title">Send Us a Message</h2>
+          <div class="notice notice--info mb-6">
+            <span aria-hidden="true">ℹ️</span>
+            <span>We respond to all messages within 2 business days. For visa emergencies, select "Urgent" in the subject.</span>
+          </div>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="contact-form"
+            id="contact-form"
+            action="/thank-you/"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="contact-name" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" required autocomplete="name" placeholder="Your full name" />
+              </div>
+              <div class="form-field">
+                <label for="contact-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" required autocomplete="email" placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-subject" class="form-label">Subject <span class="required" aria-hidden="true">*</span></label>
+              <select id="contact-subject" name="subject" class="form-select" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="document-review">Document Review Guidance</option>
+                <option value="cover-letter">Cover Letter Strategy</option>
+                <option value="itinerary">Itinerary Structuring</option>
+                <option value="financial">Financial Proof Review</option>
+                <option value="refusal">Refusal Analysis</option>
+                <option value="strategy-call">Strategy Call Booking</option>
+                <option value="general">General Question</option>
+                <option value="urgent">Urgent — Application in &lt;2 weeks</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-nationality" class="form-label">Your Nationality</label>
+              <input type="text" id="contact-nationality" name="nationality" class="form-input" placeholder="e.g. Brazilian, Indian, Filipino" />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-visa-type" class="form-label">Visa Type You're Applying For</label>
+              <input type="text" id="contact-visa-type" name="visa-type" class="form-input" placeholder="e.g. Schengen Tourist, UK Visitor" />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message" class="form-label">Your Message <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="5" required placeholder="Tell us about your situation and how we can help..."></textarea>
+            </div>
+
+            <div class="notice notice--warning mb-4">
+              <span aria-hidden="true">⚠️</span>
+              <span>Please do not include passport numbers or other sensitive personal data in this form.</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg w-full" style="justify-content:center">
+              Send Message →
+            </button>
+
+            <p class="form-disclaimer">
+              By submitting this form, you agree that we may contact you by email in response to your enquiry.
+              We will never share your information with third parties.
+              <a href="/privacy-policy/" class="link">Privacy Policy</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- Sidebar info -->
+        <aside class="contact-sidebar">
+          <div class="contact-info-card">
+            <h3>Before You Write</h3>
+            <p>Many questions are already answered in our resources:</p>
+            <ul class="sidebar-links mt-4">
+              <li><a href="/faq/" class="link">→ Read our FAQ</a></li>
+              <li><a href="/schengen-visa-guide/" class="link">→ Schengen Complete Guide</a></li>
+              <li><a href="/blog/" class="link">→ Visa Strategy Blog</a></li>
+            </ul>
+          </div>
+          <div class="contact-info-card contact-info-card--cta">
+            <h3>Skip the Queue</h3>
+            <p>Book a free 20-minute Visa Readiness Audit and talk to us directly.</p>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-5)">Book Free Audit →</a>
+          </div>
+          <div class="contact-info-card">
+            <h3>Response Time</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-text-muted)">We respond to all enquiries within <strong>2 business days</strong>. For urgent applications, please select "Urgent" in the subject dropdown.</p>
+          </div>
+          <div class="notice notice--info">
+            <span aria-hidden="true">⚠️</span>
+            <span style="font-size:var(--text-xs)">We provide educational guidance only. This is not a legal service. <a href="/disclaimer/" class="link">Disclaimer →</a></span>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+.contact-hero__title    { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-block: var(--space-3); }
+.contact-hero__subtitle { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 52ch; line-height: var(--leading-relaxed); }
+.contact-grid { display: grid; grid-template-columns: 1fr 340px; gap: var(--space-12); align-items: start; }
+@media (max-width: 960px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-form-wrap__title { font-size: var(--text-2xl); margin-bottom: var(--space-5); }
+.contact-form { display: flex; flex-direction: column; gap: var(--space-5); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+.form-disclaimer { font-size: var(--text-xs); color: var(--color-text-muted); line-height: var(--leading-relaxed); text-align: center; }
+.contact-sidebar { display: flex; flex-direction: column; gap: var(--space-4); }
+.contact-info-card { background: var(--color-surface-2); border-radius: var(--radius-xl); padding: var(--space-6); border: 1px solid var(--color-border); }
+.contact-info-card h3 { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-2); }
+.contact-info-card p  { font-size: var(--text-sm); color: var(--color-text-muted); }
+.contact-info-card--cta { background: var(--color-navy); color: white; }
+.contact-info-card--cta h3 { color: white; }
+.contact-info-card--cta p  { color: hsl(220 30% 80%); }
+.sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+.sidebar-links li { font-size: var(--text-sm); }
+</style>

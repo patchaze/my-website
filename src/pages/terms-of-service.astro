@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const lastUpdated = '19 February 2026';
+---
+
+<BaseLayout
+  title="Terms of Service — Visa Ready Guide"
+  description="Terms of service for Visa Ready Guide educational visa strategy consultation services."
+  breadcrumb={[{ name: 'Terms of Service', url: 'https://visareadyguide.com/terms-of-service/' }]}
+  noindex={true}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Terms of Service' }]} />
+  </div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <header class="legal-header">
+        <h1 class="legal-header__title">Terms of Service</h1>
+        <p class="legal-header__meta">Last updated: {lastUpdated}</p>
+      </header>
+
+      <div class="prose">
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By accessing this website or using any services offered by Visa Ready Guide, you agree
+          to be bound by these Terms of Service and our <a href="/disclaimer/" class="link">Disclaimer</a>.
+          If you do not agree to these terms, please do not use our website or services.
+        </p>
+
+        <h2>2. Nature of Services</h2>
+        <p>
+          Visa Ready Guide provides educational strategy guidance on visa application preparation.
+          Our services are strictly educational in nature. We do not provide legal advice, immigration
+          legal services, or visa submission services. Please read the full <a href="/disclaimer/" class="link">Disclaimer</a>.
+        </p>
+
+        <h2>3. User Responsibilities</h2>
+        <p>By using our services, you agree that you will:</p>
+        <ul>
+          <li>Provide accurate and truthful information in all forms and sessions</li>
+          <li>Not misuse our guidance to assist with fraudulent applications</li>
+          <li>Take sole responsibility for the content and accuracy of your visa application</li>
+          <li>Verify all requirements with the relevant embassy or consulate before applying</li>
+          <li>Not share session content or written guidance with third parties for commercial purposes</li>
+        </ul>
+
+        <h2>4. Booking and Cancellation</h2>
+        <p>
+          Session bookings are confirmed by email. We require 24 hours notice for cancellations.
+          Late cancellations (under 24 hours) may result in forfeiture of session fees for paid services.
+          The free audit sessions are subject to reasonable scheduling constraints.
+        </p>
+
+        <h2>5. Payment and Refunds</h2>
+        <p>
+          Fees for paid sessions are due before or at the time of booking. Our services are billed
+          for time and guidance, not for visa outcomes. Refusals of visa applications are not grounds
+          for refund of service fees, as this would conflict with our disclaimer that no outcome is
+          guaranteed or promised.
+        </p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>
+          All content on this website — including articles, guides, templates, and structured content —
+          is the intellectual property of Visa Ready Guide. You may use this content for personal,
+          non-commercial purposes. You may not reproduce, publish, or distribute our content
+          without written permission.
+        </p>
+
+        <h2>7. Prohibited Uses</h2>
+        <p>You agree not to use our services or website to:</p>
+        <ul>
+          <li>Create or assist with fraudulent or misleading visa applications</li>
+          <li>Misrepresent yourself or provide false information</li>
+          <li>Reverse engineer, copy, or commercially exploit our content</li>
+          <li>Engage in any unlawful activity</li>
+        </ul>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>
+          As detailed in our <a href="/disclaimer/" class="link">Disclaimer</a>, Visa Ready Guide's
+          liability is limited to the fullest extent permitted by law. We accept no liability for
+          visa refusals, financial losses, or damages resulting from your use of our services.
+        </p>
+
+        <h2>9. Changes to Terms</h2>
+        <p>
+          We reserve the right to update these terms at any time. Continued use of our services
+          after changes are published constitutes acceptance of the new terms.
+        </p>
+
+        <h2>10. Governing Law</h2>
+        <p>
+          These terms are governed by applicable law. Any disputes shall be resolved in accordance
+          with the relevant jurisdiction.
+        </p>
+
+        <h2>11. Contact</h2>
+        <p>
+          For questions about these terms, please <a href="/contact/" class="link">contact us</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.legal-header { margin-bottom: var(--space-10); }
+.legal-header__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-2); }
+.legal-header__meta  { color: var(--color-text-muted); font-size: var(--text-sm); }
+</style>

@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Patricia Azevedo",
+  "jobTitle": "Visa Application Strategy Consultant",
+  "url": "https://visareadyguide.com/about/",
+  "description": "Visa application strategy consultant helping applicants prepare stronger document packages through education-first guidance.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Visa Ready Guide",
+    "url": "https://visareadyguide.com"
+  }
+};
+---
+
+<BaseLayout
+  title="About Visa Ready Guide — Meet the Strategy Consultant"
+  description="Learn who guides the Visa Ready Guide process: our credentials, philosophy, and commitment to education-first, result-honest visa preparation. Not a law firm."
+  breadcrumb={[{ name: 'About', url: 'https://visareadyguide.com/about/' }]}
+  schema={personSchema}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'About' }]} />
+  </div>
+
+  <!-- About Hero -->
+  <section class="about-hero section section--tinted">
+    <div class="container">
+      <div class="about-hero__inner">
+        <div class="about-hero__content">
+          <span class="section-label">About Visa Ready Guide</span>
+          <h1 class="about-hero__title">
+            A Different Kind of Visa Guidance
+          </h1>
+          <p class="about-hero__intro">
+            Visa Ready Guide was built on a simple frustration: visa applicants are overwhelmed by
+            bureaucratic requirements, misled by opaque agencies, and left without clear answers.
+            We exist to change that — with radical transparency and education-first guidance.
+          </p>
+        </div>
+        <div class="about-hero__author">
+          <div class="author-card">
+            <div class="author-card__avatar" aria-hidden="true">
+              <div class="author-avatar-placeholder">PA</div>
+            </div>
+            <div class="author-card__info">
+              <strong class="author-card__name">Patricia Azevedo</strong>
+              <span class="author-card__role">Visa Strategy Consultant</span>
+              <div class="author-card__langs">
+                <span class="tag">🇬🇧 English</span>
+                <span class="tag">🇧🇷 Portuguese</span>
+                <span class="tag">🇪🇸 Spanish</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section">
+    <div class="container container--narrow">
+      <span class="section-label">Our Philosophy</span>
+      <h2>Education Before Application</h2>
+      <div class="prose mt-6">
+        <p>
+          We believe visa applicants should understand every document in their package — what it
+          demonstrates, why embassies care about it, and how to present it credibly. An applicant
+          who understands their own case is always in a stronger position.
+        </p>
+        <p>
+          That's why every service we offer is framed as education and strategy guidance, not
+          as a submission service or legal representation. We help you become the most prepared
+          version of yourself before you walk into that appointment.
+        </p>
+        <h3>What We Do Differently</h3>
+        <p>
+          Unlike visa agencies that operate like black boxes, we explain <em>why</em> each
+          document matters and what officers typically look for. Unlike immigration lawyers,
+          we don't charge legal fees for non-legal guidance. And unlike government portals,
+          we translate bureaucratic requirements into practical, human-readable strategy.
+        </p>
+        <h3>Our Commitment to Honesty</h3>
+        <p>
+          We will never promise you a visa approval. No one can make that promise honestly.
+          What we promise is honest, thorough, evidence-based guidance on how to prepare the
+          strongest application you can — and complete transparency about what we do and don't do.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we do / don't do -->
+  <section class="section section--tinted">
+    <div class="container container--narrow">
+      <h2 class="text-center" style="margin-bottom:var(--space-10)">Full Scope of Our Services</h2>
+      <div class="scope-grid">
+        <div class="scope-col scope-col--yes">
+          <h3>✅ We Provide</h3>
+          <ul class="check-list">
+            <li>Document package review and gap analysis</li>
+            <li>Cover letter strategy and structure guidance</li>
+            <li>Travel itinerary structuring support</li>
+            <li>Financial proof review and presentation advice</li>
+            <li>Refusal letter analysis and reapplication strategy</li>
+            <li>60-minute end-to-end strategy consultation calls</li>
+            <li>Educational resources and written guides</li>
+          </ul>
+        </div>
+        <div class="scope-col scope-col--no">
+          <h3>🚫 We Do NOT Provide</h3>
+          <ul class="x-list">
+            <li>Legal advice or immigration legal services</li>
+            <li>Application submission on your behalf</li>
+            <li>Guarantees of visa approval</li>
+            <li>Representation before embassies or immigration authorities</li>
+            <li>Predictions about specific consular decisions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="notice notice--info mt-8">
+        <span aria-hidden="true">ℹ️</span>
+        <span>
+          For immigration legal advice or representation, please consult a qualified immigration attorney
+          in your jurisdiction. We are happy to discuss the difference and help you determine which you need.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials & Trust -->
+  <section class="section">
+    <div class="container container--narrow">
+      <span class="section-label">Why Trust Us</span>
+      <h2>Our Trust Commitments</h2>
+      <div class="trust-commitments mt-8">
+        {[
+          { icon: '📋', title: 'Official Source Citations', desc: 'All guidance is grounded in publicly available embassy, consulate, and government requirements — always cited.' },
+          { icon: '🔄', title: 'Regularly Updated Content', desc: 'Embassy requirements change. All our guides are reviewed quarterly and date-stamped so you always know how fresh the information is.' },
+          { icon: '🗣️', title: 'Named Consultant', desc: 'No anonymous advice. Every piece of content and every consultation is provided by a named, accountable professional.' },
+          { icon: '📊', title: 'No Outcome Claims', desc: "We never publish success rates, approval statistics, or outcome promises. Consular decisions are not ours to predict." },
+          { icon: '🌍', title: 'Multilingual Service', desc: 'We serve clients in English, Spanish, Portuguese, and French — with cultural awareness for each community.' },
+          { icon: '⚖️', title: 'Clear Legal Boundaries', desc: 'We maintain strict separation between educational guidance and legal advice. When in doubt, we tell you to consult a lawyer.' },
+        ].map(c => (
+          <div class="trust-commitment">
+            <span class="trust-commitment__icon" aria-hidden="true">{c.icon}</span>
+            <div>
+              <h3 class="trust-commitment__title">{c.title}</h3>
+              <p class="trust-commitment__desc">{c.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    title="Ready to work together?"
+    subtitle="Start with a free 20-minute Visa Readiness Audit — no commitment required."
+  />
+
+</BaseLayout>
+
+<style>
+.about-hero { padding-block: var(--space-16); }
+.about-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+@media (max-width: 760px) { .about-hero__inner { grid-template-columns: 1fr; } }
+.about-hero__title {
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+  margin-block: var(--space-4);
+  line-height: 1.15;
+}
+.about-hero__intro { font-size: var(--text-lg); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+
+.author-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.author-avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-navy));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+}
+.author-card__info { display: flex; flex-direction: column; gap: var(--space-2); align-items: center; }
+.author-card__name { font-size: var(--text-xl); font-weight: var(--font-bold); }
+.author-card__role { font-size: var(--text-sm); color: var(--color-text-muted); }
+.author-card__langs { display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center; }
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+@media (max-width: 640px) { .scope-grid { grid-template-columns: 1fr; } }
+.scope-col {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: white;
+}
+.scope-col h3 { margin-bottom: var(--space-5); font-size: var(--text-xl); }
+
+.trust-commitments { display: flex; flex-direction: column; gap: var(--space-6); }
+.trust-commitment { display: flex; gap: var(--space-4); align-items: flex-start; }
+.trust-commitment__icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.trust-commitment__title { font-size: var(--text-lg); font-weight: var(--font-semibold); margin-bottom: var(--space-1); }
+.trust-commitment__desc { font-size: var(--text-base); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+</style>

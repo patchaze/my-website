@@ -1,0 +1,194 @@
+---
+const navLinks = [
+  { label: 'Home',     href: '/' },
+  { label: 'About',    href: '/about/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Guide',    href: '/schengen-visa-guide/' },
+  { label: 'Blog',     href: '/blog/' },
+  { label: 'FAQ',      href: '/faq/' },
+];
+
+const currentPath = new URL(Astro.request.url).pathname;
+function isActive(href: string) {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="header" role="banner">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="/" class="nav__logo" aria-label="Visa Ready Guide — Home">
+        <span class="nav__logo-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="hsl(218,65%,32%)"/>
+            <text x="16" y="23" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="hsl(38,92%,50%)">V</text>
+          </svg>
+        </span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-brand">Visa Ready</span>
+          <span class="nav__logo-sub">Guide</span>
+        </span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class={`nav__link ${isActive(link.href) ? 'nav__link--active' : ''}`}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA -->
+      <a href="/free-visa-audit/" class="btn btn--primary btn--sm nav__cta">
+        Free Audit
+      </a>
+
+      <!-- Mobile toggle — pure CSS via hidden checkbox -->
+      <input type="checkbox" id="nav-toggle" class="nav__toggle-input" aria-hidden="true" />
+      <label for="nav-toggle" class="nav__toggle-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+
+      <!-- Mobile menu -->
+      <div class="nav__mobile">
+        <ul role="list">
+          {navLinks.map(link => (
+            <li>
+              <a
+                href={link.href}
+                class={`nav__mobile-link ${isActive(link.href) ? 'nav__mobile-link--active' : ''}`}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="margin-top:0.75rem;justify-content:center">
+              Book Free Audit
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  height: 68px;
+  position: relative;
+}
+
+/* Logo */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.nav__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.nav__logo-brand { font-size: var(--text-base); font-weight: var(--font-bold); color: var(--color-primary); letter-spacing: -0.02em; }
+.nav__logo-sub   { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: var(--font-medium); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Desktop nav links */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+  justify-content: center;
+}
+.nav__link {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.nav__link:hover        { color: var(--color-primary); background: var(--color-surface-2); }
+.nav__link--active      { color: var(--color-primary); font-weight: var(--font-semibold); }
+
+/* CTA */
+.nav__cta { flex-shrink: 0; }
+
+/* Mobile toggle */
+.nav__toggle-input  { display: none; }
+.nav__toggle-label  { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+.nav__toggle-label span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+/* Mobile menu */
+.nav__mobile {
+  display: none;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  right: 0;
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-dropdown);
+}
+.nav__mobile ul { display: flex; flex-direction: column; gap: var(--space-1); }
+.nav__mobile-link {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.nav__mobile-link:hover       { background: var(--color-surface-2); color: var(--color-primary); }
+.nav__mobile-link--active     { color: var(--color-primary); font-weight: var(--font-semibold); }
+
+/* Mobile breakpoint */
+@media (max-width: 900px) {
+  .nav__links    { display: none; }
+  .nav__cta      { display: none; }
+  .nav__toggle-label { display: flex; }
+  .nav__toggle-input:checked ~ .nav__mobile { display: block; }
+  .nav__toggle-input:checked ~ .nav__toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav__toggle-input:checked ~ .nav__toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav__toggle-input:checked ~ .nav__toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+</style>

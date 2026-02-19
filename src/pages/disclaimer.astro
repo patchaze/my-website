@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const lastUpdated = '19 February 2026';
+---
+
+<BaseLayout
+  title="Disclaimer — Visa Ready Guide Educational Service"
+  description="Important legal disclaimer: Visa Ready Guide provides educational visa strategy guidance only. We are not a law firm, not a visa agency, and we do not guarantee visa approval."
+  breadcrumb={[{ name: 'Disclaimer', url: 'https://visareadyguide.com/disclaimer/' }]}
+  noindex={true}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Disclaimer' }]} />
+  </div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <header class="legal-header">
+        <h1 class="legal-header__title">Important Disclaimer</h1>
+        <p class="legal-header__meta">Last updated: {lastUpdated}</p>
+        <div class="notice notice--warning">
+          <span aria-hidden="true">⚠️</span>
+          <span>
+            <strong>Please read this disclaimer carefully before using any service provided by Visa Ready Guide.</strong>
+            By using our website or services, you acknowledge that you have read and understood these limitations.
+          </span>
+        </div>
+      </header>
+
+      <div class="prose">
+        <h2>1. Educational Purpose Only</h2>
+        <p>
+          Visa Ready Guide provides educational and informational content only. All content on this website,
+          including blog posts, guides, resources, and services, is intended solely to educate applicants
+          on the general process of preparing visa applications.
+        </p>
+        <p>
+          Nothing on this website or provided through any of our services constitutes legal advice,
+          legal guidance, or the practice of immigration law.
+        </p>
+
+        <h2>2. Not a Law Firm</h2>
+        <p>
+          Visa Ready Guide is not a law firm. No employee, contractor, or consultant of Visa Ready Guide
+          is acting as your attorney. No attorney-client relationship is formed through any use of this
+          website, its content, or its services.
+        </p>
+        <p>
+          If you require legal advice about your immigration status, eligibility, or rights,
+          you must consult a qualified, licensed immigration attorney in your jurisdiction.
+        </p>
+
+        <h2>3. Not a Visa Agency</h2>
+        <p>
+          Visa Ready Guide is not a visa agency or a visa application service. We do not:
+        </p>
+        <ul>
+          <li>Submit applications on your behalf</li>
+          <li>Represent you before any embassy, consulate, or immigration authority</li>
+          <li>Hold power of attorney or any equivalent authority</li>
+          <li>Act as an immigration representative or authorised agent</li>
+        </ul>
+
+        <h2>4. No Guarantee of Approval</h2>
+        <p>
+          Visa Ready Guide makes no representation, warranty, or guarantee that following our guidance,
+          using our services, or adopting our recommendations will result in a visa being granted.
+        </p>
+        <p>
+          Visa decisions are made exclusively by embassy officers and consular officials based on their
+          assessment of your application and current policies. We have no influence over these decisions.
+          No consultant, service, or agency can legally guarantee visa approval.
+        </p>
+
+        <h2>5. Accuracy and Currency of Information</h2>
+        <p>
+          Embassy requirements, visa policies, and documentary requirements change frequently.
+          While we strive to keep our content accurate and up to date, Visa Ready Guide cannot
+          guarantee the ongoing accuracy or completeness of any information published on this website.
+        </p>
+        <p>
+          <strong>Always verify current requirements directly on the official website of the relevant
+          embassy or consulate before submitting any application.</strong>
+        </p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>
+          To the fullest extent permitted by law, Visa Ready Guide and its consultants shall not be
+          liable for any loss, damage, visa refusal, financial cost, or other consequence arising
+          from your use of our services, your reliance on any content published on this website,
+          or any decision you make based on information provided by Visa Ready Guide.
+        </p>
+
+        <h2>7. No Refund Policy for Consular Refusals</h2>
+        <p>
+          Our services are billed for time, guidance, and education — not for visa outcomes.
+          Refusals of visa applications are not grounds for refund of our service fees.
+        </p>
+
+        <h2>8. Contact</h2>
+        <p>
+          If you have questions about this disclaimer, please <a href="/contact/" class="link">contact us</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.legal-header { margin-bottom: var(--space-10); }
+.legal-header__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-2); }
+.legal-header__meta  { color: var(--color-text-muted); font-size: var(--text-sm); margin-bottom: var(--space-5); }
+</style>

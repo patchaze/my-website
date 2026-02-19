@@ -1,0 +1,321 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const lastReviewed = 'February 2026';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many countries are in the Schengen Area?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The Schengen Area includes 27 European countries that have abolished passport controls at their mutual borders." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can I stay in the Schengen Area on a tourist visa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A Schengen Type C tourist visa allows up to 90 days within any 180-day period across the entire Schengen Area." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which embassy should I apply to for a Schengen visa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You should apply to the embassy of your main destination country (where you will spend the most nights). If you are spending equal time in multiple countries, apply to the embassy of your first entry point." }
+    }
+  ]
+};
+
+const tocItems = [
+  { id: 'overview',          label: 'Schengen Overview' },
+  { id: 'requirements',      label: 'Document Requirements' },
+  { id: 'financial',         label: 'Financial Proof' },
+  { id: 'cover-letter',      label: 'Cover Letter Strategy' },
+  { id: 'itinerary',         label: 'Travel Itinerary' },
+  { id: 'refusal',           label: 'Refusal Prevention' },
+  { id: 'reapplication',     label: 'After a Refusal' },
+  { id: 'faq',               label: 'Quick FAQ' },
+];
+---
+
+<BaseLayout
+  title="Schengen Tourist Visa Guide 2026 — Complete Application Strategy"
+  description="The complete 2026 guide to Schengen tourist visa applications: document requirements, financial proof, cover letter strategy, refusal prevention, and reapplication advice."
+  breadcrumb={[{ name: 'Schengen Visa Guide', url: 'https://visareadyguide.com/schengen-visa-guide/' }]}
+  schema={faqSchema}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Schengen Tourist Visa Guide 2026' }]} />
+  </div>
+
+  <!-- Guide hero -->
+  <header class="guide-hero section section--tinted">
+    <div class="container">
+      <div class="guide-hero__inner">
+        <div>
+          <div class="guide-hero__meta">
+            <span class="badge badge--success">🇪🇺 Schengen Type C</span>
+            <span class="badge">Updated {lastReviewed}</span>
+          </div>
+          <h1 class="guide-hero__title">Schengen Tourist Visa: The Complete 2026 Guide</h1>
+          <p class="guide-hero__subtitle">
+            Everything you need to understand document requirements, financial proof standards,
+            cover letter structure, and refusal prevention — all in one place.
+          </p>
+          <div class="notice notice--warning" style="max-width:60ch">
+            <span aria-hidden="true">⚠️</span>
+            <span>Educational guidance only. Always verify requirements on the official embassy website before applying. <a href="/disclaimer/" class="link">Disclaimer →</a></span>
+          </div>
+        </div>
+        <!-- TOC preview -->
+        <nav class="guide-toc-card" aria-label="Table of contents">
+          <strong class="guide-toc-card__title">In This Guide</strong>
+          <ol class="guide-toc-card__list">
+            {tocItems.map(item => (
+              <li><a href={`#${item.id}`} class="guide-toc-card__link">{item.label}</a></li>
+            ))}
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container section">
+    <div class="guide-layout">
+      <article class="guide-content">
+
+        <!-- Overview -->
+        <section id="overview" class="guide-section" aria-labelledby="overview-h2">
+          <h2 id="overview-h2">Schengen Area Overview</h2>
+          <p>
+            The Schengen Area is a zone of 27 European countries that have abolished passport controls.
+            A <strong>Schengen Type C visa</strong> allows tourism, business visits, or family visits
+            for up to <strong>90 days within any 180-day period</strong>.
+          </p>
+          <div class="info-box">
+            <h3>Which embassy do I apply to?</h3>
+            <ul class="check-list">
+              <li>Apply to the embassy of the <strong>country where you'll spend the most nights</strong></li>
+              <li>If equal time in all countries: apply to your <strong>first point of entry</strong></li>
+              <li>Processing times vary by embassy — apply well in advance</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Document requirements -->
+        <section id="requirements" class="guide-section" aria-labelledby="req-h2">
+          <h2 id="req-h2">Core Document Requirements</h2>
+          <p>The standard Schengen document package typically includes:</p>
+          <div class="checklist-grid">
+            {[
+              { doc: 'Valid passport', note: 'Valid 3+ months beyond your exit date, 2+ blank pages' },
+              { doc: 'Completed application form', note: 'From the official embassy/consulate website' },
+              { doc: 'Recent passport photos', note: '2 photos, taken within 6 months, white background' },
+              { doc: 'Travel health insurance', note: 'Minimum €30,000, covers all Schengen, full duration' },
+              { doc: 'Flight reservation', note: 'A reservation confirmation (not necessarily booked tickets)' },
+              { doc: 'Accommodation proof', note: 'All nights accounted for — hotels, Airbnb, or host letter' },
+              { doc: 'Cover letter', note: 'Written explanation of purpose, finances, and intent to return' },
+              { doc: 'Travel itinerary', note: 'Day-by-day trip plan aligned with your accommodation proof' },
+              { doc: 'Financial proof', note: 'Bank statements + income proof (see financial section below)' },
+              { doc: 'Proof of ties to home country', note: 'Employment, property, family documentation' },
+            ].map(item => (
+              <div class="checklist-item">
+                <span class="checklist-item__check" aria-hidden="true">✓</span>
+                <div>
+                  <strong class="checklist-item__doc">{item.doc}</strong>
+                  <span class="checklist-item__note">{item.note}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p class="guide-source">Always verify the complete list on the official embassy website of your destination country.</p>
+        </section>
+
+        <!-- Financial proof -->
+        <section id="financial" class="guide-section" aria-labelledby="fin-h2">
+          <h2 id="fin-h2">Financial Proof Standards</h2>
+          <p>
+            Financial documentation is the most common reason applications are refused.
+            Officers look for <strong>consistency, legitimacy, and sufficiency</strong>.
+          </p>
+          <h3>What to Prepare</h3>
+          <ul class="check-list mt-4">
+            <li>Bank statements for the last <strong>3–6 months</strong> (6 is safer)</li>
+            <li>Consistent balance — no sudden large deposits right before applying</li>
+            <li>Evidence of regular income (payslips, employment letter)</li>
+            <li>Self-employed: tax returns, business registration, accountant letter</li>
+            <li>If sponsored: sponsor bank statements + signed declaration</li>
+          </ul>
+          <div class="notice notice--info mt-6">
+            <span aria-hidden="true">ℹ️</span>
+            <span>We do not publish specific minimum balance thresholds — these vary by embassy and change regularly. Check the official embassy requirements. <a href="/services/financial-proof-review/" class="link">Financial Proof Review service →</a></span>
+          </div>
+        </section>
+
+        <!-- Cover letter -->
+        <section id="cover-letter" class="guide-section" aria-labelledby="cl-h2">
+          <h2 id="cl-h2">Cover Letter Strategy</h2>
+          <p>Your cover letter addresses the four core concerns of every embassy officer:</p>
+          <div class="pillars-grid-guide">
+            {[
+              { num: '01', title: 'Why are you travelling?', desc: 'Be specific. Where, when, for what reason. Avoid generic statements.' },
+              { num: '02', title: 'How will you fund the trip?', desc: 'Reference your financial documents explicitly. Give context for your financial situation.' },
+              { num: '03', title: 'Why will you return home?', desc: 'Employment, property, family — list every tie explicitly. This is often underwritten.' },
+              { num: '04', title: 'What is your travel plan?', desc: 'Reference your attached itinerary. Show the trip is planned in advance.' },
+            ].map(p => (
+              <div class="pillar-guide">
+                <span class="pillar-guide__num">{p.num}</span>
+                <strong class="pillar-guide__title">{p.title}</strong>
+                <p class="pillar-guide__desc">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p class="mt-4"><a href="/blog/how-to-write-visa-cover-letter/" class="link">→ Full Cover Letter Strategy Guide</a></p>
+        </section>
+
+        <!-- Itinerary -->
+        <section id="itinerary" class="guide-section" aria-labelledby="itin-h2">
+          <h2 id="itin-h2">Travel Itinerary</h2>
+          <p>A visa-ready itinerary includes:</p>
+          <ul class="check-list mt-4">
+            <li>Entry and exit dates</li>
+            <li>City-by-city day plan with accommodation addresses</li>
+            <li>Activities or venues for each day (specific, not generic)</li>
+            <li>Budget estimates consistent with your financial proof</li>
+            <li>Logical route (credible travel order between cities)</li>
+          </ul>
+          <p class="mt-4"><a href="/services/itinerary-structuring/" class="link">→ Itinerary Structuring Service</a></p>
+        </section>
+
+        <!-- Refusal prevention -->
+        <section id="refusal" class="guide-section" aria-labelledby="ref-h2">
+          <h2 id="ref-h2">Refusal Prevention</h2>
+          <p>The most common reasons Schengen applications are refused:</p>
+          <ul class="x-list mt-4">
+            <li>Insufficient or inconsistent financial proof</li>
+            <li>Vague or missing cover letter</li>
+            <li>No clear ties to home country</li>
+            <li>Accommodation gaps in the itinerary</li>
+            <li>Non-compliant travel insurance</li>
+            <li>Document inconsistencies (dates, names, addresses)</li>
+          </ul>
+          <p class="mt-4"><a href="/blog/visa-refusal-reasons/" class="link">→ Read: Top 7 Reasons Schengen Visas Are Refused</a></p>
+        </section>
+
+        <!-- After a refusal -->
+        <section id="reapplication" class="guide-section" aria-labelledby="reapp-h2">
+          <h2 id="reapp-h2">After a Refusal</h2>
+          <p>
+            A refusal is not permanent. Your refusal letter must state the reasons.
+            Use that information to build a stronger application:
+          </p>
+          <ul class="check-list mt-4">
+            <li>Read the refusal letter carefully — each reason is specific</li>
+            <li>Identify what was missing (financial, ties, purpose)</li>
+            <li>Gather stronger supporting documents for each issue</li>
+            <li>Rewrite your cover letter to address the refusal directly</li>
+            <li>Allow time — submitting too quickly with the same package rarely succeeds</li>
+          </ul>
+          <div class="notice notice--warning mt-6">
+            <span aria-hidden="true">⚠️</span>
+            <span>If your refusal involved legal status, overstay, or violations, consult a qualified immigration lawyer. <a href="/services/refusal-analysis/" class="link">Refusal Analysis service →</a></span>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="guide-section" aria-labelledby="faq-h2">
+          <h2 id="faq-h2">Quick FAQ</h2>
+          <dl class="guide-faq">
+            {[
+              { q: 'How long does Schengen visa processing take?', a: 'Typically 15 calendar days, but can vary significantly by embassy and season. Apply early — ideally 6–8 weeks before travel.' },
+              { q: 'Can I travel to all 27 Schengen countries with one visa?', a: 'Yes. A valid Schengen visa allows travel within the entire Schengen Area.' },
+              { q: 'Do I need booked (paid) flights, or just a reservation?', a: 'Most embassies accept a reservation confirmation. Avoid purchasing non-refundable flights before your visa is approved.' },
+              { q: 'What if I am self-employed?', a: 'Self-employed applicants should provide business registration documents, 6 months of bank statements, most recent tax return, and ideally an accountant letter confirming income.' },
+            ].map(item => (
+              <div class="guide-faq-item">
+                <dt class="guide-faq-item__q">{item.q}</dt>
+                <dd class="guide-faq-item__a">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+      </article>
+
+      <!-- Sticky sidebar -->
+      <aside class="guide-sidebar" aria-label="Guide navigation">
+        <div class="guide-toc sticky-toc">
+          <strong class="guide-toc__title">Jump to Section</strong>
+          <nav>
+            <ol class="guide-toc__list">
+              {tocItems.map(item => (
+                <li><a href={`#${item.id}`} class="guide-toc__link">{item.label}</a></li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+        <div class="guide-sidebar-cta">
+          <h3>Get Personalised Guidance</h3>
+          <p>A free 20-min audit to review your specific situation.</p>
+          <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-4)">Book Free Audit →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <CTABanner />
+
+</BaseLayout>
+
+<style>
+.guide-hero { padding-block: var(--space-16); }
+.guide-hero__inner { display: grid; grid-template-columns: 1fr 280px; gap: var(--space-12); align-items: start; }
+@media (max-width: 900px) { .guide-hero__inner { grid-template-columns: 1fr; } }
+.guide-hero__meta { display: flex; gap: var(--space-3); margin-bottom: var(--space-4); flex-wrap: wrap; }
+.guide-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); line-height: 1.2; }
+.guide-hero__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); margin-bottom: var(--space-6); }
+.guide-toc-card { background: white; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-5); box-shadow: var(--shadow-md); }
+.guide-toc-card__title { display: block; font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-3); }
+.guide-toc-card__list { display: flex; flex-direction: column; gap: var(--space-2); padding-left: var(--space-4); }
+.guide-toc-card__link { font-size: var(--text-sm); color: var(--color-primary); text-decoration: none; }
+.guide-toc-card__link:hover { text-decoration: underline; }
+
+.guide-layout { display: grid; grid-template-columns: 1fr 260px; gap: var(--space-12); align-items: start; }
+@media (max-width: 900px) { .guide-layout { grid-template-columns: 1fr; } .guide-sidebar { display: none; } }
+.guide-section { margin-bottom: var(--space-16); scroll-margin-top: 80px; }
+.guide-section h2 { font-size: var(--text-3xl); margin-bottom: var(--space-5); padding-bottom: var(--space-3); border-bottom: 2px solid var(--color-border); }
+.guide-section h3 { font-size: var(--text-xl); margin-top: var(--space-6); margin-bottom: var(--space-2); }
+.guide-section p  { color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+.guide-source { font-size: var(--text-xs); color: var(--color-text-subtle); margin-top: var(--space-4); }
+
+.checklist-grid { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-5); }
+.checklist-item { display: flex; gap: var(--space-3); align-items: flex-start; padding: var(--space-4); background: var(--color-surface-2); border-radius: var(--radius-lg); border: 1px solid var(--color-border); }
+.checklist-item__check { color: var(--color-success); font-size: 1rem; flex-shrink: 0; margin-top: 2px; font-weight: bold; }
+.checklist-item__doc  { display: block; font-weight: var(--font-semibold); font-size: var(--text-sm); }
+.checklist-item__note { display: block; font-size: var(--text-xs); color: var(--color-text-muted); margin-top: 2px; }
+
+.pillars-grid-guide { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-5); }
+@media (max-width: 640px) { .pillars-grid-guide { grid-template-columns: 1fr; } }
+.pillar-guide { padding: var(--space-5); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.pillar-guide__num   { font-size: var(--text-xs); font-weight: var(--font-bold); color: var(--color-accent-dark); }
+.pillar-guide__title { display: block; font-size: var(--text-base); font-weight: var(--font-semibold); margin-block: var(--space-2); }
+.pillar-guide__desc  { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+
+.info-box { background: var(--color-surface-2); border-radius: var(--radius-xl); padding: var(--space-5); border-left: 4px solid var(--color-primary); margin-top: var(--space-5); }
+.info-box h3 { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-3); }
+
+.guide-faq { display: flex; flex-direction: column; gap: var(--space-5); }
+.guide-faq-item {}
+.guide-faq-item__q { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-2); }
+.guide-faq-item__a { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+
+.sticky-toc { position: sticky; top: 100px; background: white; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-5); margin-bottom: var(--space-4); }
+.guide-toc__title { display: block; font-size: var(--text-xs); font-weight: var(--font-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-3); }
+.guide-toc__list { display: flex; flex-direction: column; gap: var(--space-2); padding-left: var(--space-4); }
+.guide-toc__link { font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none; transition: color var(--transition-fast); }
+.guide-toc__link:hover { color: var(--color-primary); }
+.guide-sidebar-cta { background: var(--color-navy); color: white; border-radius: var(--radius-xl); padding: var(--space-5); }
+.guide-sidebar-cta h3 { color: white; font-size: var(--text-base); margin-bottom: var(--space-2); }
+.guide-sidebar-cta p  { font-size: var(--text-sm); color: hsl(220 30% 80%); }
+</style>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /_astro/
+
+Sitemap: https://visareadyguide.com/sitemap-index.xml

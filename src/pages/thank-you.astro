@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thank You — Visa Ready Guide"
+  description="Thank you for contacting Visa Ready Guide. We'll be in touch shortly."
+  noindex={true}
+>
+  <section class="section" style="min-height:60vh;display:flex;align-items:center">
+    <div class="container container--narrow text-center">
+      <div class="thankyou-icon" aria-hidden="true">✅</div>
+      <h1 class="thankyou__title">Message Received. Thank You!</h1>
+      <p class="thankyou__subtitle">
+        We've received your message and will respond within <strong>1–2 business days</strong>.
+      </p>
+      <p style="color:var(--color-text-muted);font-size:var(--text-base);margin-bottom:var(--space-8)">
+        While you wait, explore our free resources:
+      </p>
+      <div class="thankyou__links">
+        <a href="/schengen-visa-guide/" class="btn btn--primary">Schengen Complete Guide →</a>
+        <a href="/blog/" class="btn btn--secondary">Visa Strategy Blog →</a>
+        <a href="/faq/" class="btn btn--ghost" style="color:var(--color-primary);border-color:var(--color-border)">FAQ →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.thankyou-icon { font-size: 4rem; margin-bottom: var(--space-5); }
+.thankyou__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+.thankyou__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); margin-bottom: var(--space-4); }
+.thankyou__links { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+</style>

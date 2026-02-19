@@ -1,0 +1,77 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  pubDate: string;
+  tags?: string[];
+  readTime?: number;
+}
+const { title, description, slug, pubDate, tags = [], readTime = 5 } = Astro.props;
+const formattedDate = new Date(pubDate).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric'
+});
+---
+
+<article class="blog-card">
+  <div class="blog-card__meta">
+    <time datetime={pubDate} class="blog-card__date">{formattedDate}</time>
+    <span class="blog-card__sep" aria-hidden="true">·</span>
+    <span class="blog-card__read">{readTime} min read</span>
+  </div>
+  <h3 class="blog-card__title">
+    <a href={`/blog/${slug}/`} class="blog-card__link">{title}</a>
+  </h3>
+  <p class="blog-card__desc">{description}</p>
+  {tags.length > 0 && (
+    <div class="blog-card__tags">
+      {tags.slice(0,3).map(tag => <span class="tag">{tag}</span>)}
+    </div>
+  )}
+</article>
+
+<style>
+.blog-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.blog-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.blog-card__sep { opacity: 0.5; }
+
+.blog-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-snug);
+  margin: 0;
+}
+.blog-card__link {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.blog-card__link::after { content: ''; position: absolute; inset: 0; }
+.blog-card__link:hover  { color: var(--color-primary); }
+
+.blog-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  flex: 1;
+}
+.blog-card__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: auto; }
+</style>

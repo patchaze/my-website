@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Visa Ready Guide a law firm or immigration lawyer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Visa Ready Guide is an educational visa application strategy consultancy. We do not provide legal advice, legal representation, or any service that constitutes the practice of immigration law. For legal advice, you should consult a qualified immigration attorney." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you guarantee my visa will be approved?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No — and no honest service can. Visa decisions are made by embassy and consulate officers based on their assessment of your application. We help you prepare the strongest possible application, but we have no influence over consular decisions." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Free Visa Readiness Audit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A free 20-minute consultation where we review your current visa preparation strategy and identify the specific areas you need to strengthen before submitting your application." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will you submit my visa application for me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. We provide educational guidance on how to prepare your application. You are responsible for submitting your own application to the relevant embassy or consulate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of visas do you cover?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our primary focus is the Schengen tourist visa (Type C), but many of our document strategy principles apply to UK Visitor Visas, US tourist visas, and other non-immigrant visa types. We'll tell you clearly in the audit whether your specific visa type is within our expertise." }
+    },
+    {
+      "@type": "Question",
+      "name": "I was refused a visa before. Can you help?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — refusal analysis and reapplication strategy is one of our core services. We can help you decode your refusal letter and build a stronger application for resubmission." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with self-employed or freelance applicants?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Self-employed applicants often face unique challenges with financial proof documentation. We specialise in helping freelancers, contractors, and business owners understand what financial documents to gather and how to present them." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you differ from a visa agency?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Visa agencies typically submit applications on your behalf and may have formal relationships with embassies. We are a purely educational service — we teach you how to prepare your documents, but you submit the application yourself. This means lower cost, more transparency, and more control for you." }
+    },
+    {
+      "@type": "Question",
+      "name": "What language is the service available in?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We provide services in English, Portuguese, Spanish, and French. Please let us know your preferred language when booking." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are you located? Do sessions happen online?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, all sessions are conducted online via video call. We work with clients globally." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Frequently Asked Questions — Visa Ready Guide"
+  description="Answers to the most common questions about our educational visa application strategy services. What we do, what we don't do, and how we can help you."
+  breadcrumb={[{ name: 'FAQ', url: 'https://visareadyguide.com/faq/' }]}
+  schema={faqSchema}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'FAQ' }]} />
+  </div>
+
+  <section class="section--tinted section--sm">
+    <div class="container text-center">
+      <span class="section-label">Questions Answered</span>
+      <h1 class="faq-hero__title">Frequently Asked Questions</h1>
+      <p class="faq-hero__subtitle">Everything you need to know before working with us.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <dl class="faq-list" id="faq-accordion">
+        {faqSchema.mainEntity.map((item, index) => (
+          <div class="faq-item" id={`faq-${index}`}>
+            <dt>
+              <button
+                class="faq-item__question"
+                aria-expanded="false"
+                aria-controls={`faq-answer-${index}`}
+              >
+                <span>{item.name}</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id={`faq-answer-${index}`} hidden>
+              <p>{item.acceptedAnswer.text}</p>
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <div class="faq-cta mt-12">
+        <p>Didn't find your answer?</p>
+        <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;justify-content:center;margin-top:var(--space-4)">
+          <a href="/contact/" class="btn btn--primary">Contact Us</a>
+          <a href="/free-visa-audit/" class="btn btn--secondary">Book Free Audit →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.faq-item__question');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const answerId = btn.getAttribute('aria-controls')!;
+      const answer   = document.getElementById(answerId);
+      const icon     = btn.querySelector('.faq-item__icon');
+      // Close all
+      buttons.forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        const aId = b.getAttribute('aria-controls')!;
+        const a   = document.getElementById(aId);
+        const i   = b.querySelector('.faq-item__icon');
+        if (a) a.hidden = true;
+        if (i) i.textContent = '+';
+      });
+      // Open clicked (if was closed)
+      if (!expanded && answer) {
+        btn.setAttribute('aria-expanded', 'true');
+        answer.hidden = false;
+        if (icon) icon.textContent = '−';
+      }
+    });
+  });
+</script>
+
+<style>
+.faq-hero__title    { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-block: var(--space-3); }
+.faq-hero__subtitle { font-size: var(--text-lg); color: var(--color-text-muted); }
+.faq-list { display: flex; flex-direction: column; gap: 0; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--color-border); }
+.faq-item { border-bottom: 1px solid var(--color-border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-5) var(--space-6);
+  text-align: left;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  gap: var(--space-4);
+  transition: background var(--transition-fast);
+}
+.faq-item__question:hover { background: var(--color-surface-2); }
+.faq-item__question[aria-expanded="true"] { background: var(--color-surface-2); color: var(--color-primary); }
+.faq-item__icon { font-size: var(--text-xl); flex-shrink: 0; color: var(--color-primary); font-weight: var(--font-normal); }
+.faq-item__answer { padding: 0 var(--space-6) var(--space-5); background: var(--color-surface-2); }
+.faq-item__answer p { color: var(--color-text-muted); line-height: var(--leading-relaxed); font-size: var(--text-base); }
+.faq-cta { text-align: center; }
+.faq-cta p { font-size: var(--text-lg); color: var(--color-text-muted); }
+</style>

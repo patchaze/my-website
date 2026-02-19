@@ -1,0 +1,44 @@
+---
+export interface Props {
+  items: Array<{ name: string; href?: string }>;
+}
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol class="breadcrumb__list" role="list">
+    <li class="breadcrumb__item">
+      <a href="/" class="breadcrumb__link">Home</a>
+    </li>
+    {items.map((item, i) => (
+      <li class="breadcrumb__item">
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        {item.href && i < items.length - 1 ? (
+          <a href={item.href} class="breadcrumb__link">{item.name}</a>
+        ) : (
+          <span class="breadcrumb__current" aria-current="page">{item.name}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+.breadcrumb { padding-block: var(--space-4); }
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+.breadcrumb__item { display: flex; align-items: center; gap: var(--space-2); }
+.breadcrumb__link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.breadcrumb__link:hover  { color: var(--color-primary); }
+.breadcrumb__sep         { color: var(--color-text-muted); }
+.breadcrumb__current     { color: var(--color-text); font-weight: var(--font-medium); }
+</style>

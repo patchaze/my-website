@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="404 — Page Not Found | Visa Ready Guide"
+  description="The page you're looking for doesn't exist. Visit our homepage or blog for visa application strategy guidance."
+  noindex={true}
+>
+  <section class="section not-found" style="min-height:70vh;display:flex;align-items:center">
+    <div class="container container--narrow text-center">
+      <div class="not-found__icon" aria-hidden="true">🗺️</div>
+      <h1 class="not-found__title">404 — Page Not Found</h1>
+      <p class="not-found__subtitle">
+        Looks like this page got lost in transit. Let's get you back on track.
+      </p>
+      <div class="not-found__links">
+        <a href="/" class="btn btn--primary">Back to Homepage →</a>
+        <a href="/services/" class="btn btn--secondary">Our Services</a>
+        <a href="/blog/" class="btn btn--ghost" style="color:var(--color-primary);border-color:var(--color-border)">Blog →</a>
+      </div>
+      <div class="not-found__popular">
+        <p>Popular pages:</p>
+        <ul>
+          <li><a href="/schengen-visa-guide/" class="link">Schengen Complete Guide</a></li>
+          <li><a href="/free-visa-audit/" class="link">Free Visa Readiness Audit</a></li>
+          <li><a href="/faq/" class="link">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.not-found__icon     { font-size: 4rem; margin-bottom: var(--space-5); }
+.not-found__title    { font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl)); margin-bottom: var(--space-4); }
+.not-found__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); margin-bottom: var(--space-8); max-width: 44ch; margin-inline: auto; line-height: var(--leading-relaxed); }
+.not-found__links    { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-10); }
+.not-found__popular  { color: var(--color-text-muted); }
+.not-found__popular p { font-size: var(--text-sm); margin-bottom: var(--space-3); }
+.not-found__popular ul { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+.not-found__popular li { font-size: var(--text-sm); }
+</style>

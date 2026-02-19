@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import BlogCard from '../../components/BlogCard.astro';
+
+const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title="Visa Application Strategy Blog — Tips, Guides & Insights"
+  description="In-depth guides on visa documents, financial proof, cover letters, refusal analysis, and country-specific visa strategy. Updated regularly. Educational content only."
+  breadcrumb={[{ name: 'Blog', url: 'https://visareadyguide.com/blog/' }]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Blog' }]} />
+  </div>
+
+  <section class="section--tinted section--sm">
+    <div class="container">
+      <span class="section-label">Insights & Education</span>
+      <h1 class="blog-index__title">Visa Strategy Blog</h1>
+      <p class="blog-index__subtitle">
+        Evidence-based guidance on visa document preparation, financial proof,
+        cover letter strategy, and refusal analysis. All content cites official sources.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {allPosts.length === 0 ? (
+        <p class="text-muted text-center">No posts published yet. Check back soon.</p>
+      ) : (
+        <div class="grid-3">
+          {allPosts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug}
+              pubDate={post.data.pubDate.toISOString()}
+              tags={post.data.tags}
+              readTime={post.data.readTime}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.blog-index__title    { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-block: var(--space-3); }
+.blog-index__subtitle { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); }
+</style>
