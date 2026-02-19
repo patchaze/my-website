@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Visa Itinerary Help — Build a Credible Travel Plan"
+  description="Build a visa-compliant travel itinerary aligned with your documents and accommodation."
+  breadcrumb={[
+    { name: 'Services', url: 'https://www.duriantravel.com/services/' },
+    { name: 'Itinerary Building', url: 'https://www.duriantravel.com/services/itinerary-building/' }
+  ]}
+>
+  <section class="hero-sm hero-gradient">
+    <div class="container">
+      <span class="section-label" style="color:var(--color-accent-light)">Service</span>
+      <h1 class="hero-sm__title" style="color:white">Itinerary Building</h1>
+      <p class="hero-sm__subtitle">Structure a visa-compliant travel plan that matches your documents and demonstrates genuine purpose.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-layout">
+        <div class="service-content prose">
+          <h2>Why Your Itinerary Matters</h2>
+          <p>Your itinerary isn't just a list of cities — it's evidence. Consular officers use it to assess whether your trip makes sense, whether your finances match your plans, and whether you intend to return home.</p>
+
+          <h2>What We Build Together</h2>
+          <ul>
+            <li>Day-by-day travel plan aligned with your visa application</li>
+            <li>Accommodation matching (hotel bookings, Airbnb, host letters)</li>
+            <li>Transportation logic (flights, trains, buses between cities)</li>
+            <li>Activity framework that supports your stated travel purpose</li>
+            <li>Budget alignment with your financial proof</li>
+          </ul>
+
+          <h2>Common Itinerary Mistakes We Fix</h2>
+          <ul>
+            <li>Too many cities in too few days (red flag)</li>
+            <li>Mismatched dates between flights and accommodation</li>
+            <li>No clear reason for choosing specific destinations</li>
+            <li>Budget that doesn't match the stated financial proof</li>
+          </ul>
+
+          <div class="notice notice--warning"><span>⚠️</span><p><strong>Disclaimer:</strong> This is educational guidance. We do not book travel or guarantee visa outcomes.</p></div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="price-card">
+            <span class="price-card__label">Investment</span>
+            <span class="price-card__price">€49</span>
+            <span class="price-card__detail">Itinerary review + structure plan</span>
+            <a href="/free-visa-audit/" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;margin-top:var(--space-4)">Start with Free Audit →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+.hero-sm { padding-block: var(--space-16); }
+.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+.hero-sm__subtitle { font-size: var(--text-lg); color: hsl(150 30% 75%); max-width: 52ch; line-height: var(--leading-relaxed); }
+.service-layout { display: grid; grid-template-columns: 1fr 320px; gap: var(--space-12); align-items: start; }
+@media (max-width: 860px) { .service-layout { grid-template-columns: 1fr; } }
+.price-card { background: white; border: 2px solid var(--color-primary); border-radius: var(--radius-xl); padding: var(--space-8); text-align: center; position: sticky; top: 100px; }
+.price-card__label { display: block; font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-2); }
+.price-card__price { display: block; font-size: var(--text-5xl); font-weight: var(--font-extrabold); color: var(--color-primary); margin-bottom: var(--space-2); }
+.price-card__detail { display: block; font-size: var(--text-sm); color: var(--color-text-muted); }
+</style>

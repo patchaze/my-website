@@ -1,85 +1,111 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import CTABanner from '../../components/CTABanner.astro';
 
 const services = [
-  { icon: '📄', title: 'Document Review Guidance',     description: 'We review your visa document package against official embassy requirements and flag every gap before submission.', href: '/services/document-review/', tags: ['Checklist', 'Pre-submission'] },
-  { icon: '✉️', title: 'Cover Letter Strategy Support', description: 'Structure a compelling cover letter that addresses travel purpose, financial capacity, and return intent — credibly.', href: '/services/cover-letter-strategy/', tags: ['Letter', 'Framing'] },
-  { icon: '🗺️', title: 'Travel Itinerary Structuring',  description: 'Build a visa-compliant travel itinerary demonstrating genuine travel purpose, aligned with accommodations and proof.', href: '/services/itinerary-structuring/', tags: ['Planning', 'Structure'] },
-  { icon: '💰', title: 'Financial Proof Review',        description: "Understand what embassy officers look for in financial documents — and how to present yours clearly and credibly.", href: '/services/financial-proof-review/', tags: ['Finance', 'Bank Statements'] },
-  { icon: '🚫', title: 'Refusal Analysis Consultation', description: 'Decode your visa refusal letter, identify the root cause, and build a stronger evidence-based reapplication strategy.', href: '/services/refusal-analysis/', tags: ['Refusal', 'Reapplication'] },
-  { icon: '📞', title: 'Visa Readiness Strategy Call',  description: 'A focused 60-minute deep dive into your full application — documents, cover letter, finances, and timeline.', href: '/services/strategy-call/', tags: ['Consultation', '60 min'] },
+  {
+    icon: '📞',
+    title: 'Visa Strategy Call',
+    description: 'A focused 60-minute 1-on-1 call to review your entire visa application plan — documents, cover letter, financial proof, itinerary, and timeline.',
+    href: '/services/visa-strategy-call/',
+    tags: ['60 min', '1-on-1', 'Strategy'],
+    price: '€79',
+  },
+  {
+    icon: '📄',
+    title: 'Document Checklist Review',
+    description: 'We check every document in your visa package against the embassy\'s published requirements and flag gaps, inconsistencies, or weak points.',
+    href: '/services/document-review/',
+    tags: ['Checklist', 'Gap Analysis'],
+    price: '€29',
+  },
+  {
+    icon: '🗺️',
+    title: 'Itinerary Building',
+    description: 'We help you build a visa-compliant travel itinerary that aligns with your accommodation, financial proof, and stated purpose of travel.',
+    href: '/services/itinerary-building/',
+    tags: ['Planning', 'Structure'],
+    price: '€49',
+  },
+  {
+    icon: '💊',
+    title: 'Travel Health Consult',
+    description: 'Pre-trip health preparation: which medications need prescriptions in Europe, vaccine requirements, pharmacy access, and what to pack in your travel kit.',
+    href: '/services/travel-health-consult/',
+    tags: ['Health', 'Preparation'],
+    price: '€39',
+  },
 ];
 
-const itemListSchema = {
+const serviceSchema = services.map(s => ({
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Visa Application Strategy Services",
-  "description": "Educational visa document strategy and preparation guidance services",
-  "itemListElement": services.map((s, i) => ({
-    "@type": "ListItem",
-    "position": i + 1,
-    "name": s.title,
-    "url": `https://www.duriantravel.com${s.href}`
-  }))
-};
+  "@type": "Service",
+  "name": s.title,
+  "description": s.description,
+  "provider": {
+    "@type": "Organization",
+    "name": "DURIAN Travel",
+    "url": "https://www.duriantravel.com"
+  },
+  "url": `https://www.duriantravel.com${s.href}`,
+  "offers": {
+    "@type": "Offer",
+    "price": s.price.replace('€', ''),
+    "priceCurrency": "EUR"
+  }
+}));
+
+const breadcrumb = [
+  { name: 'Services', url: 'https://www.duriantravel.com/services/' }
+];
 ---
 
 <BaseLayout
-  title="Visa Strategy Services — Document Guidance & Preparation"
+  title="Visa & Travel Services — DURIAN Travel"
   description="Visa strategy services: document review, cover letters, itineraries, financial proof, and refusal analysis."
-  breadcrumb={[{ name: 'Services', url: 'https://www.duriantravel.com/services/' }]}
-  schema={itemListSchema}
+  breadcrumb={breadcrumb}
+  schema={serviceSchema}
 >
-  <div class="container">
-    <Breadcrumb items={[{ name: 'Services' }]} />
-  </div>
 
-  <section class="page-hero section--tinted section">
-    <div class="container text-center">
-      <span class="section-label">What We Offer</span>
-      <h1 class="page-hero__title">Visa Strategy &amp; Document Preparation Services</h1>
-      <p class="page-hero__subtitle">
-        Each service is framed exclusively as educational guidance. We do not submit
-        applications on your behalf, provide legal advice, or guarantee outcomes.
+  <section class="hero-sm hero-gradient">
+    <div class="container">
+      <span class="section-label" style="color:var(--color-accent-light)">Our Services</span>
+      <h1 class="hero-sm__title" style="color:white">Expert Guidance, Not Empty Promises</h1>
+      <p class="hero-sm__subtitle">
+        We educate and empower. We don't submit applications on your behalf and we don't guarantee outcomes.
+        Each service is designed to help you present the strongest possible application.
       </p>
-      <div class="notice notice--warning" style="max-width:60ch;margin:var(--space-8) auto 0">
-        <span aria-hidden="true">⚠️</span>
-        <span>All services are educational in nature. Not legal advice. Not visa agency services.
-          <a href="/disclaimer/" class="link">Read our full disclaimer →</a>
-        </span>
-      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="grid-3">
-        {services.map(s => <ServiceCard {...s} />)}
+      <div class="notice notice--info mb-8">
+        <span>📋</span>
+        <p>
+          <strong>Not sure where to start?</strong>
+          Book a <a href="/free-visa-audit/" class="link">free 15-minute audit</a> first.
+          We'll review your situation and recommend the right service.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Process section -->
-  <section class="section section--tinted">
-    <div class="container container--narrow">
-      <div class="text-center section-header">
-        <span class="section-label">How It Works</span>
-        <h2 class="section-title">Our Simple 3-Step Process</h2>
-      </div>
-      <div class="process-steps">
-        {[
-          { num: '01', title: 'Book Your Free Audit', desc: 'Start with a free 20-minute Visa Readiness Audit. We assess your current preparation and identify the key areas to strengthen.' },
-          { num: '02', title: 'Choose Your Service', desc: 'Based on the audit, we recommend the most relevant service — whether that\'s a document review, cover letter strategy, or a full strategy call.' },
-          { num: '03', title: 'Apply with Confidence', desc: 'Walk into your visa appointment knowing your documentation is as strong as it can be — with a clear narrative and no gaps.' },
-        ].map(step => (
-          <div class="process-step">
-            <div class="process-step__num" aria-hidden="true">{step.num}</div>
-            <div class="process-step__content">
-              <h3 class="process-step__title">{step.title}</h3>
-              <p class="process-step__desc">{step.desc}</p>
+      <div class="services-grid">
+        {services.map(s => (
+          <div class="service-full-card">
+            <div class="service-full-card__header">
+              <span class="service-full-card__icon">{s.icon}</span>
+              <div>
+                <h2 class="service-full-card__title">{s.title}</h2>
+                <div class="service-full-card__tags">
+                  {s.tags.map(t => <span class="tag">{t}</span>)}
+                </div>
+              </div>
+            </div>
+            <p class="service-full-card__desc">{s.description}</p>
+            <div class="service-full-card__footer">
+              <span class="service-full-card__price">Starting at {s.price}</span>
+              <a href={s.href} class="btn btn--primary btn--sm">Learn More →</a>
             </div>
           </div>
         ))}
@@ -87,32 +113,70 @@ const itemListSchema = {
     </div>
   </section>
 
-  <CTABanner title="Not sure which service you need?" subtitle="Start with the free Visa Readiness Audit — we'll help you identify exactly what to focus on." />
+  <!-- What's included across all services -->
+  <section class="section section--tinted">
+    <div class="container container--narrow">
+      <header class="section-header text-center">
+        <span class="section-label">What's Included</span>
+        <h2 class="section-title">Every Service Comes With</h2>
+      </header>
+      <div class="grid-3">
+        <div class="feature-mini">
+          <span class="feature-mini__icon">📝</span>
+          <h3 class="feature-mini__title">Written Summary</h3>
+          <p class="feature-mini__desc">Actionable notes and next steps delivered after every session.</p>
+        </div>
+        <div class="feature-mini">
+          <span class="feature-mini__icon">🔒</span>
+          <h3 class="feature-mini__title">Confidential</h3>
+          <p class="feature-mini__desc">Your personal information is handled securely and never shared.</p>
+        </div>
+        <div class="feature-mini">
+          <span class="feature-mini__icon">⚡</span>
+          <h3 class="feature-mini__title">24h Turnaround</h3>
+          <p class="feature-mini__desc">Document reviews completed within 24 hours of submission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
 
 </BaseLayout>
 
 <style>
-.page-hero__title   { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-block: var(--space-4); max-width: 22ch; margin-inline: auto; }
-.page-hero__subtitle { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 56ch; margin-inline: auto; line-height: var(--leading-relaxed); }
-.process-steps { display: flex; flex-direction: column; gap: var(--space-6); }
-.process-step {
-  display: flex;
+.hero-sm { padding-block: var(--space-16); }
+.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+.hero-sm__subtitle { font-size: var(--text-lg); color: hsl(150 30% 75%); max-width: 60ch; line-height: var(--leading-relaxed); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
-  align-items: flex-start;
+}
+@media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+
+.service-full-card {
   background: white;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: var(--space-6);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
 }
-.process-step__num {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-extrabold);
-  color: var(--color-surface-3);
-  font-family: var(--font-serif);
-  line-height: 1;
-  flex-shrink: 0;
-  width: 3rem;
-}
-.process-step__title { font-size: var(--text-xl); font-weight: var(--font-bold); margin-bottom: var(--space-2); }
-.process-step__desc  { color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+.service-full-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.service-full-card__header { display: flex; align-items: flex-start; gap: var(--space-4); }
+.service-full-card__icon { font-size: 2rem; }
+.service-full-card__title { font-size: var(--text-xl); font-weight: var(--font-bold); margin-bottom: var(--space-2); }
+.service-full-card__tags { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.service-full-card__desc { font-size: var(--text-base); line-height: var(--leading-relaxed); color: var(--color-text-muted); flex: 1; }
+.service-full-card__footer { display: flex; align-items: center; justify-content: space-between; padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+.service-full-card__price { font-size: var(--text-lg); font-weight: var(--font-bold); color: var(--color-primary); }
+
+.feature-mini { text-align: center; }
+.feature-mini__icon { font-size: 2rem; display: block; margin-bottom: var(--space-3); }
+.feature-mini__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-2); }
+.feature-mini__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
 </style>

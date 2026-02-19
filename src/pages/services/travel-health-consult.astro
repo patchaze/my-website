@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Travel Health Consult for Europe"
+  description="Pre-trip health check: vaccines, prescriptions, pharmacy tips for traveling in Europe."
+  breadcrumb={[
+    { name: 'Services', url: 'https://www.duriantravel.com/services/' },
+    { name: 'Travel Health Consult', url: 'https://www.duriantravel.com/services/travel-health-consult/' }
+  ]}
+>
+  <section class="hero-sm hero-gradient">
+    <div class="container">
+      <span class="section-label" style="color:var(--color-accent-light)">Service</span>
+      <h1 class="hero-sm__title" style="color:white">Travel Health Consult</h1>
+      <p class="hero-sm__subtitle">Pre-trip health preparation from a pharmacist — medications, prescriptions, vaccines, and what to pack.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-layout">
+        <div class="service-content prose">
+          <h2>What We Cover</h2>
+          <p>
+            Founded by a licensed pharmacist, this consult blends professional health knowledge with practical travel experience.
+            We help you prepare the health side of your trip so you can focus on the adventure.
+          </p>
+          <ul>
+            <li>Prescription medication rules for your destination countries</li>
+            <li>What's available over-the-counter in European pharmacies</li>
+            <li>Vaccines: which are recommended, which are required</li>
+            <li>Building a smart travel first aid kit</li>
+            <li>Flying with medications, inhalers, and medical devices</li>
+            <li>Health insurance considerations for your visa</li>
+          </ul>
+
+          <h2>Why This Matters</h2>
+          <p>Many travelers don't realise that a medication that's legal at home may be restricted or require special documentation in Europe. A 30-minute consult can prevent border issues or pharmacy surprises.</p>
+
+          <div class="notice notice--warning"><span>⚠️</span><p><strong>Disclaimer:</strong> This is educational guidance based on pharmacy expertise and travel experience. This is not a medical consultation. For medical advice, consult your doctor.</p></div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="price-card">
+            <span class="price-card__label">Investment</span>
+            <span class="price-card__price">€39</span>
+            <span class="price-card__detail">30-min consult + written notes</span>
+            <a href="/free-visa-audit/" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;margin-top:var(--space-4)">Start with Free Audit →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+.hero-sm { padding-block: var(--space-16); }
+.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+.hero-sm__subtitle { font-size: var(--text-lg); color: hsl(150 30% 75%); max-width: 52ch; line-height: var(--leading-relaxed); }
+.service-layout { display: grid; grid-template-columns: 1fr 320px; gap: var(--space-12); align-items: start; }
+@media (max-width: 860px) { .service-layout { grid-template-columns: 1fr; } }
+.price-card { background: white; border: 2px solid var(--color-primary); border-radius: var(--radius-xl); padding: var(--space-8); text-align: center; position: sticky; top: 100px; }
+.price-card__label { display: block; font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-2); }
+.price-card__price { display: block; font-size: var(--text-5xl); font-weight: var(--font-extrabold); color: var(--color-primary); margin-bottom: var(--space-2); }
+.price-card__detail { display: block; font-size: var(--text-sm); color: var(--color-text-muted); }
+</style>

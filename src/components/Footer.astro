@@ -1,24 +1,38 @@
 ---
 const serviceLinks = [
-  { label: 'Document Review',      href: '/services/document-review/' },
-  { label: 'Cover Letter Strategy',href: '/services/cover-letter-strategy/' },
-  { label: 'Itinerary Structuring', href: '/services/itinerary-structuring/' },
-  { label: 'Financial Proof Review',href: '/services/financial-proof-review/' },
-  { label: 'Refusal Analysis',      href: '/services/refusal-analysis/' },
-  { label: 'Strategy Call',         href: '/services/strategy-call/' },
+  { label: 'Visa Strategy Call',    href: '/services/visa-strategy-call/' },
+  { label: 'Document Review',       href: '/services/document-review/' },
+  { label: 'Itinerary Building',    href: '/services/itinerary-building/' },
+  { label: 'Travel Health Consult', href: '/services/travel-health-consult/' },
+];
+const guideLinks = [
+  { label: 'Schengen Visa Guide', href: '/schengen-visa-guide/' },
+  { label: 'Visa Process',        href: '/visa-application-process/' },
+  { label: 'Travel Health',       href: '/travel-health-europe/' },
+  { label: 'Travel Planning',     href: '/travel-planning/' },
+  { label: 'Blog',                href: '/blog/' },
+  { label: 'Resources',           href: '/resources/' },
+];
+const companyLinks = [
+  { label: 'About',          href: '/about/' },
+  { label: 'Contact',        href: '/contact/' },
+  { label: 'Free Visa Audit',href: '/free-visa-audit/' },
+  { label: 'Disclaimer',     href: '/disclaimer/' },
+  { label: 'Privacy Policy', href: '/privacy-policy/' },
+  { label: 'Terms of Service', href: '/terms-of-service/' },
+  { label: 'Cookie Policy',  href: '/cookie-policy/' },
 ];
 const year = new Date().getFullYear();
 ---
 
 <footer class="footer" role="contentinfo">
-  <!-- Legal disclaimer bar -->
+  <!-- Disclaimer bar -->
   <div class="footer__disclaimer">
     <div class="container">
       <p>
         <strong>⚠️ Not Legal Advice.</strong>
-        DURIAN provides educational content and document preparation strategy only.
-        We are not immigration lawyers and do not provide legal advice, immigration representation,
-        or guarantees of visa approval. Always consult a licensed immigration attorney for legal guidance.
+        DURIAN Travel provides educational content and travel planning guidance only.
+        We are not immigration lawyers, not the embassy, and we do not guarantee visa approval.
         <a href="/disclaimer/" class="footer__disclaimer-link">Read Full Disclaimer →</a>
       </p>
     </div>
@@ -31,19 +45,19 @@ const year = new Date().getFullYear();
 
         <!-- Brand column -->
         <div class="footer__brand">
-          <a href="/" class="footer__logo" aria-label="DURIAN home">
+          <a href="/" class="footer__logo" aria-label="DURIAN Travel home">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="8" fill="hsl(218,65%,32%)"/>
-              <text x="16" y="23" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="hsl(38,92%,50%)">D</text>
+              <rect width="32" height="32" rx="8" fill="hsl(152,55%,28%)"/>
+              <text x="16" y="23" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="hsl(42,90%,55%)">D</text>
             </svg>
-            <span>DURIAN</span>
+            <span>DURIAN Travel</span>
           </a>
           <p class="footer__tagline">
             Navigate Every Border. Explore Every Horizon.
-            Expert travel insights and visa strategy guidance — education-first, no legal advice.
+            Schengen visa guidance and Europe travel support — education-first, no legal advice.
           </p>
           <p class="footer__not-lawyer">
-            <span>📋</span> We are not a law firm or visa agency.
+            <span>📋</span> We are not lawyers and not the embassy.
           </p>
         </div>
 
@@ -57,14 +71,13 @@ const year = new Date().getFullYear();
           </ul>
         </div>
 
-        <!-- Resources column -->
+        <!-- Guides column -->
         <div class="footer__col">
-          <h3 class="footer__col-title">Resources</h3>
+          <h3 class="footer__col-title">Guides & Resources</h3>
           <ul role="list">
-            <li><a href="/schengen-visa-guide/" class="footer__link">Schengen Visa Guide</a></li>
-            <li><a href="/blog/" class="footer__link">Blog & Insights</a></li>
-            <li><a href="/faq/" class="footer__link">FAQ</a></li>
-            <li><a href="/free-visa-audit/" class="footer__link">Free Visa Audit</a></li>
+            {guideLinks.map(link => (
+              <li><a href={link.href} class="footer__link">{link.label}</a></li>
+            ))}
           </ul>
         </div>
 
@@ -72,11 +85,9 @@ const year = new Date().getFullYear();
         <div class="footer__col">
           <h3 class="footer__col-title">Company</h3>
           <ul role="list">
-            <li><a href="/about/" class="footer__link">About</a></li>
-            <li><a href="/contact/" class="footer__link">Contact</a></li>
-            <li><a href="/disclaimer/" class="footer__link">Disclaimer</a></li>
-            <li><a href="/privacy-policy/" class="footer__link">Privacy Policy</a></li>
-            <li><a href="/terms-of-service/" class="footer__link">Terms of Service</a></li>
+            {companyLinks.map(link => (
+              <li><a href={link.href} class="footer__link">{link.label}</a></li>
+            ))}
           </ul>
         </div>
 
@@ -87,7 +98,7 @@ const year = new Date().getFullYear();
   <!-- Bottom bar -->
   <div class="footer__bottom">
     <div class="container flex-between" style="flex-wrap:wrap;gap:var(--space-3)">
-      <p class="footer__copy">© {year} DURIAN. All rights reserved.</p>
+      <p class="footer__copy">© {year} DURIAN Travel. All rights reserved.</p>
       <p class="footer__copy" style="text-align:right">
         Educational guidance only —
         <a href="/disclaimer/" class="footer__disclaimer-link">not legal advice</a>
@@ -97,17 +108,17 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
-.footer { background: var(--color-navy); color: hsl(220 30% 80%); }
+.footer { background: var(--color-navy); color: hsl(150 30% 80%); }
 
 .footer__disclaimer {
-  background: hsl(30 80% 20%);
+  background: hsl(35 70% 18%);
   border-top: 3px solid var(--color-accent);
   padding: var(--space-4) 0;
 }
 .footer__disclaimer p {
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
-  color: hsl(38 80% 88%);
+  color: hsl(42 80% 88%);
 }
 .footer__disclaimer strong { color: var(--color-accent-light); }
 .footer__disclaimer-link { color: var(--color-accent-light); text-decoration: underline; }
@@ -141,7 +152,7 @@ const year = new Date().getFullYear();
 .footer__tagline {
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
-  color: hsl(220 20% 65%);
+  color: hsl(150 20% 60%);
   margin-bottom: var(--space-3);
   max-width: 36ch;
 }
@@ -150,8 +161,8 @@ const year = new Date().getFullYear();
   align-items: center;
   gap: var(--space-2);
   font-size: var(--text-xs);
-  color: hsl(220 20% 55%);
-  border: 1px solid hsl(220 20% 30%);
+  color: hsl(150 20% 50%);
+  border: 1px solid hsl(150 20% 25%);
   border-radius: var(--radius-full);
   padding: var(--space-1) var(--space-3);
 }
@@ -161,21 +172,21 @@ const year = new Date().getFullYear();
   font-weight: var(--font-semibold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: hsl(220 20% 55%);
+  color: hsl(150 20% 50%);
   margin-bottom: var(--space-4);
 }
 .footer__col ul { display: flex; flex-direction: column; gap: var(--space-3); }
 .footer__link {
   font-size: var(--text-sm);
-  color: hsl(220 20% 70%);
+  color: hsl(150 20% 68%);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 .footer__link:hover { color: white; }
 
 .footer__bottom {
-  border-top: 1px solid hsl(220 20% 25%);
+  border-top: 1px solid hsl(150 20% 20%);
   padding: var(--space-5) 0;
 }
-.footer__copy { font-size: var(--text-xs); color: hsl(220 20% 45%); }
+.footer__copy { font-size: var(--text-xs); color: hsl(150 20% 40%); }
 </style>

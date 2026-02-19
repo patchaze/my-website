@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Schengen Visa Strategy Call — Book a Session"
+  description="60-minute 1-on-1 call to review your visa plan, documents, and timeline. Educational guidance only."
+  breadcrumb={[
+    { name: 'Services', url: 'https://www.duriantravel.com/services/' },
+    { name: 'Visa Strategy Call', url: 'https://www.duriantravel.com/services/visa-strategy-call/' }
+  ]}
+>
+  <section class="hero-sm hero-gradient">
+    <div class="container">
+      <span class="section-label" style="color:var(--color-accent-light)">Service</span>
+      <h1 class="hero-sm__title" style="color:white">Visa Strategy Call</h1>
+      <p class="hero-sm__subtitle">A focused 60-minute 1-on-1 session to review your complete visa application strategy.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-layout">
+        <div class="service-content prose">
+          <h2>What We Cover</h2>
+          <p>This call is designed to give you complete clarity on your Schengen visa application. We walk through every element together:</p>
+          <ul>
+            <li>Your travel purpose and how to present it credibly</li>
+            <li>Document review — what's strong, what's missing</li>
+            <li>Cover letter strategy and key points to address</li>
+            <li>Financial proof assessment for your specific profile</li>
+            <li>Itinerary and accommodation alignment</li>
+            <li>Timeline planning and appointment preparation</li>
+            <li>Any previous refusals and how to address them</li>
+          </ul>
+
+          <h2>Who This Is For</h2>
+          <ul>
+            <li>First-time Schengen applicants who want to get it right</li>
+            <li>Applicants who've been refused before</li>
+            <li>Self-employed or freelance travelers with complex documentation</li>
+            <li>Anyone feeling overwhelmed by the process</li>
+          </ul>
+
+          <h2>What You Get</h2>
+          <ul>
+            <li>60-minute video call (Zoom or Google Meet)</li>
+            <li>Written action plan emailed after the call</li>
+            <li>7 days of follow-up questions via email</li>
+          </ul>
+
+          <div class="notice notice--warning">
+            <span>⚠️</span>
+            <p>
+              <strong>Disclaimer:</strong> This is educational guidance, not legal advice.
+              We do not submit applications, contact embassies on your behalf, or guarantee visa outcomes.
+            </p>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="price-card">
+            <span class="price-card__label">Investment</span>
+            <span class="price-card__price">€79</span>
+            <span class="price-card__detail">60-minute call + written plan</span>
+            <a href="/free-visa-audit/" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;margin-top:var(--space-4)">
+              Start with Free Audit →
+            </a>
+            <a href="/contact/" class="btn btn--secondary btn--sm" style="width:100%;justify-content:center;margin-top:var(--space-3)">
+              Ask a Question
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+.hero-sm { padding-block: var(--space-16); }
+.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+.hero-sm__subtitle { font-size: var(--text-lg); color: hsl(150 30% 75%); max-width: 52ch; line-height: var(--leading-relaxed); }
+
+.service-layout { display: grid; grid-template-columns: 1fr 320px; gap: var(--space-12); align-items: start; }
+@media (max-width: 860px) { .service-layout { grid-template-columns: 1fr; } }
+
+.price-card {
+  background: white;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  position: sticky;
+  top: 100px;
+}
+.price-card__label { display: block; font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-2); }
+.price-card__price { display: block; font-size: var(--text-5xl); font-weight: var(--font-extrabold); color: var(--color-primary); margin-bottom: var(--space-2); }
+.price-card__detail { display: block; font-size: var(--text-sm); color: var(--color-text-muted); }
+</style>

@@ -11,7 +11,7 @@ export interface Props {
 
 const {
   title = "Ready to apply with confidence?",
-  subtitle = "Book your free 20-minute Visa Readiness Audit. We'll review your strategy and identify exactly where to strengthen your application.",
+  subtitle = "Book a free 15-minute visa audit. We'll review your strategy and tell you exactly what to prioritise.",
   cta = "Book Free Audit",
   ctaHref = "/free-visa-audit/",
   ctaSecondary,
@@ -28,7 +28,7 @@ const {
         <p class="cta-banner__subtitle">{subtitle}</p>
       </div>
       <div class="cta-banner__actions">
-        <a href={ctaHref} class="btn btn--primary btn--lg">{cta}</a>
+        <a href={ctaHref} class="btn btn--accent btn--lg">{cta}</a>
         {ctaSecondary && ctaSecondaryHref && (
           <a href={ctaSecondaryHref} class="btn btn--ghost btn--lg">{ctaSecondary}</a>
         )}
@@ -57,7 +57,7 @@ const {
 .cta-banner__subtitle { font-size: var(--text-lg); opacity: 0.8; line-height: var(--leading-relaxed); }
 
 .cta-banner--dark .cta-banner__title    { color: white; }
-.cta-banner--dark .cta-banner__subtitle { color: hsl(220 20% 75%); }
+.cta-banner--dark .cta-banner__subtitle { color: hsl(150 25% 70%); }
 
 .cta-banner__actions {
   display: flex;

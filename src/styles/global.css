@@ -226,6 +226,19 @@ p {
     border-color: hsl(0 0% 100% / 0.7);
 }
 
+.btn--accent {
+    background: var(--color-accent);
+    color: var(--color-navy);
+    border-color: var(--color-accent);
+    font-weight: var(--font-bold);
+}
+
+.btn--accent:hover {
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    box-shadow: var(--shadow-md);
+}
+
 .btn--sm {
     padding: var(--space-2) var(--space-4);
     font-size: var(--text-sm);
@@ -681,7 +694,7 @@ tr:last-child td {
 
 /* ---------- Hero gradient overlay ---------- */
 .hero-gradient {
-    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 60%, hsl(218 55% 35%) 100%);
+    background: linear-gradient(135deg, hsl(152, 40%, 12%) 0%, hsl(152, 55%, 22%) 50%, hsl(165, 45%, 18%) 100%);
 }
 
 /* ---------- Animations ---------- */
