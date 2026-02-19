@@ -21,7 +21,7 @@ const {
   title,
   description,
   canonical,
-  ogImage = 'https://duriantravel.com/og-default.png',
+  ogImage = 'https://www.duriantravel.com/og-default.png',
   ogType = 'website',
   article,
   breadcrumb,
@@ -40,8 +40,8 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "DURIAN",
-  "url": "https://duriantravel.com",
-  "logo": "https://duriantravel.com/favicon.svg",
+  "url": "https://www.duriantravel.com",
+  "logo": "https://www.duriantravel.com/favicon.svg",
   "description": "Educational visa document strategy and preparation guidance. Not a law firm. Not a visa agent.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -58,12 +58,12 @@ if (Astro.url.pathname === '/') {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "DURIAN",
-    "url": "https://duriantravel.com",
+    "url": "https://www.duriantravel.com",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://duriantravel.com/blog/?q={search_term_string}"
+        "urlTemplate": "https://www.duriantravel.com/blog/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -80,7 +80,7 @@ if (breadcrumb && breadcrumb.length > 0) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://duriantravel.com/"
+        "item": "https://www.duriantravel.com/"
       },
       ...breadcrumb.map((item, index) => ({
         "@type": "ListItem",
@@ -103,15 +103,15 @@ if (article) {
     "author": {
       "@type": "Person",
       "name": article.author,
-      "url": "https://duriantravel.com/about/"
+      "url": "https://www.duriantravel.com/about/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "DURIAN",
-      "url": "https://duriantravel.com",
+      "url": "https://www.duriantravel.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://duriantravel.com/favicon.svg"
+        "url": "https://www.duriantravel.com/favicon.svg"
       }
     },
     "datePublished": article.datePublished,

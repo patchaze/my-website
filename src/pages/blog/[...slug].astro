@@ -19,7 +19,7 @@ const pubDateFormatted  = post.data.pubDate.toLocaleDateString('en-US', { year: 
 const modDateFormatted  = (post.data.modDate ?? post.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 const modDateISO        = (post.data.modDate ?? post.data.pubDate).toISOString();
 const pubDateISO        = post.data.pubDate.toISOString();
-const canonicalURL      = `https://duriantravel.com/blog/${post.slug}/`;
+const canonicalURL      = `https://www.duriantravel.com/blog/${post.slug}/`;
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -44,7 +44,7 @@ const faqSchema = {
     tags: post.data.tags
   }}
   breadcrumb={[
-    { name: 'Blog', url: 'https://duriantravel.com/blog/' },
+    { name: 'Blog', url: 'https://www.duriantravel.com/blog/' },
     { name: post.data.title, url: canonicalURL }
   ]}
 >
