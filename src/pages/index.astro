@@ -5,38 +5,32 @@ import BlogCard from '../components/BlogCard.astro';
 import CTABanner from '../components/CTABanner.astro';
 
 const services = [
-  { icon: '📞', title: 'Visa Strategy Call',       description: 'A focused 60-minute call to review your visa plan, documents, and timeline.', href: '/services/visa-strategy-call/', tags: ['60 min', 'Strategy'] },
-  { icon: '📄', title: 'Document Checklist Review', description: 'We check your visa documents against embassy requirements and flag what\'s missing.', href: '/services/document-review/', tags: ['Checklist', 'Review'] },
-  { icon: '🗺️', title: 'Itinerary Building',       description: 'Build a visa-compliant itinerary that matches your documents and travel purpose.', href: '/services/itinerary-building/', tags: ['Planning', 'Structure'] },
-  { icon: '💊', title: 'Travel Health Consult',    description: 'Pre-trip health prep: meds, prescriptions, pharmacy access, and vaccine guidance.', href: '/services/travel-health-consult/', tags: ['Health', 'Prep'] },
+  { icon: '🗺️', title: 'Trip Planning',         description: 'We build complete, day-by-day travel plans — flights, trains, activities, budgets — so you never have to guess.', href: '/services/itinerary-building/', tags: ['Planning', 'Itinerary'] },
+  { icon: '🏨', title: 'Accommodation',          description: 'We find and coordinate your stays — hotels, Airbnbs, hostels — matched to your budget and route.', href: '/services/', tags: ['Hotels', 'Booking'] },
+  { icon: '📄', title: 'Visa & Document Support', description: 'Need a Schengen visa? We review your documents, flag gaps, and help you present a strong application.', href: '/services/document-review/', tags: ['Visa', 'Checklist'] },
+  { icon: '📞', title: 'Consultancy Calls',       description: 'Book a 1-on-1 call. We answer your questions, review your plan, and give you clear next steps.', href: '/services/visa-strategy-call/', tags: ['1-on-1', 'Advice'] },
 ];
 
-const recentPosts = [
-  { title: 'Schengen Visa Document Checklist 2026', description: 'Everything you need in your Schengen visa package, explained step by step.', slug: 'schengen-document-checklist', pubDate: '2026-02-01', tags: ['Schengen', 'Documents'], readTime: 8 },
-  { title: 'How to Write a Visa Cover Letter', description: 'A strategic guide to writing a cover letter that communicates purpose and ties.', slug: 'how-to-write-visa-cover-letter', pubDate: '2026-02-10', tags: ['Cover Letter', 'Strategy'], readTime: 7 },
-  { title: 'Top 7 Visa Refusal Reasons',       description: 'Real reasons embassies deny applications — and how to prevent each one.', slug: 'visa-refusal-reasons', pubDate: '2026-02-15', tags: ['Refusal', 'Tips'], readTime: 6 },
+const strengths = [
+  { icon: '⚡', title: 'We Reply Fast',         desc: 'No waiting days for a response. We respond within hours, not weeks.' },
+  { icon: '📋', title: 'We Build Checklists',    desc: 'Everything you need — organised, prioritised, and easy to follow.' },
+  { icon: '🗺️', title: 'We Plan Every Detail',  desc: 'Day-by-day itineraries, transport links, accommodation — all mapped out.' },
+  { icon: '🏨', title: 'We Handle Accommodation', desc: 'We source and coordinate stays that fit your budget and route.' },
+  { icon: '💊', title: 'Pharmacist on the Team', desc: 'Travel health, medication rules, prescriptions — sorted before you fly.' },
+  { icon: '🤝', title: 'Personal Consultancy',   desc: '1-on-1 calls. Real humans. Tailored advice for your specific trip.' },
 ];
 
 const processSteps = [
-  { num: '1', title: 'Free Audit', desc: 'Book a free 15-minute review of your visa application plan.' },
-  { num: '2', title: 'Strategy Plan', desc: 'We identify gaps, risks, and create your personalised action plan.' },
-  { num: '3', title: 'Document Review', desc: 'We check every document against embassy requirements and flag issues.' },
-  { num: '4', title: 'Submit with Confidence', desc: 'You walk into the embassy with a complete, strategy-backed application.' },
+  { num: '1', title: 'Tell Us Your Trip', desc: 'Where you\'re going, when, and what kind of experience you want.' },
+  { num: '2', title: 'We Build Your Plan', desc: 'Full itinerary, accommodation options, transport, budgets, checklists.' },
+  { num: '3', title: 'Review Together', desc: 'A 1-on-1 call to walk through everything and answer your questions.' },
+  { num: '4', title: 'Travel with Confidence', desc: 'You go — with a plan, a checklist, and direct support if you need it.' },
 ];
 
-const countries = [
-  { name: 'Brazil',      flag: '🇧🇷', slug: 'brazilian' },
-  { name: 'India',       flag: '🇮🇳', slug: 'indian' },
-  { name: 'Philippines', flag: '🇵🇭', slug: 'filipino' },
-  { name: 'Nigeria',     flag: '🇳🇬', slug: 'nigerian' },
-  { name: 'Pakistan',    flag: '🇵🇰', slug: 'pakistani' },
-  { name: 'Indonesia',   flag: '🇮🇩', slug: 'indonesian' },
-  { name: 'Turkey',      flag: '🇹🇷', slug: 'turkish' },
-  { name: 'South Africa',flag: '🇿🇦', slug: 'south-african' },
-  { name: 'Egypt',       flag: '🇪🇬', slug: 'egyptian' },
-  { name: 'Thailand',    flag: '🇹🇭', slug: 'thai' },
-  { name: 'Morocco',     flag: '🇲🇦', slug: 'moroccan' },
-  { name: 'China',       flag: '🇨🇳', slug: 'chinese' },
+const recentPosts = [
+  { title: 'Planning Your First Europe Trip', description: 'A complete guide to budgeting, routing, and booking your first European adventure.', slug: 'planning-first-europe-trip', pubDate: '2026-02-01', tags: ['Planning', 'Europe'], readTime: 8 },
+  { title: 'How to Write a Visa Cover Letter', description: 'A strategic guide to writing a cover letter that communicates purpose and ties.', slug: 'how-to-write-visa-cover-letter', pubDate: '2026-02-10', tags: ['Visa', 'Strategy'], readTime: 7 },
+  { title: 'Packing for Europe: The Only List You Need', description: 'Carry-on vs check-in, liquids, electronics, medications — all covered.', slug: 'packing-europe-list', pubDate: '2026-02-15', tags: ['Packing', 'Tips'], readTime: 6 },
 ];
 
 const faqSchema = {
@@ -45,36 +39,36 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is a Schengen tourist visa?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A Schengen tourist visa (Type C) allows you to visit up to 29 European countries for up to 90 days within a 180-day period. You apply at the embassy or consulate of the country you'll spend the most time in." }
+      "name": "What does DURIAN Travel do?",
+      "acceptedAnswer": { "@type": "Answer", "text": "DURIAN Travel is a travel planning consultancy. We build complete trip plans, coordinate accommodation, create checklists, and provide 1-on-1 consultancy. We also help with Schengen visa document preparation." }
     },
     {
       "@type": "Question",
-      "name": "Is DURIAN Travel a law firm?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. DURIAN Travel is an educational visa strategy consultancy. We provide document review guidance, checklists, and travel planning — not legal advice or immigration representation." }
+      "name": "Do you book flights and hotels for me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We research and recommend the best options for your budget and route. We can coordinate bookings or guide you through doing it yourself — whichever you prefer." }
     },
     {
       "@type": "Question",
-      "name": "Can you guarantee my visa will be approved?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No one can guarantee a visa approval — and you should be suspicious of anyone who claims to. We help you present the strongest possible application based on official requirements." }
+      "name": "How fast do you respond?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We respond within hours, not days. For active clients, we maintain ongoing communication throughout the planning process." }
     },
     {
       "@type": "Question",
-      "name": "What does the free visa audit include?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A free 15-minute call where we review your current application strategy, identify the biggest risks, and tell you exactly what to prioritise before submission." }
+      "name": "Can you help with my Schengen visa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — visa document review is one of our services. We check your documents, flag gaps, and help you prepare a strong application. We are not lawyers and do not guarantee approval." }
     },
     {
       "@type": "Question",
-      "name": "Who is behind DURIAN Travel?",
-      "acceptedAnswer": { "@type": "Answer", "text": "DURIAN Travel was founded by a licensed pharmacist turned travel consultant with personal Schengen visa experience and a background in detail-oriented documentation processes." }
+      "name": "How much do your services cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Services start from €29 for a document checklist review. Full trip planning and consultancy packages are available. Book a free 15-minute call to discuss your needs." }
     }
   ]
 };
 ---
 
 <BaseLayout
-  title="DURIAN — Schengen Visa Help & Europe Travel Planning"
-  description="Expert Schengen visa guidance, document review, and Europe travel planning. Not lawyers. Not the embassy. Just clear help."
+  title="DURIAN — Europe Travel Planning, Accommodation & Consultancy"
+  description="We plan trips, find accommodation, build checklists, and respond fast. Europe travel consultancy with visa support."
   schema={faqSchema}
 >
 
@@ -84,49 +78,56 @@ const faqSchema = {
       <div class="hero__inner">
         <div class="hero__content">
           <div class="badge badge--accent hero__badge">
-            📋 Educational Guidance Only — We Are Not Lawyers
+            🗺️ Europe Travel Planning & Consultancy
           </div>
           <h1 id="hero-heading" class="hero__title">
-            Don't Let a Weak Application<br />
-            <span class="hero__title-accent">Cost You Your Visa</span>
+            We Plan Your Trip.<br />
+            <span class="hero__title-accent">Every Single Detail.</span>
           </h1>
           <p class="hero__subtitle">
-            Schengen visa guidance and Europe travel support you can actually understand.
-            We help you prepare documents, plan your trip, and avoid common mistakes.
+            Accommodation, itineraries, checklists, visa support — we handle it all.
+            Tell us where you're going, and we'll build the plan.
           </p>
           <div class="hero__actions">
             <a href="/free-visa-audit/" class="btn btn--accent btn--lg">
-              Book Free 15-Min Audit
+              Book Free 15-Min Call
             </a>
-            <a href="/schengen-visa-guide/" class="btn btn--ghost btn--lg">
-              Schengen Visa Guide →
+            <a href="/services/" class="btn btn--ghost btn--lg">
+              See Our Services →
             </a>
           </div>
           <div class="hero__trust">
             <div class="hero__stars" aria-label="5 stars rating">★★★★★</div>
-            <span>Trusted by applicants from 40+ countries</span>
+            <span>Trusted by travelers from 40+ countries</span>
           </div>
         </div>
         <div class="hero__visual" aria-hidden="true">
           <div class="hero__card-stack">
             <div class="hero__doc-card hero__doc-card--1">
-              <div class="hero__doc-icon">📄</div>
+              <div class="hero__doc-icon">🗺️</div>
               <div class="hero__doc-text">
-                <span>Document Package</span>
-                <span class="hero__doc-status hero__doc-status--ok">✓ Complete</span>
+                <span>Travel Itinerary</span>
+                <span class="hero__doc-status hero__doc-status--ok">✓ Day-by-day plan ready</span>
               </div>
             </div>
             <div class="hero__doc-card hero__doc-card--2">
-              <div class="hero__doc-icon">✉️</div>
+              <div class="hero__doc-icon">🏨</div>
               <div class="hero__doc-text">
-                <span>Cover Letter</span>
-                <span class="hero__doc-status hero__doc-status--ok">✓ Strong</span>
+                <span>Accommodation</span>
+                <span class="hero__doc-status hero__doc-status--ok">✓ 4 hotels booked</span>
               </div>
             </div>
             <div class="hero__doc-card hero__doc-card--3">
-              <div class="hero__doc-icon">💰</div>
+              <div class="hero__doc-icon">📋</div>
               <div class="hero__doc-text">
-                <span>Financial Proof</span>
+                <span>Trip Checklist</span>
+                <span class="hero__doc-status hero__doc-status--ok">✓ 18/18 items done</span>
+              </div>
+            </div>
+            <div class="hero__doc-card hero__doc-card--4">
+              <div class="hero__doc-icon">📄</div>
+              <div class="hero__doc-text">
+                <span>Visa Documents</span>
                 <span class="hero__doc-status hero__doc-status--warn">⚠ Review needed</span>
               </div>
             </div>
@@ -136,62 +137,34 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- DEFINITION BOX — AI Quotable -->
-  <section class="def-section" aria-labelledby="def-heading">
-    <div class="container container--narrow">
-      <div class="def-box">
-        <h2 id="def-heading" class="def-box__title">🇪🇺 What Is a Schengen Tourist Visa?</h2>
-        <p class="def-box__text">
-          A <strong>Schengen tourist visa</strong> (Type C) is a short-stay visa that allows holders
-          to visit up to <strong>29 European countries</strong> for up to <strong>90 days within a 180-day period</strong>.
-          You apply at the embassy or consulate of the country where you'll spend the most time.
-          The visa does not guarantee entry — it permits you to present yourself at the border.
-        </p>
-        <p class="def-box__source">Source: European Commission — <a href="https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa_en" rel="noopener" target="_blank" class="link">Schengen Borders & Visa Policy</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT WE DO vs DON'T DO -->
-  <section class="section section--tinted" aria-labelledby="wwd-heading">
-    <div class="container container--narrow">
+  <!-- WHY DURIAN — Core Strengths -->
+  <section class="section" aria-labelledby="strengths-heading">
+    <div class="container">
       <header class="section-header text-center">
-        <span class="section-label">Transparency</span>
-        <h2 id="wwd-heading" class="section-title">What We Do vs What We Don't Do</h2>
+        <span class="section-label">Why DURIAN</span>
+        <h2 id="strengths-heading" class="section-title">We Don't Just Give Advice — We Do the Work</h2>
+        <p class="section-subtitle" style="margin-inline:auto">
+          Most consultancies talk. We plan, book, organise, and support — from first call to landing day.
+        </p>
       </header>
-      <div class="not-grid">
-        <div class="not-col not-col--yes">
-          <h3 class="not-col__title not-col__title--yes">✅ What We Do</h3>
-          <ul class="check-list">
-            <li>Review your visa documents against embassy checklists</li>
-            <li>Help you write a credible cover letter</li>
-            <li>Build visa-compliant travel itineraries</li>
-            <li>Explain proof of funds requirements</li>
-            <li>Provide travel health and packing guidance</li>
-            <li>Analyse refusals and plan reapplications</li>
-          </ul>
-        </div>
-        <div class="not-col not-col--no">
-          <h3 class="not-col__title not-col__title--no">🚫 What We Don't Do</h3>
-          <ul class="x-list">
-            <li>Submit visa applications on your behalf</li>
-            <li>Provide legal advice or representation</li>
-            <li>Guarantee visa approval</li>
-            <li>Act as the embassy or consulate</li>
-            <li>Replace qualified immigration lawyers</li>
-            <li>Make false promises about outcomes</li>
-          </ul>
-        </div>
+      <div class="strengths-grid">
+        {strengths.map(s => (
+          <div class="strength-card">
+            <span class="strength-card__icon">{s.icon}</span>
+            <h3 class="strength-card__title">{s.title}</h3>
+            <p class="strength-card__desc">{s.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- HOW WE HELP — 4 Steps -->
-  <section class="section" aria-labelledby="process-heading">
+  <!-- HOW IT WORKS — 4 Steps -->
+  <section class="section section--tinted" aria-labelledby="process-heading">
     <div class="container">
       <header class="section-header text-center">
         <span class="section-label">How It Works</span>
-        <h2 id="process-heading" class="section-title">4 Steps to a Stronger Application</h2>
+        <h2 id="process-heading" class="section-title">From Idea to Itinerary in 4 Steps</h2>
       </header>
       <div class="process-grid">
         {processSteps.map(step => (
@@ -206,86 +179,78 @@ const faqSchema = {
   </section>
 
   <!-- SERVICES -->
-  <section class="section section--tinted" aria-labelledby="services-heading">
+  <section class="section" aria-labelledby="services-heading">
     <div class="container">
       <header class="section-header text-center">
-        <span class="section-label">Services</span>
-        <h2 id="services-heading" class="section-title">Expert Guidance, Not Empty Promises</h2>
+        <span class="section-label">What We Offer</span>
+        <h2 id="services-heading" class="section-title">Everything You Need for Your Trip</h2>
         <p class="section-subtitle" style="margin-inline:auto">
-          Each service is designed to educate and empower — not to submit applications on your behalf. Starting from €29.
+          Trip planning, accommodation, visa support, health prep, and personal consultancy. Starting from €29.
         </p>
       </header>
       <div class="grid-2">
         {services.map(s => <ServiceCard {...s} />)}
       </div>
       <div class="text-center mt-8">
-        <a href="/services/" class="btn btn--secondary">View All Services →</a>
+        <a href="/services/" class="btn btn--secondary">See All Services →</a>
       </div>
     </div>
   </section>
 
-  <!-- COUNTRY SELECTOR -->
-  <section class="section" aria-labelledby="country-heading">
+  <!-- FAST RESPONSE BANNER -->
+  <section class="fast-banner">
     <div class="container">
-      <header class="section-header text-center">
-        <span class="section-label">Country-Specific Guides</span>
-        <h2 id="country-heading" class="section-title">Where Are You Applying From?</h2>
-        <p class="section-subtitle" style="margin-inline:auto">
-          Select your nationality for a tailored Schengen visa guide with country-specific requirements.
-        </p>
-      </header>
-      <div class="country-grid">
-        {countries.map(c => (
-          <a href={`/schengen-visa-guide/nationals/${c.slug}/`} class="country-card">
-            <span class="country-card__flag">{c.flag}</span>
-            <span class="country-card__name">{c.name}</span>
-          </a>
-        ))}
-      </div>
-      <div class="text-center mt-6">
-        <a href="/schengen-visa-guide/" class="btn btn--secondary">See All Nationalities →</a>
+      <div class="fast-banner__inner">
+        <div class="fast-banner__icon">⚡</div>
+        <div>
+          <h2 class="fast-banner__title">We Reply in Hours, Not Days</h2>
+          <p class="fast-banner__text">
+            Got a question at midnight? Send it. Planning changes last minute? We adapt.
+            Active clients get direct access to our team — no ticketing systems, no waiting.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CHECKLIST PREVIEW -->
+  <!-- WHAT'S IN YOUR PLAN -->
   <section class="section section--tinted" aria-labelledby="checklist-heading">
     <div class="container">
       <div class="feature-row">
         <div class="feature-row__content">
-          <span class="section-label">Free Checklist</span>
-          <h2 id="checklist-heading" class="section-title">Schengen Visa Document Checklist</h2>
+          <span class="section-label">What You Get</span>
+          <h2 id="checklist-heading" class="section-title">Your Complete Trip Package</h2>
           <p style="font-size:var(--text-lg);color:var(--color-text-muted);line-height:var(--leading-relaxed);margin-bottom:var(--space-6)">
-            Don't submit without checking every item. Here's what most embassies require:
+            When we plan your trip, you get everything — not just an itinerary:
           </p>
           <ol class="checklist-preview">
-            <li>✅ Valid passport (6+ months, 2 blank pages)</li>
-            <li>✅ Completed application form</li>
-            <li>✅ Passport-sized photos (recent, white background)</li>
-            <li>✅ Travel insurance (€30,000+ coverage)</li>
-            <li>✅ Flight reservation (round-trip)</li>
-            <li>✅ Hotel booking or accommodation proof</li>
-            <li>✅ Bank statements (last 3-6 months)</li>
-            <li>✅ Cover letter explaining travel purpose</li>
+            <li>✅ Day-by-day itinerary with transport links</li>
+            <li>✅ Accommodation options matched to your budget</li>
+            <li>✅ Pre-departure checklist (documents, packing, meds)</li>
+            <li>✅ Budget breakdown with estimated daily costs</li>
+            <li>✅ Local tips — SIM cards, transport passes, must-knows</li>
+            <li>✅ Emergency contacts and pharmacy locations</li>
+            <li>✅ Visa document checklist (if applicable)</li>
+            <li>✅ Direct support throughout the planning process</li>
           </ol>
           <div class="mt-6" style="display:flex;gap:var(--space-4);flex-wrap:wrap">
-            <a href="/schengen-visa-guide/required-documents/" class="btn btn--primary">See Full Checklist →</a>
-            <a href="/resources/" class="btn btn--secondary">Download PDF ↓</a>
+            <a href="/free-visa-audit/" class="btn btn--primary">Book Free Call →</a>
+            <a href="/services/" class="btn btn--secondary">View Services</a>
           </div>
         </div>
         <div class="feature-row__visual" aria-hidden="true">
           <div class="guide-preview">
             <div class="guide-preview__header">
-              <span>🇪🇺 Schengen Visa Guide 2026</span>
-              <span class="badge badge--success">Free</span>
+              <span>🗺️ Your Trip Plan</span>
+              <span class="badge badge--success">Included</span>
             </div>
             <ul class="guide-preview__toc">
-              <li>→ Document Requirements</li>
-              <li>→ Financial Proof Standards</li>
-              <li>→ Cover Letter Strategy</li>
-              <li>→ Travel Itinerary</li>
-              <li>→ Interview Tips</li>
-              <li>→ Refusal Prevention</li>
+              <li>→ Day 1–3: Paris — Montmartre, Louvre, Seine</li>
+              <li>→ Day 4–5: Train to Barcelona</li>
+              <li>→ Day 6–7: Barcelona — Sagrada, Gothic Quarter</li>
+              <li>→ Day 8: Fly home — BCN Airport</li>
+              <li>→ Budget: €1,240 total (€155/day)</li>
+              <li>→ Hotels: 3 confirmed bookings</li>
             </ul>
           </div>
         </div>
@@ -297,35 +262,32 @@ const faqSchema = {
   <section class="section" aria-labelledby="testimonials-heading">
     <div class="container">
       <header class="section-header text-center">
-        <span class="section-label">Client Experiences</span>
-        <h2 id="testimonials-heading" class="section-title">What Applicants Say</h2>
-        <p class="section-subtitle" style="margin-inline:auto">
-          Honest accounts of the preparation experience. We never ask clients about their visa outcome.
-        </p>
+        <span class="section-label">What Clients Say</span>
+        <h2 id="testimonials-heading" class="section-title">Real People, Real Trips</h2>
       </header>
       <div class="grid-3">
         <blockquote class="testimonial-card">
           <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-card__quote">"The document review caught three gaps I never would have spotted. My application was much stronger because of it."</p>
+          <p class="testimonial-card__quote">"They planned my entire 12-day Italy trip — flights, trains, hotels, everything. I just showed up and enjoyed it."</p>
           <footer class="testimonial-card__footer">
             <strong class="testimonial-card__name">Maria S.</strong>
-            <span class="testimonial-card__meta">Brazil · Schengen Tourist Visa</span>
+            <span class="testimonial-card__meta">Brazil · Italy Trip</span>
           </footer>
         </blockquote>
         <blockquote class="testimonial-card">
           <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-card__quote">"After my first refusal I was lost. The refusal analysis helped me understand exactly what went wrong and how to fix it."</p>
+          <p class="testimonial-card__quote">"I messaged them at 11pm with a question about my booking. Had a reply before midnight. That's the kind of support you can't find anywhere."</p>
           <footer class="testimonial-card__footer">
             <strong class="testimonial-card__name">Aarav P.</strong>
-            <span class="testimonial-card__meta">India · Schengen Tourist Visa</span>
+            <span class="testimonial-card__meta">India · France + Spain</span>
           </footer>
         </blockquote>
         <blockquote class="testimonial-card">
           <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-card__quote">"I didn't know how to present my finances as a freelancer. The guidance completely changed how I structured my proof."</p>
+          <p class="testimonial-card__quote">"The checklist alone saved me hours. Every document, every booking, every detail — all organised in one place."</p>
           <footer class="testimonial-card__footer">
             <strong class="testimonial-card__name">Ana R.</strong>
-            <span class="testimonial-card__meta">Philippines · UK Visitor Visa</span>
+            <span class="testimonial-card__meta">Philippines · Portugal Trip</span>
           </footer>
         </blockquote>
       </div>
@@ -359,31 +321,35 @@ const faqSchema = {
       </header>
       <div class="faq-list">
         <details class="faq-item">
-          <summary class="faq-item__q">What is a Schengen tourist visa?</summary>
-          <p class="faq-item__a">A Schengen tourist visa (Type C) allows you to visit up to 29 European countries for up to 90 days within a 180-day period. You apply at the embassy or consulate of the country you'll spend the most time in.</p>
+          <summary class="faq-item__q">What does DURIAN Travel actually do?</summary>
+          <p class="faq-item__a">We're a travel planning consultancy. We build complete trip plans — itinerary, accommodation, transport, checklists, budgets — and provide 1-on-1 support throughout. We also help with Schengen visa document preparation.</p>
         </details>
         <details class="faq-item">
-          <summary class="faq-item__q">Is DURIAN Travel a law firm or immigration lawyer?</summary>
-          <p class="faq-item__a">No. We provide educational visa strategy guidance and document review. We are not lawyers, not the embassy, and we do not provide legal representation. For legal advice, consult a qualified immigration attorney.</p>
+          <summary class="faq-item__q">Do you book flights and hotels?</summary>
+          <p class="faq-item__a">We research and recommend the best options for your budget and route. We can coordinate bookings or guide you through doing it yourself — whichever you prefer.</p>
         </details>
         <details class="faq-item">
-          <summary class="faq-item__q">Can you guarantee my visa approval?</summary>
-          <p class="faq-item__a">No — and you should be suspicious of anyone who claims to. Visa decisions are made solely by consular officers. We help you present the strongest possible application.</p>
+          <summary class="faq-item__q">How fast do you respond?</summary>
+          <p class="faq-item__a">Within hours. Active clients have direct access to our team. No ticketing systems, no waiting days for a reply.</p>
         </details>
         <details class="faq-item">
-          <summary class="faq-item__q">What does the free visa audit include?</summary>
-          <p class="faq-item__a">A free 15-minute session where we review your current application strategy, identify the biggest risks, and tell you exactly what to prioritise before submission. No commitment required.</p>
+          <summary class="faq-item__q">Can you help with my Schengen visa?</summary>
+          <p class="faq-item__a">Yes — visa document review is one of our services. We check your documents, flag gaps, and help you prepare. We're not lawyers and don't guarantee approval, but we make sure your application is as strong as possible.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-item__q">How much do your services cost?</summary>
-          <p class="faq-item__a">Our services start from €29 for a document checklist review. Strategy calls are €79 for 60 minutes. See our full pricing on the services page.</p>
+          <p class="faq-item__a">Services start from €29. Full trip planning packages depend on the complexity of your trip. Book a free 15-minute call and we'll give you a clear quote.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <CTABanner />
+  <CTABanner
+    title="Ready to plan your trip?"
+    subtitle="Book a free 15-minute call. Tell us where you want to go — we'll show you what we can do."
+    cta="Book Free Call"
+  />
 
 </BaseLayout>
 
@@ -447,6 +413,7 @@ const faqSchema = {
 .hero__doc-card--1 { animation: slideIn 0.5s ease 0s both; }
 .hero__doc-card--2 { animation: slideIn 0.5s ease 0.1s both; }
 .hero__doc-card--3 { animation: slideIn 0.5s ease 0.2s both; }
+.hero__doc-card--4 { animation: slideIn 0.5s ease 0.3s both; }
 @keyframes slideIn { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
 .hero__doc-icon { font-size: 1.5rem; }
 .hero__doc-text { display: flex; flex-direction: column; gap: 2px; color: white; font-size: var(--text-sm); font-weight: var(--font-medium); }
@@ -454,32 +421,26 @@ const faqSchema = {
 .hero__doc-status--ok   { color: hsl(145 60% 65%); }
 .hero__doc-status--warn { color: var(--color-accent-light); }
 
-/* Definition box */
-.def-section { padding-block: var(--space-12); background: white; }
-.def-box {
-  background: hsl(150 25% 96%);
-  border: 2px solid hsl(152 35% 80%);
-  border-left: 5px solid var(--color-primary);
-  border-radius: var(--radius-xl);
-  padding: var(--space-8);
-}
-.def-box__title { font-size: var(--text-xl); font-weight: var(--font-bold); color: var(--color-primary-dark); margin-bottom: var(--space-4); }
-.def-box__text { font-size: var(--text-base); line-height: var(--leading-relaxed); color: var(--color-text); margin-bottom: var(--space-3); }
-.def-box__source { font-size: var(--text-xs); color: var(--color-text-muted); }
-
-/* What we do grid */
-.not-grid {
+/* Strengths grid */
+.strengths-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-8);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
 }
-@media (max-width: 640px) { .not-grid { grid-template-columns: 1fr; } }
-.not-col { background: white; border-radius: var(--radius-xl); padding: var(--space-8); border: 1px solid var(--color-border); }
-.not-col--yes { border-left: 4px solid var(--color-success); }
-.not-col--no { border-left: 4px solid var(--color-danger); }
-.not-col__title { font-size: var(--text-xl); font-weight: var(--font-bold); margin-bottom: var(--space-5); }
-.not-col__title--yes { color: var(--color-success); }
-.not-col__title--no  { color: var(--color-danger); }
+@media (max-width: 768px) { .strengths-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .strengths-grid { grid-template-columns: 1fr; } }
+.strength-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.strength-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.strength-card__icon { font-size: 2rem; display: block; margin-bottom: var(--space-3); }
+.strength-card__title { font-size: var(--text-base); font-weight: var(--font-bold); color: var(--color-text); margin-bottom: var(--space-2); }
+.strength-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
 
 /* Process grid */
 .process-grid {
@@ -514,28 +475,23 @@ const faqSchema = {
 .process-card__title { font-size: var(--text-lg); font-weight: var(--font-semibold); color: var(--color-text); margin-bottom: var(--space-2); }
 .process-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
 
-/* Country grid */
-.country-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: var(--space-3);
+/* Fast response banner */
+.fast-banner {
+  background: var(--color-navy);
+  color: white;
+  padding-block: var(--space-12);
 }
-.country-card {
+.fast-banner__inner {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  gap: var(--space-8);
 }
-.country-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-sm); }
-.country-card__flag { font-size: 1.25rem; }
+@media (max-width: 640px) {
+  .fast-banner__inner { flex-direction: column; text-align: center; }
+}
+.fast-banner__icon { font-size: 3rem; flex-shrink: 0; }
+.fast-banner__title { font-size: var(--text-2xl); font-weight: var(--font-bold); margin-bottom: var(--space-2); }
+.fast-banner__text { font-size: var(--text-base); color: hsl(150 25% 70%); line-height: var(--leading-relaxed); max-width: 55ch; }
 
 /* Checklist preview */
 .checklist-preview {
