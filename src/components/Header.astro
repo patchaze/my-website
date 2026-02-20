@@ -22,13 +22,13 @@ function isActive(href: string) {
       <a href="/" class="nav__logo" aria-label="DURIAN Travel — Home">
         <span class="nav__logo-icon" aria-hidden="true">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="36" height="36" rx="10" fill="hsl(152,55%,28%)"/>
-            <text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="hsl(42,90%,55%)">D</text>
+            <rect width="36" height="36" rx="10" fill="#1B3A5C"/>
+            <text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="#D85F4A">D</text>
           </svg>
         </span>
         <span class="nav__logo-text">
           <span class="nav__logo-brand">DURIAN</span>
-          <span class="nav__logo-sub">Travel Insights</span>
+          <span class="nav__logo-sub">Travel</span>
         </span>
       </a>
 
@@ -48,7 +48,7 @@ function isActive(href: string) {
       </ul>
 
       <!-- CTA -->
-      <a href="/free-visa-audit/" class="btn btn--primary btn--sm nav__cta">
+      <a href="/free-visa-audit/" class="btn btn--accent btn--sm nav__cta">
         Free Audit
       </a>
 
@@ -72,7 +72,7 @@ function isActive(href: string) {
             </li>
           ))}
           <li>
-            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="margin-top:0.75rem;justify-content:center">
+            <a href="/free-visa-audit/" class="btn btn--accent w-full" style="margin-top:0.75rem;justify-content:center">
               Book Free Audit
             </a>
           </li>
@@ -110,7 +110,7 @@ function isActive(href: string) {
 }
 .nav__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .nav__logo-brand { font-size: var(--text-base); font-weight: var(--font-bold); color: var(--color-primary); letter-spacing: -0.02em; }
-.nav__logo-sub   { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: var(--font-medium); text-transform: uppercase; letter-spacing: 0.08em; }
+.nav__logo-sub   { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: var(--font-medium); letter-spacing: 0.08em; }
 
 /* Desktop nav links */
 .nav__links {
@@ -130,7 +130,7 @@ function isActive(href: string) {
   border-radius: var(--radius-md);
   transition: color var(--transition-fast), background var(--transition-fast);
 }
-.nav__link:hover        { color: var(--color-primary); background: var(--color-surface-2); }
+.nav__link:hover        { color: var(--color-primary); background: var(--color-bg-alt); }
 .nav__link--active      { color: var(--color-primary); font-weight: var(--font-semibold); }
 
 /* CTA */
@@ -172,7 +172,7 @@ function isActive(href: string) {
   border-radius: var(--radius-md);
   transition: background var(--transition-fast), color var(--transition-fast);
 }
-.nav__mobile-link:hover       { background: var(--color-surface-2); color: var(--color-primary); }
+.nav__mobile-link:hover       { background: var(--color-bg-alt); color: var(--color-primary); }
 .nav__mobile-link--active     { color: var(--color-primary); font-weight: var(--font-semibold); }
 
 /* Mobile breakpoint */
