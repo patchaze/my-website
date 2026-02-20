@@ -35,13 +35,19 @@ function isActive(href: string) {
       <ul class="nav__links" role="list">
         {navLinks.map(link => (
           <li>
-            <a
-              href={link.href}
-              class={`nav__link ${isActive(link.href) ? 'nav__link--active' : ''}`}
-              aria-current={isActive(link.href) ? 'page' : undefined}
-            >
-              {link.label}
-            </a>
+            {link.href && link.href !== '/travel-planning/' ? (
+              <a
+                href={link.href}
+                class={`nav__link ${isActive(link.href) ? 'nav__link--active' : ''}`}
+                aria-current={isActive(link.href) ? 'page' : undefined}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <span class="nav__link" style="cursor: default; opacity: 0.6;">
+                {link.label}
+              </span>
+            )}
           </li>
         ))}
       </ul>
@@ -62,12 +68,18 @@ function isActive(href: string) {
         <ul role="list">
           {navLinks.map(link => (
             <li>
-              <a
-                href={link.href}
-                class={`nav__mobile-link ${isActive(link.href) ? 'nav__mobile-link--active' : ''}`}
-              >
-                {link.label}
-              </a>
+              {link.href && link.href !== '/travel-planning/' ? (
+                <a
+                  href={link.href}
+                  class={`nav__mobile-link ${isActive(link.href) ? 'nav__mobile-link--active' : ''}`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <span class="nav__mobile-link" style="opacity: 0.6;">
+                  {link.label}
+                </span>
+              )}
             </li>
           ))}
           <li>
