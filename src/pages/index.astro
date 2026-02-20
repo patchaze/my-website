@@ -1,30 +1,48 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
 import BlogCard from '../components/BlogCard.astro';
 import CTABanner from '../components/CTABanner.astro';
 
-const services = [
-  { icon: '🗺️', title: 'Trip Planning',         description: 'We build complete, day-by-day travel plans — flights, trains, activities, budgets — so you never have to guess.', href: '/services/itinerary-building/', tags: ['Planning', 'Itinerary'] },
-  { icon: '🏨', title: 'Accommodation',          description: 'We find and coordinate your stays — hotels, Airbnbs, hostels — matched to your budget and route.', href: '/services/', tags: ['Hotels', 'Booking'] },
-  { icon: '📄', title: 'Visa & Document Support', description: 'Need a Schengen visa? We review your documents, flag gaps, and help you present a strong application.', href: '/services/document-review/', tags: ['Visa', 'Checklist'] },
-  { icon: '📞', title: 'Consultancy Calls',       description: 'Book a 1-on-1 call. We answer your questions, review your plan, and give you clear next steps.', href: '/services/visa-strategy-call/', tags: ['1-on-1', 'Advice'] },
-];
-
-const strengths = [
-  { icon: '⚡', title: 'We Reply Fast',         desc: 'No waiting days for a response. We respond within hours, not weeks.' },
-  { icon: '📋', title: 'We Build Checklists',    desc: 'Everything you need — organised, prioritised, and easy to follow.' },
-  { icon: '🗺️', title: 'We Plan Every Detail',  desc: 'Day-by-day itineraries, transport links, accommodation — all mapped out.' },
-  { icon: '🏨', title: 'We Handle Accommodation', desc: 'We source and coordinate stays that fit your budget and route.' },
-  { icon: '💊', title: 'Pharmacist on the Team', desc: 'Travel health, medication rules, prescriptions — sorted before you fly.' },
-  { icon: '🤝', title: 'Personal Consultancy',   desc: '1-on-1 calls. Real humans. Tailored advice for your specific trip.' },
+const expertise = [
+  {
+    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#D85F4A" stroke-width="2"/><path d="M24 14v6l4 4" stroke="#D85F4A" stroke-width="2" stroke-linecap="round"/><path d="M16 30h16M18 34h12" stroke="#D85F4A" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+    title: 'Bespoke Itineraries',
+    desc: 'Tailor-made travel plans designed around your unique interests and pace.',
+    link: '/services/itinerary-building/',
+    linkText: 'Learn More',
+    tags: ['Custom', 'Planning'],
+  },
+  {
+    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#D85F4A" stroke-width="2"/><rect x="16" y="18" width="16" height="12" rx="2" stroke="#D85F4A" stroke-width="2"/><path d="M20 18v-2a4 4 0 018 0v2" stroke="#D85F4A" stroke-width="2"/></svg>`,
+    title: 'Curated Stays',
+    desc: 'Hand-selected boutique hotels, private villas, and exclusive resorts.',
+    link: '/services/',
+    linkText: 'Discover Accommodations',
+    tags: ['Hotels', 'Villas'],
+  },
+  {
+    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#D85F4A" stroke-width="2"/><path d="M16 20c0-4 3.5-6 8-6s8 2 8 6c0 6-8 12-8 12s-8-6-8-12z" stroke="#D85F4A" stroke-width="2"/></svg>`,
+    title: 'Cultural Experiences',
+    desc: 'Private dining, chef\'s tables, and authentic local food tours.',
+    link: '/services/',
+    linkText: 'See Offerings',
+    tags: ['Food', 'Culture'],
+  },
+  {
+    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#D85F4A" stroke-width="2"/><path d="M24 16v16M16 24h16" stroke="#D85F4A" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="#D85F4A" stroke-width="1.5"/></svg>`,
+    title: 'Exclusive Access',
+    desc: 'VIP entry, behind-the-scenes tours, and personal travel guides.',
+    link: '/services/',
+    linkText: 'Find Out How',
+    tags: ['VIP', 'Exclusive'],
+  },
 ];
 
 const processSteps = [
-  { num: '1', title: 'Tell Us Your Trip', desc: 'Where you\'re going, when, and what kind of experience you want.' },
-  { num: '2', title: 'We Build Your Plan', desc: 'Full itinerary, accommodation options, transport, budgets, checklists.' },
-  { num: '3', title: 'Review Together', desc: 'A 1-on-1 call to walk through everything and answer your questions.' },
-  { num: '4', title: 'Travel with Confidence', desc: 'You go — with a plan, a checklist, and direct support if you need it.' },
+  { num: '1', title: 'CONSULTATION', desc: 'Initial discussion to understand your travel desires and preferences.' },
+  { num: '2', title: 'DESIGN', desc: 'We craft a personalised itinerary with unique experiences and accommodations.' },
+  { num: '3', title: 'REFINE', desc: 'Collaboration to perfect every detail of your journey.' },
+  { num: '4', title: 'EXPERIENCE', desc: 'Enjoy a seamless, stress-free trip with 24/7 support.' },
 ];
 
 const recentPosts = [
@@ -72,236 +90,102 @@ const faqSchema = {
   schema={faqSchema}
 >
 
-  <!-- HERO -->
-  <section class="hero hero-gradient" aria-labelledby="hero-heading">
-    <div class="container">
-      <div class="hero__inner">
-        <div class="hero__content">
-          <div class="badge badge--accent hero__badge">
-            🗺️ Europe Travel Planning & Consultancy
-          </div>
-          <h1 id="hero-heading" class="hero__title">
-            We Plan Your Trip.<br />
-            <span class="hero__title-accent">Every Single Detail.</span>
-          </h1>
-          <p class="hero__subtitle">
-            Accommodation, itineraries, checklists, visa support — we handle it all.
-            Tell us where you're going, and we'll build the plan.
-          </p>
-          <div class="hero__actions">
-            <a href="/free-visa-audit/" class="btn btn--accent btn--lg">
-              Book Free 15-Min Call
-            </a>
-            <a href="/services/" class="btn btn--ghost btn--lg">
-              See Our Services →
-            </a>
-          </div>
-          <div class="hero__trust">
-            <div class="hero__stars" aria-label="5 stars rating">★★★★★</div>
-            <span>Trusted by travelers from 40+ countries</span>
-          </div>
-        </div>
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__card-stack">
-            <div class="hero__doc-card hero__doc-card--1">
-              <div class="hero__doc-icon">🗺️</div>
-              <div class="hero__doc-text">
-                <span>Travel Itinerary</span>
-                <span class="hero__doc-status hero__doc-status--ok">✓ Day-by-day plan ready</span>
-              </div>
-            </div>
-            <div class="hero__doc-card hero__doc-card--2">
-              <div class="hero__doc-icon">🏨</div>
-              <div class="hero__doc-text">
-                <span>Accommodation</span>
-                <span class="hero__doc-status hero__doc-status--ok">✓ 4 hotels booked</span>
-              </div>
-            </div>
-            <div class="hero__doc-card hero__doc-card--3">
-              <div class="hero__doc-icon">📋</div>
-              <div class="hero__doc-text">
-                <span>Trip Checklist</span>
-                <span class="hero__doc-status hero__doc-status--ok">✓ 18/18 items done</span>
-              </div>
-            </div>
-            <div class="hero__doc-card hero__doc-card--4">
-              <div class="hero__doc-icon">📄</div>
-              <div class="hero__doc-text">
-                <span>Visa Documents</span>
-                <span class="hero__doc-status hero__doc-status--warn">⚠ Review needed</span>
-              </div>
-            </div>
-          </div>
+  <!-- HERO — Photo background like mockup -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero__bg">
+      <img src="/images/hero-europe.png" alt="European coastal town at sunset" width="1600" height="900" loading="eager" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 id="hero-heading" class="hero__title">
+          We Plan Your Trip.<br />
+          <span class="hero__title-accent">Every Single Detail.</span>
+        </h1>
+        <p class="hero__subtitle">
+          Experience the world with bespoke itineraries, curated accommodations,
+          and exclusive access. Your journey, perfectly crafted.
+        </p>
+        <div class="hero__actions">
+          <a href="/services/" class="hero__btn hero__btn--outline">Explore Our Services</a>
+          <a href="/free-visa-audit/" class="hero__btn hero__btn--coral">Start Planning</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY DURIAN — Core Strengths -->
-  <section class="section" aria-labelledby="strengths-heading">
+  <!-- OUR EXPERTISE — 4 cards with circular icons -->
+  <section class="section" aria-labelledby="expertise-heading">
     <div class="container">
       <header class="section-header text-center">
-        <span class="section-label">Why DURIAN</span>
-        <h2 id="strengths-heading" class="section-title">We Don't Just Give Advice — We Do the Work</h2>
-        <p class="section-subtitle" style="margin-inline:auto">
-          Most consultancies talk. We plan, book, organise, and support — from first call to landing day.
-        </p>
+        <span class="section-label">Our Expertise</span>
       </header>
-      <div class="strengths-grid">
-        {strengths.map(s => (
-          <div class="strength-card">
-            <span class="strength-card__icon">{s.icon}</span>
-            <h3 class="strength-card__title">{s.title}</h3>
-            <p class="strength-card__desc">{s.desc}</p>
+      <div class="expertise-grid">
+        {expertise.map(e => (
+          <div class="expertise-card">
+            <div class="expertise-card__icon" set:html={e.icon}></div>
+            <h3 class="expertise-card__title">{e.title}</h3>
+            <p class="expertise-card__desc">{e.desc}</p>
+            <div class="expertise-card__tags">
+              {e.tags.map(t => <span class="expertise-tag">{t}</span>)}
+            </div>
+            <a href={e.link} class="expertise-card__link">{e.linkText} →</a>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS — 4 Steps -->
-  <section class="section section--tinted" aria-labelledby="process-heading">
+  <!-- THE DURIAN PROCESS — Large numbers -->
+  <section class="section section--alt" aria-labelledby="process-heading">
     <div class="container">
       <header class="section-header text-center">
-        <span class="section-label">How It Works</span>
-        <h2 id="process-heading" class="section-title">From Idea to Itinerary in 4 Steps</h2>
+        <span class="section-label">The DURIAN Process</span>
       </header>
       <div class="process-grid">
         {processSteps.map(step => (
-          <div class="process-card">
-            <div class="process-card__num">{step.num}</div>
-            <h3 class="process-card__title">{step.title}</h3>
-            <p class="process-card__desc">{step.desc}</p>
+          <div class="process-step">
+            <span class="process-step__num">{step.num}</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">{step.title}</h3>
+              <p class="process-step__desc">{step.desc}</p>
+            </div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="section" aria-labelledby="services-heading">
+  <!-- TESTIMONIALS — Dark background, centered serif -->
+  <section class="testimonials-dark" aria-labelledby="testimonials-heading">
     <div class="container">
-      <header class="section-header text-center">
-        <span class="section-label">What We Offer</span>
-        <h2 id="services-heading" class="section-title">Everything You Need for Your Trip</h2>
-        <p class="section-subtitle" style="margin-inline:auto">
-          Trip planning, accommodation, visa support, health prep, and personal consultancy. Starting from €29.
+      <header class="text-center" style="margin-bottom:var(--space-8)">
+        <span class="section-label" style="color:var(--color-accent)">What Our Clients Say</span>
+      </header>
+      <blockquote class="testimonial-hero">
+        <p class="testimonial-hero__quote">
+          "DURIAN Travel curated an unforgettable honeymoon for us in Japan. Every single detail, from the private tea ceremony to the ryokan stay, was flawless. We felt completely taken care of."
         </p>
-      </header>
-      <div class="grid-2">
-        {services.map(s => <ServiceCard {...s} />)}
-      </div>
-      <div class="text-center mt-8">
-        <a href="/services/" class="btn btn--secondary">See All Services →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAST RESPONSE BANNER -->
-  <section class="fast-banner">
-    <div class="container">
-      <div class="fast-banner__inner">
-        <div class="fast-banner__icon">⚡</div>
-        <div>
-          <h2 class="fast-banner__title">We Reply in Hours, Not Days</h2>
-          <p class="fast-banner__text">
-            Got a question at midnight? Send it. Planning changes last minute? We adapt.
-            Active clients get direct access to our team — no ticketing systems, no waiting.
-          </p>
+        <footer class="testimonial-hero__footer">
+          <strong>Emily & James, London</strong>
+        </footer>
+        <div class="testimonial-hero__dots">
+          <span class="dot dot--active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT'S IN YOUR PLAN -->
-  <section class="section section--tinted" aria-labelledby="checklist-heading">
-    <div class="container">
-      <div class="feature-row">
-        <div class="feature-row__content">
-          <span class="section-label">What You Get</span>
-          <h2 id="checklist-heading" class="section-title">Your Complete Trip Package</h2>
-          <p style="font-size:var(--text-lg);color:var(--color-text-muted);line-height:var(--leading-relaxed);margin-bottom:var(--space-6)">
-            When we plan your trip, you get everything — not just an itinerary:
-          </p>
-          <ol class="checklist-preview">
-            <li>✅ Day-by-day itinerary with transport links</li>
-            <li>✅ Accommodation options matched to your budget</li>
-            <li>✅ Pre-departure checklist (documents, packing, meds)</li>
-            <li>✅ Budget breakdown with estimated daily costs</li>
-            <li>✅ Local tips — SIM cards, transport passes, must-knows</li>
-            <li>✅ Emergency contacts and pharmacy locations</li>
-            <li>✅ Visa document checklist (if applicable)</li>
-            <li>✅ Direct support throughout the planning process</li>
-          </ol>
-          <div class="mt-6" style="display:flex;gap:var(--space-4);flex-wrap:wrap">
-            <a href="/free-visa-audit/" class="btn btn--primary">Book Free Call →</a>
-            <a href="/services/" class="btn btn--secondary">View Services</a>
-          </div>
-        </div>
-        <div class="feature-row__visual" aria-hidden="true">
-          <div class="guide-preview">
-            <div class="guide-preview__header">
-              <span>🗺️ Your Trip Plan</span>
-              <span class="badge badge--success">Included</span>
-            </div>
-            <ul class="guide-preview__toc">
-              <li>→ Day 1–3: Paris — Montmartre, Louvre, Seine</li>
-              <li>→ Day 4–5: Train to Barcelona</li>
-              <li>→ Day 6–7: Barcelona — Sagrada, Gothic Quarter</li>
-              <li>→ Day 8: Fly home — BCN Airport</li>
-              <li>→ Budget: €1,240 total (€155/day)</li>
-              <li>→ Hotels: 3 confirmed bookings</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section" aria-labelledby="testimonials-heading">
-    <div class="container">
-      <header class="section-header text-center">
-        <span class="section-label">What Clients Say</span>
-        <h2 id="testimonials-heading" class="section-title">Real People, Real Trips</h2>
-      </header>
-      <div class="grid-3">
-        <blockquote class="testimonial-card">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-card__quote">"They planned my entire 12-day Italy trip — flights, trains, hotels, everything. I just showed up and enjoyed it."</p>
-          <footer class="testimonial-card__footer">
-            <strong class="testimonial-card__name">Maria S.</strong>
-            <span class="testimonial-card__meta">Brazil · Italy Trip</span>
-          </footer>
-        </blockquote>
-        <blockquote class="testimonial-card">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-card__quote">"I messaged them at 11pm with a question about my booking. Had a reply before midnight. That's the kind of support you can't find anywhere."</p>
-          <footer class="testimonial-card__footer">
-            <strong class="testimonial-card__name">Aarav P.</strong>
-            <span class="testimonial-card__meta">India · France + Spain</span>
-          </footer>
-        </blockquote>
-        <blockquote class="testimonial-card">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-card__quote">"The checklist alone saved me hours. Every document, every booking, every detail — all organised in one place."</p>
-          <footer class="testimonial-card__footer">
-            <strong class="testimonial-card__name">Ana R.</strong>
-            <span class="testimonial-card__meta">Philippines · Portugal Trip</span>
-          </footer>
-        </blockquote>
-      </div>
+      </blockquote>
     </div>
   </section>
 
   <!-- BLOG PREVIEW -->
-  <section class="section section--tinted" aria-labelledby="blog-heading">
+  <section class="section" aria-labelledby="blog-heading">
     <div class="container">
       <header class="section-header">
         <div class="flex-between" style="flex-wrap:wrap;gap:var(--space-4)">
           <div>
             <span class="section-label">Latest Insights</span>
-            <h2 id="blog-heading" class="section-title">From the Blog</h2>
+            <h2 id="blog-heading" class="section-title">From the Journal</h2>
           </div>
           <a href="/blog/" class="btn btn--secondary">View All Posts →</a>
         </div>
@@ -313,7 +197,7 @@ const faqSchema = {
   </section>
 
   <!-- FAQ -->
-  <section class="section" aria-labelledby="faq-heading">
+  <section class="section section--alt" aria-labelledby="faq-heading">
     <div class="container container--narrow">
       <header class="section-header text-center">
         <span class="section-label">FAQ</span>
@@ -354,95 +238,164 @@ const faqSchema = {
 </BaseLayout>
 
 <style>
-/* Hero */
-.hero { padding-block: var(--space-20); color: white; }
-.hero-gradient {
-  background: linear-gradient(135deg, hsl(152, 40%, 12%) 0%, hsl(152, 55%, 22%) 50%, hsl(165, 45%, 18%) 100%);
-}
-.hero__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-16);
+/* ══════════════════════════════════════════
+   HERO — Photo background
+   ══════════════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
   align-items: center;
+  color: white;
+  overflow: hidden;
 }
-@media (max-width: 860px) {
-  .hero__inner { grid-template-columns: 1fr; }
-  .hero__visual { display: none; }
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
-.hero__badge { margin-bottom: var(--space-5); }
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 33, 56, 0.82) 0%,
+    rgba(27, 58, 92, 0.6) 50%,
+    rgba(15, 33, 56, 0.4) 100%
+  );
+}
+.hero__container {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--space-20);
+}
+.hero__content {
+  max-width: 600px;
+}
 .hero__title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: var(--font-extrabold);
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 400;
   line-height: 1.15;
   margin-bottom: var(--space-5);
   color: white;
 }
-.hero__title-accent { color: var(--color-accent); }
+.hero__title-accent {
+  color: var(--color-accent);
+  font-style: italic;
+}
 .hero__subtitle {
-  font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
-  color: hsl(215 25% 78%);
+  font-size: clamp(var(--text-base), 2vw, var(--text-lg));
+  color: hsla(0,0%,100%,0.8);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-8);
-  max-width: 52ch;
+  max-width: 48ch;
 }
-.hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-8); }
-.hero__trust {
+.hero__actions {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  font-size: var(--text-sm);
-  color: hsl(215 20% 65%);
-}
-.hero__stars { color: var(--color-accent); font-size: var(--text-lg); }
-
-/* Hero visual */
-.hero__visual { display: flex; justify-content: center; align-items: center; }
-.hero__card-stack { display: flex; flex-direction: column; gap: var(--space-3); width: 100%; max-width: 320px; }
-.hero__doc-card {
-  display: flex;
-  align-items: center;
   gap: var(--space-4);
-  background: hsl(215 30% 98% / 0.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid hsl(215 30% 100% / 0.15);
-  border-radius: var(--radius-xl);
-  padding: var(--space-4) var(--space-5);
-  transition: transform var(--transition-normal);
+  flex-wrap: wrap;
 }
-.hero__doc-card:hover { transform: translateX(4px); }
-.hero__doc-card--1 { animation: slideIn 0.5s ease 0s both; }
-.hero__doc-card--2 { animation: slideIn 0.5s ease 0.1s both; }
-.hero__doc-card--3 { animation: slideIn 0.5s ease 0.2s both; }
-.hero__doc-card--4 { animation: slideIn 0.5s ease 0.3s both; }
-@keyframes slideIn { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
-.hero__doc-icon { font-size: 1.5rem; }
-.hero__doc-text { display: flex; flex-direction: column; gap: 2px; color: white; font-size: var(--text-sm); font-weight: var(--font-medium); }
-.hero__doc-status { font-size: var(--text-xs); }
-.hero__doc-status--ok   { color: hsl(145 55% 65%); }
-.hero__doc-status--warn { color: var(--color-accent-light); }
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.hero__btn--outline {
+  color: white;
+  border: 2px solid white;
+  background: transparent;
+}
+.hero__btn--outline:hover {
+  background: hsla(0,0%,100%,0.15);
+}
+.hero__btn--coral {
+  color: white;
+  background: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+.hero__btn--coral:hover {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
 
-/* Strengths grid */
-.strengths-grid {
+/* ══════════════════════════════════════════
+   OUR EXPERTISE — Circular icon cards
+   ══════════════════════════════════════════ */
+.expertise-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
 }
-@media (max-width: 768px) { .strengths-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .strengths-grid { grid-template-columns: 1fr; } }
-.strength-card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
-  text-align: center;
-  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
-}
-.strength-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.strength-card__icon { font-size: 2rem; display: block; margin-bottom: var(--space-3); }
-.strength-card__title { font-size: var(--text-base); font-weight: var(--font-bold); color: var(--color-text); margin-bottom: var(--space-2); }
-.strength-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+@media (max-width: 900px) { .expertise-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .expertise-grid { grid-template-columns: 1fr; } }
 
-/* Process grid */
+.expertise-card {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+}
+.expertise-card__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+.expertise-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+.expertise-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+.expertise-card__tags {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.expertise-tag {
+  display: inline-block;
+  padding: 2px var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.expertise-card__link {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.expertise-card__link:hover { color: var(--color-accent-dark); }
+
+/* ══════════════════════════════════════════
+   DURIAN PROCESS — Large serif numbers
+   ══════════════════════════════════════════ */
+.section--alt { background: var(--color-bg-alt); }
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -450,130 +403,81 @@ const faqSchema = {
 }
 @media (max-width: 768px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .process-grid { grid-template-columns: 1fr; } }
-.process-card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
-  text-align: center;
-  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
-}
-.process-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.process-card__num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-full);
-  background: var(--color-primary);
-  color: white;
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--space-4);
-}
-.process-card__title { font-size: var(--text-lg); font-weight: var(--font-semibold); color: var(--color-text); margin-bottom: var(--space-2); }
-.process-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
 
-/* Fast response banner */
-.fast-banner {
-  background: var(--color-navy);
-  color: white;
-  padding-block: var(--space-12);
-}
-.fast-banner__inner {
+.process-step {
   display: flex;
-  align-items: center;
-  gap: var(--space-8);
-}
-@media (max-width: 640px) {
-  .fast-banner__inner { flex-direction: column; text-align: center; }
-}
-.fast-banner__icon { font-size: 3rem; flex-shrink: 0; }
-.fast-banner__title { font-size: var(--text-2xl); font-weight: var(--font-bold); margin-bottom: var(--space-2); }
-.fast-banner__text { font-size: var(--text-base); color: hsl(215 20% 72%); line-height: var(--leading-relaxed); max-width: 55ch; }
-
-/* Checklist preview */
-.checklist-preview {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-3);
 }
-.checklist-preview li {
-  font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text);
+.process-step__num {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  line-height: 1;
+  flex-shrink: 0;
 }
-
-/* Testimonials */
-.testimonial-card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+.process-step__content {
+  padding-top: var(--space-2);
 }
-.testimonial-card__stars { color: var(--color-accent); font-size: var(--text-lg); }
-.testimonial-card__quote {
-  font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text);
-  font-style: italic;
-  flex: 1;
-}
-.testimonial-card__footer { display: flex; flex-direction: column; gap: 2px; }
-.testimonial-card__name { font-weight: var(--font-semibold); font-size: var(--text-sm); color: var(--color-text); }
-.testimonial-card__meta { font-size: var(--text-xs); color: var(--color-text-muted); }
-
-/* Feature row */
-.feature-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-16);
-  align-items: center;
-}
-@media (max-width: 860px) {
-  .feature-row { grid-template-columns: 1fr; }
-  .feature-row__visual { display: none; }
-}
-
-/* Guide preview */
-.guide-preview {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
-}
-.guide-preview__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-4) var(--space-5);
-  background: var(--color-navy);
-  color: white;
+.process-step__title {
   font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-2);
 }
-.guide-preview__toc {
-  padding: var(--space-5);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-.guide-preview__toc li {
+.process-step__desc {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-border);
+  line-height: var(--leading-relaxed);
 }
-.guide-preview__toc li:last-child { border-bottom: none; padding-bottom: 0; }
 
-/* FAQ */
+/* ══════════════════════════════════════════
+   TESTIMONIALS — Dark section
+   ══════════════════════════════════════════ */
+.testimonials-dark {
+  background: var(--color-navy);
+  padding-block: var(--space-16);
+  border-top: 3px solid var(--color-accent);
+}
+.testimonial-hero {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+}
+.testimonial-hero__quote {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-lg), 2.5vw, var(--text-2xl));
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+.testimonial-hero__footer {
+  color: hsla(0,0%,100%,0.65);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+.testimonial-hero__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: hsla(0,0%,100%,0.25);
+  transition: background var(--transition-fast);
+}
+.dot--active { background: var(--color-accent); }
+
+/* ══════════════════════════════════════════
+   FAQ
+   ══════════════════════════════════════════ */
 .faq-list { display: flex; flex-direction: column; gap: var(--space-3); }
 .faq-item {
   background: white;
@@ -592,7 +496,7 @@ const faqSchema = {
   justify-content: space-between;
   align-items: center;
 }
-.faq-item__q::after { content: '+'; font-size: var(--text-xl); color: var(--color-primary); font-weight: var(--font-bold); }
+.faq-item__q::after { content: '+'; font-size: var(--text-xl); color: var(--color-accent); font-weight: var(--font-bold); }
 .faq-item[open] .faq-item__q::after { content: '−'; }
 .faq-item__q::-webkit-details-marker { display: none; }
 .faq-item__a {
@@ -602,7 +506,9 @@ const faqSchema = {
   color: var(--color-text-muted);
 }
 
-/* Grid utilities */
+/* ══════════════════════════════════════════
+   Grid utilities
+   ══════════════════════════════════════════ */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
