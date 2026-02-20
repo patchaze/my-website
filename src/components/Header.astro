@@ -86,8 +86,10 @@ function isActive(href: string) {
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  background: var(--color-navy);
-  border-bottom: none;
+  background: rgba(15, 33, 56, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: none;
 }
 
