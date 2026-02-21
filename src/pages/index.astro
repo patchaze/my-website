@@ -222,7 +222,7 @@ const faqSchema = {
         <span class="section-label" style="color:var(--color-accent)">What Our Clients Say</span>
       </header>
       <div class="testimonial-slider">
-        <div class="testimonial-track">
+        <div class="testimonial-track" id="testimonial-track">
           {testimonials.map((t, i) => (
             <div class="testimonial-slide" id={`testimonial-${i}`}>
               <blockquote class="testimonial-hero">
@@ -236,10 +236,48 @@ const faqSchema = {
         </div>
         <div class="testimonial-hero__dots">
           {testimonials.map((_, i) => (
-             <a href={`#testimonial-${i}`} class="dot" aria-label={`Go to slide ${i + 1}`}></a>
+             <button 
+               class="testimonial-dot" 
+               aria-label={`Go to slide ${i + 1}`}
+               data-slide={i}
+             ></button>
           ))}
         </div>
       </div>
+
+      <script is:inline>
+        document.querySelectorAll('.testimonial-dot').forEach(dot => {
+          dot.addEventListener('click', () => {
+            const slideId = `testimonial-${dot.dataset.slide}`;
+            const track = document.getElementById('testimonial-track');
+            const slide = document.getElementById(slideId);
+            if (track && slide) {
+              track.scrollTo({
+                left: slide.offsetLeft,
+                behavior: 'smooth'
+              });
+            }
+            
+            // Update active state
+            document.querySelectorAll('.testimonial-dot').forEach(d => d.classList.remove('active'));
+            dot.classList.add('active');
+          });
+        });
+        
+        // Initial active state
+        document.querySelector('.testimonial-dot')?.classList.add('active');
+
+        // Update active dot on scroll
+        const track = document.getElementById('testimonial-track');
+        if (track) {
+          track.addEventListener('scroll', () => {
+            const index = Math.round(track.scrollLeft / track.offsetWidth);
+            document.querySelectorAll('.testimonial-dot').forEach((d, i) => {
+              d.classList.toggle('active', i === index);
+            });
+          });
+        }
+      </script>
     </div>
   </section>
 
@@ -747,10 +785,11 @@ const faqSchema = {
   display: flex;
   justify-content: center;
   gap: var(--space-3);
+  margin-top: var(--space-4);
   position: relative;
   z-index: 10;
 }
-.dot {
+.testimonial-dot {
   width: 12px;
   height: 12px;
   border-radius: var(--radius-full);
@@ -758,17 +797,18 @@ const faqSchema = {
   transition: all var(--transition-fast);
   cursor: pointer;
   border: 1px solid transparent;
+  padding: 0;
 }
-.dot:hover {
+.testimonial-dot:hover {
   background: hsla(0,0%,100%,0.4);
 }
-.dot:focus {
+.testimonial-dot.active {
   background: var(--color-accent);
-  outline: none;
 }
-/*.dot--active { background: var(--color-accent); }*/
-/* We can use CSS to highlight the active dot if we use anchors, but it's cleaner with JS or just snap */
-.dot:target { background: var(--color-accent); }
+.testimonial-dot:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
 
 /* ══════════════════════════════════════════
    FAQ
