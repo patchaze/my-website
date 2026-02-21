@@ -39,10 +39,27 @@ const expertise = [
 ];
 
 const processSteps = [
-  { num: '1', title: 'CONSULTATION', desc: 'Initial discussion to understand your travel desires and preferences.' },
-  { num: '2', title: 'DESIGN', desc: 'We craft a personalised itinerary with unique experiences and accommodations.' },
-  { num: '3', title: 'REFINE', desc: 'Collaboration to perfect every detail of your journey.' },
-  { num: '4', title: 'EXPERIENCE', desc: 'Enjoy a seamless, stress-free trip with 24/7 support.' },
+  { letter: 'D', title: 'Documentation', desc: 'Meticulous review and preparation of your visa application documents.' },
+  { letter: 'U', title: 'Understanding', desc: 'In-depth analysis of your travel goals and personal circumstances.' },
+  { letter: 'R', title: 'Regulatory', desc: 'Up-to-the-minute compliance with evolving immigration laws and embassy rules.' },
+  { letter: 'I', title: 'Insight', desc: 'Strategic guidance based on years of cross-border travel expertise.' },
+  { letter: 'A', title: 'Advisory', desc: 'Personalised recommendations to strengthen your case and avoid common pitfalls.' },
+  { letter: 'N', title: 'Network', desc: 'Connection to our global ecosystem of luxury stays and local fixers.' },
+];
+
+const testimonials = [
+  {
+    quote: "DURIAN Travel curated an unforgettable honeymoon for us in Japan. Every detail, from private tea ceremonies to ryokan stays, was flawless.",
+    author: "Emily & James, London"
+  },
+  {
+    quote: "The document review saved my application. They caught a crucial error in my sponsorship proof that would have definitely led to a refusal.",
+    author: "Sarah M., New York"
+  },
+  {
+    quote: "Fast response times and deep local knowledge. They didn't just book hotels; they built a story for our family trip to Portugal.",
+    author: "Mark T., Sydney"
+  }
 ];
 
 const recentPosts = [
@@ -187,7 +204,7 @@ const faqSchema = {
       <div class="process-grid">
         {processSteps.map(step => (
           <div class="process-step">
-            <span class="process-step__num">{step.num}</span>
+            <span class="process-step__num">{step.letter}</span>
             <div class="process-step__content">
               <h3 class="process-step__title">{step.title}</h3>
               <p class="process-step__desc">{step.desc}</p>
@@ -204,19 +221,25 @@ const faqSchema = {
       <header class="text-center" style="margin-bottom:var(--space-8)">
         <span class="section-label" style="color:var(--color-accent)">What Our Clients Say</span>
       </header>
-      <blockquote class="testimonial-hero">
-        <p class="testimonial-hero__quote">
-          "DURIAN Travel curated an unforgettable honeymoon for us in Japan. Every single detail, from the private tea ceremony to the ryokan stay, was flawless. We felt completely taken care of."
-        </p>
-        <footer class="testimonial-hero__footer">
-          <strong>Emily & James, London</strong>
-        </footer>
-        <div class="testimonial-hero__dots">
-          <span class="dot dot--active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+      <div class="testimonial-slider">
+        <div class="testimonial-track">
+          {testimonials.map((t, i) => (
+            <div class="testimonial-slide" id={`testimonial-${i}`}>
+              <blockquote class="testimonial-hero">
+                <p class="testimonial-hero__quote">"{t.quote}"</p>
+                <footer class="testimonial-hero__footer">
+                  <strong>{t.author}</strong>
+                </footer>
+              </blockquote>
+            </div>
+          ))}
         </div>
-      </blockquote>
+        <div class="testimonial-hero__dots">
+          {testimonials.map((_, i) => (
+             <a href={`#testimonial-${i}`} class="dot" aria-label={`Go to slide ${i + 1}`}></a>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
 
@@ -487,7 +510,7 @@ const faqSchema = {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(15, 33, 56, 0.4);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -628,12 +651,12 @@ const faqSchema = {
 /* ══════════════════════════════════════════
    DURIAN PROCESS — Large serif numbers
    ══════════════════════════════════════════ */
-.section--alt { background: var(--color-bg-alt); }
+.section--alt { background: var(--color-bg); }
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-6);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8) var(--space-10);
 }
 @media (max-width: 768px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .process-grid { grid-template-columns: 1fr; } }
@@ -669,17 +692,42 @@ const faqSchema = {
 }
 
 /* ══════════════════════════════════════════
-   TESTIMONIALS — Dark section
+   TESTIMONIALS — Dark section with slider
    ══════════════════════════════════════════ */
 .testimonials-dark {
   background: var(--color-navy);
   padding-block: var(--space-16);
   border-top: 3px solid var(--color-accent);
 }
+
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: var(--space-8);
+  padding-bottom: var(--space-8);
+  scrollbar-width: none; /* Firefox */
+}
+.testimonial-track::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.testimonial-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
 .testimonial-hero {
   text-align: center;
-  max-width: 680px;
+  max-width: 720px;
   margin-inline: auto;
+  padding-inline: var(--space-4);
 }
 .testimonial-hero__quote {
   font-family: var(--font-serif);
@@ -693,21 +741,34 @@ const faqSchema = {
 .testimonial-hero__footer {
   color: hsla(0,0%,100%,0.65);
   font-size: var(--text-sm);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
 }
 .testimonial-hero__dots {
   display: flex;
   justify-content: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
+  position: relative;
+  z-index: 10;
 }
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: var(--radius-full);
-  background: hsla(0,0%,100%,0.25);
-  transition: background var(--transition-fast);
+  background: hsla(0,0%,100%,0.2);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid transparent;
 }
-.dot--active { background: var(--color-accent); }
+.dot:hover {
+  background: hsla(0,0%,100%,0.4);
+}
+.dot:focus {
+  background: var(--color-accent);
+  outline: none;
+}
+/*.dot--active { background: var(--color-accent); }*/
+/* We can use CSS to highlight the active dot if we use anchors, but it's cleaner with JS or just snap */
+.dot:target { background: var(--color-accent); }
 
 /* ══════════════════════════════════════════
    FAQ
