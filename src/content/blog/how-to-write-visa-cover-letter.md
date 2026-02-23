@@ -101,4 +101,4 @@ Sincerely,
 
 *This guide is for educational purposes only. Requirements vary by embassy and individual situation. Last reviewed: February 2026.*
 
-*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/about/)*
+*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/about-us/)*

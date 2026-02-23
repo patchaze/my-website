@@ -116,4 +116,4 @@ Before submitting, review your complete package for:
 
 *This guide is updated regularly based on publicly available embassy requirements. Last reviewed: February 2026. This is educational guidance only — not legal advice.*
 
-*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/about/)*
+*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/about-us/)*

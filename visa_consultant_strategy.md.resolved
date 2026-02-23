@@ -439,7 +439,7 @@ Domain:     visareadyguide.com
 
 MAIN:
 /                              ← Home
-/about/                        ← About
+/about-us/                        ← About
 /services/                     ← Services Hub
 /services/document-review/     ← Service page
 /services/cover-letter-strategy/
@@ -500,7 +500,7 @@ Implemented in `<head>` of every page, plus XML sitemap. See Section 6 for full 
   "author": {
     "@type": "Person",
     "name": "Patricia Azevedo",
-    "url": "https://visareadyguide.com/about/"
+    "url": "https://visareadyguide.com/about-us/"
   },
   "datePublished": "2026-02-19",
   "dateModified": "2026-02-19",

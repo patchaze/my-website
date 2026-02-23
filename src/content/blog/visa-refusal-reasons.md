@@ -89,4 +89,4 @@ Embassies must provide a reason for refusal on the refusal letter. Decoding that
 
 *This article is educational guidance only. Individual cases vary significantly. Last reviewed: February 2026.*
 
-*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/about/)*
+*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/about-us/)*

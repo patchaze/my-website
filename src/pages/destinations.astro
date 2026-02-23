@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Destinations"
+  description="Where are you going next?"
+  breadcrumb={[{ name: 'Destinations', url: 'https://www.duriantravel.com/destinations/' }]}
+>
+
+  <section class="hero-sm hero-gradient">
+    <div class="container">
+      <span class="section-label" style="color:var(--color-accent-light)">Destinations</span>
+      <h1 class="hero-sm__title" style="color:white">Destinations to Visit in 2026</h1>
+     
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow prose">
+      <h2>Portugal</h2>
