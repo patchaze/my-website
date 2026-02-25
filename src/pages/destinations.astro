@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTABanner from '../components/CTABanner.astro';
 import countriesData from '../data/countries.json';
+import { Image } from 'astro:assets';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,gif}');
 
 // Group countries by region
 const groupedCountries = countriesData.reduce((acc, country) => {
@@ -50,7 +53,7 @@ const regionOrder = [
               {countries.map(country => (
                 <a href={`/destinations/${country.slug}/`} class="destination-tile" aria-label={`Explore ${country.name}`}>
                   <div class="tile-image-wrapper">
-                    <img src={country.heroImage} alt={country.name} loading="lazy" />
+                    <Image src={images[`/src/assets${country.heroImage}`]()} alt={country.name} width={800} loading="lazy" />
                     <div class="tile-overlay">
                       <span class="explore-btn">Explore</span>
                     </div>

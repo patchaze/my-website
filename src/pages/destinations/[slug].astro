@@ -2,6 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTABanner from '../../components/CTABanner.astro';
 import countriesData from '../../data/countries.json';
+import { Image } from 'astro:assets';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,gif}');
 
 export async function getStaticPaths() {
   return countriesData.map(country => ({
@@ -25,7 +28,7 @@ const breadcrumb = [
 >
   <section class="hero-country-card">
     <div class="hero__bg-full">
-      <img src={country.heroImage} alt={`Beautiful landscape of ${country.name}`} loading="eager" />
+      <Image src={images[`/src/assets${country.heroImage}`]()} alt={`Beautiful landscape of ${country.name}`} width={1920} loading="eager" />
       <div class="hero__overlay-dark"></div>
     </div>
     <div class="container hero-country-content">
@@ -72,7 +75,7 @@ const breadcrumb = [
       <div class="cities-grid">
         {country.cities.map(city => (
           <div class="city-card glass-card">
-            <img src={city.image} alt={`City view of ${city.name}`} loading="lazy" />
+            <Image src={images[`/src/assets${city.image}`]()} alt={`City view of ${city.name}`} width={600} loading="lazy" />
             <div class="city-card__info">
               <h3>{city.name}</h3>
             </div>

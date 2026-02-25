@@ -2,6 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 import CTABanner from '../components/CTABanner.astro';
+import { Image } from 'astro:assets';
+import heroImg from '../assets/images/hero-dramatic-4k.jpg';
+import amalfiImg from '../assets/images/card-amalfi.png';
+import alpsImg from '../assets/images/card-alps.png';
 
 const expertise = [
   {
@@ -110,7 +114,7 @@ const faqSchema = {
   <!-- HERO — Full-bleed with floating glass cards -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero__bg-full">
-      <img src="/images/hero-dramatic-4k.jpg" alt="Dramatic Dolomites mountain landscape at sunset" width="3840" height="2160" loading="eager" />
+      <Image src={heroImg} alt="Dramatic Dolomites mountain landscape at sunset" width={1920} loading="eager" />
       <div class="hero__overlay-dark"></div>
     </div>
     
@@ -137,14 +141,14 @@ const faqSchema = {
       <!-- Right: Floating Glass Cards -->
       <div class="hero__visuals">
         <a href="/destinations/italy/" class="glass-card glass-card--1 hero-link" aria-label="Explore Italy">
-          <img src="/images/card-amalfi.png" alt="Positano, Amalfi Coast" width="300" height="400" />
+          <Image src={amalfiImg} alt="Positano, Amalfi Coast" width={300} height={400} />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Amalfi Coast, Italy</p>
           </div>
           <div class="hero-link-overlay"><span class="explore-btn">Explore Italy</span></div>
         </a>
         <a href="/destinations/switzerland/" class="glass-card glass-card--2 hero-link" aria-label="Explore Switzerland">
-          <img src="/images/card-alps.png" alt="Swiss Alps turquoise lake" width="300" height="400" />
+          <Image src={alpsImg} alt="Swiss Alps turquoise lake" width={300} height={400} />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Swiss Alps, Switzerland</p>
           </div>
@@ -153,26 +157,6 @@ const faqSchema = {
       </div>
     </div>
 
-    <!-- Bottom: Value Proposition Bar -->
-    <div class="hero__value-bar">
-      <div class="container hero__value-container">
-        <div class="value-item">
-          <span class="value-item__icon">★</span>
-          <div class="value-item__text">
-            <strong>Excellence</strong>
-            <span>Striving for exceptional quality in every aspect of our service.</span>
-          </div>
-        </div>
-        <div class="value-separator"></div>
-        <div class="value-item">
-          <span class="value-item__icon">🍃</span>
-          <div class="value-item__text">
-            <strong>Sustainable</strong>
-            <span>Promoting responsible travel practices for a greener future.</span>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- OUR EXPERTISE — 4 cards with circular icons -->
@@ -585,69 +569,6 @@ const faqSchema = {
 .hero-link:focus .explore-btn {
   transform: translateY(0);
 }
-
-/* Bottom: Value Bar */
-.hero__value-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-block: var(--space-6);
-  z-index: 2;
-}
-@media (max-width: 768px) {
-  .hero__value-bar { position: relative; background: var(--color-navy); }
-}
-
-.hero__value-container {
-  display: flex;
-  align-items: center;
-  gap: var(--space-8);
-}
-@media (max-width: 768px) {
-  .hero__value-container { flex-direction: column; text-align: center; gap: var(--space-6); }
-}
-
-.value-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  flex: 1;
-}
-.value-item__icon {
-  width: 48px;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: var(--color-accent);
-}
-.value-item__text {
-  display: flex;
-  flex-direction: column;
-}
-.value-item__text strong {
-  font-size: var(--text-base);
-  margin-bottom: 2px;
-}
-.value-item__text span {
-  font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.value-separator {
-  width: 1px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-}
-@media (max-width: 768px) { .value-separator { display: none; } }
 
 .hero__social {
   display: flex;
