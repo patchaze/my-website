@@ -58,13 +58,14 @@ function isActive(href: string) {
       </a>
 
       <!-- Mobile toggle -->
-      <input type="checkbox" id="nav-toggle" class="nav__toggle-input" aria-hidden="true" />
-      <label for="nav-toggle" class="nav__toggle-label" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </label>
+      <button id="nav-toggle" class="nav__toggle-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
       <!-- Mobile menu -->
-      <div class="nav__mobile">
+      <div id="nav-mobile" class="nav__mobile">
         <ul role="list">
           {navLinks.map(link => (
             <li>
@@ -181,21 +182,30 @@ function isActive(href: string) {
   border-color: var(--color-accent-dark);
 }
 
-/* Mobile toggle */
-.nav__toggle-input  { display: none; }
-.nav__toggle-label  { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
-.nav__toggle-label span {
+/* Mobile toggle button */
+.nav__toggle-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 100;
+}
+.nav__toggle-btn .bar {
   display: block;
   width: 22px;
   height: 2px;
   background: white;
   border-radius: 2px;
   transition: all var(--transition-fast);
+  transform-origin: left center;
 }
 
 /* Mobile menu */
 .nav__mobile {
-  display: none;
+  display: none; /* hidden by default */
   position: absolute;
   top: calc(100% + 1px);
   left: 0;
@@ -206,6 +216,10 @@ function isActive(href: string) {
   box-shadow: var(--shadow-lg);
   z-index: var(--z-dropdown);
 }
+.nav__mobile.is-open {
+  display: block;
+}
+
 .nav__mobile ul { display: flex; flex-direction: column; gap: var(--space-1); }
 .nav__mobile-link {
   display: block;
@@ -224,16 +238,32 @@ function isActive(href: string) {
 @media (max-width: 900px) {
   .nav__links    { display: none; }
   .nav__cta-btn  { display: none; }
-  .nav__toggle-label { display: flex; }
-  .nav__toggle-input:checked ~ .nav__mobile { display: block; }
-  .nav__toggle-input:checked ~ .nav__toggle-label span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+  .nav__toggle-btn { display: flex; }
+  
+  /* Hamburger to X animation */
+  .nav__toggle-btn[aria-expanded="true"] .bar:nth-child(1) {
+    transform: rotate(45deg);
   }
-  .nav__toggle-input:checked ~ .nav__toggle-label span:nth-child(2) {
+  .nav__toggle-btn[aria-expanded="true"] .bar:nth-child(2) {
     opacity: 0;
   }
-  .nav__toggle-input:checked ~ .nav__toggle-label span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+  .nav__toggle-btn[aria-expanded="true"] .bar:nth-child(3) {
+    transform: rotate(-45deg);
   }
 }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('nav-mobile');
+
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
