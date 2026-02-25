@@ -27,6 +27,7 @@ const breadcrumb = [
     <div class="hero__bg-full">
       <img src={country.heroImage} alt={`Beautiful landscape of ${country.name}`} loading="eager" />
       <div class="hero__overlay-dark"></div>
+      <div class="placeholder-badge">Image Placeholder</div>
     </div>
     <div class="container hero-country-content">
       <div class="hero__badge">📍 {country.region.toUpperCase()}</div>
@@ -73,6 +74,7 @@ const breadcrumb = [
         {country.cities.map(city => (
           <div class="city-card glass-card">
             <img src={city.image} alt={`City view of ${city.name}`} loading="lazy" />
+            <div class="placeholder-badge">Placeholder</div>
             <div class="city-card__info">
               <h3>{city.name}</h3>
             </div>
@@ -153,6 +155,20 @@ const breadcrumb = [
   color: var(--color-text);
   padding-bottom: var(--space-2);
   border-bottom: 1px solid var(--color-border);
+}
+
+.placeholder-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .visa-alert {
