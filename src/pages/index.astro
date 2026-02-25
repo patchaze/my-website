@@ -136,18 +136,20 @@ const faqSchema = {
 
       <!-- Right: Floating Glass Cards -->
       <div class="hero__visuals">
-        <div class="glass-card glass-card--1">
+        <a href="/destinations/italy/" class="glass-card glass-card--1 hero-link" aria-label="Explore Italy">
           <img src="/images/card-amalfi.png" alt="Positano, Amalfi Coast" width="300" height="400" />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Amalfi Coast, Italy</p>
           </div>
-        </div>
-        <div class="glass-card glass-card--2">
+          <div class="hero-link-overlay"><span class="explore-btn">Explore Italy</span></div>
+        </a>
+        <a href="/destinations/switzerland/" class="glass-card glass-card--2 hero-link" aria-label="Explore Switzerland">
           <img src="/images/card-alps.png" alt="Swiss Alps turquoise lake" width="300" height="400" />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Swiss Alps, Switzerland</p>
           </div>
-        </div>
+          <div class="hero-link-overlay"><span class="explore-btn">Explore Switzerland</span></div>
+        </a>
       </div>
     </div>
 
@@ -540,6 +542,48 @@ const faqSchema = {
 .hero__visuals:hover .glass-card--2 {
   transform: translateX(100px) translateY(50px) rotate(6deg);
   opacity: 1;
+}
+
+.hero-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  cursor: pointer;
+}
+
+.hero-link-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 33, 56, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  z-index: 10;
+}
+
+.hero-link:hover .hero-link-overlay,
+.hero-link:focus .hero-link-overlay {
+  opacity: 1;
+}
+
+.explore-btn {
+  background: var(--color-accent);
+  color: white;
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transform: translateY(10px);
+  transition: transform var(--transition-normal);
+}
+
+.hero-link:hover .explore-btn,
+.hero-link:focus .explore-btn {
+  transform: translateY(0);
 }
 
 /* Bottom: Value Bar */

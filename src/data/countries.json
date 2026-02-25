@@ -1,0 +1,901 @@
+[
+    {
+        "name": "Austria",
+        "slug": "austria",
+        "region": "Western Europe",
+        "heroImage": "/images/destinations/austria.jpg",
+        "metaLine": "Schengen • Western Europe • Best in Summer/Winter",
+        "facts": {
+            "capital": "Vienna",
+            "currency": "Euro (€)",
+            "language": "German",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Sep, Dec-Feb",
+            "dailyBudget": "€100-€200"
+        },
+        "whyGo": "Renowned for its alpine landscapes, imperial history, and classical music heritage, Austria offers a perfect blend of outdoor adventure and cultural sophistication.",
+        "cities": [
+            {
+                "name": "Vienna",
+                "image": "/images/destinations/vienna.jpg"
+            },
+            {
+                "name": "Salzburg",
+                "image": "/images/destinations/salzburg.jpg"
+            },
+            {
+                "name": "Innsbruck",
+                "image": "/images/destinations/innsbruck.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Belgium",
+        "slug": "belgium",
+        "region": "Western Europe",
+        "heroImage": "/images/destinations/belgium.jpg",
+        "metaLine": "Schengen • Western Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Brussels",
+            "currency": "Euro (€)",
+            "language": "Dutch, French, German",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Apr-Oct",
+            "dailyBudget": "€90-€180"
+        },
+        "whyGo": "Famous for its medieval towns, Renaissance architecture, and world-class chocolate and beer, Belgium is a compact country brimming with history and culinary delights.",
+        "cities": [
+            {
+                "name": "Brussels",
+                "image": "/images/destinations/brussels.jpg"
+            },
+            {
+                "name": "Bruges",
+                "image": "/images/destinations/bruges.jpg"
+            },
+            {
+                "name": "Antwerp",
+                "image": "/images/destinations/antwerp.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "France",
+        "slug": "france",
+        "region": "Western Europe",
+        "heroImage": "/images/destinations/france.jpg",
+        "metaLine": "Schengen • Western Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Paris",
+            "currency": "Euro (€)",
+            "language": "French",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Apr-Oct",
+            "dailyBudget": "€120-€250"
+        },
+        "whyGo": "From the romantic streets of Paris to the sun-drenched vineyards of Bordeaux and the glamorous Riviera, France is the epitome of culture, gastronomy, and chic living.",
+        "cities": [
+            {
+                "name": "Paris",
+                "image": "/images/destinations/paris.jpg"
+            },
+            {
+                "name": "Nice",
+                "image": "/images/destinations/nice.jpg"
+            },
+            {
+                "name": "Lyon",
+                "image": "/images/destinations/lyon.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Germany",
+        "slug": "germany",
+        "region": "Western Europe",
+        "heroImage": "/images/destinations/germany.jpg",
+        "metaLine": "Schengen • Western Europe • Best in Summer/Autumn",
+        "facts": {
+            "capital": "Berlin",
+            "currency": "Euro (€)",
+            "language": "German",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Oct",
+            "dailyBudget": "€100-€200"
+        },
+        "whyGo": "Germany offers cutting-edge cities, deep history, fairytale castles, and vibrant festivals like Oktoberfest, balanced with the serene landscapes of the Black Forest and the Alps.",
+        "cities": [
+            {
+                "name": "Berlin",
+                "image": "/images/destinations/berlin.jpg"
+            },
+            {
+                "name": "Munich",
+                "image": "/images/destinations/munich.jpg"
+            },
+            {
+                "name": "Hamburg",
+                "image": "/images/destinations/hamburg.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Luxembourg",
+        "slug": "luxembourg",
+        "region": "Western Europe",
+        "heroImage": "/images/destinations/luxembourg.jpg",
+        "metaLine": "Schengen • Western Europe • Best in Spring/Summer",
+        "facts": {
+            "capital": "Luxembourg City",
+            "currency": "Euro (€)",
+            "language": "Luxembourgish, French, German",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€130-€250"
+        },
+        "whyGo": "A tiny yet affluent nation known for its fortified medieval old town seamlessly blending with modern architecture, offering lush valleys and dense forests for nature lovers.",
+        "cities": [
+            {
+                "name": "Luxembourg City",
+                "image": "/images/destinations/luxembourg-city.jpg"
+            },
+            {
+                "name": "Echternach",
+                "image": "/images/destinations/echternach.jpg"
+            },
+            {
+                "name": "Vianden",
+                "image": "/images/destinations/vianden.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Netherlands",
+        "slug": "netherlands",
+        "region": "Western Europe",
+        "heroImage": "/images/destinations/netherlands.jpg",
+        "metaLine": "Schengen • Western Europe • Best in Spring/Summer",
+        "facts": {
+            "capital": "Amsterdam",
+            "currency": "Euro (€)",
+            "language": "Dutch",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Apr-Oct",
+            "dailyBudget": "€110-€220"
+        },
+        "whyGo": "Famous for its picturesque canals, vibrant tulip fields, and historic windmills, the Netherlands boasts a famously progressive culture and world-class cycling infrastructure.",
+        "cities": [
+            {
+                "name": "Amsterdam",
+                "image": "/images/destinations/amsterdam.jpg"
+            },
+            {
+                "name": "Rotterdam",
+                "image": "/images/destinations/rotterdam.jpg"
+            },
+            {
+                "name": "Utrecht",
+                "image": "/images/destinations/utrecht.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Greece",
+        "slug": "greece",
+        "region": "Southern Europe",
+        "heroImage": "/images/destinations/greece.jpg",
+        "metaLine": "Schengen • Southern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Athens",
+            "currency": "Euro (€)",
+            "language": "Greek",
+            "timezone": "EET (UTC+2)",
+            "bestMonths": "Apr-Jun, Sep-Oct",
+            "dailyBudget": "€80-€180"
+        },
+        "whyGo": "Offering ancient ruins, idyllic islands scattered across the Aegean, and a passion for life and food, Greece is the historic cradle of Western civilization and a top sun destination.",
+        "cities": [
+            {
+                "name": "Athens",
+                "image": "/images/destinations/athens.jpg"
+            },
+            {
+                "name": "Santorini",
+                "image": "/images/destinations/santorini.jpg"
+            },
+            {
+                "name": "Mykonos",
+                "image": "/images/destinations/mykonos.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Italy",
+        "slug": "italy",
+        "region": "Southern Europe",
+        "heroImage": "/images/destinations/italy.jpg",
+        "metaLine": "Schengen • Southern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Rome",
+            "currency": "Euro (€)",
+            "language": "Italian",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Apr-Jun, Sep-Nov",
+            "dailyBudget": "€100-€250"
+        },
+        "whyGo": "Unparalleled art, architecture, and gastronomy await in Italy, from the ancient streets of Rome and romantic Venice to the stunning Amalfi Coast and dynamic Milan.",
+        "cities": [
+            {
+                "name": "Rome",
+                "image": "/images/destinations/rome.jpg"
+            },
+            {
+                "name": "Venice",
+                "image": "/images/destinations/venice.jpg"
+            },
+            {
+                "name": "Florence",
+                "image": "/images/destinations/florence.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Malta",
+        "slug": "malta",
+        "region": "Southern Europe",
+        "heroImage": "/images/destinations/malta.jpg",
+        "metaLine": "Schengen • Southern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Valletta",
+            "currency": "Euro (€)",
+            "language": "Maltese, English",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Apr-Jun, Sep-Nov",
+            "dailyBudget": "€80-€160"
+        },
+        "whyGo": "A sun-soaked Mediterranean archipelago steeped in history, featuring megalithic temples, grand knights' fortresses, and crystal-clear waters perfect for diving.",
+        "cities": [
+            {
+                "name": "Valletta",
+                "image": "/images/destinations/valletta.jpg"
+            },
+            {
+                "name": "Mdina",
+                "image": "/images/destinations/mdina.jpg"
+            },
+            {
+                "name": "Sliema",
+                "image": "/images/destinations/sliema.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Portugal",
+        "slug": "portugal",
+        "region": "Southern Europe",
+        "heroImage": "/images/destinations/portugal.jpg",
+        "metaLine": "Schengen • Southern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Lisbon",
+            "currency": "Euro (€)",
+            "language": "Portuguese",
+            "timezone": "WET (UTC+0)",
+            "bestMonths": "Mar-Jun, Sep-Nov",
+            "dailyBudget": "€70-€150"
+        },
+        "whyGo": "Known for its stunning coastline, golden beaches, rich maritime history, and melancholy Fado music, Portugal is an affordable and sunny gem on the edge of Europe.",
+        "cities": [
+            {
+                "name": "Lisbon",
+                "image": "/images/destinations/lisbon.jpg"
+            },
+            {
+                "name": "Porto",
+                "image": "/images/destinations/porto.jpg"
+            },
+            {
+                "name": "Faro",
+                "image": "/images/destinations/faro.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Spain",
+        "slug": "spain",
+        "region": "Southern Europe",
+        "heroImage": "/images/destinations/spain.jpg",
+        "metaLine": "Schengen • Southern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Madrid",
+            "currency": "Euro (€)",
+            "language": "Spanish",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Apr-Jun, Sep-Nov",
+            "dailyBudget": "€80-€180"
+        },
+        "whyGo": "Passionate and diverse, Spain offers extraordinary art trails, vibrant fiestas, delicious tapas, and everything from lush northern mountains to sun-baked southern beaches.",
+        "cities": [
+            {
+                "name": "Madrid",
+                "image": "/images/destinations/madrid.jpg"
+            },
+            {
+                "name": "Barcelona",
+                "image": "/images/destinations/barcelona.jpg"
+            },
+            {
+                "name": "Seville",
+                "image": "/images/destinations/seville.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Denmark",
+        "slug": "denmark",
+        "region": "Northern Europe",
+        "heroImage": "/images/destinations/denmark.jpg",
+        "metaLine": "Schengen • Northern Europe • Best in Summer",
+        "facts": {
+            "capital": "Copenhagen",
+            "currency": "Danish Krone (DKK)",
+            "language": "Danish",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Aug",
+            "dailyBudget": "€130-€250"
+        },
+        "whyGo": "The land of hygge combines cutting-edge design, Michelin-starred New Nordic cuisine, and a relaxed, cycling-focused lifestyle in a beautiful, historic setting.",
+        "cities": [
+            {
+                "name": "Copenhagen",
+                "image": "/images/destinations/copenhagen.jpg"
+            },
+            {
+                "name": "Aarhus",
+                "image": "/images/destinations/aarhus.jpg"
+            },
+            {
+                "name": "Odense",
+                "image": "/images/destinations/odense.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Finland",
+        "slug": "finland",
+        "region": "Northern Europe",
+        "heroImage": "/images/destinations/finland.jpg",
+        "metaLine": "Schengen • Northern Europe • Best in Summer/Winter",
+        "facts": {
+            "capital": "Helsinki",
+            "currency": "Euro (€)",
+            "language": "Finnish, Swedish",
+            "timezone": "EET (UTC+2)",
+            "bestMonths": "Jun-Aug, Dec-Mar",
+            "dailyBudget": "€120-€200"
+        },
+        "whyGo": "A tranquil haven of pristine forests and thousands of lakes, known for its sauna culture, modern design, and the magical Northern Lights in winter Lapland.",
+        "cities": [
+            {
+                "name": "Helsinki",
+                "image": "/images/destinations/helsinki.jpg"
+            },
+            {
+                "name": "Rovaniemi",
+                "image": "/images/destinations/rovaniemi.jpg"
+            },
+            {
+                "name": "Turku",
+                "image": "/images/destinations/turku.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Iceland",
+        "slug": "iceland",
+        "region": "Northern Europe",
+        "heroImage": "/images/destinations/iceland.jpg",
+        "metaLine": "Schengen • Northern Europe • Best in Summer",
+        "facts": {
+            "capital": "Reykjavik",
+            "currency": "Icelandic Króna (ISK)",
+            "language": "Icelandic",
+            "timezone": "GMT (UTC+0)",
+            "bestMonths": "Jun-Aug",
+            "dailyBudget": "€150-€300"
+        },
+        "whyGo": "An otherworldly landscape of geysers, glaciers, volcanoes, and hot springs, offering unparalleled adventure and dramatic natural beauty at the edge of the Arctic Circle.",
+        "cities": [
+            {
+                "name": "Reykjavik",
+                "image": "/images/destinations/reykjavik.jpg"
+            },
+            {
+                "name": "Akureyri",
+                "image": "/images/destinations/akureyri.jpg"
+            },
+            {
+                "name": "Vik",
+                "image": "/images/destinations/vik.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Norway",
+        "slug": "norway",
+        "region": "Northern Europe",
+        "heroImage": "/images/destinations/norway.jpg",
+        "metaLine": "Schengen • Northern Europe • Best in Summer",
+        "facts": {
+            "capital": "Oslo",
+            "currency": "Norwegian Krone (NOK)",
+            "language": "Norwegian",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Jun-Aug",
+            "dailyBudget": "€150-€300"
+        },
+        "whyGo": "Home to some of the world's most spectacular coastal scenery with deep fjords and steep mountains, perfect for hiking, cruises, and chasing the midnight sun.",
+        "cities": [
+            {
+                "name": "Oslo",
+                "image": "/images/destinations/oslo.jpg"
+            },
+            {
+                "name": "Bergen",
+                "image": "/images/destinations/bergen.jpg"
+            },
+            {
+                "name": "Tromso",
+                "image": "/images/destinations/tromso.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Sweden",
+        "slug": "sweden",
+        "region": "Northern Europe",
+        "heroImage": "/images/destinations/sweden.jpg",
+        "metaLine": "Schengen • Northern Europe • Best in Summer",
+        "facts": {
+            "capital": "Stockholm",
+            "currency": "Swedish Krona (SEK)",
+            "language": "Swedish",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€120-€220"
+        },
+        "whyGo": "A mix of chic, forward-thinking cities and vast expanses of wild forests and archipelagoes, Sweden embraces a stylish, sustainable way of life.",
+        "cities": [
+            {
+                "name": "Stockholm",
+                "image": "/images/destinations/stockholm.jpg"
+            },
+            {
+                "name": "Gothenburg",
+                "image": "/images/destinations/gothenburg.jpg"
+            },
+            {
+                "name": "Malmo",
+                "image": "/images/destinations/malmo.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Croatia",
+        "slug": "croatia",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/croatia.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Summer",
+        "facts": {
+            "capital": "Zagreb",
+            "currency": "Euro (€)",
+            "language": "Croatian",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€80-€160"
+        },
+        "whyGo": "Famed for its stunning Adriatic coastline strewn with over a thousand islands, well-preserved medieval towns, and crystal-clear waters perfect for sailing.",
+        "cities": [
+            {
+                "name": "Zagreb",
+                "image": "/images/destinations/zagreb.jpg"
+            },
+            {
+                "name": "Dubrovnik",
+                "image": "/images/destinations/dubrovnik.jpg"
+            },
+            {
+                "name": "Split",
+                "image": "/images/destinations/split.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Czech Republic",
+        "slug": "czech-republic",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/czech-republic.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Prague",
+            "currency": "Czech Koruna (CZK)",
+            "language": "Czech",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€60-€120"
+        },
+        "whyGo": "A fairy-tale destination boasting a rich architectural heritage from Gothic to Art Nouveau, anchored by the magic of Prague and the world's best pilsner beer.",
+        "cities": [
+            {
+                "name": "Prague",
+                "image": "/images/destinations/prague.jpg"
+            },
+            {
+                "name": "Brno",
+                "image": "/images/destinations/brno.jpg"
+            },
+            {
+                "name": "Cesky Krumlov",
+                "image": "/images/destinations/cesky-krumlov.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Estonia",
+        "slug": "estonia",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/estonia.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Summer",
+        "facts": {
+            "capital": "Tallinn",
+            "currency": "Euro (€)",
+            "language": "Estonian",
+            "timezone": "EET (UTC+2)",
+            "bestMonths": "May-Aug",
+            "dailyBudget": "€70-€130"
+        },
+        "whyGo": "A digitally advanced society with deep historical roots, featuring one of Europe's best-preserved medieval old towns alongside huge expanses of pristine forest.",
+        "cities": [
+            {
+                "name": "Tallinn",
+                "image": "/images/destinations/tallinn.jpg"
+            },
+            {
+                "name": "Tartu",
+                "image": "/images/destinations/tartu.jpg"
+            },
+            {
+                "name": "Parnu",
+                "image": "/images/destinations/parnu.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Hungary",
+        "slug": "hungary",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/hungary.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Budapest",
+            "currency": "Hungarian Forint (HUF)",
+            "language": "Hungarian",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Apr-Oct",
+            "dailyBudget": "€60-€130"
+        },
+        "whyGo": "Renowned for its dramatic capital straddling the Danube, rich thermal bath culture, and hearty, paprika-infused culinary traditions.",
+        "cities": [
+            {
+                "name": "Budapest",
+                "image": "/images/destinations/budapest.jpg"
+            },
+            {
+                "name": "Debrecen",
+                "image": "/images/destinations/debrecen.jpg"
+            },
+            {
+                "name": "Szeged",
+                "image": "/images/destinations/szeged.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Latvia",
+        "slug": "latvia",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/latvia.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Summer",
+        "facts": {
+            "capital": "Riga",
+            "currency": "Euro (€)",
+            "language": "Latvian",
+            "timezone": "EET (UTC+2)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€60-€120"
+        },
+        "whyGo": "Known for the Art Nouveau splendor of its capital, deep traditions in choral music, and an expansive coastline shaped by the Baltic Sea.",
+        "cities": [
+            {
+                "name": "Riga",
+                "image": "/images/destinations/riga.jpg"
+            },
+            {
+                "name": "Jurmala",
+                "image": "/images/destinations/jurmala.jpg"
+            },
+            {
+                "name": "Sigulda",
+                "image": "/images/destinations/sigulda.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Lithuania",
+        "slug": "lithuania",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/lithuania.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Summer",
+        "facts": {
+            "capital": "Vilnius",
+            "currency": "Euro (€)",
+            "language": "Lithuanian",
+            "timezone": "EET (UTC+2)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€60-€110"
+        },
+        "whyGo": "A land steeped in quirky charm and a vivid history, featuring a baroque capital, poignant historical sites, and tranquil national parks covered in pine.",
+        "cities": [
+            {
+                "name": "Vilnius",
+                "image": "/images/destinations/vilnius.jpg"
+            },
+            {
+                "name": "Kaunas",
+                "image": "/images/destinations/kaunas.jpg"
+            },
+            {
+                "name": "Klaipeda",
+                "image": "/images/destinations/klaipeda.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Poland",
+        "slug": "poland",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/poland.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Warsaw",
+            "currency": "Polish Zloty (PLN)",
+            "language": "Polish",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Oct",
+            "dailyBudget": "€50-€100"
+        },
+        "whyGo": "A vast country balancing a turbulent history with modern vibrancy, presenting beautifully reconstructed old towns, hearty folk cuisine, and poignant heritage sites.",
+        "cities": [
+            {
+                "name": "Warsaw",
+                "image": "/images/destinations/warsaw.jpg"
+            },
+            {
+                "name": "Krakow",
+                "image": "/images/destinations/krakow.jpg"
+            },
+            {
+                "name": "Gdansk",
+                "image": "/images/destinations/gdansk.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Slovakia",
+        "slug": "slovakia",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/slovakia.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Spring/Summer",
+        "facts": {
+            "capital": "Bratislava",
+            "currency": "Euro (€)",
+            "language": "Slovak",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€60-€110"
+        },
+        "whyGo": "A paradise for outdoor enthusiasts, featuring the dramatic peaks of the High Tatras, enchanting medieval castles, and uncrowded, picturesque towns.",
+        "cities": [
+            {
+                "name": "Bratislava",
+                "image": "/images/destinations/bratislava.jpg"
+            },
+            {
+                "name": "Kosice",
+                "image": "/images/destinations/kosice.jpg"
+            },
+            {
+                "name": "Zilina",
+                "image": "/images/destinations/zilina.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Slovenia",
+        "slug": "slovenia",
+        "region": "Central & Eastern Europe",
+        "heroImage": "/images/destinations/slovenia.jpg",
+        "metaLine": "Schengen • Central & Eastern Europe • Best in Spring/Autumn",
+        "facts": {
+            "capital": "Ljubljana",
+            "currency": "Euro (€)",
+            "language": "Slovene",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Oct",
+            "dailyBudget": "€70-€140"
+        },
+        "whyGo": "A compact green jewel nestled between the Alps and the Mediterranean, famous for its emerald rivers, alpine lakes like Bled, and an exceptionally livable capital.",
+        "cities": [
+            {
+                "name": "Ljubljana",
+                "image": "/images/destinations/ljubljana.jpg"
+            },
+            {
+                "name": "Bled",
+                "image": "/images/destinations/bled.jpg"
+            },
+            {
+                "name": "Maribor",
+                "image": "/images/destinations/maribor.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Liechtenstein",
+        "slug": "liechtenstein",
+        "region": "Microstates Associated via Open Borders",
+        "heroImage": "/images/destinations/liechtenstein.jpg",
+        "metaLine": "Schengen • Microstate • Best in Summer",
+        "facts": {
+            "capital": "Vaduz",
+            "currency": "Swiss Franc (CHF)",
+            "language": "German",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "May-Oct",
+            "dailyBudget": "€150-€250"
+        },
+        "whyGo": "Tucked entirely in the Alps, this tiny principality governed by an iron-clad monarchy offers excellent hiking trails and a surprising contemporary art scene.",
+        "cities": [
+            {
+                "name": "Vaduz",
+                "image": "/images/destinations/vaduz.jpg"
+            },
+            {
+                "name": "Schaan",
+                "image": "/images/destinations/schaan.jpg"
+            },
+            {
+                "name": "Malbun",
+                "image": "/images/destinations/malbun.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Switzerland",
+        "slug": "switzerland",
+        "region": "Microstates Associated via Open Borders",
+        "heroImage": "/images/destinations/switzerland.jpg",
+        "metaLine": "Schengen • Microstate Associated • Best in Summer/Winter",
+        "facts": {
+            "capital": "Bern",
+            "currency": "Swiss Franc (CHF)",
+            "language": "German, French, Italian, Romansh",
+            "timezone": "CET (UTC+1)",
+            "bestMonths": "Jun-Sep, Dec-Mar",
+            "dailyBudget": "€150-€300"
+        },
+        "whyGo": "The ultimate alpine destination known for precision, luxury, towering peaks like the Matterhorn, pristine lakes, and an impeccable, scenic rail network.",
+        "cities": [
+            {
+                "name": "Zurich",
+                "image": "/images/destinations/zurich.jpg"
+            },
+            {
+                "name": "Geneva",
+                "image": "/images/destinations/geneva.jpg"
+            },
+            {
+                "name": "Lucerne",
+                "image": "/images/destinations/lucerne.jpg"
+            }
+        ],
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Bulgaria",
+        "slug": "bulgaria",
+        "region": "Recently Added",
+        "heroImage": "/images/destinations/bulgaria.jpg",
+        "metaLine": "Schengen Air/Sea • Recently Added • Best in Summer",
+        "facts": {
+            "capital": "Sofia",
+            "currency": "Bulgarian Lev (BGN)",
+            "language": "Bulgarian",
+            "timezone": "EET (UTC+2)",
+            "bestMonths": "May-Sep",
+            "dailyBudget": "€40-€90"
+        },
+        "whyGo": "Rich in Orthodox heritage and Thracian treasures, offering a beautiful Black Sea coast in summer and affordable, dramatic mountain ranges perfect for hiking.",
+        "cities": [
+            {
+                "name": "Sofia",
+                "image": "/images/destinations/sofia.jpg"
+            },
+            {
+                "name": "Plovdiv",
+                "image": "/images/destinations/plovdiv.jpg"
+            },
+            {
+                "name": "Varna",
+                "image": "/images/destinations/varna.jpg"
+            }
+        ],
+        "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice."
+    },
+    {
+        "name": "Romania",
+        "slug": "romania",
+        "region": "Recently Added",
+        "heroImage": "/images/destinations/romania.jpg",
+        "metaLine": "Schengen Air/Sea • Recently Added • Best in Summer",
+        "facts": {
+            "capital": "Bucharest",
+            "currency": "Romanian Leu (RON)",
+            "language": "Romanian",
+            "timezone": "EET (UTC+2)",
+            "bestMonths": "May-Oct",
+            "dailyBudget": "€50-€100"
+        },
+        "whyGo": "Dominated by the stunning Carpathian Mountains and the legend of Dracula, Romania offers medieval Saxon villages, thick forests, and a dynamic capital.",
+        "cities": [
+            {
+                "name": "Bucharest",
+                "image": "/images/destinations/bucharest.jpg"
+            },
+            {
+                "name": "Cluj-Napoca",
+                "image": "/images/destinations/cluj.jpg"
+            },
+            {
+                "name": "Brasov",
+                "image": "/images/destinations/brasov.jpg"
+            }
+        ],
+        "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice."
+    }
+]
