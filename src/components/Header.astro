@@ -254,16 +254,30 @@ function isActive(href: string) {
 </style>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
+  function setupNavToggle() {
     const toggleBtn = document.getElementById('nav-toggle');
     const mobileMenu = document.getElementById('nav-mobile');
 
     if (toggleBtn && mobileMenu) {
-      toggleBtn.addEventListener('click', () => {
-        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-        toggleBtn.setAttribute('aria-expanded', !isExpanded);
+      // Remove previously attached listeners (if any) to prevent duplicates
+      const newToggleBtn = toggleBtn.cloneNode(true);
+      toggleBtn.parentNode.replaceChild(newToggleBtn, toggleBtn);
+      
+      newToggleBtn.addEventListener('click', () => {
+        const isExpanded = newToggleBtn.getAttribute('aria-expanded') === 'true';
+        newToggleBtn.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('is-open');
       });
     }
-  });
+  }
+
+  // Run on initial load and after every ViewTransition
+  document.addEventListener('astro:page-load', setupNavToggle);
+  
+  // Also run immediately in case ViewTransitions is bypassed or this is the first hard load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupNavToggle);
+  } else {
+    setupNavToggle();
+  }
 </script>
