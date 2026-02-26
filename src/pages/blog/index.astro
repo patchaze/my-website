@@ -13,15 +13,11 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
   description="Visa strategy blog: guides on documents, cover letters, financial proof, and refusal analysis."
   breadcrumb={[{ name: 'Blog', url: 'https://www.duriantravel.com/blog/' }]}
 >
-  <div class="container">
-    <Breadcrumb items={[{ name: 'Blog' }]} />
-  </div>
-
-  <section class="section--tinted section--sm">
-    <div class="container">
-      <span class="section-label">Insights & Education</span>
-      <h1 class="blog-index__title">Visa Strategy Blog</h1>
-      <p class="blog-index__subtitle">
+  <section class="hero-sm hero-gradient">
+    <div class="container relative">
+      <span class="section-label" style="color:var(--color-accent-light)">Insights & Education</span>
+      <h1 class="hero-sm__title" style="color:white">Visa Strategy Blog</h1>
+      <p class="hero-sm__subtitle" style="color:hsl(150 30% 75%); max-width:60ch; line-height:var(--leading-relaxed); font-size:var(--text-lg)">
         Evidence-based guidance on visa document preparation, financial proof,
         cover letter strategy, and refusal analysis. All content cites official sources.
       </p>
@@ -51,6 +47,6 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
 </BaseLayout>
 
 <style>
-.blog-index__title    { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-block: var(--space-3); }
-.blog-index__subtitle { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); }
+.hero-sm { padding-block: var(--space-16); }
+.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
 </style>

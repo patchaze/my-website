@@ -9,15 +9,11 @@ import CTABanner from '../components/CTABanner.astro';
   description="Contact DURIAN. Ask a question, book a session, or get a free visa readiness audit."
   breadcrumb={[{ name: 'Contact', url: 'https://www.duriantravel.com/contact/' }]}
 >
-  <div class="container">
-    <Breadcrumb items={[{ name: 'Contact' }]} />
-  </div>
-
-  <section class="section--tinted section--sm">
-    <div class="container">
-      <span class="section-label">Get in Touch</span>
-      <h1 class="contact-hero__title">Contact Us</h1>
-      <p class="contact-hero__subtitle">
+  <section class="hero-sm hero-gradient">
+    <div class="container relative">
+      <span class="section-label" style="color:var(--color-accent-light)">Get in Touch</span>
+      <h1 class="hero-sm__title" style="color:white">Contact Us</h1>
+      <p class="hero-sm__subtitle" style="color:hsl(150 30% 75%); max-width:60ch; line-height:var(--leading-relaxed); font-size:var(--text-lg)">
         Have a question? Want to book a service? Start with the free audit — or send us a message below.
       </p>
     </div>
@@ -138,8 +134,8 @@ import CTABanner from '../components/CTABanner.astro';
 </BaseLayout>
 
 <style>
-.contact-hero__title    { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-block: var(--space-3); }
-.contact-hero__subtitle { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 52ch; line-height: var(--leading-relaxed); }
+.hero-sm { padding-block: var(--space-16); }
+.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
 .contact-grid { display: grid; grid-template-columns: 1fr 340px; gap: var(--space-12); align-items: start; }
 @media (max-width: 960px) { .contact-grid { grid-template-columns: 1fr; } }
 .contact-form-wrap__title { font-size: var(--text-2xl); margin-bottom: var(--space-5); }
