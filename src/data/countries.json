@@ -28,7 +28,8 @@
                 "image": "/images/destinations/innsbruck.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Belgium",
@@ -59,7 +60,8 @@
                 "image": "/images/destinations/antwerp.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "France",
@@ -90,7 +92,8 @@
                 "image": "/images/destinations/lyon.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Germany",
@@ -121,7 +124,8 @@
                 "image": "/images/destinations/hamburg.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Luxembourg",
@@ -152,7 +156,8 @@
                 "image": "/images/destinations/vianden.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Netherlands",
@@ -183,7 +188,8 @@
                 "image": "/images/destinations/utrecht.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Greece",
@@ -214,7 +220,8 @@
                 "image": "/images/destinations/mykonos.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Italy",
@@ -245,7 +252,8 @@
                 "image": "/images/destinations/florence.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Malta",
@@ -276,7 +284,8 @@
                 "image": "/images/destinations/sliema.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Portugal",
@@ -307,7 +316,8 @@
                 "image": "/images/destinations/faro.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Spain",
@@ -338,7 +348,8 @@
                 "image": "/images/destinations/seville.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Denmark",
@@ -369,7 +380,8 @@
                 "image": "/images/destinations/odense.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Finland",
@@ -400,7 +412,8 @@
                 "image": "/images/destinations/turku.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Iceland",
@@ -431,7 +444,8 @@
                 "image": "/images/destinations/vik.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Norway",
@@ -462,7 +476,8 @@
                 "image": "/images/destinations/tromso.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Sweden",
@@ -493,7 +508,8 @@
                 "image": "/images/destinations/malmo.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Croatia",
@@ -524,7 +540,8 @@
                 "image": "/images/destinations/split.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Czech Republic",
@@ -555,7 +572,8 @@
                 "image": "/images/destinations/cesky-krumlov.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Estonia",
@@ -586,7 +604,8 @@
                 "image": "/images/destinations/parnu.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Hungary",
@@ -617,7 +636,8 @@
                 "image": "/images/destinations/szeged.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Latvia",
@@ -648,7 +668,8 @@
                 "image": "/images/destinations/sigulda.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Lithuania",
@@ -679,7 +700,8 @@
                 "image": "/images/destinations/klaipeda.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Poland",
@@ -710,7 +732,8 @@
                 "image": "/images/destinations/gdansk.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Slovakia",
@@ -741,7 +764,8 @@
                 "image": "/images/destinations/zilina.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Slovenia",
@@ -772,12 +796,13 @@
                 "image": "/images/destinations/maribor.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Liechtenstein",
         "slug": "liechtenstein",
-        "region": "Microstates Associated via Open Borders",
+        "region": "Schengen Associated States",
         "heroImage": "/images/destinations/liechtenstein.jpg",
         "metaLine": "Schengen • Microstate • Best in Summer",
         "facts": {
@@ -803,12 +828,13 @@
                 "image": "/images/destinations/malbun.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Switzerland",
         "slug": "switzerland",
-        "region": "Microstates Associated via Open Borders",
+        "region": "Schengen Associated States",
         "heroImage": "/images/destinations/switzerland.jpg",
         "metaLine": "Schengen • Microstate Associated • Best in Summer/Winter",
         "facts": {
@@ -834,7 +860,8 @@
                 "image": "/images/destinations/lucerne.jpg"
             }
         ],
-        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 1
     },
     {
         "name": "Bulgaria",
@@ -865,7 +892,8 @@
                 "image": "/images/destinations/varna.jpg"
             }
         ],
-        "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     },
     {
         "name": "Romania",
@@ -896,6 +924,7 @@
                 "image": "/images/destinations/brasov.jpg"
             }
         ],
-        "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice."
+        "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "tier": 2
     }
 ]

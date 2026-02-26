@@ -22,9 +22,10 @@ const breadcrumb = [
 ---
 
 <BaseLayout
-  title={`${country.name} Travel Guide & Visa Info - DURIAN`}
-  description={`Plan your trip to ${country.name}. ${country.metaLine}. Discover the best cities to visit, average budget, and visa guidance for the Schengen area.`}
+  title={`${country.name} Trip Planning | Custom Itinerary + Schengen Visa Notes | DURIAN`}
+  description={`${country.name} itinerary planning with visa compliant structure, hotel logic, and document guidance for Schengen applications. Capital: ${country.facts.capital}. Best months: ${country.facts.bestMonths}.`}
   breadcrumb={breadcrumb}
+  noindex={country.tier !== 1}
 >
   <section class="hero-country-card">
     <div class="hero__bg-full">
