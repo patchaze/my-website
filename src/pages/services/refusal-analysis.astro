@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Schengen Visa Refusal Analysis | Reapply Plan + Document Fixes | DURIAN"
+  description="Decode the refusal reasons from your letter and build a stronger reapplication strategy with targeted document upgrades."
+  breadcrumb={[
+    { name: 'Services', url: 'https://www.duriantravel.com/services/' },
+    { name: 'Refusal Analysis', url: 'https://www.duriantravel.com/services/refusal-analysis/' }
+  ]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Services', href: '/services/' }, { name: 'Refusal Analysis' }]} />
+  </div>
+
+  <header class="service-hero section--tinted section">
+    <div class="container">
+      <div class="service-hero__label">
+        <span class="service-icon" aria-hidden="true">🔍</span>
+        <span class="section-label">Refusal Recovery</span>
+      </div>
+      <h1 class="service-hero__title">Refusal Analysis and Reapplication Strategy</h1>
+      <p class="service-hero__subtitle">
+        A visa refusal is not permanent. Your refusal letter contains specific reasons —
+        we help you decode them, identify what to fix, and build a reapplication strategy that addresses each issue directly.
+      </p>
+      <div class="service-hero__actions">
+        <a href="/free-visa-audit/" class="btn btn--primary btn--lg">Start with Free Audit</a>
+        <a href="/contact/" class="btn btn--secondary btn--lg">Ask a Question</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-content-grid">
+        <div class="service-main">
+          <h2>How Refusal Analysis Works</h2>
+          <p>
+            Every Schengen visa refusal letter cites specific articles and reasons for the decision.
+            These reasons are precise — but they're written in administrative language that can be
+            difficult to interpret without context.
+          </p>
+          <p>
+            Our Refusal Analysis service translates those reasons into actionable steps:
+            what went wrong, what was missing, and what you need to change before reapplying.
+          </p>
+
+          <h3>What We Cover</h3>
+          <ul class="check-list mt-4">
+            <li>Line-by-line interpretation of your refusal letter</li>
+            <li>Mapping refusal reasons to specific document weaknesses</li>
+            <li>Assessment of whether new evidence is needed or existing evidence needs restructuring</li>
+            <li>Cover letter strategy for addressing the refusal directly</li>
+            <li>Timeline guidance: when to reapply and what to avoid</li>
+            <li>Whether to apply to the same embassy or a different one</li>
+          </ul>
+
+          <h3 class="mt-8">Most Common Refusal Reasons We See</h3>
+          <ul class="x-list mt-4">
+            <li>Insufficient or inconsistent financial proof</li>
+            <li>Vague or missing purpose of travel</li>
+            <li>No demonstrated ties to home country</li>
+            <li>Accommodation gaps or itinerary inconsistencies</li>
+            <li>Non-compliant or expired travel insurance</li>
+            <li>Previous immigration history concerns</li>
+          </ul>
+
+          <h3 class="mt-8">What We Deliver</h3>
+          <p>After the analysis, you receive:</p>
+          <ul class="check-list mt-4">
+            <li>Written breakdown of each refusal reason with plain-language explanation</li>
+            <li>Prioritised action plan for your reapplication</li>
+            <li>Specific document upgrade recommendations</li>
+            <li>Cover letter guidance addressing the refusal</li>
+            <li>Timing recommendation for resubmission</li>
+          </ul>
+
+          <h3 class="mt-8">What This Service Does NOT Include</h3>
+          <ul class="x-list mt-4">
+            <li>Legal representation or appeals</li>
+            <li>Submission of applications on your behalf</li>
+            <li>Contact with embassies or consulates</li>
+            <li>Guarantees of approval on reapplication</li>
+          </ul>
+          <div class="notice notice--warning mt-6">
+            <span aria-hidden="true">⚠️</span>
+            <span>If your refusal involved immigration violations, overstay, or legal issues, you should consult a qualified immigration lawyer. Our service is educational guidance only. <a href="/disclaimer/" class="link">Read full disclaimer →</a></span>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Ideal For</h3>
+            <ul class="check-list">
+              <li>Applicants who received a refusal and want to reapply</li>
+              <li>Applicants unsure why they were refused</li>
+              <li>Those who've been refused more than once</li>
+              <li>Applicants considering a different embassy</li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Services</h3>
+            <ul class="sidebar-links">
+              <li><a href="/services/document-review/" class="link">→ Document Review</a></li>
+              <li><a href="/services/cover-letter-strategy/" class="link">→ Cover Letter Strategy</a></li>
+              <li><a href="/services/financial-proof-review/" class="link">→ Financial Proof Review</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Reading</h3>
+            <ul class="sidebar-links">
+              <li><a href="/blog/visa-refusal-reasons/" class="link">→ Top Refusal Reasons Blog Post</a></li>
+              <li><a href="/schengen-visa-guide/#refusal" class="link">→ Refusal Prevention in Guide</a></li>
+              <li><a href="/schengen-visa-guide/#reapplication" class="link">→ After a Refusal</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box sidebar-box--cta">
+            <h3>Been refused? Let's review it.</h3>
+            <p>Start with a free 15-min audit. We'll read your refusal letter together.</p>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-4)">Book Free Audit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .service-hero { padding-block: var(--space-16); }
+  .service-hero__label { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .service-icon { font-size: 2rem; }
+  .service-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+  .service-hero__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); margin-bottom: var(--space-8); }
+  .service-hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .service-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+  @media (max-width: 960px) { .service-content-grid { grid-template-columns: 1fr; } }
+  .service-main h2 { margin-bottom: var(--space-4); }
+  .service-main h3 { margin-top: var(--space-8); margin-bottom: 0; }
+  .service-main p  { color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-top: var(--space-3); }
+  .service-sidebar { display: flex; flex-direction: column; gap: var(--space-5); }
+  .sidebar-box {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+  }
+  .sidebar-box--cta { background: var(--color-primary); color: white; }
+  .sidebar-box--cta h3 { color: white; margin-bottom: var(--space-2); }
+  .sidebar-box--cta p  { color: hsl(220 30% 80%); font-size: var(--text-sm); }
+  .sidebar-box__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-4); }
+  .sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+  .sidebar-links li { font-size: var(--text-sm); }
+</style>

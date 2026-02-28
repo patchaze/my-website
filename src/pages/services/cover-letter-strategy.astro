@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Schengen Visa Cover Letter Strategy | Structure + Review | DURIAN"
+  description="Get a clear cover letter structure that matches your documents, finances, and itinerary. Educational guidance plus written review notes."
+  breadcrumb={[
+    { name: 'Services', url: 'https://www.duriantravel.com/services/' },
+    { name: 'Cover Letter Strategy', url: 'https://www.duriantravel.com/services/cover-letter-strategy/' }
+  ]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Services', href: '/services/' }, { name: 'Cover Letter Strategy' }]} />
+  </div>
+
+  <header class="service-hero section--tinted section">
+    <div class="container">
+      <div class="service-hero__label">
+        <span class="service-icon" aria-hidden="true">✉️</span>
+        <span class="section-label">Cover Letter Strategy</span>
+      </div>
+      <h1 class="service-hero__title">Cover Letter Strategy for Schengen Visas</h1>
+      <p class="service-hero__subtitle">
+        Your cover letter is the only document where you speak directly to the consular officer.
+        We help you write one that addresses purpose, finances, ties, and itinerary — clearly and credibly.
+      </p>
+      <div class="service-hero__actions">
+        <a href="/free-visa-audit/" class="btn btn--primary btn--lg">Start with Free Audit</a>
+        <a href="/contact/" class="btn btn--secondary btn--lg">Ask a Question</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-content-grid">
+        <div class="service-main">
+          <h2>What This Service Covers</h2>
+          <p>
+            Embassy officers have four core questions when they read your cover letter.
+            If your letter doesn't address all four clearly, it becomes a weak point in your application —
+            even if all your other documents are strong.
+          </p>
+          <p>
+            Our Cover Letter Strategy service helps you build a letter that directly answers
+            those questions using your real documents as evidence.
+          </p>
+
+          <h3>The Four Pillars We Address</h3>
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <span class="pillar-card__num">01</span>
+              <strong class="pillar-card__title">Why are you travelling?</strong>
+              <p class="pillar-card__desc">Be specific about where, when, and for what reason. Generic statements weaken credibility.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-card__num">02</span>
+              <strong class="pillar-card__title">How will you fund the trip?</strong>
+              <p class="pillar-card__desc">Reference your financial documents explicitly. Give context for your income and savings.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-card__num">03</span>
+              <strong class="pillar-card__title">Why will you return home?</strong>
+              <p class="pillar-card__desc">Employment, property, family — list every tie explicitly. This is the most underwritten section.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-card__num">04</span>
+              <strong class="pillar-card__title">What is your travel plan?</strong>
+              <p class="pillar-card__desc">Reference your itinerary and accommodation proof. Show the trip is planned in advance.</p>
+            </div>
+          </div>
+
+          <h3 class="mt-8">What We Deliver</h3>
+          <p>After the session, you receive:</p>
+          <ul class="check-list mt-4">
+            <li>A recommended letter structure tailored to your profile</li>
+            <li>Paragraph-by-paragraph guidance on what to include and what to avoid</li>
+            <li>Written notes on tone, length, and common mistakes</li>
+            <li>Alignment check: does the letter match your documents?</li>
+          </ul>
+
+          <h3 class="mt-8">What This Service Does NOT Include</h3>
+          <ul class="x-list mt-4">
+            <li>Writing the cover letter for you</li>
+            <li>Legal advice on visa eligibility</li>
+            <li>Submission of documents on your behalf</li>
+            <li>Guarantees of visa approval</li>
+          </ul>
+          <div class="notice notice--info mt-6">
+            <span aria-hidden="true">ℹ️</span>
+            <span>This is educational guidance. We teach you how to write a strong letter — but the final version is yours. <a href="/disclaimer/" class="link">Read full disclaimer →</a></span>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Ideal For</h3>
+            <ul class="check-list">
+              <li>First-time applicants unsure what to write</li>
+              <li>Applicants with complex financial situations</li>
+              <li>Self-employed or freelance travellers</li>
+              <li>Anyone who received a refusal citing "purpose of travel"</li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Services</h3>
+            <ul class="sidebar-links">
+              <li><a href="/services/document-review/" class="link">→ Document Review</a></li>
+              <li><a href="/services/financial-proof-review/" class="link">→ Financial Proof Review</a></li>
+              <li><a href="/services/visa-strategy-call/" class="link">→ Visa Strategy Call</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Reading</h3>
+            <ul class="sidebar-links">
+              <li><a href="/blog/how-to-write-visa-cover-letter/" class="link">→ How to Write a Visa Cover Letter</a></li>
+              <li><a href="/schengen-visa-guide/#cover-letter" class="link">→ Cover Letter Section in Guide</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box sidebar-box--cta">
+            <h3>Not sure if this is the right service?</h3>
+            <p>Start with a free 15-min audit. We'll recommend the best path.</p>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-4)">Book Free Audit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .service-hero { padding-block: var(--space-16); }
+  .service-hero__label { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .service-icon { font-size: 2rem; }
+  .service-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+  .service-hero__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); margin-bottom: var(--space-8); }
+  .service-hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .service-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+  @media (max-width: 960px) { .service-content-grid { grid-template-columns: 1fr; } }
+  .service-main h2 { margin-bottom: var(--space-4); }
+  .service-main h3 { margin-top: var(--space-8); margin-bottom: 0; }
+  .service-main p  { color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-top: var(--space-3); }
+  .service-sidebar { display: flex; flex-direction: column; gap: var(--space-5); }
+  .sidebar-box {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+  }
+  .sidebar-box--cta { background: var(--color-primary); color: white; }
+  .sidebar-box--cta h3 { color: white; margin-bottom: var(--space-2); }
+  .sidebar-box--cta p  { color: hsl(220 30% 80%); font-size: var(--text-sm); }
+  .sidebar-box__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-4); }
+  .sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+  .sidebar-links li { font-size: var(--text-sm); }
+
+  .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-5); }
+  @media (max-width: 640px) { .pillars-grid { grid-template-columns: 1fr; } }
+  .pillar-card { padding: var(--space-5); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+  .pillar-card__num   { font-size: var(--text-xs); font-weight: var(--font-bold); color: var(--color-accent-dark); }
+  .pillar-card__title { display: block; font-size: var(--text-base); font-weight: var(--font-semibold); margin-block: var(--space-2); }
+  .pillar-card__desc  { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+</style>

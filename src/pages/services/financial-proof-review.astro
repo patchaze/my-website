@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Financial Proof Review for Schengen Visas | Bank Statements + Sponsorship | DURIAN"
+  description="Identify red flags like sudden deposits, weak income proof, or mismatched budgets. Get a written improvement plan before you submit."
+  breadcrumb={[
+    { name: 'Services', url: 'https://www.duriantravel.com/services/' },
+    { name: 'Financial Proof Review', url: 'https://www.duriantravel.com/services/financial-proof-review/' }
+  ]}
+>
+  <div class="container">
+    <Breadcrumb items={[{ name: 'Services', href: '/services/' }, { name: 'Financial Proof Review' }]} />
+  </div>
+
+  <header class="service-hero section--tinted section">
+    <div class="container">
+      <div class="service-hero__label">
+        <span class="service-icon" aria-hidden="true">💰</span>
+        <span class="section-label">Financial Proof Strategy</span>
+      </div>
+      <h1 class="service-hero__title">Financial Proof Review</h1>
+      <p class="service-hero__subtitle">
+        Financial documentation is the most common reason Schengen applications are refused.
+        We review your bank statements, income proof, and budget alignment — then tell you exactly what to fix.
+      </p>
+      <div class="service-hero__actions">
+        <a href="/free-visa-audit/" class="btn btn--primary btn--lg">Start with Free Audit</a>
+        <a href="/contact/" class="btn btn--secondary btn--lg">Ask a Question</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-content-grid">
+        <div class="service-main">
+          <h2>Why Financial Proof Causes More Refusals Than Any Other Document</h2>
+          <p>
+            Embassy officers look for three things in your finances:
+            <strong>consistency, legitimacy, and sufficiency</strong>.
+            A sudden large deposit, an unexplained income gap, or a budget that doesn't match
+            your itinerary can each independently trigger a refusal — even if the rest of your
+            application is strong.
+          </p>
+          <p>
+            Our Financial Proof Review identifies these patterns before the officer does.
+          </p>
+
+          <h3>What We Review</h3>
+          <ul class="check-list mt-4">
+            <li>Bank statements (3–6 months) for balance consistency and red flags</li>
+            <li>Income documentation (payslips, employment letters, contracts)</li>
+            <li>Self-employed proof: tax returns, business registration, accountant letters</li>
+            <li>Sponsorship packages: sponsor bank statements + signed declarations</li>
+            <li>Budget alignment: does your stated budget match your financial documents?</li>
+            <li>Cross-referencing: do finances match itinerary duration and accommodation costs?</li>
+          </ul>
+
+          <h3 class="mt-8">Common Red Flags We Check For</h3>
+          <ul class="x-list mt-4">
+            <li>Sudden large deposits shortly before applying ("window dressing")</li>
+            <li>Inconsistent or declining balances</li>
+            <li>Income that doesn't align with stated occupation</li>
+            <li>Missing months or account closures during the review period</li>
+            <li>Budget mismatch (daily spend doesn't match financial capacity)</li>
+            <li>Sponsor documents that lack credibility or completeness</li>
+          </ul>
+
+          <h3 class="mt-8">What We Deliver</h3>
+          <p>After the review, you receive a written summary including:</p>
+          <ul class="check-list mt-4">
+            <li>Red flag analysis of your financial documents</li>
+            <li>Specific recommendations for strengthening weak points</li>
+            <li>Budget-to-itinerary alignment check</li>
+            <li>Notes on how to present sponsored travel correctly</li>
+          </ul>
+
+          <h3 class="mt-8">What This Service Does NOT Include</h3>
+          <ul class="x-list mt-4">
+            <li>Creating or altering financial documents</li>
+            <li>Legal advice on visa eligibility</li>
+            <li>Specific minimum balance thresholds (these vary by embassy)</li>
+            <li>Guarantees of visa approval</li>
+          </ul>
+          <div class="notice notice--info mt-6">
+            <span aria-hidden="true">ℹ️</span>
+            <span>This is an educational review service. We help you understand what officers look for — we don't create documents or predict outcomes. <a href="/disclaimer/" class="link">Read full disclaimer →</a></span>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Ideal For</h3>
+            <ul class="check-list">
+              <li>Self-employed or freelance applicants</li>
+              <li>Sponsored travellers (family or third-party)</li>
+              <li>Applicants with irregular income patterns</li>
+              <li>Those previously refused for financial reasons</li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Services</h3>
+            <ul class="sidebar-links">
+              <li><a href="/services/document-review/" class="link">→ Document Review</a></li>
+              <li><a href="/services/cover-letter-strategy/" class="link">→ Cover Letter Strategy</a></li>
+              <li><a href="/services/refusal-analysis/" class="link">→ Refusal Analysis</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Related Reading</h3>
+            <ul class="sidebar-links">
+              <li><a href="/schengen-visa-guide/#financial" class="link">→ Financial Proof Guide Section</a></li>
+              <li><a href="/blog/schengen-document-checklist/" class="link">→ Document Checklist</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box sidebar-box--cta">
+            <h3>Not sure about your financial proof?</h3>
+            <p>Start with a free 15-min audit. We'll tell you where you stand.</p>
+            <a href="/free-visa-audit/" class="btn btn--primary w-full" style="justify-content:center;margin-top:var(--space-4)">Book Free Audit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .service-hero { padding-block: var(--space-16); }
+  .service-hero__label { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .service-icon { font-size: 2rem; }
+  .service-hero__title { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
+  .service-hero__subtitle { font-size: var(--text-xl); color: var(--color-text-muted); max-width: 56ch; line-height: var(--leading-relaxed); margin-bottom: var(--space-8); }
+  .service-hero__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .service-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+  @media (max-width: 960px) { .service-content-grid { grid-template-columns: 1fr; } }
+  .service-main h2 { margin-bottom: var(--space-4); }
+  .service-main h3 { margin-top: var(--space-8); margin-bottom: 0; }
+  .service-main p  { color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-top: var(--space-3); }
+  .service-sidebar { display: flex; flex-direction: column; gap: var(--space-5); }
+  .sidebar-box {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+  }
+  .sidebar-box--cta { background: var(--color-primary); color: white; }
+  .sidebar-box--cta h3 { color: white; margin-bottom: var(--space-2); }
+  .sidebar-box--cta p  { color: hsl(220 30% 80%); font-size: var(--text-sm); }
+  .sidebar-box__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-4); }
+  .sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+  .sidebar-links li { font-size: var(--text-sm); }
+</style>
