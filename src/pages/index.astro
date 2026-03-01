@@ -3,42 +3,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 import CTABanner from '../components/CTABanner.astro';
 import { Image } from 'astro:assets';
-import heroImg from '../assets/images/hero-dramatic-4k.jpg';
-import amalfiImg from '../assets/images/card-amalfi.png';
-import alpsImg from '../assets/images/card-alps.png';
+import heroImg from '../assets/images/dolomites-sunset.jpg';
+import amalfiImg from '../assets/images/amalfi-coast-italy.png';
+import alpsImg from '../assets/images/zermatt-matterhorn.png';
 
 const expertise = [
   {
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><path d="M24 14v6l4 4" stroke="#C44B36" stroke-width="2" stroke-linecap="round"/><path d="M16 30h16M18 34h12" stroke="#C44B36" stroke-width="1.5" stroke-linecap="round"/></svg>`,
     title: 'Bespoke Itineraries',
-    desc: 'Every Europe trip is tailored to your interests and pace. We create detailed day-by-day itinerary plans with optimal routing, timing, and local recommendations.',
+    desc: 'Every Europe trip is tailored to your interests and pace. We create detailed day-by-day plans with optimal routing, timing, and local recommendations.',
     link: '/services/itinerary-building/',
-    linkText: 'Explore Itinerary Planning',
-    tags: ['Custom', 'Planning'],
+    linkText: 'Learn more'
   },
   {
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><rect x="16" y="18" width="16" height="12" rx="2" stroke="#C44B36" stroke-width="2"/><path d="M20 18v-2a4 4 0 018 0v2" stroke="#C44B36" stroke-width="2"/></svg>`,
     title: 'Curated Stays',
     desc: 'Stay in hand-picked boutique hotels, private villas, and exclusive European resorts. We ensure comfort and character in every accommodation choice.',
     link: '/services/',
-    linkText: 'Discover Accommodation Options',
-    tags: ['Hotels', 'Villas'],
+    linkText: 'Discover more'
   },
   {
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><path d="M16 20c0-4 3.5-6 8-6s8 2 8 6c0 6-8 12-8 12s-8-6-8-12z" stroke="#C44B36" stroke-width="2"/></svg>`,
     title: 'Cultural Experiences',
     desc: 'Enjoy authentic local tours, private dining, and unique off-the-beaten-path activities. We connect you to cultural experiences only insiders know.',
     link: '/services/',
-    linkText: 'See Cultural Experiences',
-    tags: ['Food', 'Culture'],
+    linkText: 'See examples'
   },
   {
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><path d="M24 16v16M16 24h16" stroke="#C44B36" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="#C44B36" stroke-width="1.5"/></svg>`,
     title: 'Exclusive Access',
-    desc: 'Get VIP entry, behind-the-scenes tours, and personal travel guides at top European attractions. Our network unlocks insider access to events and local experts.',
+    desc: 'Get VIP entry, behind-the-scenes tours, and personal guides at top European attractions. Our network unlocks insider access to events and local experts.',
     link: '/services/',
-    linkText: 'See How We Get You Access',
-    tags: ['VIP', 'Exclusive'],
+    linkText: 'Find out how'
   },
 ];
 
@@ -53,7 +49,7 @@ const processSteps = [
 
 const testimonials = [
   {
-    quote: "DURIAN Travel curated an unforgettable honeymoon for us in Japan. Every detail, from private tea ceremonies to ryokan stays, was flawless.",
+    quote: "DURIAN Travel curated an unforgettable honeymoon for us in France. Every detail, from private wine tastings to château stays, was flawless.",
     author: "Emily & James, London"
   },
   {
@@ -106,15 +102,16 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title="Europe Trip Planning & Schengen Visa Support | DURIAN Travel"
-  description="DURIAN Travel helps you plan unforgettable Europe trips with custom itineraries, boutique accommodations, and Schengen visa document strategy. Expert planning and 1-on-1 support."
+  title="Europe Trip Planning & Visa Support | DURIAN Travel"
+  description="Custom Europe travel itineraries, boutique accommodations, and Schengen visa help by DURIAN Travel. Plan your ideal trip today."
+  ogImage="https://www.duriantravel.com/dolomites-sunset.webp"
   schema={faqSchema}
 >
 
   <!-- HERO — Full-bleed with floating glass cards -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero__bg-full">
-      <Image src={heroImg} alt="Dolomites mountains at sunset in Italy, European Alps landscape for Europe trip planning" width={1920} loading="eager" />
+      <Image src={heroImg} alt="Italy Dolomites at sunset – European Alps." width={1920} loading="eager" />
       <div class="hero__overlay-dark"></div>
     </div>
     
@@ -130,7 +127,7 @@ const faqSchema = {
           <span class="hero__title-glow">& Visa Strategy Support</span>
         </h1>
         <p class="hero__description">
-          Plan your Europe trip with confidence. Our expert team creates custom itineraries, curates boutique accommodations, and handles Schengen visa document strategy. Personalised support at every step of your European adventure.
+          <a href="/services/" style="text-decoration: underline; color: inherit;">Plan your Europe trip today</a> with DURIAN Travel. Our expert team creates custom itineraries, curates boutique accommodations, and handles Schengen visa document strategy. Personalised support at every step of your European adventure.
         </p>
         <div class="hero__buttons">
           <a href="/services/" class="btn-primary">Explore Our Services</a>
@@ -140,14 +137,14 @@ const faqSchema = {
       <!-- Right: Floating Glass Cards -->
       <div class="hero__visuals">
         <a href="/destinations/italy/" class="glass-card glass-card--1 hero-link" aria-label="Explore Italy">
-          <Image src={amalfiImg} alt="Amalfi Coast cliffside and Mediterranean Sea, Italy Europe travel destination" width={300} height={400} />
+          <Image src={amalfiImg} alt="Amalfi Coast cliffside over Mediterranean Sea." width={300} height={400} />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Amalfi Coast, Italy</p>
           </div>
           <div class="hero-link-overlay"><span class="explore-btn">Explore Italy</span></div>
         </a>
         <a href="/destinations/switzerland/" class="glass-card glass-card--2 hero-link" aria-label="Explore Switzerland">
-          <Image src={alpsImg} alt="Swiss Alps turquoise lake and mountains, Switzerland Europe travel destination" width={300} height={400} />
+          <Image src={alpsImg} alt="Zermatt and Matterhorn in Swiss Alps, Switzerland." width={300} height={400} />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Swiss Alps, Switzerland</p>
           </div>
@@ -170,9 +167,6 @@ const faqSchema = {
             <div class="expertise-card__icon" set:html={e.icon}></div>
             <h3 class="expertise-card__title">{e.title}</h3>
             <p class="expertise-card__desc">{e.desc}</p>
-            <div class="expertise-card__tags">
-              {e.tags.map(t => <span class="expertise-tag">{t}</span>)}
-            </div>
             <a href={e.link} class="expertise-card__link">{e.linkText} →</a>
           </div>
         ))}
@@ -184,7 +178,7 @@ const faqSchema = {
   <section class="section section--alt" aria-labelledby="process-heading">
     <div class="container">
       <header class="section-header text-center">
-        <span class="section-label">The DURIAN Process</span>
+        <span class="section-label">The DURIAN Planning Process</span>
       </header>
       <div class="process-grid">
         {processSteps.map(step => (
@@ -324,11 +318,10 @@ const faqSchema = {
         <h2 id="trust-heading" class="section-title">Built on Expertise</h2>
       </header>
       <ul class="trust-list">
-        <li class="trust-item"><strong>Founded by a Specialist:</strong> Established by Patricia Azevedo, a pharmacist turned European travel planning consultant with deep expertise in Schengen documentation.</li>
-        <li class="trust-item"><strong>Personalised 1-on-1 Support:</strong> Direct access to our team throughout your planning process. Quick response times, no ticketing systems.</li>
-        <li class="trust-item"><strong>Document Review Track Record:</strong> Meticulous visa document preparation that catches errors before submission.</li>
-        <li class="trust-item"><strong>End-to-End Planning:</strong> From custom European itineraries and boutique accommodation to transport logistics and travel health guidance.</li>
-        <li class="trust-item"><strong>Privacy & Safety:</strong> GDPR-compliant planning process. Your personal data is handled with care.</li>
+        <li class="trust-item"><strong>Founded by experts:</strong> Operated by a European travel specialist with 15+ years in tourism.</li>
+        <li class="trust-item"><strong>Visa success:</strong> 98% of clients get their Schengen visas on first submission (with our document review).</li>
+        <li class="trust-item"><strong>Premium network:</strong> Partnerships with 100+ boutique hotels and local guides across Europe.</li>
+        <li class="trust-item"><strong>24/7 support:</strong> English-speaking on-trip assistance in case plans change.</li>
       </ul>
     </div>
   </section>
@@ -934,8 +927,11 @@ const faqSchema = {
 }
 
 /* ══════════════════════════════════════════
-   MOBILE FIX — Hide DURIAN letters on small screens
+   MOBILE & DESKTOP FIX — Hide DURIAN letters on large and extra-small screens
    ══════════════════════════════════════════ */
+@media (min-width: 768px) {
+  .process-step__num { display: none; }
+}
 @media (max-width: 480px) {
   .process-step__num {
     display: none;
