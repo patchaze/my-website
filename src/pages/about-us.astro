@@ -5,17 +5,17 @@ import CTABanner from '../components/CTABanner.astro';
 
 <BaseLayout
   title="About DURIAN | European Travel Consultancy + Trip Planning"
-  description="Meet the founder behind DURIAN. A pharmacist's precision applied to European travel planning, itinerary design, and document preparation guidance."
+  description="DURIAN Travel is a European travel consultancy built on expertise, precision, and insider knowledge. Discover our approach to bespoke itineraries and Schengen visa strategy."
   breadcrumb={[{ name: 'About', url: 'https://www.duriantravel.com/about-us/' }]}
 >
 
   <section class="hero-sm hero-gradient">
     <div class="container">
       <span class="section-label" style="color:var(--color-accent-light)">About Us</span>
-      <h1 class="hero-sm__title" style="color:white">The Person Behind DURIAN Travel</h1>
+      <h1 class="hero-sm__title" style="color:white">The Story Behind DURIAN Travel</h1>
       <p class="hero-sm__subtitle">
-        A pharmacist who fell in love with travel — and discovered that most people struggle
-        with visa applications not because they're unqualified, but because the process is opaque.
+        A boutique European travel consultancy built on the belief that every journey deserves
+        expert guidance — from the first itinerary sketch to the final visa stamp.
       </p>
     </div>
   </section>
@@ -29,50 +29,85 @@ import CTABanner from '../components/CTABanner.astro';
         and one missing document can mean a refusal stamp in your passport.
       </p>
       <p>
-        <strong>DURIAN Travel was born from personal frustration.</strong> After going through the process
-        myself — and watching friends get refused for entirely preventable reasons — I decided to build
-        the resource I wished had existed.
+        <strong>DURIAN Travel was born from a desire to change that.</strong> We set out to build the
+        resource we wished had existed — combining deep destination expertise with meticulous document
+        strategy so travellers arrive prepared, not anxious.
       </p>
-
-      <h2>Founder Background</h2>
-      <p>
-        My name is Patricia. I'm a licensed pharmacist with a career built on precision, documentation,
-        and attention to detail. Those same skills apply directly to visa applications — where every document
-        matters and every inconsistency can raise a flag.
-      </p>
-      <p>
-        I've traveled to multiple Schengen countries, navigated the visa process firsthand, and studied
-        the official requirements from dozens of embassies. I combine that experience with a pharmacist's
-        methodical approach to help others prepare stronger applications.
-      </p>
-
-      <div class="notice notice--warning">
-        <span>⚠️</span>
-        <p>
-          <strong>Important:</strong> I am not an immigration lawyer. I do not submit visa applications.
-          I do not guarantee approvals. I provide educational guidance and document review to help you
-          prepare — the decision is always the embassy's.
-        </p>
-      </div>
 
       <h2>Our Principles</h2>
       <ul>
         <li><strong>Honesty over hype.</strong> We never promise approvals. We tell you what's strong and what's weak.</li>
-        <li><strong>Education first.</strong> Our goal is for you to understand the process, not depend on us.</li>
+        <li><strong>Education first.</strong> Our goal is for you to understand the process, not depend on us forever.</li>
         <li><strong>Detail matters.</strong> One missing bank statement can cost months. We catch those details.</li>
-        <li><strong>Accessible pricing.</strong> Quality guidance shouldn't cost thousands. Services start at €29.</li>
+        <li><strong>Accessible excellence.</strong> Quality guidance shouldn't cost thousands. Services start at €29.</li>
       </ul>
 
       <h2>What We Cover</h2>
       <p>
-        Our core expertise is <strong>Schengen tourist visa applications</strong>, but we also provide guidance on:
+        Our core expertise is <strong>Schengen tourist visa applications and Europe trip planning</strong>, but we also provide guidance on:
       </p>
       <ul>
-        <li>Travel health preparation (medications, prescriptions, vaccines)</li>
-        <li>Trip itinerary and accommodation planning</li>
-        <li>Packing, carry-on rules, and airport security</li>
-        <li>Budget travel: flights, SIM cards, insurance</li>
+        <li>Bespoke day-by-day itinerary design across Europe</li>
+        <li>Curated boutique hotel and villa recommendations</li>
+        <li>Cultural experiences, private tours, and local fixers</li>
+        <li>Budget planning: flights, SIM cards, travel insurance</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- THE DURIAN PROCESS -->
+  <section class="section section--alt">
+    <div class="container">
+      <header class="section-header text-center">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">The DURIAN Planning Process</h2>
+        <p class="section-intro">Every letter of DURIAN reflects a pillar of our approach to European travel.</p>
+      </header>
+
+      <div class="durian-grid">
+        <div class="durian-item">
+          <span class="durian-letter">D</span>
+          <div>
+            <h3 class="durian-title">Documentation</h3>
+            <p class="durian-desc">Meticulous review and preparation of all your travel application documents.</p>
+          </div>
+        </div>
+        <div class="durian-item">
+          <span class="durian-letter">U</span>
+          <div>
+            <h3 class="durian-title">Understanding</h3>
+            <p class="durian-desc">In-depth analysis of your travel goals and personal circumstances.</p>
+          </div>
+        </div>
+        <div class="durian-item">
+          <span class="durian-letter">R</span>
+          <div>
+            <h3 class="durian-title">Regulatory</h3>
+            <p class="durian-desc">Up-to-the-minute compliance with evolving immigration laws and embassy rules.</p>
+          </div>
+        </div>
+        <div class="durian-item">
+          <span class="durian-letter">I</span>
+          <div>
+            <h3 class="durian-title">Insight</h3>
+            <p class="durian-desc">Strategic guidance based on years of cross-border travel expertise.</p>
+          </div>
+        </div>
+        <div class="durian-item">
+          <span class="durian-letter">A</span>
+          <div>
+            <h3 class="durian-title">Advisory</h3>
+            <p class="durian-desc">Personalised recommendations to strengthen your case and avoid common pitfalls.</p>
+          </div>
+        </div>
+        <div class="durian-item">
+          <span class="durian-letter">N</span>
+          <div>
+            <h3 class="durian-title">Network</h3>
+            <p class="durian-desc">Connection to our global ecosystem of luxury stays and local fixers.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -84,4 +119,46 @@ import CTABanner from '../components/CTABanner.astro';
 .hero-sm { padding-block: var(--space-16); }
 .hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
 .hero-sm__subtitle { font-size: var(--text-lg); color: hsl(150 30% 75%); max-width: 60ch; line-height: var(--leading-relaxed); }
+
+.section-intro { color: var(--color-text-muted); max-width: 55ch; margin: 0 auto var(--space-12); text-align: center; }
+
+.durian-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.durian-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 2px 12px hsl(0 0% 0% / 0.06);
+}
+
+.durian-letter {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  min-width: 2.5rem;
+}
+
+.durian-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-heading);
+}
+
+.durian-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
 </style>
