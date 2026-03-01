@@ -123,35 +123,39 @@ import CTABanner from '../components/CTABanner.astro';
 .section-intro { color: var(--color-text-muted); max-width: 55ch; margin: 0 auto var(--space-12); text-align: center; }
 
 .durian-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-8);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-4);
   margin-top: var(--space-8);
+  overflow-x: auto;
 }
 
 .durian-item {
+  flex: 1 0 0;
   display: flex;
-  align-items: flex-start;
-  gap: var(--space-5);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
   background: white;
   border-radius: var(--radius-lg);
-  padding: var(--space-6);
+  padding: var(--space-6) var(--space-4);
   box-shadow: 0 2px 12px hsl(0 0% 0% / 0.06);
+  min-width: 0;
 }
 
 .durian-letter {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-accent);
   line-height: 1;
-  min-width: 2.5rem;
 }
 
 .durian-title {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: 600;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
   color: var(--color-heading);
 }
 
@@ -160,5 +164,14 @@ import CTABanner from '../components/CTABanner.astro';
   color: var(--color-text-muted);
   line-height: var(--leading-relaxed);
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .durian-grid {
+    flex-wrap: wrap;
+  }
+  .durian-item {
+    flex: 1 0 calc(50% - var(--space-4));
+  }
 }
 </style>
