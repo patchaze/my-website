@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 import CTABanner from '../components/CTABanner.astro';
-import { Image } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 import heroImg from '../assets/images/dolomites-sunset.jpg';
 import amalfiImg from '../assets/images/amalfi-coast-italy.png';
 import alpsImg from '../assets/images/zermatt-matterhorn.png';
@@ -104,7 +104,7 @@ const faqSchema = {
   <!-- HERO — Full-bleed with floating glass cards -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero__bg-full">
-      <Image src={heroImg} alt="Italy Dolomites at sunset – European Alps." width={1920} loading="eager" />
+      <Picture src={heroImg} alt="Italy Dolomites at sunset – European Alps." widths={[480, 800, 1200, 1920]} sizes="100vw" formats={['avif', 'webp']} fallbackFormat="jpg" loading="eager" fetchpriority="high" />
       <div class="hero__overlay-dark"></div>
     </div>
     
@@ -130,14 +130,14 @@ const faqSchema = {
       <!-- Right: Floating Glass Cards -->
       <div class="hero__visuals">
         <a href="/destinations/italy/" class="glass-card glass-card--1 hero-link" aria-label="Explore Italy">
-          <Image src={amalfiImg} alt="Amalfi Coast cliffside over Mediterranean Sea." width={300} height={400} />
+          <Picture src={amalfiImg} alt="Amalfi Coast cliffside over Mediterranean Sea." widths={[300, 600]} sizes="(max-width: 600px) 100vw, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Amalfi Coast, Italy</p>
           </div>
           <div class="hero-link-overlay"><span class="explore-btn">Explore Italy</span></div>
         </a>
         <a href="/destinations/switzerland/" class="glass-card glass-card--2 hero-link" aria-label="Explore Switzerland">
-          <Image src={alpsImg} alt="Zermatt and Matterhorn in Swiss Alps, Switzerland." width={300} height={400} />
+          <Picture src={alpsImg} alt="Zermatt and Matterhorn in Swiss Alps, Switzerland." widths={[300, 600]} sizes="(max-width: 600px) 100vw, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Swiss Alps, Switzerland</p>
           </div>
