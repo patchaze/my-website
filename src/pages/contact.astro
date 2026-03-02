@@ -36,14 +36,15 @@ import CTABanner from '../components/CTABanner.astro';
           <form
             name="contact"
             method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
             class="contact-form"
             id="contact-form"
-            action="/thank-you/"
+            action="https://formsubmit.co/contact@duriantravel.com"
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_next" value="https://www.duriantravel.com/thank-you/" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New Website Contact Form Submission" />
+            <input type="hidden" name="_template" value="table" />
 
             <div class="form-row">
               <div class="form-field">
