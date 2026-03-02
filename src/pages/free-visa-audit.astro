@@ -28,55 +28,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="audit-form-wrap">
           <h2 style="margin-bottom:var(--space-6)">Book Your Free Audit</h2>
 
-          <form class="audit-form" action="/thank-you/" method="GET">
-            <div class="form-group">
-              <label class="form-label" for="name">Full Name</label>
-              <input class="form-input" type="text" id="name" name="name" required placeholder="Your full name" />
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="email">Email Address</label>
-              <input class="form-input" type="email" id="email" name="email" required placeholder="you@example.com" />
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="nationality">Your Nationality</label>
-              <select class="form-select" id="nationality" name="nationality" required>
-                <option value="">Select...</option>
-                <option>Brazilian</option>
-                <option>Indian</option>
-                <option>Filipino</option>
-                <option>Nigerian</option>
-                <option>Pakistani</option>
-                <option>Indonesian</option>
-                <option>Turkish</option>
-                <option>South African</option>
-                <option>Egyptian</option>
-                <option>Thai</option>
-                <option>Moroccan</option>
-                <option>Chinese</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="destination">Which Schengen Country?</label>
-              <input class="form-input" type="text" id="destination" name="destination" placeholder="e.g. France, Germany, Italy" />
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="situation">Briefly describe your situation</label>
-              <textarea class="form-textarea" id="situation" name="situation" rows="4" placeholder="E.g. first-time applicant, previously refused, self-employed, traveling with family..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--accent btn--lg" style="width:100%;justify-content:center">
-              Book Free Audit →
-            </button>
-
-            <p class="form-hint" style="text-align:center;margin-top:var(--space-3)">
-              Free. No credit card. No commitment. We'll contact you within 24 hours.
-            </p>
-          </form>
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/contact-duriantravel/durian-travel-15-minute-audit?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
         </div>
 
         <!-- What's included sidebar -->
