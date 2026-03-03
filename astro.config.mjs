@@ -19,6 +19,18 @@ export default defineConfig({
     build: {
       cssMinify: true,
       minify: 'esbuild',
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            // Keep each page's CSS separate to avoid cross-page CSS loading
+            if (id.includes('src/pages/')) {
+              const match = id.match(/src\/pages\/([^/]+)/);
+              if (match) return `page-${match[1].replace(/\./g, '_')}`;
+            }
+          }
+        }
+      }
     },
   },
 });

@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 import CTABanner from '../components/CTABanner.astro';
-import { Image, Picture } from 'astro:assets';
+import { Image, Picture, getImage } from 'astro:assets';
 import heroImg from '../assets/images/dolomites-sunset.jpg';
 import amalfiImg from '../assets/images/amalfi-coast-italy.png';
 import alpsImg from '../assets/images/zermatt-matterhorn.png';
@@ -92,6 +92,12 @@ const faqSchema = {
     }
   ]
 };
+// Pre-generate hero image for LCP preload hint
+const heroAvif480 = await getImage({ src: heroImg, width: 480, format: 'avif' });
+const heroAvif800 = await getImage({ src: heroImg, width: 800, format: 'avif' });
+const heroAvif1200 = await getImage({ src: heroImg, width: 1200, format: 'avif' });
+const heroAvif1920 = await getImage({ src: heroImg, width: 1920, format: 'avif' });
+const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroAvif1200.src} 1200w, ${heroAvif1920.src} 1920w`;
 ---
 
 <BaseLayout
@@ -99,6 +105,8 @@ const faqSchema = {
   description="Expert Europe trip planning, custom itineraries, boutique accommodations & Schengen visa strategy by DURIAN Travel. Start your adventure today!"
   ogImage="https://www.duriantravel.com/dolomites-sunset.webp"
   schema={faqSchema}
+  lcpImageSrcset={lcpAvifSrcset}
+  lcpImageSizes="100vw"
 >
 
   <!-- HERO — Full-bleed with floating glass cards -->
