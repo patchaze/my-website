@@ -29,6 +29,27 @@ const props = Astro.props;
     {props.lcpImageSrcset && (
       <link rel="preload" as="image" imagesrcset={props.lcpImageSrcset} imagesizes={props.lcpImageSizes ?? '100vw'} fetchpriority="high" />
     )}
+    <style is:inline>
+      /* --- CRITICAL FCP CSS INLINED --- */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; tab-size: 4; }
+      body {
+        font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+        font-size: var(--text-base, 1rem);
+        line-height: var(--leading-normal, 1.5);
+        color: var(--color-text, #333);
+        background: var(--color-surface, #FAFAFA);
+        -webkit-font-smoothing: antialiased;
+      }
+      img, video, svg { display: block; max-width: 100%; }
+      button, input, select, textarea { font: inherit; }
+      a { color: inherit; }
+      p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+      ul, ol { list-style: none; }
+      h1 { font-family: var(--font-serif, "Playfair Display", serif); font-size: clamp(var(--text-3xl, 2rem), 5vw, var(--text-5xl, 4rem)); font-weight: var(--font-extrabold, 800); line-height: var(--leading-tight, 1.1); letter-spacing: -0.02em; }
+      h2 { font-family: var(--font-serif, "Playfair Display", serif); font-size: clamp(var(--text-2xl, 1.5rem), 4vw, var(--text-4xl, 2.5rem)); font-weight: var(--font-bold, 700); line-height: var(--leading-tight, 1.1); letter-spacing: -0.015em; }
+      h3 { font-size: clamp(var(--text-xl, 1.25rem), 3vw, var(--text-2xl, 1.5rem)); font-weight: var(--font-semibold, 600); line-height: var(--leading-snug, 1.3); }
+    </style>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
