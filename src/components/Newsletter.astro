@@ -22,77 +22,117 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
         <p class="newsletter__desc">Join 2,000+ travellers who get our weekly insider tips — destination guides, visa checklists, seasonal deals and more. Unsubscribe anytime.</p>
       </div>
 
-      <div class="newsletter__form-container sib-form">
-        <div id="sib-form-container">
-          <!-- Official Brevo feedback IDs integrated into custom styling -->
-          <div id="success-message" class="newsletter__feedback newsletter__feedback--success" style="display:none;">
-            ✅ You're in! Check your inbox to confirm your subscription.
-          </div>
-          <div id="error-message" class="newsletter__feedback newsletter__feedback--error" style="display:none;">
-            Something went wrong. Please try again.
-          </div>
-
-          <form 
-            class="newsletter__form" 
-            id="sib-form" 
-            method="POST" 
-            action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ=="
-            data-type="subscription"
-          >
-            <div class="newsletter__field-row">
-              <div class="newsletter__input-wrap">
-                <input
-                  type="email"
-                  name="EMAIL"
-                  id="EMAIL"
-                  required
-                  placeholder="Your email address"
-                  class="newsletter__input"
-                  aria-label="Email address"
-                />
-              </div>
-              <button type="submit" class="newsletter__btn sib-form-block__button">
-                <span class="newsletter__btn-text">Subscribe</span>
-                <span class="newsletter__btn-loading" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="20"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>
-                </span>
-              </button>
-            </div>
-            
-            <label class="newsletter__consent">
-              <input type="checkbox" name="OPT_IN" id="OPT_IN" required />
-              <span>I agree to receive emails from DURIAN Travel. <a href="/privacy-policy/">Privacy Policy</a></span>
-            </label>
-
-            <!-- Required hidden fields for Brevo backend -->
-            <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" />
-            <input type="hidden" name="locale" value="en" />
-            <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT" style="display: none"></div>
-          </form>
+      <div class="newsletter__form-container">
+        <!-- Success Message -->
+        <div class="newsletter__feedback newsletter__feedback--success" id={`${id}-success`} style="display:none;">
+          ✅ You're in! Check your inbox to confirm your subscription.
         </div>
+        
+        <!-- Error Message -->
+        <div class="newsletter__feedback newsletter__feedback--error" id={`${id}-error`} style="display:none;">
+          Something went wrong. Please try again.
+        </div>
+
+        <form class="newsletter__form" id={`${id}-form`} data-newsletter-form-custom>
+          <div class="newsletter__field-row">
+            <div class="newsletter__input-wrap">
+              <input
+                type="email"
+                name="EMAIL"
+                required
+                placeholder="Your email address"
+                class="newsletter__input"
+                aria-label="Email address"
+              />
+            </div>
+            <button type="submit" class="newsletter__btn">
+              <span class="newsletter__btn-text">Subscribe</span>
+              <span class="newsletter__btn-loading" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="20"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>
+              </span>
+            </button>
+          </div>
+          <label class="newsletter__consent">
+            <input type="checkbox" name="OPT_IN" required />
+            <span>I agree to receive emails from DURIAN Travel. <a href="/privacy-policy/">Privacy Policy</a></span>
+          </label>
+        </form>
       </div>
     </div>
   </section>
 ) : null}
 
-<!-- Brevo Configuration & Scripts -->
+<!-- Custom Subscription Logic with reCAPTCHA v3 -->
+<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT"></script>
 <script is:inline>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-  window.LOCALE = 'en';
-  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
-  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.translation = {
-    common: {
-      selectedList: '{quantity} list selected',
-      selectedLists: '{quantity} lists selected',
-      selectedOption: '{quantity} selected',
-      selectedOptions: '{quantity} selected',
-    }
-  };
+(function() {
+  const BREVO_URL = 'https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==';
+  const SITE_KEY = '6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT';
+
+  // Helper for feedback
+  function showMsg(el, show) {
+    if (el) el.style.display = show ? 'block' : 'none';
+  }
+
+  document.querySelectorAll('[data-newsletter-form-custom]').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const emailInput = form.querySelector('input[name="EMAIL"]');
+      const email = emailInput.value.trim();
+      const btn = form.querySelector('button[type="submit"]');
+      const successEl = document.getElementById(form.id.replace('-form', '-success'));
+      const errorEl = document.getElementById(form.id.replace('-form', '-error'));
+
+      if (!email || !SITE_KEY) return;
+
+      // Reset feedback
+      showMsg(successEl, false);
+      showMsg(errorEl, false);
+      
+      btn.classList.add('is-loading');
+      btn.disabled = true;
+
+      // 1. Get reCAPTCHA v3 token
+      grecaptcha.ready(function() {
+        grecaptcha.execute(SITE_KEY, {action: 'subscription'}).then(function(token) {
+          
+          // 2. Prepare payload exactly as Brevo expects
+          const params = new URLSearchParams();
+          params.append('EMAIL', email);
+          params.append('email_address_check', '');
+          params.append('locale', 'en');
+          params.append('OPT_IN', 'on');
+          params.append('g-recaptcha-response', token);
+
+          // 3. Submit via fetch (no-cors is necessary for cross-domain POST)
+          fetch(BREVO_URL, {
+            method: 'POST',
+            body: params,
+            mode: 'no-cors'
+          }).then(() => {
+            // Success
+            showMsg(successEl, true);
+            form.reset();
+            form.style.display = 'none';
+          }).catch(err => {
+            console.error('Newsletter error:', err);
+            showMsg(errorEl, true);
+          }).finally(() => {
+            btn.classList.remove('is-loading');
+            btn.disabled = false;
+          });
+        }).catch(err => {
+          console.error('reCAPTCHA error:', err);
+          showMsg(errorEl, true);
+          btn.classList.remove('is-loading');
+          btn.disabled = false;
+        });
+      });
+    });
+  });
+})();
 </script>
-<script is:inline src="https://sibforms.com/forms/end-form/build/main.js" defer></script>
-<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT&hl=en" async defer></script>
 
 <style>
 /* ══════════════════════════════════════════
