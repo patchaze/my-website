@@ -22,88 +22,59 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
         <p class="newsletter__desc">Join 2,000+ travellers who get our weekly insider tips — destination guides, visa checklists, seasonal deals and more. Unsubscribe anytime.</p>
       </div>
 
-      <div id="sib-form-container" class="sib-form-container">
-        <!-- Error Message -->
-        <div id="error-message" class="sib-form-message-panel newsletter__feedback newsletter__feedback--error" style="display:none;">
-          <div class="sib-form-message-panel__text">
-            <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
-          </div>
-        </div>
-
-        <!-- Success Message -->
-        <div id="success-message" class="sib-form-message-panel newsletter__feedback newsletter__feedback--success" style="display:none;">
-          <div class="sib-form-message-panel__text">
-            <span class="sib-form-message-panel__inner-text">✅ Your subscription has been successful. Check your inbox!</span>
-          </div>
-        </div>
-
-        <form 
-          id="sib-form" 
-          method="POST" 
-          action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==" 
-          data-type="subscription"
-          class="newsletter__form"
-        >
-          <div class="newsletter__field-row">
-            <div class="newsletter__input-wrap">
-              <input
-                type="email"
-                name="EMAIL"
-                id="EMAIL"
-                required
-                placeholder="Your email address"
-                class="newsletter__input"
-                aria-label="Email address"
-              />
+      <div class="sib-form">
+        <div id="sib-form-container" class="sib-form-container">
+          <div id="error-message" class="sib-form-message-panel newsletter__feedback newsletter__feedback--error" style="display:none;">
+            <div class="sib-form-message-panel__text">
+              <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
             </div>
-            <button type="submit" class="newsletter__btn sib-form-block__button">
-              <span class="newsletter__btn-text">Subscribe</span>
-            </button>
           </div>
+          <div id="success-message" class="sib-form-message-panel newsletter__feedback newsletter__feedback--success" style="display:none;">
+            <div class="sib-form-message-panel__text">
+              <span class="sib-form-message-panel__inner-text">✅ Your subscription has been successful.</span>
+            </div>
+          </div>
+          <div id="sib-container" class="sib-container--large sib-container--vertical">
+            <form 
+              id="sib-form" 
+              method="POST" 
+              action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==" 
+              data-type="subscription"
+              class="newsletter__form"
+            >
+              <div class="newsletter__field-row">
+                <div class="newsletter__input-wrap">
+                  <input
+                    class="newsletter__input"
+                    type="text"
+                    id="EMAIL"
+                    name="EMAIL"
+                    autocomplete="off"
+                    placeholder="Your email address"
+                    data-required="true"
+                    required
+                  />
+                </div>
+                <button 
+                  class="newsletter__btn sib-form-block__button sib-form-block__button-with-loader" 
+                  form="sib-form" 
+                  type="submit"
+                >
+                  <span class="newsletter__btn-text">Subscribe</span>
+                </button>
+              </div>
 
-          <label class="newsletter__consent">
-            <input type="checkbox" name="OPT_IN" required />
-            <span>I agree to receive emails from DURIAN Travel. <a href="/privacy-policy/">Privacy Policy</a></span>
-          </label>
-
-          <!-- Hidden fields for Brevo -->
-          <input type="text" name="email_address_check" value="" style="display:none !important;" />
-          <input type="hidden" name="locale" value="en" />
-          
-          <!-- reCAPTCHA v3 -->
-          <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT" style="display: none"></div>
-        </form>
+              <!-- Required hidden fields for Brevo -->
+              <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" />
+              <input type="hidden" name="locale" value="en" />
+              <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT" style="display: none"></div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-) : (
-  <!-- Compact inline newsletter (not used in current layout but keeping logic) -->
-  <div id="sib-form-container" class="sib-form-container">
-    <div id="success-message" class="newsletter__feedback newsletter__feedback--success" style="display:none;">Success!</div>
-    <form 
-      id="sib-form" 
-      method="POST" 
-      action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==" 
-      data-type="subscription"
-      class="footer__newsletter-form"
-    >
-      <div class="footer__newsletter-row">
-        <input
-          type="email"
-          name="EMAIL"
-          id="EMAIL"
-          required
-          placeholder="Email"
-          class="footer__newsletter-input"
-        />
-        <button type="submit" class="footer__newsletter-btn">Subscribe</button>
-      </div>
-      <input type="text" name="email_address_check" value="" style="display:none !important;" />
-      <input type="hidden" name="locale" value="en" />
-      <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT" style="display: none"></div>
-    </form>
-  </div>
-)}
+) : null}
 
 <!-- Brevo Scripts -->
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
@@ -122,8 +93,8 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
     }
   };
 </script>
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT&hl=en" async defer></script>
+<script is:inline src="https://sibforms.com/forms/end-form/build/main.js" defer></script>
+<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT&hl=en" async defer></script>
 
 <style>
 /* ══════════════════════════════════════════
