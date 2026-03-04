@@ -1,0 +1,60 @@
+---
+/**
+ * NewsletterRelay.astro
+ * 
+ * This is a "Singleton" component that should be included ONCE in the global layout.
+ * it provides the official Brevo form engine (hidden) that all custom newsletter
+ * forms on the site relay their data to.
+ */
+---
+
+<!-- HIDDEN Official Brevo Relay Tank (Off-screen) -->
+<div 
+  id="newsletter-relay-tank"
+  style="position: absolute; left: -9999px; height: 1px; width: 1px; overflow: hidden;" 
+  aria-hidden="true"
+>
+  <div class="sib-form">
+    <div id="sib-form-container">
+      <!-- These IDs are EXACTLY what main.js expects -->
+      <div id="success-message" style="display:none;">SUCCESS</div>
+      <div id="error-message" style="display:none;">ERROR</div>
+      
+      <form 
+        id="sib-form" 
+        method="POST" 
+        action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ=="
+        target="brevo_relay_iframe"
+      >
+        <input type="email" name="EMAIL" id="RELAY_EMAIL" />
+        <input type="checkbox" name="OPT_IN" id="RELAY_OPT_IN" value="1" />
+        <input type="text" name="email_address_check" value="" />
+        <input type="hidden" name="locale" value="en" />
+        <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT"></div>
+        <button type="submit" id="RELAY_SUBMIT">Relay</button>
+      </form>
+    </div>
+  </div>
+  <!-- Iframe target strictly prevents any redirects from the main page -->
+  <iframe name="brevo_relay_iframe" id="brevo-relay-iframe" style="display:none;"></iframe>
+</div>
+
+<!-- Official Brevo Handling Scripts -->
+<script is:inline>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+</script>
+<!-- main.js depends on the IDs above -->
+<script is:inline src="https://sibforms.com/forms/end-form/build/main.js" defer></script>
+<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT&hl=en" async defer></script>

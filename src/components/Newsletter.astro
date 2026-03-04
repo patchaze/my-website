@@ -58,72 +58,26 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
             <span>I agree to receive emails from DURIAN Travel. <a href="/privacy-policy/">Privacy Policy</a></span>
           </label>
         </form>
-
-        <!-- HIDDEN Official Brevo Relay Tank (Off-screen, not display:none for better script compatibility) -->
-        <div style="position: absolute; left: -9999px; height: 1px; width: 1px; overflow: hidden;" aria-hidden="true">
-          <div class="sib-form">
-            <div id={`sib-form-container-${id}`}>
-              <!-- Unique IDs to avoid clashes between multiple instances -->
-              <div id={`${id}-relay-success`}></div>
-              <div id={`${id}-relay-error`}></div>
-              
-              <form 
-                id={`sib-form-${id}`} 
-                method="POST" 
-                action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ=="
-              >
-                <input type="email" name="EMAIL" id={`${id}-relay-email`} />
-                <input type="checkbox" name="OPT_IN" id={`${id}-relay-opt-in`} value="1" />
-                <input type="text" name="email_address_check" value="" />
-                <input type="hidden" name="locale" value="en" />
-                <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT"></div>
-                <button type="submit" id={`${id}-relay-submit`}>Relay</button>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 ) : null}
 
-<!-- Official Brevo Handling Scripts -->
-<script is:inline>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-  window.LOCALE = 'en';
-  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
-  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.translation = {
-    common: {
-      selectedList: '{quantity} list selected',
-      selectedLists: '{quantity} lists selected',
-      selectedOption: '{quantity} selected',
-      selectedOptions: '{quantity} selected',
-    }
-  };
-</script>
-<script is:inline src="https://sibforms.com/forms/end-form/build/main.js" defer></script>
-<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT&hl=en" async defer></script>
-
-<!-- Hybrid Relay Script -->
+<!-- Custom Newsletter Relay Client logic -->
 <script is:inline>
 (function() {
   document.querySelectorAll('[data-newsletter-relay-source]').forEach(visibleForm => {
-    // Determine the unique component ID
-    const compId = visibleForm.id.replace('-form', '');
-    
     visibleForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
       const emailValue = visibleForm.querySelector('input[name="EMAIL"]').value;
-      const relayEmail = document.getElementById(`${compId}-relay-email`);
-      const relayOptIn = document.getElementById(`${compId}-relay-opt-in`);
-      const relaySubmit = document.getElementById(`${compId}-relay-submit`);
+      const relayEmail = document.getElementById('RELAY_EMAIL');
+      const relayOptIn = document.getElementById('RELAY_OPT_IN');
+      const relaySubmit = document.getElementById('RELAY_SUBMIT');
       
       const btn = visibleForm.querySelector('button[type="submit"]');
-      const successEl = document.getElementById(`${compId}-success`);
-      const errorEl = document.getElementById(`${compId}-error`);
+      const successEl = document.getElementById(visibleForm.id.replace('-form', '-success'));
+      const errorEl = document.getElementById(visibleForm.id.replace('-form', '-error'));
 
       // Clear previous feedback
       if (successEl) successEl.style.display = 'none';
@@ -132,26 +86,25 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
       btn.classList.add('is-loading');
       btn.disabled = true;
 
-      // 1. Relay data to the official (hidden) form
+      // 1. Relay data to the global Singleton Relay
       if (relayEmail) relayEmail.value = emailValue;
       if (relayOptIn) relayOptIn.checked = true;
 
-      // 2. Trigger official submission via button click
+      // 2. Trigger global submission
       if (relaySubmit) relaySubmit.click();
 
-      // 3. Monitor official state and mirror back to visible UI
+      // 3. Monitor the Singleton Relay state
       const checkStatus = setInterval(() => {
-        const officialSuccess = document.getElementById(`${compId}-relay-success`);
-        const officialError = document.getElementById(`${compId}-relay-error`);
+        const officialSuccess = document.getElementById('success-message');
+        const officialError = document.getElementById('error-message');
 
-        // Check for style change OR nested innerHTML change (Brevo sometimes does both)
-        if (officialSuccess && (officialSuccess.style.display !== 'none' || officialSuccess.querySelector('.sib-form-message-panel'))) {
+        if (officialSuccess && (officialSuccess.style.display !== 'none' || officialSuccess.innerHTML.includes('sib-form-message-panel'))) {
           clearInterval(checkStatus);
           clearTimeout(timeoutSafety);
           btn.classList.remove('is-loading');
           visibleForm.style.display = 'none';
           if (successEl) successEl.style.display = 'block';
-        } else if (officialError && (officialError.style.display !== 'none' || officialError.querySelector('.sib-form-message-panel'))) {
+        } else if (officialError && (officialError.style.display !== 'none' || officialError.innerHTML.includes('sib-form-message-panel'))) {
           clearInterval(checkStatus);
           clearTimeout(timeoutSafety);
           btn.classList.remove('is-loading');
@@ -160,7 +113,7 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
         }
       }, 500);
 
-      // Timeout safety: 10 seconds
+      // Timeout safety: 12 seconds
       const timeoutSafety = setTimeout(() => {
         clearInterval(checkStatus);
         btn.classList.remove('is-loading');
@@ -169,7 +122,7 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
           errorEl.textContent = "Request timed out. Please try again or check your internet connection.";
           errorEl.style.display = 'block';
         }
-      }, 10000);
+      }, 12000);
     });
   });
 })();
