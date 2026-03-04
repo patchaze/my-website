@@ -22,149 +22,108 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
         <p class="newsletter__desc">Join 2,000+ travellers who get our weekly insider tips — destination guides, visa checklists, seasonal deals and more. Unsubscribe anytime.</p>
       </div>
 
-      <form class="newsletter__form" id={`${id}-form`} data-newsletter-form>
-        <div class="newsletter__field-row">
-          <div class="newsletter__input-wrap">
-            <input
-              type="email"
-              name="EMAIL"
-              required
-              placeholder="Your email address"
-              class="newsletter__input"
-              aria-label="Email address"
-              id={`${id}-email`}
-            />
+      <div id="sib-form-container" class="sib-form-container">
+        <!-- Error Message -->
+        <div id="error-message" class="sib-form-message-panel newsletter__feedback newsletter__feedback--error" style="display:none;">
+          <div class="sib-form-message-panel__text">
+            <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
           </div>
-          <button type="submit" class="newsletter__btn">
-            <span class="newsletter__btn-text">Subscribe</span>
-            <span class="newsletter__btn-loading" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="20"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>
-            </span>
-          </button>
         </div>
-        <label class="newsletter__consent">
-          <input type="checkbox" name="CONSENT" required />
-          <span>I agree to receive emails from DURIAN Travel. <a href="/privacy-policy/">Privacy Policy</a></span>
-        </label>
-        <div class="newsletter__feedback" id={`${id}-feedback`} aria-live="polite"></div>
-      </form>
+
+        <!-- Success Message -->
+        <div id="success-message" class="sib-form-message-panel newsletter__feedback newsletter__feedback--success" style="display:none;">
+          <div class="sib-form-message-panel__text">
+            <span class="sib-form-message-panel__inner-text">✅ Your subscription has been successful. Check your inbox!</span>
+          </div>
+        </div>
+
+        <form 
+          id="sib-form" 
+          method="POST" 
+          action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==" 
+          data-type="subscription"
+          class="newsletter__form"
+        >
+          <div class="newsletter__field-row">
+            <div class="newsletter__input-wrap">
+              <input
+                type="email"
+                name="EMAIL"
+                id="EMAIL"
+                required
+                placeholder="Your email address"
+                class="newsletter__input"
+                aria-label="Email address"
+              />
+            </div>
+            <button type="submit" class="newsletter__btn sib-form-block__button">
+              <span class="newsletter__btn-text">Subscribe</span>
+            </button>
+          </div>
+
+          <label class="newsletter__consent">
+            <input type="checkbox" name="OPT_IN" required />
+            <span>I agree to receive emails from DURIAN Travel. <a href="/privacy-policy/">Privacy Policy</a></span>
+          </label>
+
+          <!-- Hidden fields for Brevo -->
+          <input type="text" name="email_address_check" value="" style="display:none !important;" />
+          <input type="hidden" name="locale" value="en" />
+          
+          <!-- reCAPTCHA v3 -->
+          <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT" style="display: none"></div>
+        </form>
+      </div>
     </div>
   </section>
 ) : (
-  <!-- Compact inline newsletter (footer) -->
-  <form class="footer__newsletter-form" id={`${id}-form`} data-newsletter-form>
-    <div class="footer__newsletter-row">
-      <input
-        type="email"
-        name="EMAIL"
-        required
-        placeholder="Email"
-        class="footer__newsletter-input"
-        aria-label="Email for newsletter"
-        id={`${id}-email`}
-      />
-      <button type="submit" class="footer__newsletter-btn">
-        <span class="newsletter__btn-text">Subscribe</span>
-        <span class="newsletter__btn-loading" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="20"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>
-        </span>
-      </button>
-    </div>
-    <label class="footer__newsletter-consent">
-      <input type="checkbox" name="CONSENT" required />
-      <span>I agree to receive emails. <a href="/privacy-policy/">Privacy</a></span>
-    </label>
-    <div class="newsletter__feedback" id={`${id}-feedback`} aria-live="polite"></div>
-  </form>
+  <!-- Compact inline newsletter (not used in current layout but keeping logic) -->
+  <div id="sib-form-container" class="sib-form-container">
+    <div id="success-message" class="newsletter__feedback newsletter__feedback--success" style="display:none;">Success!</div>
+    <form 
+      id="sib-form" 
+      method="POST" 
+      action="https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==" 
+      data-type="subscription"
+      class="footer__newsletter-form"
+    >
+      <div class="footer__newsletter-row">
+        <input
+          type="email"
+          name="EMAIL"
+          id="EMAIL"
+          required
+          placeholder="Email"
+          class="footer__newsletter-input"
+        />
+        <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+      </div>
+      <input type="text" name="email_address_check" value="" style="display:none !important;" />
+      <input type="hidden" name="locale" value="en" />
+      <div class="g-recaptcha-v3" data-sitekey="6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT" style="display: none"></div>
+    </form>
+  </div>
 )}
 
-<!-- Shared client-side JS for all newsletter forms -->
-<script>
-(function() {
-  /* ─── BREVO CONFIGURATION ───
-     Replace this URL with your Brevo form action URL.
-     To get it: Brevo Dashboard → Contacts → Forms → Create Form →
-     copy the form action URL (looks like: https://xxx.sibforms.com/serve/...)
-     ─────────────────────────── */
-  const BREVO_FORM_URL = 'https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==';  // ← Paste your Brevo form URL here
-
-  document.querySelectorAll('[data-newsletter-form]').forEach(form => {
-    if (form.dataset.initialized) return;
-    form.dataset.initialized = 'true';
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const emailInput = form.querySelector('input[type="email"]');
-      const consentInput = form.querySelector('input[name="CONSENT"]');
-      const feedbackEl = form.querySelector('.newsletter__feedback');
-      const btn = form.querySelector('button[type="submit"]');
-      const email = emailInput?.value?.trim();
-
-      // Validate
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showFeedback(feedbackEl, 'Please enter a valid email address.', 'error');
-        return;
-      }
-      if (consentInput && !consentInput.checked) {
-        showFeedback(feedbackEl, 'Please agree to receive emails.', 'error');
-        return;
-      }
-
-      // Check if Brevo URL is configured
-      if (!BREVO_FORM_URL) {
-        showFeedback(feedbackEl, '✅ Thanks for subscribing! (Demo mode — connect Brevo to go live)', 'success');
-        emailInput.value = '';
-        if (consentInput) consentInput.checked = false;
-        return;
-      }
-
-      // Submit
-      btn.classList.add('is-loading');
-      btn.disabled = true;
-
-      try {
-        // Use URLSearchParams for application/x-www-form-urlencoded (more compatible than FormData)
-        const params = new URLSearchParams();
-        params.append('EMAIL', email);
-        params.append('email_address_check', '');
-        params.append('locale', 'en');
-
-        const res = await fetch(BREVO_FORM_URL, {
-          method: 'POST',
-          body: params,
-          mode: 'no-cors'
-        });
-
-        // With no-cors we can't read the response, so we assumes success
-        showFeedback(feedbackEl, '✅ You\'re in! Check your inbox to confirm your subscription.', 'success');
-        emailInput.value = '';
-        if (consentInput) consentInput.checked = false;
-      } catch (err) {
-        showFeedback(feedbackEl, 'Something went wrong. Please try again.', 'error');
-      } finally {
-        btn.classList.remove('is-loading');
-        btn.disabled = false;
-      }
-    });
-  });
-
-  function showFeedback(el, message, type) {
-    if (!el) return;
-    el.textContent = message;
-    el.className = 'newsletter__feedback newsletter__feedback--' + type;
-    el.style.display = 'block';
-
-    // Auto-hide success after 6s
-    if (type === 'success') {
-      setTimeout(() => {
-        el.style.display = 'none';
-        el.textContent = '';
-      }, 6000);
+<!-- Brevo Scripts -->
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<script is:inline>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
     }
-  }
-})();
+  };
 </script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT&hl=en" async defer></script>
 
 <style>
 /* ══════════════════════════════════════════
