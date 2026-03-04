@@ -18,17 +18,44 @@ export interface Props {
   hreflang?: Array<{ lang: string; url: string }>;
   lcpImageSrcset?: string;
   lcpImageSizes?: string;
+  keywords?: string;
 }
 
-const props = Astro.props;
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  ogType,
+  article,
+  breadcrumb,
+  schema,
+  noindex,
+  hreflang,
+  lcpImageSrcset,
+  lcpImageSizes,
+  keywords
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <SEO {...props} />
-    {props.lcpImageSrcset && (
-      <link rel="preload" as="image" imagesrcset={props.lcpImageSrcset} imagesizes={props.lcpImageSizes ?? '100vw'} fetchpriority="high" />
+    <SEO 
+      title={title}
+      description={description}
+      canonical={canonical}
+      ogImage={ogImage}
+      ogType={ogType}
+      article={article}
+      breadcrumb={breadcrumb}
+      schema={schema}
+      noindex={noindex}
+      hreflang={hreflang}
+      keywords={keywords}
+    />
+    {lcpImageSrcset && (
+      <link rel="preload" as="image" imagesrcset={lcpImageSrcset} imagesizes={lcpImageSizes ?? '100vw'} fetchpriority="high" />
     )}
     <style is:inline>
       /* --- CRITICAL FCP/LCP CSS INLINED --- */

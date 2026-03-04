@@ -1,4 +1,5 @@
 ---
+keywords: "Refusal, Tips, Schengen"
 title: "Top 7 Reasons Schengen Visa Applications Are Refused"
 description: "Real reasons embassies deny tourist visa applications — and what you can do to address each one before submitting your application. Educational guidance only."
 pubDate: "2026-02-15"

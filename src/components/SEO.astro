@@ -15,6 +15,7 @@ export interface Props {
   schema?: object | object[];
   noindex?: boolean;
   hreflang?: Array<{ lang: string; url: string }>;
+  keywords?: string;
 }
 
 const {
@@ -28,12 +29,20 @@ const {
   schema,
   noindex = false,
   hreflang = [],
+  keywords,
 } = Astro.props;
 
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
 
+// Fallback to tags for keywords if not provided on an article
+let finalKeywords = keywords;
+if (!finalKeywords && article?.tags?.length) {
+  finalKeywords = article.tags.join(', ');
+}
+
 // Build JSON-LD array
 const schemas: object[] = [];
+console.log('SEO rendering for:', title, '| finalKeywords is:', finalKeywords, '| keywords prop:', keywords, '| tags:', article?.tags);
 
 // Organization schema (on every page)
 const orgSchema = {
@@ -144,6 +153,7 @@ if (schema) {
 <!-- SEO -->
 <title>{title}</title>
 <meta name="description" content={description} />
+{finalKeywords && <meta name="keywords" content={finalKeywords} />}
 {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
 <link rel="canonical" href={canonicalURL} />
 

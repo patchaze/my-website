@@ -43,6 +43,7 @@ const faqSchema = {
     dateModified: modDateISO,
     tags: post.data.tags
   }}
+  keywords={post.data.keywords || post.data.tags?.join(', ')}
   breadcrumb={[
     { name: 'Blog', url: 'https://www.duriantravel.com/blog/' },
     { name: post.data.title, url: canonicalURL }

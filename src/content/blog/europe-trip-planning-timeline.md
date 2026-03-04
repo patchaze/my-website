@@ -1,4 +1,5 @@
 ---
+keywords: "Planning, Europe, Itinerary"
 title: "Europe Trip Planning Timeline: A Week-by-Week Plan for First-Time Travelers"
 description: "A realistic Europe planning timeline covering passports, routes, trains, hotels, budget, and packing. The practical guide that prevents last-minute chaos."
 pubDate: "2026-03-03"

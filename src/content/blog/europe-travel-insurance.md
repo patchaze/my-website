@@ -1,4 +1,5 @@
 ---
+keywords: "Insurance, Europe, Schengen"
 title: "Travel Insurance for Europe: What to Buy, What to Skip, and How to Compare"
 description: "How to choose Europe travel insurance: coverage types, exclusions, medical requirements for Schengen, and a comparison checklist that actually helps."
 pubDate: "2026-03-31"

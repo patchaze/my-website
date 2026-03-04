@@ -58,3 +58,27 @@
 <!-- main.js depends on the IDs above -->
 <script is:inline src="https://sibforms.com/forms/end-form/build/main.js" defer></script>
 <script is:inline src="https://www.google.com/recaptcha/api.js?render=6LdeA38sAAAAAARqNVo_dLr3jH_Hatbcm6l-anIT&hl=en" async defer></script>
+
+<!-- Localhost Bypass / Debug Script -->
+<script is:inline>
+  (function() {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    
+    // If we're on localhost, we intercept the RELAY_SUBMIT and fake a success 
+    // because reCAPTCHA will likely block the official Brevo script from finishing.
+    document.addEventListener('click', function(e) {
+      if (e.target && e.target.id === 'RELAY_SUBMIT' && isLocal) {
+        console.log('NewsletterRelay: Localhost detected. Simulating success to bypass reCAPTCHA hang.');
+        
+        // Short delay to simulate network
+        setTimeout(() => {
+          const successMsg = document.getElementById('success-message');
+          if (successMsg) {
+            successMsg.innerHTML = '<div class="sib-form-message-panel">SUCCESS_MOCK</div>';
+            successMsg.style.display = 'block';
+          }
+        }, 1500);
+      }
+    }, true); // Capture phase to ensure we run before/instead of Brevo if needed
+  })();
+</script>

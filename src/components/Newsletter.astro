@@ -98,29 +98,45 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
         const officialSuccess = document.getElementById('success-message');
         const officialError = document.getElementById('error-message');
 
+        // Check for success
         if (officialSuccess && (officialSuccess.style.display !== 'none' || officialSuccess.innerHTML.includes('sib-form-message-panel'))) {
+          console.log('Newsletter: Success state detected in relay.');
           clearInterval(checkStatus);
           clearTimeout(timeoutSafety);
           btn.classList.remove('is-loading');
           visibleForm.style.display = 'none';
           if (successEl) successEl.style.display = 'block';
-        } else if (officialError && (officialError.style.display !== 'none' || officialError.innerHTML.includes('sib-form-message-panel'))) {
+          
+          // Reset relay for next potential form use
+          officialSuccess.style.display = 'none';
+          officialSuccess.innerHTML = 'SUCCESS';
+        } 
+        // Check for error
+        else if (officialError && (officialError.style.display !== 'none' || officialError.innerHTML.includes('sib-form-message-panel'))) {
+          console.log('Newsletter: Error state detected in relay.');
           clearInterval(checkStatus);
           clearTimeout(timeoutSafety);
           btn.classList.remove('is-loading');
           btn.disabled = false;
           if (errorEl) errorEl.style.display = 'block';
+
+          // Reset relay
+          officialError.style.display = 'none';
+          officialError.innerHTML = 'ERROR';
         }
       }, 500);
 
       // Timeout safety: 12 seconds
       const timeoutSafety = setTimeout(() => {
-        clearInterval(checkStatus);
-        btn.classList.remove('is-loading');
-        btn.disabled = false;
-        if (errorEl) {
-          errorEl.textContent = "Request timed out. Please try again or check your internet connection.";
-          errorEl.style.display = 'block';
+        if (btn.classList.contains('is-loading')) {
+          console.warn('Newsletter: Subscription request timed out.');
+          clearInterval(checkStatus);
+          btn.classList.remove('is-loading');
+          btn.disabled = false;
+          if (errorEl) {
+            errorEl.textContent = "Request timed out. Please try again or check your internet connection.";
+            errorEl.style.display = 'block';
+          }
         }
       }, 12000);
     });

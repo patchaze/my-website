@@ -1,4 +1,5 @@
 ---
+keywords: "Italy, Itinerary, Rome"
 title: "10-Day Italy Itinerary for First-Timers: Rome, Florence, Venice (With Booking Logic)"
 description: "A first-timers 10-day Italy itinerary with pacing, train logic, and what to book early plus packing and budget notes."
 pubDate: "2026-04-28"

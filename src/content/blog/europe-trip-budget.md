@@ -1,4 +1,5 @@
 ---
+keywords: "Budget, Europe, Planning"
 title: "Europe Budget Blueprint: Build a Realistic Daily Budget (Without Becoming Miserable)"
 description: "Build a Europe trip budget with fixed costs, daily spending, buffers, and a simple spreadsheet approach to prevent surprise poverty."
 pubDate: "2026-04-07"
