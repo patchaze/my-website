@@ -179,18 +179,13 @@ if (schema) {
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-<!-- Fonts: Preconnect + Preload Critical + async load remaining -->
+<!-- Fonts: Optimized Inter + Playfair Display -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-<!-- 1. Preload the exact CSS file for the fonts -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&family=DM+Serif+Display&display=swap" />
-
-<!-- 2. Async load the fonts stylesheet to prevent render blocking -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&family=DM+Serif+Display&display=swap" media="print" onload="this.media='all'" />
-
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" media="print" onload="this.media='all'" />
 <noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&family=DM+Serif+Display&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" />
 </noscript>
 
 <!-- JSON-LD Structured Data -->

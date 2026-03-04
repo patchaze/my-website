@@ -30,25 +30,49 @@ const props = Astro.props;
       <link rel="preload" as="image" imagesrcset={props.lcpImageSrcset} imagesizes={props.lcpImageSizes ?? '100vw'} fetchpriority="high" />
     )}
     <style is:inline>
-      /* --- CRITICAL FCP CSS INLINED --- */
+      /* --- CRITICAL FCP/LCP CSS INLINED --- */
+      :root {
+        --color-navy: #0F2138;
+        --color-accent: #C44B36;
+        --color-surface: #FAFAFA;
+        --font-serif: "Playfair Display", serif;
+        --font-sans: "Inter", system-ui, sans-serif;
+        --z-sticky: 100;
+        --space-4: 1rem;
+        --space-6: 1.5rem;
+        --radius-full: 9999px;
+      }
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; tab-size: 4; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
       body {
-        font-family: var(--font-sans, "Inter", system-ui, sans-serif);
-        font-size: var(--text-base, 1rem);
-        line-height: var(--leading-normal, 1.5);
-        color: var(--color-text, #333);
-        background: var(--color-surface, #FAFAFA);
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+        background: var(--color-surface);
         -webkit-font-smoothing: antialiased;
       }
-      img, video, svg { display: block; max-width: 100%; }
-      button, input, select, textarea { font: inherit; }
-      a { color: inherit; }
-      p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
-      ul, ol { list-style: none; }
-      h1 { font-family: var(--font-serif, "Playfair Display", serif); font-size: clamp(var(--text-3xl, 2rem), 5vw, var(--text-5xl, 4rem)); font-weight: var(--font-extrabold, 800); line-height: var(--leading-tight, 1.1); letter-spacing: -0.02em; }
-      h2 { font-family: var(--font-serif, "Playfair Display", serif); font-size: clamp(var(--text-2xl, 1.5rem), 4vw, var(--text-4xl, 2.5rem)); font-weight: var(--font-bold, 700); line-height: var(--leading-tight, 1.1); letter-spacing: -0.015em; }
-      h3 { font-size: clamp(var(--text-xl, 1.25rem), 3vw, var(--text-2xl, 1.5rem)); font-weight: var(--font-semibold, 600); line-height: var(--leading-snug, 1.3); }
+      .container { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: 1.5rem; }
+      
+      /* Header Critical */
+      .header { position: sticky; top: 0; z-index: var(--z-sticky); background: rgba(15, 33, 56, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); height: 64px; display: flex; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+      .nav { display: flex; align-items: center; justify-content: space-between; width: 100%; height: 64px; }
+      .nav__logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: white; }
+      .nav__logo-brand { font-family: var(--font-serif); font-size: 1.25rem; letter-spacing: 0.04em; }
+      .nav__logo-sub { font-size: 0.75rem; color: rgba(255,255,255,0.5); font-style: italic; }
+      
+      /* Hero Critical */
+      .hero { position: relative; min-height: 100vh; display: flex; align-items: center; color: white; overflow: hidden; background: var(--color-navy); }
+      .hero__bg-full { position: absolute; inset: 0; z-index: 0; }
+      .hero__bg-full img { width: 100%; height: 100%; object-fit: cover; }
+      .hero__overlay-dark { position: absolute; inset: 0; background: linear-gradient(to right, rgba(15, 33, 56, 0.85) 0%, rgba(15, 33, 56, 0.4) 50%, rgba(15, 33, 56, 0.2) 100%); }
+      .hero__grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 2rem; width: 100%; }
+      .hero__title { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
+      
+      @media (max-width: 900px) {
+        .hero { min-height: auto; padding-top: 80px; padding-bottom: 2rem; }
+        .hero__grid { grid-template-columns: 1fr; text-align: center; }
+      }
     </style>
   </head>
   <body>
