@@ -124,16 +124,19 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
       btn.disabled = true;
 
       try {
-        const formData = new FormData();
-        formData.append('EMAIL', email);
+        // Use URLSearchParams for application/x-www-form-urlencoded (more compatible than FormData)
+        const params = new URLSearchParams();
+        params.append('EMAIL', email);
+        params.append('email_address_check', '');
+        params.append('locale', 'en');
 
         const res = await fetch(BREVO_FORM_URL, {
           method: 'POST',
-          body: formData,
-          mode: 'no-cors',   // Brevo forms are cross-origin
+          body: params,
+          mode: 'no-cors'
         });
 
-        // With no-cors we can't read the response, so we assume success
+        // With no-cors we can't read the response, so we assumes success
         showFeedback(feedbackEl, '✅ You\'re in! Check your inbox to confirm your subscription.', 'success');
         emailInput.value = '';
         if (consentInput) consentInput.checked = false;
