@@ -1,4 +1,6 @@
 ---
+import Newsletter from './Newsletter.astro';
+
 const exploreLinks = [
   { label: 'Destinations', href: '/destinations/' },
   { label: 'Services',     href: '/services/' },
@@ -110,10 +112,7 @@ const year = new Date().getFullYear();
         <!-- Newsletter column -->
         <div class="footer__newsletter">
           <p class="footer__newsletter-label">Newsletter sign-up to receive our exclusive updates</p>
-          <form class="footer__newsletter-form" onsubmit="return false;">
-            <input type="email" placeholder="Email" class="footer__newsletter-input" aria-label="Email for newsletter" />
-            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
-          </form>
+          <Newsletter variant="inline" id="footer-newsletter" />
         </div>
 
       </div>
