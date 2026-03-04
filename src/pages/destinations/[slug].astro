@@ -28,7 +28,7 @@ const breadcrumb = [
 >
   <section class="hero-country-card">
     <div class="hero__bg-full">
-      <Image src={images[`/src/assets${country.heroImage}`]()} alt={`Beautiful landscape of ${country.name}`} width={1920} loading="eager" />
+      <Image src={images[`/src/assets${country.heroImage}`]()} alt={`Beautiful landscape of ${country.name}`} widths={[480, 800, 1200, 1920]} sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 100vw" formats={['avif', 'webp']} fallbackFormat="jpg" loading="eager" fetchpriority="high" />
       <div class="hero__overlay-dark"></div>
     </div>
     <div class="container hero-country-content">
@@ -80,7 +80,7 @@ const breadcrumb = [
       <div class="cities-grid">
         {country.cities.map(city => (
           <div class="city-card glass-card">
-            <Image src={images[`/src/assets${city.image}`]()} alt={`City view of ${city.name}`} width={600} loading="lazy" />
+            <Image src={images[`/src/assets${city.image}`]()} alt={`City view of ${city.name}`} widths={[300, 600]} sizes="(max-width: 600px) 300px, 300px" formats={['avif', 'webp']} fallbackFormat="jpg" loading="lazy" decoding="async" />
             <div class="city-card__info">
               <h3>{city.name}</h3>
             </div>

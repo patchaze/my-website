@@ -113,7 +113,7 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
   <!-- HERO — Full-bleed with floating glass cards -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero__bg-full">
-      <Picture src={heroImg} alt="Italy Dolomites at sunset – European Alps." widths={[480, 800, 1200, 1920]} sizes="100vw" formats={['avif', 'webp']} fallbackFormat="jpg" loading="eager" fetchpriority="high" />
+      <Picture src={heroImg} alt="Italy Dolomites at sunset – European Alps." widths={[480, 800, 1200, 1920]} sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 100vw" formats={['avif', 'webp']} fallbackFormat="jpg" loading="eager" fetchpriority="high" />
       <div class="hero__overlay-dark"></div>
     </div>
     
@@ -139,14 +139,14 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
       <!-- Right: Floating Glass Cards -->
       <div class="hero__visuals">
         <a href="/destinations/italy/" class="glass-card glass-card--1 hero-link" aria-label="Explore Italy">
-          <Picture src={amalfiImg} alt="Amalfi Coast cliffside over Mediterranean Sea." widths={[300, 600]} sizes="(max-width: 600px) 100vw, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} />
+          <Picture src={amalfiImg} alt="Amalfi Coast cliffside over Mediterranean Sea." widths={[300, 600]} sizes="(max-width: 600px) 300px, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} loading="lazy" decoding="async" />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Amalfi Coast, Italy</p>
           </div>
           <div class="hero-link-overlay"><span class="explore-btn">Explore Italy</span></div>
         </a>
         <a href="/destinations/switzerland/" class="glass-card glass-card--2 hero-link" aria-label="Explore Switzerland">
-          <Picture src={alpsImg} alt="Zermatt and Matterhorn in Swiss Alps, Switzerland." widths={[300, 600]} sizes="(max-width: 600px) 100vw, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} />
+          <Picture src={alpsImg} alt="Zermatt and Matterhorn in Swiss Alps, Switzerland." widths={[300, 600]} sizes="(max-width: 600px) 300px, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} loading="lazy" decoding="async" />
           <div class="glass-card__info">
             <p class="glass-card__location">📍 Swiss Alps, Switzerland</p>
           </div>
