@@ -99,7 +99,7 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
         const officialError = document.getElementById('error-message');
 
         // Check for success
-        if (officialSuccess && (officialSuccess.style.display !== 'none' || officialSuccess.innerHTML.includes('sib-form-message-panel'))) {
+        if (officialSuccess && officialSuccess.classList.contains('sib-form-message-panel--active')) {
           console.log('Newsletter: Success state detected in relay.');
           clearInterval(checkStatus);
           clearTimeout(timeoutSafety);
@@ -108,11 +108,10 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
           if (successEl) successEl.style.display = 'block';
           
           // Reset relay for next potential form use
-          officialSuccess.style.display = 'none';
-          officialSuccess.innerHTML = 'SUCCESS';
+          officialSuccess.classList.remove('sib-form-message-panel--active');
         } 
         // Check for error
-        else if (officialError && (officialError.style.display !== 'none' || officialError.innerHTML.includes('sib-form-message-panel'))) {
+        else if (officialError && officialError.classList.contains('sib-form-message-panel--active')) {
           console.log('Newsletter: Error state detected in relay.');
           clearInterval(checkStatus);
           clearTimeout(timeoutSafety);
@@ -121,8 +120,7 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
           if (errorEl) errorEl.style.display = 'block';
 
           // Reset relay
-          officialError.style.display = 'none';
-          officialError.innerHTML = 'ERROR';
+          officialError.classList.remove('sib-form-message-panel--active');
         }
       }, 500);
 

@@ -17,8 +17,12 @@
   <div class="sib-form">
     <div id="sib-form-container">
       <!-- These IDs are EXACTLY what main.js expects -->
-      <div id="success-message" style="display:none;">SUCCESS</div>
-      <div id="error-message" style="display:none;">ERROR</div>
+      <div id="success-message" class="sib-form-message-panel">
+        <span class="sib-form-message-panel__inner-text">SUCCESS</span>
+      </div>
+      <div id="error-message" class="sib-form-message-panel">
+        <span class="sib-form-message-panel__inner-text">ERROR</span>
+      </div>
       
       <form 
         id="sib-form" 
@@ -74,8 +78,7 @@
         setTimeout(() => {
           const successMsg = document.getElementById('success-message');
           if (successMsg) {
-            successMsg.innerHTML = '<div class="sib-form-message-panel">SUCCESS_MOCK</div>';
-            successMsg.style.display = 'block';
+            successMsg.classList.add('sib-form-message-panel--active');
           }
         }, 1500);
       }
