@@ -449,6 +449,13 @@ hr {
     font-size: 0.9em;
 }
 
+.prose img {
+    border-radius: var(--radius-lg);
+    margin-block: var(--space-6);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+}
+
 /* ---------- Warning/Notice boxes ---------- */
 .notice {
     display: flex;
