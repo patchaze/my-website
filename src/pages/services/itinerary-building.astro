@@ -36,13 +36,36 @@ import CTABanner from '../../components/CTABanner.astro';
             <li>Budget alignment with your financial proof</li>
           </ul>
 
-          <h2>Common Itinerary Mistakes We Fix</h2>
-          <ul>
-            <li>Too many cities in too few days (red flag)</li>
-            <li>Mismatched dates between flights and accommodation</li>
-            <li>No clear reason for choosing specific destinations</li>
-            <li>Budget that doesn't match the stated financial proof</li>
-          </ul>
+          <h2>How It Works</h2>
+          <ol class="step-list">
+            <li>
+              <strong>Initial Consultation:</strong> We discuss your travel goals, budget, and any specific visa constraints you might have.
+            </li>
+            <li>
+              <strong>First Draft:</strong> We build a logical route based on your entry/exit points and desired pace.
+            </li>
+            <li>
+              <strong>Accommodation Alignment:</strong> Each night is mapped to a specific hotel or area, ensuring there are no 'gaps' that could lead to a visa refusal.
+            </li>
+            <li>
+              <strong>Final Refinement:</strong> We add daily activities and transportation details to create a robust, credible travel document.
+            </li>
+          </ol>
+
+          <h2>Who Is This For?</h2>
+          <p>This service is ideal for first-time Schengen applicants, travelers with complex multi-country plans, or anyone who has previously faced a refusal due to 'unclear purpose of stay'.</p>
+
+          <h2>Frequently Asked Questions</h2>
+          <dl class="service-faq">
+            <dt>Do you book the hotels for me?</dt>
+            <dd>No, DURIAN is a consultancy. We provide the structure and guidance on which hotels to book to match your itinerary, but the actual bookings remain under your control.</dd>
+            
+            <dt>Will this guarantee my visa?</dt>
+            <dd>No service can guarantee a visa outcome. However, a well-structured itinerary significantly reduces the risk of refusal based on 'logic' or 'credibility' issues.</dd>
+            
+            <dt>Can you help with flights too?</dt>
+            <dd>We help you plan the logical flow of your flights (which cities to fly in and out of), but we do not handle ticket purchases.</dd>
+          </dl>
 
           <div class="notice notice--warning"><span>⚠️</span><p><strong>Disclaimer:</strong> This is educational guidance. We do not book travel or guarantee visa outcomes.</p></div>
         </div>
@@ -50,7 +73,7 @@ import CTABanner from '../../components/CTABanner.astro';
         <aside class="service-sidebar">
           <div class="price-card">
             <span class="price-card__label">Investment</span>
-            <span class="price-card__price">€49</span>
+            <span class="price-card__price">€24</span>
             <span class="price-card__detail">Itinerary review + structure plan</span>
             <a href="/free-visa-audit/" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;margin-top:var(--space-4)">Start with Free Audit →</a>
           </div>
@@ -72,4 +95,11 @@ import CTABanner from '../../components/CTABanner.astro';
 .price-card__label { display: block; font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-2); }
 .price-card__price { display: block; font-size: var(--text-5xl); font-weight: var(--font-extrabold); color: var(--color-primary); margin-bottom: var(--space-2); }
 .price-card__detail { display: block; font-size: var(--text-sm); color: var(--color-text-muted); }
+
+/* Service specific styles */
+.step-list { list-style: none; padding: 0; margin-block: var(--space-8); counter-reset: steps; }
+.step-list li { position: relative; padding-left: var(--space-12); margin-bottom: var(--space-6); line-height: 1.6; }
+.step-list li::before { content: counter(steps); counter-increment: steps; position: absolute; left: 0; top: 0; width: 32px; height: 32px; background: var(--color-navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; }
+.service-faq dt { font-weight: var(--font-bold); color: var(--color-navy); margin-top: var(--space-6); font-size: var(--text-base); }
+.service-faq dd { margin-left: 0; margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-sm); line-height: 1.6; }
 </style>

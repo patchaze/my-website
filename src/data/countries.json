@@ -29,6 +29,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Austria is a land of timeless elegance, where imperial history meets breathtaking natural beauty. Beyond the grand boulevards of Vienna, the country unfolds into a tapestry of emerald valleys, jagged alpine peaks, and crystalline lakes. Whether you're exploring the Baroque architecture of its cities or taking in the mountain air of the Tyrol, Austria offers a travel experience that is both refined and revitalizing. Our custom itineraries often focus on the duality of the Austrian experience: the high-culture heritage of the Habsburgs and the rustic charm of rural alpine villages.",
+        "highlights": [
+            "Experience a classical concert in an imperial palace in Vienna.",
+            "Wander the Sound of Music filming locations in Salzburg.",
+            "Ride the scenic Arlberg railway through the heart of the Alps.",
+            "Explore the ice caves of Eisriesenwelt near Werfen."
+        ],
+        "gastronomy": "Austrian cuisine is hearty and sophisticated. Don't miss the iconic Wiener Schnitzel, the rich Sachertorte chocolate cake, and the cozy atmosphere of a traditional Viennese coffee house. In the mountains, look for Tirolean Gröstl and local alpine cheeses.",
+        "bestTimeToVisitExtended": "For city lovers, May to September offers pleasant walking weather, while December brings the magical Christmas markets. Skiers should head to the Alps between December and March, while hikers will find June to August ideal.",
+        "seoKeywords": "Austria travel guide 2026, Vienna itinerary, Salzburg day trips, Alps hiking tours, Austria visa requirements, bespoke Austria vacation",
+        "metaDescription": "Plan your ideal Austria trip with bespoke itineraries. Explore Vienna's imperial history, Salzburg's musical heritage, and the stunning Austrian Alps.",
         "tier": 1
     },
     {
@@ -61,6 +72,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Belgium is a hidden gem that packs an incredible amount of history, art, and culinary excellence into a compact area. From the surrealist art of Brussels to the perfectly preserved medieval canals of Bruges and Ghent, Belgium is a feast for the senses. Often overlooked for its larger neighbors, it offers a more intimate European experience, characterized by stunning architecture, world-renowned chocolate, and a beer culture so prestigious it is recognized by UNESCO. It's the perfect destination for travelers seeking a mix of cosmopolitan energy and fairytale charm.",
+        "highlights": [
+            "Take a guided chocolate tasting tour in Brussels.",
+            "Climb the Belfry of Bruges for panoramic medieval views.",
+            "Visit the diamond district and fashion boutiques of Antwerp.",
+            "Explore the Gravensteen castle in Ghent."
+        ],
+        "gastronomy": "Belgium is a paradise for foodies. Beyond the famous Belgian waffles and double-fried fries (frites), discover Moules-Frites, Carbonnade flamande (beef stew), and over 1,500 varieties of artisanal beer. The chocolate, of course, is legendary.",
+        "bestTimeToVisitExtended": "Spring (April to June) is wonderful for blooming parks, and Autumn (September to October) offers mild weather and fewer crowds. Summer is vibrant with festivals, while December brings charming Christmas markets to every major square.",
+        "seoKeywords": "Belgium travel guide, Brussels itinerary, Bruges canal tours, Belgian beer tasting, Antwerp fashion guide, Belgium visa requirements",
+        "metaDescription": "Discover the best of Belgium, from Brussels' Grand Place to Bruges' romantic canals. Plan your custom Belgian trip with expert travel notes.",
         "tier": 2
     },
     {
@@ -93,6 +115,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "France remains the world's most visited country for good reason. It is a land of profound diversity, where the glitzy French Riviera meets the rugged beauty of Provence, and the historic chateaux of the Loire Valley contrast with the high-tech urbanity of Lyon. Paris, the crown jewel, is a perennial favorite, but the real magic of France often lies in its rural corners—the vineyards of Burgundy, the cider orchards of Normandy, and the sun-drenched lavender fields of the south. At DURIAN, we specialize in navigating the nuances of French travel, from securing the right visa to mapping out a route that captures the true 'art de vivre'.",
+        "highlights": [
+            "Sunset cruise on the River Seine in Paris.",
+            "Vineyard hopping and wine tasting in the Bordeaux region.",
+            "Wandering the lavender fields of Provence in July.",
+            "Driving the glamorous Corniche roads of the French Riviera."
+        ],
+        "gastronomy": "French gastronomy is a cornerstone of the country's culture. Enjoy everything from a simple, perfect croissant at a neighborhood boulangerie to multi-course Michelin-starred dining. Regional specialties like Cassoulet from the south, Bouillabaisse from Marseille, and Coq au Vin are essential experiences.",
+        "bestTimeToVisitExtended": "Spring (April to June) and Fall (September to October) are the golden periods for most of France, offering beautiful weather and manageable crowds. Summer is peak season for the coast, while winter is magical in the Alps and Paris.",
+        "seoKeywords": "France travel destination, Paris vacation planning, French Riviera guide, Provence travel itinerary, France visa for tourists, bespoke France tours",
+        "metaDescription": "Experience the romance and culture of France. Plan your trip from Paris to the Riviera with our custom itineraries and expert travel consultancy.",
         "tier": 1
     },
     {
@@ -125,6 +158,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Germany is a powerhouse of European culture, blending high-tech efficiency with a deep respect for tradition. From the avant-garde art scenes of Berlin to the fairytale castles of Bavaria and the industrial heritage of the Ruhr valley, Germany offers an incredible variety of experiences. Whether you are visiting for the world-famous Oktoberfest, exploring the sombre history of the 20th century, or hiking through the mystical Black Forest, you'll find a country that is as multifaceted as it is welcoming. At DURIAN, we help you navigate the logistics—from train passes to visa folders—so you can focus on the journey.",
+        "highlights": [
+            "Explore the historic Berlin Wall and Brandenburg Gate.",
+            "Visit the fairytale Neuschwanstein Castle in Bavaria.",
+            "Take a scenic boat cruise along the Rhine River Valley.",
+            "Experience the industrial-cool vibe of Hamburg's Speicherstadt."
+        ],
+        "gastronomy": "German food is warming and regional. Sample authentic Bratwurst, Pretzels (Brezeln), and Schnitzel. In autumn, the beer halls come alive, but don't overlook the refined white wines of the Mosel Valley or the hearty black forest cake for dessert.",
+        "bestTimeToVisitExtended": "Summer (June to August) is ideal for beer gardens and outdoor festivals. Autumn (September to October) is the time for wine harvests and Oktoberfest. Winter (late November to December) is spectacular for the historic Christmas markets in cities like Nuremberg and Dresden.",
+        "seoKeywords": "Germany travel itinerary, Berlin city guide, Bavaria castle tours, Rhine river cruise, Germany visa requirements, Black Forest travel tips",
+        "metaDescription": "Explore the heart of Europe with our bespoke Germany travel plans. From Berlin's history to Bavaria's castles, discover Germany your way.",
         "tier": 1
     },
     {
@@ -139,7 +183,7 @@
             "language": "Luxembourgish, French, German",
             "timezone": "CET (UTC+1)",
             "bestMonths": "May-Sep",
-            "dailyBudget": "€130-€250"
+            "dailyBudget": "130-250"
         },
         "whyGo": "A tiny yet affluent nation known for its fortified medieval old town seamlessly blending with modern architecture, offering lush valleys and dense forests for nature lovers.",
         "cities": [
@@ -157,6 +201,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Luxembourg is a tiny but powerful nation that offers a unique blend of medieval history and modern, cosmopolitan energy. Its capital, Luxembourg City, is set on a dramatic cliffside and features a beautifully preserved old town (the Grund) that contrasts with the glass skyscrapers of its financial district. Beyond the capital, Luxembourg reveals its lush heart—the Müllerthal region, often called 'Little Switzerland' for its rocky landscapes and waterfalls, and the historic castles of the north like Vianden. It's an ideal destination for those who appreciate understated luxury, clean design, and high-quality European living in a compact and easily navigable country.",
+        "highlights": [
+            "Explore the UNESCO-listed fortifications and Casemates du Bock in Luxembourg City.",
+            "Visit the fairytale Vianden Castle, one of the most beautiful in Europe.",
+            "Hike the trails of the Müllerthal region through dramatic rock formations.",
+            "Take the glass-walled elevator for panoramic views of the Grund valley."
+        ],
+        "gastronomy": "Luxembourgish cuisine is a sophisticated blend of French refinement and German heartiness. Try the Judd mat Gaardebounen (smoked pork with broad beans) or the Friture de la Moselle (fried fish from the river). The Moselle valley also produces excellent white wines, particularly Riesling and Crémant.",
+        "bestTimeToVisitExtended": "Spring (May and June) and Summer (July and August) are the best times for outdoor activities and city exploration. September is also lovely for the wine harvest in the Moselle valley. Winter is cold but very cozy, with top-tier Christmas markets.",
+        "seoKeywords": "Luxembourg travel guide, Luxembourg City old town, Vianden castle tours, Müllerthal hiking, Luxembourg visa requirements, small European countries travel",
+        "metaDescription": "Discover the hidden gem of Luxembourg. From medieval fortifications to Alpine-style hiking, plan your bespoke Luxembourgish trip with our expert travel consulting.",
         "tier": 2
     },
     {
@@ -171,7 +226,7 @@
             "language": "Dutch",
             "timezone": "CET (UTC+1)",
             "bestMonths": "Apr-Oct",
-            "dailyBudget": "€110-€220"
+            "dailyBudget": "110-220"
         },
         "whyGo": "Famous for its picturesque canals, vibrant tulip fields, and historic windmills, the Netherlands boasts a famously progressive culture and world-class cycling infrastructure.",
         "cities": [
@@ -189,6 +244,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "The Netherlands is a masterpiece of landscape engineering and cultural openness. Known for its iconic network of canals, vibrant fields of tulips that paint the countryside in spring, and a cycling culture that is the envy of the world, it offers a uniquely accessible European experience. Beyond the romantic bridges of Amsterdam, the country reveals a diverse character—from the avant-garde architecture of Rotterdam to the historic universities of Utrecht and the tranquil beaches of the North Sea coast. It is a nation that values both its maritime past and its forward-thinking future. At DURIAN, we help you experience the Dutch 'gezelligheid' (cozy social atmosphere) while navigating its efficient and scenic travel routes.",
+        "highlights": [
+            "Take a sunset canal cruise through the historic center of Amsterdam.",
+            "Visit the world-famous Keukenhof Gardens to see millions of tulips in spring.",
+            "Explore the futuristic architecture and Cube Houses in Rotterdam.",
+            "Cycle the historic windmills of Kinderdijk, a UNESCO World Heritage site."
+        ],
+        "gastronomy": "Dutch food is simple, satisfying, and increasingly innovative. Try the world-famous cheeses (Gouda, Edam), the thick pea soup (Erwtensoep), or the sweet Stroopwafels. Rotterdam offers a world-class international food scene, while Amsterdam's cafes are the heart of its social life.",
+        "bestTimeToVisitExtended": "Spring (mid-April to mid-May) is the absolute best time for the tulip blossoms. Summer (June to August) offers perfect weather for cycling and boat trips. Autumn is lovely with fewer crowds, while winter is magical in the cities, especially when the canals freeze over.",
+        "seoKeywords": "Netherlands travel guide, Amsterdam canal cruise, Tulip gardens Keukenhof, Dutch windmill tours, Netherlands visa requirements, world-class cycling Europe",
+        "metaDescription": "Experience the charm and innovation of the Netherlands. From Amsterdam's canals to the tulip fields, plan your custom Dutch adventure with our expert travel notes.",
         "tier": 1
     },
     {
@@ -221,6 +287,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Greece is the historic heart of the Mediterranean, a land where the ruins of antiquity stand in conversation with vibrant modern life. Beyond the iconic Parthenon of Athens, Greece reveals itself across thousands of islands, each with its own character—from the blue-domed churches of Santorini to the lush greenery of Corfu and the rugged hills of Crete. It is a country that demands a slower pace, where 'philoxenia' (love of strangers) is still a way of life. At DURIAN, we help you navigate the complexities of island hopping and seasonal timing, ensuring your Greek odyssey is as smooth as it is unforgettable.",
+        "highlights": [
+            "Private skip-the-line tour of the Acropolis in Athens.",
+            "Watch the world-famous sunset in Oia, Santorini.",
+            "Explore the well-preserved medieval Old Town of Rhodes.",
+            "Hike the dramatic Samaria Gorge in Crete."
+        ],
+        "gastronomy": "Greek food is the definition of fresh, healthy, and flavorful Mediterranean dining. Enjoy local olives, feta cheese, and grilled meats like Souvlaki and Gyros. Don't miss fresh seafood at a seaside taverna, traditional Moussaka, and the honey-sweetened pastries like Baklava.",
+        "bestTimeToVisitExtended": "Spring (April to June) and Autumn (September to October) are the ideal times, offering perfect weather for exploration and fewer crowds. Summer is great for beach-focused trips, while winter is a peaceful time to explore the historic sites of Athens.",
+        "seoKeywords": "Greece travel guide 2026, Athens itinerary, Santorini island hopping, Crete hiking tours, Greece visa requirements, Mediterranean vacation planning",
+        "metaDescription": "Uncover the magic of Greece. From Athens' ancient history to the stunning Aegean islands, plan your bespoke Greek getaway with our expert travel consulting.",
         "tier": 1
     },
     {
@@ -253,6 +330,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Italy is a sensory masterpiece, a country where every meal is a celebration and every street corner feels like a film set. It possesses more UNESCO World Heritage sites than any other nation, ranging from the ancient ruins of Rome to the Renaissance treasures of Florence and the unique canal-scape of Venice. But Italy's true allure lies in the 'dolce vita'—the art of living well. Whether you're sipping an aperitivo on the Amalfi Coast, exploring the rolling hills of Tuscany, or discovering the fashion-forward energy of Milan, Italy never fails to inspire. We specialize in crafting multi-city Italian itineraries that balance iconic sights with authentic, local experiences.",
+        "highlights": [
+            "Private tour of the Colosseum and Roman Forum.",
+            "Cooking class in a traditional Tuscan farmhouse.",
+            "Gondola ride and hidden cicchetti tour in Venice.",
+            "Hiking the breathtaking trails of the Cinque Terre."
+        ],
+        "gastronomy": "Italian cuisine is a global favorite for a reason. From the wood-fired pizzas of Naples and the carbonara of Rome to the truffle-rich dishes of Piedmont and the seafood of Sicily, every region offers a unique palette. Olive oil, wine, and gelato are, of course, essential daily requirements.",
+        "bestTimeToVisitExtended": "Spring (April to June) and early Autumn (September to October) offer the most comfortable weather for sightseeing. Summer is hot but perfect for the coast, while Winter (especially January and February) provides a quieter, more local perspective in the major art cities.",
+        "seoKeywords": "Italy travel planner, Rome itinerary, Tuscany wine tours, Amalfi Coast guide, Italy visa requirements, custom Italy vacation 2026",
+        "metaDescription": "Fall in love with Italy. From Rome's ancient history to the hills of Tuscany, our expert planners design the perfect bespoke Italian getaway.",
         "tier": 1
     },
     {
@@ -285,6 +373,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Malta is a tiny archipelago with a monumental history. Situated in the center of the Mediterranean, it has been a crossroads for civilizations for millennia, from the Phoenicians and Romans to the Knights of St. John and the British. This heritage is literally built into the landscape, with megalithic temples that predate the pyramids and the stunning Baroque architecture of Valletta, a city that feels like an open-air museum. Despite its small size, Malta offers diverse landscapes—from its rocky coastlines and the stunning Blue Lagoon to the quiet medieval streets of Mdina. It's a perfect destination for those who love history, sunshine, and the sea.",
+        "highlights": [
+            "Explore the grand St. John's Co-Cathedral in Valletta.",
+            "Take a boat trip to the crystal-clear Blue Lagoon on Comino.",
+            "Visit the 5,000-year-old Ħaġar Qim and Mnajdra temples.",
+            "Wander the silent streets of the medieval walled city of Mdina."
+        ],
+        "gastronomy": "Maltese cuisine is a fascinating blend of Mediterranean influences. Must-tries include Pastizzi (flaky pea or ricotta pastries), the national dish of Stuffat tal-Fenek (rabbit stew), and fresh local Ftira bread. Pair it with the unique local orange soda, Kinnie, or a Cisk beer.",
+        "bestTimeToVisitExtended": "Spring (April to June) and Autumn (September to November) are the best months for exploring, with warm temperatures and vibrant landscapes. Summer is peak for beach lovers, while the mild winters are perfect for historical sightseeing without the heat.",
+        "seoKeywords": "Malta travel tips, Valletta city guide, Comino blue lagoon tour, Maltese history and architecture, Malta visa requirements, Mediterranean island vacation",
+        "metaDescription": "Discover Malta, the historic jewel of the Mediterranean. Explore Valletta's Baroque beauty and ancient temples with our custom travel notes.",
         "tier": 2
     },
     {
@@ -317,6 +416,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Portugal is a land of soulful tradition and modern innovation, characterized by its dramatic Atlantic coastline and a deep connection to its maritime past. From the tiled facades and cobblestone hills of Lisbon to the historic wine cellars of Porto and the golden beaches of the Algarve, Portugal offers an incredibly authentic and affordable European experience. It is a country of subtle beauties—the melancholic strains of Fado music, the intricate 'azulejo' tiles, and the simple perfection of a custard tart. We specialize in Portuguese itineraries that go beyond the main cities, exploring the cork forests of Alentejo and the mystical forests of Sintra.",
+        "highlights": [
+            "Ride the historic Tram 28 through the hills of Lisbon.",
+            "Port wine tasting at the famous cellars in Vila Nova de Gaia.",
+            "Visit the fairytale Pena Palace and Quinta da Regaleira in Sintra.",
+            "Surfing or relaxing on the rugged beaches of the Algarve."
+        ],
+        "gastronomy": "Portuguese food is honest, hearty, and deeply connected to the sea. Salted cod (Bacalhau) is famously prepared in hundreds of ways. Don't miss the iconic Pastel de Nata (custard tart), grilled sardines in summer, and the rich 'Francesinha' sandwich in Porto.",
+        "bestTimeToVisitExtended": "Spring (March to June) and early Autumn (September to October) are perfect for exploring the whole country. Summer is ideal for the northern coast and festivals, while winter is mild in the Algarve and quiet in the cities.",
+        "seoKeywords": "Portugal travel itinerary, Lisbon city guide, Porto wine tours, Sintra day trip, Portugal visa requirements, Atlantic coast travel",
+        "metaDescription": "Experience the authentic charm of Portugal. From Lisbon's hills to Porto's wine, discover our custom itineraries for a perfect Portuguese adventure.",
         "tier": 1
     },
     {
@@ -349,6 +459,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Spain is a country of intoxicating energy, diverse landscapes, and a passion for life that is contagious. It is a mosaic of distinct regions, each with its own language, culture, and culinary traditions—from the green hills of Galicia and the Basque Country to the sun-soaked plains of Andalusia and the vibrant capitals of Madrid and Barcelona. Whether you are marvelling at Gaudi's architecture, watching a passionate Flamenco performance, or wandering through the medieval halls of the Alhambra, Spain offers an endless variety of experiences. Our Spanish itineraries are designed to capture this diversity, blending iconic landmarks with hidden local gems.",
+        "highlights": [
+            "Tour the breathtaking Sagrada Família in Barcelona.",
+            "Explore the majestic Alhambra palace complex in Granada.",
+            "Experience an authentic late-night tapas crawl in Madrid.",
+            "Visit the futuristic City of Arts and Sciences in Valencia."
+        ],
+        "gastronomy": "Spain's food culture is legendary. From the communal joy of Paella to the sophisticated simplicity of Jamón Ibérico and the social ritual of Tapas. Each region has gems: seafood in the north, Salmorejo in the south, and world-class wines from Rioja and Priorat.",
+        "bestTimeToVisitExtended": "Spring (April to June) and Autumn (September to October) are generally the best for all of Spain. Summer is peak for the beaches in the north, while Andalusia is best in early Spring or late Autumn to avoid the extreme heat.",
+        "seoKeywords": "Spain travel destination, Barcelona itinerary, Madrid tapas tour, Andalusia road trip, Spain visa for tourists, bespoke Spain tours",
+        "metaDescription": "Immerse yourself in the vibrancy of Spain. Plan your trip from Barcelona to Andalusia with our expert travel consultancy and custom itineraries.",
         "tier": 1
     },
     {
@@ -381,6 +502,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Denmark is the gateway to Scandinavia, a country that effortlessly blends historical grandeur with ultra-modern design. From the colorful waterfront of Nyhavn in Copenhagen to the sprawling sandy beaches of Skagen and the historic Viking settlements of Jutland, Denmark is defined by its coastal beauty and 'hygge'—the uniquely Danish concept of cozy contentment. It is a nation of islands, connected by impressive bridges and efficient ferries, making it a joy to explore by bike, train, or car. Whether you are visiting for the world-class New Nordic cuisine or the whimsical charm of Legoland, Denmark offers a high quality of travel that is both sophisticated and relaxed.",
+        "highlights": [
+            "Wander the historic theme park and gardens of Tivoli in Copenhagen.",
+            "Visit the dramatic Cliffs of Møn (Møns Klint) on the Baltic Sea.",
+            "Explore the childhood home of Hans Christian Andersen in Odense.",
+            "See the meeting of two seas at the northern tip of Denmark in Skagen."
+        ],
+        "gastronomy": "Danish food has undergone a revolution. Beyond the traditional 'Smørrebrød' (open-faced sandwiches) and world-famous pastries, Denmark is the heart of New Nordic cuisine. Fresh seafood, local root vegetables, and artisanal rye bread are staples. Don't miss a local craft beer or the sweet 'Rødgrød med fløde' dessert.",
+        "bestTimeToVisitExtended": "Summer (June to August) is the absolute best time to visit, with long daylight hours and pleasant weather. May and September are also beautiful and less crowded. Winter is dark but cozy, perfect for experiencing genuine Danish Christmas markets.",
+        "seoKeywords": "Denmark travel guide, Copenhagen itinerary, Hygge experience Denmark, Viking history tours, Denmark visa requirements, Scandinavian vacation planning",
+        "metaDescription": "Plan your adventure in Denmark. From Copenhagen's design to the Viking history of Jutland, discover the best of Danish culture with our custom itineraries.",
         "tier": 2
     },
     {
@@ -413,6 +545,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Finland is a land of vast, unspoiled wilderness and innovative, high-tech cities. Known as the 'Land of a Thousand Lakes' (it actually has over 180,000), it offers a unique escape into nature, whether you're exploring the dense forests of the south or the magical Arctic landscapes of Lapland. Finland is a country of contrasts—where the 24-hour midnight sun of summer gives way to the ethereal Northern Lights of winter. It is also the home of the sauna, a cultural ritual that is essential to understanding the Finnish way of life. At DURIAN, we help you plan everything from a design-focused stay in Helsinki to an adventurous log cabin retreat in the Arctic Circle.",
+        "highlights": [
+            "Experience the magical Northern Lights in Finnish Lapland.",
+            "Visit Santa Claus Village in Rovaniemi on the Arctic Circle.",
+            "Relax in a traditional wood-fired sauna by a pristine lake.",
+            "Explore the sea fortress of Suomenlinna, a UNESCO site in Helsinki."
+        ],
+        "gastronomy": "Finnish cuisine is deeply rooted in the forest and the sea. Savoury dishes include reindeer meat, fresh salmon, and Baltic herring. Don't miss the Karjalanpiirakka (Karelian pasties) and the sourdough rye bread. In summer, the markets are filled with wild berries and mushrooms.",
+        "bestTimeToVisitExtended": "Winter (December to March) is the peak time for Lapland activities and Northern Lights. Summer (June to August) is perfect for the lake region and coastal cities under the midnight sun. Autumn (September to October) is a beautiful time for 'ruska' (fall foliage) in the forests.",
+        "seoKeywords": "Finland travel adventure, Lapland northern lights tours, Helsinki design guide, Finnish sauna culture, Finland visa requirements, Arctic circle vacation",
+        "metaDescription": "Discover the wild beauty of Finland. From Helsinki's design to the magic of Lapland, plan your custom Finnish trip with our expert travel notes.",
         "tier": 2
     },
     {
@@ -445,6 +588,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Iceland is a geological wonderland, a place where the earth's raw power is visible at every turn. Situated on the Mid-Atlantic Ridge, it is a land of dramatic geysers, thundering waterfalls, massive glaciers, and active volcanoes. The Ring Road offers one of the world's most spectacular road trips, taking you through black sand beaches, iceberg lagoons, and rugged fjords. Iceland is a destination for the truly adventurous, but it also offers the sophisticated culture of Reykjavik and the restorative warmth of geothermal lagoons. We specialize in planning Icelandic road trips that maximize your chances of seeing the natural wonders while navigating the country's unpredictable weather.",
+        "highlights": [
+            "Drive the Golden Circle to see Geysir, Gullfoss, and Þingvellir.",
+            "Soak in the mineral-rich waters of the Blue Lagoon.",
+            "Witness the Jökulsárlón Glacier Lagoon and its floating icebergs.",
+            "Hike the rainbow-colored mountains of Landmannalaugar."
+        ],
+        "gastronomy": "Icelandic food is a testament to survival and tradition. Modern chefs use fresh, local ingredients like Icelandic lamb and world-class seafood (Atlantic cod, langoustines). For the brave, there is the traditional fermented shark (Hákarl), but most prefer the fresh skyr yogurt and the famous Icelandic hot dogs.",
+        "bestTimeToVisitExtended": "Summer (June to August) provides 24-hour daylight and the best weather for the highlands and Ring Road. Winter (September to April) is the time for the Northern Lights and ice cave exploration, though many inland roads will be closed.",
+        "seoKeywords": "Iceland road trip guide, Reykjavik city tips, Golden Circle tour, Northern Lights Iceland, Iceland visa requirements, Arctic adventure travel",
+        "metaDescription": "Experience the raw power of Iceland. From the Blue Lagoon to the thundering waterfalls, plan your ultimate Icelandic road trip with our bespoke itineraries.",
         "tier": 2
     },
     {
@@ -477,6 +631,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Norway is home to some of the most spectacular natural scenery on the planet. Its deep, sapphire-blue fjords, carved by ancient glaciers and flanked by dizzyingly steep mountains, are the country's iconic image. But Norway is also a land of vibrant coastal cities like Bergen and Ålesund, and a pioneer in sustainable, high-tech living in Oslo. Whether you are cruising through the Geirangerfjord, hiking the iconic Preikestolen (Pulpit Rock), or exploring the remote peaks of the Lofoten Islands, Norway offers an outdoor experience that is unparalleled. At DURIAN, we help you navigate the logistics of ferries, tunnels, and scenic railways to ensure you see the very best of this rugged nation.",
+        "highlights": [
+            "Cruise through the UNESCO-listed Geirangerfjord or Nærøyfjord.",
+            "Take the scenic Flåm Railway, one of the steepest in the world.",
+            "Hike to the breathtaking views of Preikestolen or Trolltunga.",
+            "See the spectacular midnight sun in the Lofoten Islands."
+        ],
+        "gastronomy": "Norwegian food is centered on the country's vast coastline. Fresh king crab, salmon, and Atlantic cod are staples. Try the traditional 'Brunost' (brown cheese) on waffles, or the local 'Lefse' flatbread. In winter, 'Pinnekjøtt' (dried lamb) is a traditional festive favorite.",
+        "bestTimeToVisitExtended": "Summer (June to August) is the peak season for hiking and fjord cruises, with long days and the best weather. Spring (May) is beautiful as the waterfalls are at their peak from melting snow. Winter is for skiing and Northern Lights in the north (Tromsø).",
+        "seoKeywords": "Norway fjord cruise guide, Oslo travel itinerary, Lofoten islands hiking, Norway scenic trains, Norway visa requirements, Scandinavian nature travel",
+        "metaDescription": "Explore the breathtaking fjords of Norway. From Oslo's modern culture to the remote Lofoten Islands, plan your custom Norwegian adventure with us.",
         "tier": 2
     },
     {
@@ -509,6 +674,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Sweden is a country of understated elegance, characterized by its vast forests, thousands of coastal islands, and stylish, forward-thinking cities. Stockholm, built on 14 islands, is often called the 'Venice of the North' and is a hub for design, fashion, and history. Beyond the capital, Sweden offers the serene beauty of the southern archipelagoes, the historic university towns of Uppsala and Lund, and the wild, untamed landscapes of Swedish Lapland in the north. It is a nation that values balance and the outdoors, from the ritual of 'fika' (coffee and cake break) to the freedom to roam in nature. We help you plan a Swedish stay that is as stylish as it is restorative.",
+        "highlights": [
+            "Explore the perfectly preserved medieval streets of Gamla Stan in Stockholm.",
+            "Take a boat tour through the thousand islands of the Stockholm Archipelago.",
+            "Visit the iconic Vasa Museum, housing a 17th-century warship.",
+            "Experience the unique ICEHOTEL in Jukkasjärvi, Swedish Lapland."
+        ],
+        "gastronomy": "Swedish food is known for its balance and freshness. Swedish meatballs with lingonberry sauce are a classic, but don't overlook the fresh seafood, especially the pickled herring and gravelax. The 'Fika' culture—taking time for coffee and pastries (like cinnamon buns)—is an essential part of the day.",
+        "bestTimeToVisitExtended": "Summer (June to August) is the most vibrant time, with warm weather and the famous Midsummer celebrations. Late Spring (May) and early Autumn (September) are also lovely. Winter is dark but beautiful, especially if you head north for snow sports and Northern Lights.",
+        "seoKeywords": "Sweden travel planner, Stockholm city guide, Swedish Lapland tours, Fika culture Sweden, Sweden visa requirements, Scandinavian lifestyle travel",
+        "metaDescription": "Discover the style and nature of Sweden. From Stockholm's islands to the wild north, plan your custom Swedish trip with our expert travel consulting.",
         "tier": 2
     },
     {
@@ -541,6 +717,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Croatia is the jewel of the Adriatic, a country where history is literally baked into the sun-drenched stones of its coastal cities. From the iconic red-roofed walls of Dubrovnik to the Roman ruins of Split and the hundreds of islands that dot the turquoise sea, Croatia offers a lifestyle that is deeply Mediterranean. Beyond the coast, the lush waterfalls of Plitvice Lakes and the charming capital of Zagreb provide a perfect contrast. Since joining the Schengen Area, Croatia has become even more accessible for multi-country European trips, and we specialize in planning sailing itineraries and coastal road trips that capture its magical light.",
+        "highlights": [
+            "Walk the historic 13th-century city walls of Dubrovnik.",
+            "Explore the natural wonder of Plitvice Lakes National Park.",
+            "Watch the sunset at the Sea Organ in Zadar.",
+            "Take a ferry to Hvar or Vis for a true island experience."
+        ],
+        "gastronomy": "Croatian food is a delicious intersection of Mediterranean and Central European flavors. On the coast, fresh seafood and 'Peka' (meat or octopus slow-cooked under a bell) are staples. In the north, try the hearty 'Zagorski Štrukli' and local Istrian truffles.",
+        "bestTimeToVisitExtended": "Summer (July and August) is the absolute peak for sailing and beaches but can be very crowded. June and September are the 'golden months' with perfect weather and manageable crowds. Winter is quiet on the coast but festive in Zagreb.",
+        "seoKeywords": "Croatia travel guide, Dubrovnik city walls, Plitvice Lakes tour, Adriatic island hopping, Croatia visa requirements, Mediterranean vacation 2026",
+        "metaDescription": "Experience the magic of Croatia. From the Adriatic coast to the Plitvice waterfalls, plan your bespoke Croatian trip with our expert travel consultancy.",
         "tier": 1
     },
     {
@@ -573,6 +760,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "The Czech Republic is the beating heart of Central Europe, a land of fairytale towns, soaring Gothic cathedrals, and a beer culture that is the envy of the world. Prague, its capital, is an architectural masterpiece that largely escaped the destruction of WWII, leaving its winding medieval streets and grand squares intact. Beyond Prague, the country reveals a landscape of rolling hills, deep forests, and historic spa towns like Karlovy Vary. It is a destination that balances sombre history with a playful, artistic energy. We specialize in Czech itineraries that pair the magic of Prague with the charming villages of Bohemia and the wine regions of Moravia.",
+        "highlights": [
+            "Walk across the historic Charles Bridge at sunrise.",
+            "Tour the majestic Prague Castle, the largest ancient castle in the world.",
+            "Visit the fairytale town of Cesky Krumlov in Southern Bohemia.",
+            "Sample world-class Czech pilsner at a traditional Prague pub."
+        ],
+        "gastronomy": "Czech cuisine is honest, hearty, and designed to go perfectly with beer. Don't miss the 'Svíčková' (beef in cream sauce), roast pork with dumplings and sauerkraut, or the sweet 'Trdelník' pastries found in Prague's squares. The beer, of course, is a national treasure.",
+        "bestTimeToVisitExtended": "Spring (May and June) and Autumn (September and October) are the most beautiful times, with mild weather and colorful landscapes. Summer is vibrant but crowded in Prague. December is magical for the traditional Christmas markets.",
+        "seoKeywords": "Czech Republic travel guide, Prague city itinerary, Cesky Krumlov day trip, Czech beer culture, Czech Republic visa, Central Europe travel notes",
+        "metaDescription": "Uncover the fairytale charm of the Czech Republic. From Prague's Gothic spires to Bohemia's castles, plan your custom Czech trip with us.",
         "tier": 2
     },
     {
@@ -605,6 +803,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Estonia is where medieval history meets high-tech innovation. Its capital, Tallinn, boasts one of the most perfectly preserved Hanseatic old towns in Europe, yet Estonia is a digital pioneer—the home of Skype and the first nation to adopt e-residency. Beyond the city, Estonia is more than 50% forest, with over 2,000 islands and a deep commitment to its wild landscapes. It is a country of quiet beauty, characterized by its Nordic sensibilities and a unique Baltic character. We help travelers plan balanced trips that combine the charm of Tallinn with the tranquility of Lahemaa National Park.",
+        "highlights": [
+            "Wander the medieval cobblestone streets of Tallinn's Old Town.",
+            "Take a bog-walking tour in one of Estonia's many national parks.",
+            "Visit the university town of Tartu, the intellectual heart of the country.",
+            "Explore the island of Saaremaa for traditional windmills and spas."
+        ],
+        "gastronomy": "Estonian food is seasonal and honest, heavy on dark rye bread, pork, and local berries. Modern Estonian chefs are reinventing traditional ingredients for a high-end experience. Don't miss the local marzipan or the distinct 'Vana Tallinn' liqueur.",
+        "bestTimeToVisitExtended": "Summer (June to August) is the best time for exploring both cities and nature, with white nights and pleasant weather. May and September are also lovely for hiking. Winter is dark but Tallinn's Christmas market is one of the best in Europe.",
+        "seoKeywords": "Estonia travel guide, Tallinn old town tours, Estonia nature travel, Baltic states itinerary, Estonia visa requirements, Nordic travel 2026",
+        "metaDescription": "Experience the unique blend of history and tech in Estonia. From Tallinn's medieval charm to the pristine forests, discover Estonia with our custom notes.",
         "tier": 2
     },
     {
@@ -637,6 +846,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Hungary is a country of grand imperial architecture and deep-rooted folk traditions. Its capital, Budapest, is one of Europe's most beautiful cities, famous for its dramatic parliament building, historic thermal baths, and the lively 'ruin bars' that have breathed new life into the old Jewish quarter. Beyond the capital, Hungary offers the calm waters of Lake Balaton, the wine-growing regions of Eger and Tokaj, and the vast puszta plains where Hungarian horse culture still thrives. It is a destination that feels both grand and surprisingly intimate. We specialize in Hungarian itineraries that combine the luxury of Budapest with the rustic charm of its rural wine regions.",
+        "highlights": [
+            "Soak in the historic Széchenyi or Gellért Thermal Baths in Budapest.",
+            "Take a night cruise on the Danube to see the illuminated Parliament.",
+            "Explore the wine caves and sample the 'Bull's Blood' wine in Eger.",
+            "Visit the traditional village of Hollókő, a UNESCO living heritage site."
+        ],
+        "gastronomy": "Hungarian food is bold, flavorful, and famously spiced with paprika. Goulash (Gulyás) is the national dish, but don't miss Chicken Paprikash, the sweet Dobos Torte cake, or the street-food favorite, Lángos (fried dough with toppings). The Tokaji dessert wine is world-famous.",
+        "bestTimeToVisitExtended": "Spring (April to June) and Autumn (September to October) are the best times, offering mild weather and festivals. Summer is hot but great for Lake Balaton. Winter is festive in Budapest, especially with the Christmas markets and thermal baths.",
+        "seoKeywords": "Hungary travel guide, Budapest city tips, Hungarian thermal baths, Tokaj wine tours, Hungary visa requirements, Central Europe vacation",
+        "metaDescription": "Uncover the imperial splendor of Hungary. From Budapest's thermal baths to the Tokaj vineyards, plan your custom Hungarian trip with our expert notes.",
         "tier": 2
     },
     {
@@ -669,6 +889,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Latvia is a country of quiet elegance and surprising architectural grandeur. Its capital, Riga, is home to one of the world's most impressive collections of Art Nouveau architecture and a beautifully restored medieval Old Town. Beyond the city, Latvia offers a vast coastline of white sand beaches at Jurmala, the dramatic Gauja River valley, and millions of hectares of pristine forest. It is a land of deep traditions, from its world-renowned choral singing to its ancient midsummer festivals. At DURIAN, we help you discover the sophisticated culture of the Baltic states while enjoying the tranquility of North European nature.",
+        "highlights": [
+            "Explore the intricate Art Nouveau neighborhood of Riga.",
+            "Relax on the endless white sand beaches of Jurmala.",
+            "Visit the medieval Turaida Castle in the Gauja National Park.",
+            "Experience the traditional Riga Central Market, a UNESCO site."
+        ],
+        "gastronomy": "Latvian cuisine is seasonal and deeply connected to the forest and the sea. Grey peas with bacon, smoked fish, and Rye bread are staples. Don't miss the local honey, wild berries, and the legendary Riga Black Balsam, a traditional herbal liqueur.",
+        "bestTimeToVisitExtended": "Summer (June to August) is the absolute best time for exploring both the cities and the coast, with long daylight hours and pleasant weather. May and September are also lovely for nature lovers. Winter is atmospheric, especially in Riga's medieval squares.",
+        "seoKeywords": "Latvia travel guide, Riga Art Nouveau tours, Jurmala beach guide, Baltic states itinerary, Latvia visa requirements, Northern Europe vacation",
+        "metaDescription": "Uncover the architectural beauty of Latvia. From Riga's Art Nouveau to the white sands of Jurmala, plan your bespoke Latvian trip with our expert notes.",
         "tier": 2
     },
     {
@@ -683,7 +914,7 @@
             "language": "Lithuanian",
             "timezone": "EET (UTC+2)",
             "bestMonths": "May-Sep",
-            "dailyBudget": "€60-€110"
+            "dailyBudget": "€60-110"
         },
         "whyGo": "A land steeped in quirky charm and a vivid history, featuring a baroque capital, poignant historical sites, and tranquil national parks covered in pine.",
         "cities": [
@@ -701,6 +932,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Lithuania is a country of vibrant spirit and deep history, characterized by its stunning Baroque architecture and quirky, independent character. Its capital, Vilnius, has one of the largest and most beautiful medieval old towns in Central Europe, and it's home to the self-proclaimed 'republic' of Uzupis—a neighborhood of artists and dreamers. Beyond the capital, Lithuania offers the unique landscape of the Curonian Spit, the historic Trakai Island Castle, and a landscape of rolling hills and deep forests. It is a nation that values its traditions while embracing a modern, European future. We specialize in Lithuanian itineraries that blend historical depth with local, authentic experiences.",
+        "highlights": [
+            "Explore the stunning Baroque churches of Vilnius Old Town.",
+            "Visit the fairytale Trakai Island Castle on Lake Galve.",
+            "Wander the unique sand dunes of the Curonian Spit.",
+            "See the Hill of Crosses, a powerful site of national identity."
+        ],
+        "gastronomy": "Lithuanian food is hearty and rooted in the earth. The national dish, Cepelinai (potato dumplings with meat), is a must-try. Other favorites include cold beet soup (Saltibarsciai) in summer and dark rye bread. Don't miss the local mead and craft beers.",
+        "bestTimeToVisitExtended": "Summer (June to August) is the best time for exploring, with long days and vibrant festivals. May and September are also lovely for hiking and sightseeing. Winter is cold but Vilnius' Christmas markets and snowy streets are truly magical.",
+        "seoKeywords": "Lithuania travel guide, Vilnius city itinerary, Curonian Spit tour, Baltic states travel, Lithuania visa requirements, Central Europe vacation",
+        "metaDescription": "Uncover the quirky charm of Lithuania. From Vilnius' Baroque beauty to the sand dunes of the Curonian Spit, plan your custom Lithuanian trip with our expert notes.",
         "tier": 2
     },
     {
@@ -733,6 +975,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Poland is a country of resilience, deep history, and warm hospitality. From the beautifully reconstructed Old Town of Warsaw to the royal splendor of Krakow and the Hanseatic charm of Gdansk, Poland's cities are hubs of culture and remembrance. Beyond its urban centers, Poland offers the rugged peaks of the Tatra Mountains and the tranquil Masurian Lake District. It is a country that confronts its complex past with honesty while looking forward with incredible energy. At DURIAN, we help you plan meaningful trips that balance historical exploration with the enjoyment of Poland's vibrant contemporary culture and natural beauty.",
+        "highlights": [
+            "Explore the historic Wawel Castle and Rynek Główny in Krakow.",
+            "Visit the poignant Auschwitz-Birkenau state museum.",
+            "Wander the colorful streets of Gdansk, the city of amber.",
+            "Hike the trails of the High Tatra Mountains in Zakopane."
+        ],
+        "gastronomy": "Polish food is the ultimate comfort food. Pierogi (dumplings with various fillings), Placki ziemniaczane (potato pancakes), and Bigos (hunter's stew) are essential. Don't miss the local bread, artisanal vodkas, and the unique 'Zapiekanka' open-faced baguettes in Krakow.",
+        "bestTimeToVisitExtended": "Spring (May and June) and early Autumn (September and October) are the most pleasant for exploration. Summer is warm and peak season for the Baltic coast and mountains. Winter is cold but Krakow's Christmas market is truly atmospheric.",
+        "seoKeywords": "Poland travel destination, Krakow city guide, Warsaw itinerary, Poland visa for tourists, bespoke Poland tours, Tatra mountains hiking",
+        "metaDescription": "Discover the resilience and beauty of Poland. From Krakow's history to the Tatra peaks, plan your bespoke Polish journey with our expert travel notes.",
         "tier": 2
     },
     {
@@ -747,7 +1000,7 @@
             "language": "Slovak",
             "timezone": "CET (UTC+1)",
             "bestMonths": "May-Sep",
-            "dailyBudget": "€60-€110"
+            "dailyBudget": "€60-110"
         },
         "whyGo": "A paradise for outdoor enthusiasts, featuring the dramatic peaks of the High Tatras, enchanting medieval castles, and uncrowded, picturesque towns.",
         "cities": [
@@ -765,6 +1018,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Slovakia is a land of dramatic natural beauty and rich historical heritage, often overlooked but offering incredible value and authenticity. Dominated by the soaring, jagged peaks of the High Tatras, it is a paradise for hikers, skiers, and nature lovers. But Slovakia is also a country of medieval castles (it has one of the highest numbers of castles per capita in the world), charming historic towns like Banská Štiavnica, and the lively capital of Bratislava, situated on the Danube. It is a destination that feels uncrowded and genuine. We help travelers plan high-altitude adventures and castle-hopping road trips through this Central European gem.",
+        "highlights": [
+            "Hike the trails of the High Tatras for stunning alpine views.",
+            "Explore the fairytale Bojnice Castle or the massive Spiš Castle.",
+            "Wander the historic Old Town of Bratislava and its castle.",
+            "Visit the unique wooden churches of the Carpathian region."
+        ],
+        "gastronomy": "Slovak food is hearty and designed for an active life. The national dish, Bryndzové halušky (potato dumplings with sheep cheese and bacon), is a must-try. Other favorites include garlic soup in bread bowls and local wines from the Lesser Carpathian region.",
+        "bestTimeToVisitExtended": "Summer (June to August) is peak for hiking and exploring the mountains. Spring (May) and Autumn (September and October) offer beautiful colors and fewer crowds in the towns. Winter (December to March) is for skiing and traditional Christmas markets.",
+        "seoKeywords": "Slovakia travel guide, High Tatras hiking, Bratislava city tips, Slovak castles tour, Slovakia visa requirements, Central Europe adventure",
+        "metaDescription": "Discover the wild beauty of Slovakia. From the High Tatras to medieval castles, plan your custom Slovak journey with our expert travel consulting.",
         "tier": 2
     },
     {
@@ -779,7 +1043,7 @@
             "language": "Slovene",
             "timezone": "CET (UTC+1)",
             "bestMonths": "May-Oct",
-            "dailyBudget": "€70-€140"
+            "dailyBudget": "€70-140"
         },
         "whyGo": "A compact green jewel nestled between the Alps and the Mediterranean, famous for its emerald rivers, alpine lakes like Bled, and an exceptionally livable capital.",
         "cities": [
@@ -797,6 +1061,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Slovenia is the 'green heart' of Europe, a country that effortlessly blends Alpine grandeur with Mediterranean charm and Central European sophistication. It is one of the most sustainable and livable countries in the world, with a capital—Ljubljana—that is mostly car-free and filled with cafes and parks. Its natural wonders are legendary, from the picture-perfect Lake Bled with its island church to the emerald waters of the Soča River and the massive Postojna caves. Slovenia is a paradise for outdoor lovers, but it also offers world-class wine and a sophisticated culinary scene. We help travelers plan balanced Slovenian itineraries that capture the best of its mountains, lakes, and coastline.",
+        "highlights": [
+            "Visit the iconic Lake Bled and take a pletna boat to the island.",
+            "Explore the emerald Soča Valley for hiking and water sports.",
+            "Tour the stunning Postojna Cave and Predjama Castle.",
+            "Wander the charming, bridge-filled streets of Ljubljana."
+        ],
+        "gastronomy": "Slovenian food is a delicious fusion of Alpine, Mediterranean, and Balkan influences. Don't miss the Kremna rezina (Bled cream cake), the hearty Kranjska klobasa (carniolan sausage), and the world-class wines from the Brda and Vipava valleys. Local honey and pumpkins seed oil are also prized.",
+        "bestTimeToVisitExtended": "Spring (May and June) and Autumn (September and October) are the most beautiful times for the lakes and mountains. Summer is perfect for adventure sports and festivals but can be busy at Bled. Winter is for skiing and soaking in thermal spas.",
+        "seoKeywords": "Slovenia travel planner, Lake Bled guide, Ljubljana city itinerary, Slovenia nature travel, Slovenia visa requirements, Alpine and Mediterranean vacation",
+        "metaDescription": "Experience the green heart of Europe in Slovenia. From Lake Bled to the Soča Valley, plan your bespoke Slovenian getaway with our expert travel notes.",
         "tier": 2
     },
     {
@@ -811,7 +1086,7 @@
             "language": "German",
             "timezone": "CET (UTC+1)",
             "bestMonths": "May-Oct",
-            "dailyBudget": "€150-€250"
+            "dailyBudget": "150-250"
         },
         "whyGo": "Tucked entirely in the Alps, this tiny principality governed by an iron-clad monarchy offers excellent hiking trails and a surprising contemporary art scene.",
         "cities": [
@@ -829,6 +1104,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Liechtenstein is one of the world's smallest and wealthiest countries, a tiny Alpine principality tucked between Switzerland and Austria. Despite its size, it offers a wealth of experiences, from the modern art galleries of its capital, Vaduz, to the high-altitude hiking trails that offer stunning views of the Rhine valley. It is a country of deep traditions, still ruled by its Princely family who reside in the iconic castle overlooking Vaduz. For travelers, Liechtenstein is a fascinating microstate that is easily explored in a day or two as part of a larger Alpine journey. At DURIAN, we help you navigate the logistics of visiting this unique and sophisticated pocket of Europe.",
+        "highlights": [
+            "Admire the Kunstmuseum Liechtenstein for modern and contemporary art.",
+            "Take the 'Princes' Way' hike for breathtaking Alpine panoramas.",
+            "Visit the vineyards of the Prince of Liechtenstein in Vaduz.",
+            "Explore the mountain village of Malbun for family-friendly winter sports."
+        ],
+        "gastronomy": "Liechtenstein's cuisine is heavily influenced by its Swiss and Austrian neighbors. Käsknöpfle (tiny pasta with lots of cheese) is the national dish. Being a high-wealth nation, you can also find exceptional high-end dining and world-class wines produced within the principality.",
+        "bestTimeToVisitExtended": "Summer (June to August) is ideal for hiking and exploring the valley. Winter (December to March) is perfect for skiing in the Malbun resort. May and September are also lovely for a quieter visit without the peak summer heat.",
+        "seoKeywords": "Liechtenstein travel guide, Vaduz city tips, Alpine hiking Liechtenstein, microstate travel Europe, Liechtenstein visa requirements, bespoke Alpine tours",
+        "metaDescription": "Uncover the secrets of Liechtenstein. From Vaduz's modern art to the high Alpine trails, plan your custom visit to one of the world's smallest nations.",
         "tier": 2
     },
     {
@@ -843,7 +1129,7 @@
             "language": "German, French, Italian, Romansh",
             "timezone": "CET (UTC+1)",
             "bestMonths": "Jun-Sep, Dec-Mar",
-            "dailyBudget": "€150-€300"
+            "dailyBudget": "150-300"
         },
         "whyGo": "The ultimate alpine destination known for precision, luxury, towering peaks like the Matterhorn, pristine lakes, and an impeccable, scenic rail network.",
         "cities": [
@@ -861,6 +1147,17 @@
             }
         ],
         "visaNote": "Schengen area. Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Switzerland is the definition of Alpine perfection. It is a country of soaring, snow-capped peaks, crystal-clear glacial lakes, and cities that are clean, efficient, and filled with historical charm. From the iconic Matterhorn in Zermatt to the glamorous lakeside resorts of Montreux and the bustling, high-tech hub of Zurich, Switzerland offers a luxury travel experience that is unmatched. It is also a nation of diverse cultures, with four national languages and a unique sense of independence. At DURIAN, we specialize in planning seamless Swiss itineraries that utilize the world-class rail system and provide access to the most breathtaking mountain views and exclusive boutique stays.",
+        "highlights": [
+            "Take the scenic Glacier Express or Bernina Express train ride.",
+            "Visit the car-free mountain village of Zermatt and see the Matterhorn.",
+            "Explore the medieval Old Town of Lucerne and its famous bridge.",
+            "Cruise the pristine waters of Lake Geneva or Lake Zurich."
+        ],
+        "gastronomy": "Swiss food is synonymous with indulgence and precision. Cheese fondue and raclette are essential winter experiences, while Swiss chocolate is world-famous. Don't miss Rosti (crispy potato pancake) and the fresh fish from the lakes. The wine, especially from the Lavaux terraces, is a hidden gem.",
+        "bestTimeToVisitExtended": "Summer (June to September) is perfect for hiking, lake activities, and mountain trains. Winter (December to March) is the peak for world-class skiing and cozy Alpine atmosphere. Spring and Autumn are quieter but offer beautiful colors and easier access to the cities.",
+        "seoKeywords": "Switzerland travel planner, Swiss rail tour, Zermatt Matterhorn guide, Swiss Alps luxury travel, Switzerland visa requirements, bespoke Swiss itineraries",
+        "metaDescription": "Experience Alpine perfection in Switzerland. From the Matterhorn to the pristine lakes, plan your ultimate luxury Swiss journey with our expert travel consulting.",
         "tier": 1
     },
     {
@@ -875,7 +1172,7 @@
             "language": "Bulgarian",
             "timezone": "EET (UTC+2)",
             "bestMonths": "May-Sep",
-            "dailyBudget": "€40-€90"
+            "dailyBudget": "40-90"
         },
         "whyGo": "Rich in Orthodox heritage and Thracian treasures, offering a beautiful Black Sea coast in summer and affordable, dramatic mountain ranges perfect for hiking.",
         "cities": [
@@ -893,6 +1190,17 @@
             }
         ],
         "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Bulgaria is a land of ancient secrets and dramatic landscapes, offering some of the best travel value in Europe. It is home to a staggering nine UNESCO World Heritage sites, ranging from the prehistoric Thracian tombs to the stunning Rila Monastery. Bulgaria's nature is equally diverse, featuring the high peaks of the Rila and Pirin mountains and the beautiful golden beaches of the Black Sea coast. With its recent partial entry into the Schengen Area (air and sea), Bulgaria is becoming a new and exciting frontier for European exploration. We help travelers plan adventurous and culturally rich Bulgarian trips that go far beyond the typical tourist path.",
+        "highlights": [
+            "Visit the majestic Rila Monastery, a spiritual and artistic gem.",
+            "Explore the Roman ruins and ancient Old Town of Plovdiv.",
+            "Relax on the golden beaches of the Black Sea in Varna or Nesebar.",
+            "Hike to the Seven Rila Lakes for spectacular mountain views."
+        ],
+        "gastronomy": "Bulgarian food is garden-fresh and flavorful. Shopska salad (cucumber, tomato, and sirene cheese) is a staple. Don't miss the Banitsa (savory pastry), grilled meats like Kebapche, and the world-class Bulgarian yogurt. The country also has a long and proud tradition of wine making.",
+        "bestTimeToVisitExtended": "Summer (June to August) is ideal for the Black Sea coast and mountain hiking. Spring (May) and Autumn (September and October) are perfect for exploring the historic cities and monasteries. Winter is for skiing in resorts like Bansko.",
+        "seoKeywords": "Bulgaria travel guide, Sofia city tips, Black Sea coast vacation, Bulgaria visa requirements, Rila monastery tour, Eastern Europe nature travel",
+        "metaDescription": "Uncover the ancient beauty of Bulgaria. From Sofia's history to the Black Sea beaches, plan your bespoke Bulgarian adventure with our expert notes.",
         "tier": 2
     },
     {
@@ -907,7 +1215,7 @@
             "language": "Romanian",
             "timezone": "EET (UTC+2)",
             "bestMonths": "May-Oct",
-            "dailyBudget": "€50-€100"
+            "dailyBudget": "50-100"
         },
         "whyGo": "Dominated by the stunning Carpathian Mountains and the legend of Dracula, Romania offers medieval Saxon villages, thick forests, and a dynamic capital.",
         "cities": [
@@ -925,6 +1233,17 @@
             }
         ],
         "visaNote": "Schengen area (air and sea borders). Visa rules depend on nationality. We provide guidance, not legal advice.",
+        "longDescription": "Romania is a land of legends, dramatic landscapes, and incredible cultural depth. Dominated by the wild peaks of the Carpathian Mountains and the ancient forests of Transylvania, it is a place where medieval history still feels very much alive. From the Saxon villages and fortified churches of Transylvania to the painted monasteries of Bucovina and the dynamic, 'Little Paris' energy of Bucharest, Romania offers a travel experience that is both adventurous and profoundly moving. Now a partial member of the Schengen Area (air and sea), Romania is easier to include in European itineraries than ever before. At DURIAN, we help travelers navigate the mysteries of Dracula's homeland and discover its authentic, rural beauty.",
+        "highlights": [
+            "Explore the fairytale Bran Castle in Transylvania.",
+            "Drive the spectacular Transfăgărășan mountain highway.",
+            "Wander the medieval streets of Sighișoara, a UNESCO site.",
+            "Visit the unique painted monasteries of Bucovina in the north."
+        ],
+        "gastronomy": "Romanian food is hearty, rustic, and deeply flavorful. Sarmale (cabbage rolls filled with meat and rice) is the national dish, usually served with Mămăligă (polenta). Don't miss the Papanași (cheese doughnuts with sour cream and jam) for dessert. Romania also has a thriving and ancient wine culture.",
+        "bestTimeToVisitExtended": "Summer (June to August) is ideal for the mountains and Transylvania. Autumn (September and October) offers stunning fall colors in the forests and is perfect for road trips. Spring is beautiful for the painted monasteries. Winter is for skiing in Poiana Brașov.",
+        "seoKeywords": "Romania travel guide, Transylvania tour, Bucharest city tips, Romania visa requirements, Carpathian mountains hiking, bespoke Romania travel",
+        "metaDescription": "Discover the legends of Romania. From Transylvania's castles to the Carpathian peaks, plan your custom Romanian adventure with our expert travel notes.",
         "tier": 2
     }
 ]

@@ -1,11 +1,21 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.duriantravel.com',
   output: 'static',
   integrations: [
     mdx(),
+    sitemap({
+      filter: (page) =>
+        page !== 'https://www.duriantravel.com/404/' &&
+        page !== 'https://www.duriantravel.com/terms-of-service/' &&
+        page !== 'https://www.duriantravel.com/privacy-policy/' &&
+        page !== 'https://www.duriantravel.com/cookie-policy/' &&
+        page !== 'https://www.duriantravel.com/disclaimer/' &&
+        page !== 'https://www.duriantravel.com/thank-you/'
+    }),
   ],
   markdown: {
     shikiConfig: {

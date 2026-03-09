@@ -15,7 +15,7 @@ readTime: 8
 
 The Schengen Area is a zone of 27 European countries that have abolished passport controls at their mutual borders. A **Schengen tourist visa (Type C)** allows you to visit these countries for up to 90 days within any 180-day period.
 
-Getting the document package right is the single most controllable factor in a successful application.
+Getting the document package right is the single most controllable factor in a successful application. If you need a complete overview of the process, [→ Read our Ultimate Schengen Visa Guide](/schengen-visa-guide/).
 
 ## The Core Schengen Visa Document Checklist
 
@@ -64,7 +64,7 @@ A written explanation of your trip, covering:
 - Financial means to support yourself
 - Reasons you will return home (ties to your country)
 
-[→ See our Cover Letter Strategy service](/services/cover-letter-strategy/)
+Want help structuring this? [→ See our Cover Letter Strategy service](/services/cover-letter-strategy/)
 
 ### 8. Travel Itinerary
 
@@ -81,7 +81,7 @@ Documents proving you can support yourself financially. Common requirements:
 - **Proof of employment / income** (salary slips, employment letter)
 - **If sponsored**: sponsor's bank statements + signed sponsor declaration
 
-[→ See our Financial Proof Review service](/services/financial-proof-review/)
+Not sure if your documents are strong enough? [→ See our Financial Proof Review service](/services/financial-proof-review/)
 
 ### 10. Proof of Ties to Home Country
 

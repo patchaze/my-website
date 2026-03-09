@@ -1,6 +1,7 @@
 ---
 /**
- * Newsletter signup component — powered by Brevo.
+ * Newsletter signup component — direct POST to Brevo.
+ * No hidden forms, no relay, no main.js, no reCAPTCHA.
  * Props:
  *   variant: 'section' (full-width homepage block) | 'inline' (compact footer block)
  *   id:       unique form id to avoid clashes when used multiple times on a page
@@ -10,10 +11,12 @@ interface Props {
   id?: string;
 }
 const { variant = 'section', id = 'newsletter' } = Astro.props;
+
+const BREVO_ACTION = "https://15cb987e.sibforms.com/serve/MUIFAOZOhVEOxVZXjAAbooSnqx_Shx1D0TJ7VqThHXBGpaAJiibkpWkVTFONEaQfYJjo7vpjpjisYLFNm0LfqQU4xLxGOUcm-7S-XiAlMFE1RtOQrNGO8SEX4bU-juKJitGkzafoMRfhcRLfUCpPV46BLpnfCk3TtCKRa_8JkE7bSr5hIvj02jmuWXjPWpC-TEMEv3pWpZemi9WfyQ==";
 ---
 
 {variant === 'section' ? (
-  <!-- Full homepage newsletter section -->
+  <!-- Full homepage newsletter block -->
   <section class="newsletter" aria-labelledby={`${id}-heading`}>
     <div class="container newsletter__inner">
       <div class="newsletter__content">
@@ -23,18 +26,25 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
       </div>
 
       <div class="newsletter__form-container">
-        <!-- Visible "Perfect" UI: Success Message -->
-        <div class="newsletter__feedback newsletter__feedback--success" id={`${id}-success`} style="display:none;">
-          ✅ You're in! Check your inbox to confirm your subscription.
-        </div>
-        
-        <!-- Visible "Perfect" UI: Error Message -->
-        <div class="newsletter__feedback newsletter__feedback--error" id={`${id}-error`} style="display:none;">
-          Something went wrong. Please try again.
+        <!-- Result UI (Initially Hidden) -->
+        <div class="newsletter__success-ui" id={`${id}-success-ui`} style="display:none;">
+          <div class="newsletter__feedback newsletter__feedback--success" style="display:block;">
+            ✅ <strong>Confirm your subscription!</strong> We've sent an email to your inbox. Please check it to join.
+          </div>
+          <button type="button" class="btn btn--ghost" style="margin-top:var(--space-4); color:white; border-color:hsla(0,0%,100%,0.2)" onclick={`document.getElementById('${id}-form').style.display='flex'; document.getElementById('${id}-success-ui').style.display='none';`}>
+            ← Join with another email
+          </button>
         </div>
 
-        <!-- Visible "Perfect" UI: Form -->
-        <form class="newsletter__form" id={`${id}-form`} data-newsletter-relay-source>
+        <!-- Silent Form Submission -->
+        <form 
+          class="newsletter__form" 
+          id={`${id}-form`}
+          method="POST"
+          action={BREVO_ACTION}
+          target="newsletter_silent_frame"
+          onsubmit={`document.getElementById('${id}-form').style.display='none'; document.getElementById('${id}-success-ui').style.display='block';`}
+        >
           <div class="newsletter__field-row">
             <div class="newsletter__input-wrap">
               <input
@@ -46,101 +56,64 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
                 aria-label="Email address"
               />
             </div>
+            <input type="text" name="email_address_check" value="" style="display:none;" />
+            <input type="hidden" name="locale" value="en" />
+            
             <button type="submit" class="newsletter__btn">
               <span class="newsletter__btn-text">Subscribe</span>
-              <span class="newsletter__btn-loading" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="20"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>
-              </span>
             </button>
           </div>
           <label class="newsletter__consent">
-            <input type="checkbox" name="OPT_IN" required />
+            <input type="checkbox" name="OPT_IN" value="1" required />
             <span>I agree to receive emails from DURIAN Travel. <a href="/privacy-policy/">Privacy Policy</a></span>
           </label>
         </form>
       </div>
     </div>
   </section>
-) : null}
+) : (
+  <!-- Inline footer/compact version -->
+  <div class="newsletter-inline" id={id}>
+    <!-- Result UI -->
+    <div id={`${id}-success-ui`} style="display:none;">
+       <p class="footer__newsletter-label" style="color: #6ee7a0;">✅ Almost there! Check your inbox to confirm.</p>
+    </div>
 
-<!-- Custom Newsletter Relay Client logic -->
-<script is:inline>
-(function() {
-  document.querySelectorAll('[data-newsletter-relay-source]').forEach(visibleForm => {
-    visibleForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const emailValue = visibleForm.querySelector('input[name="EMAIL"]').value;
-      const relayEmail = document.getElementById('RELAY_EMAIL');
-      const relayOptIn = document.getElementById('RELAY_OPT_IN');
-      const relaySubmit = document.getElementById('RELAY_SUBMIT');
-      
-      const btn = visibleForm.querySelector('button[type="submit"]');
-      const successEl = document.getElementById(visibleForm.id.replace('-form', '-success'));
-      const errorEl = document.getElementById(visibleForm.id.replace('-form', '-error'));
+    <form 
+      class="newsletter-inline__form" 
+      id={`${id}-form`}
+      method="POST"
+      action={BREVO_ACTION}
+      target="newsletter_silent_frame"
+      onsubmit={`document.getElementById('${id}-form').style.display='none'; document.getElementById('${id}-success-ui').style.display='block';`}
+    >
+      <p class="footer__newsletter-label" id={`${id}-label`}>Subscribe for expert Europe travel strategies &amp; visa news.</p>
+      <div class="footer__newsletter-form">
+        <input
+          type="email"
+          name="EMAIL"
+          required
+          placeholder="Email address"
+          class="footer__newsletter-input"
+          aria-labelledby={`${id}-label`}
+        />
+        <input type="text" name="email_address_check" value="" style="display:none;" />
+        <input type="hidden" name="locale" value="en" />
+        
+        <button type="submit" class="footer__newsletter-btn">
+          <span class="newsletter__btn-text">Go</span>
+        </button>
+      </div>
+      <label class="newsletter__consent" style="margin-top: var(--space-3); color: hsla(0,0%,100%,0.35);">
+        <input type="checkbox" name="OPT_IN" value="1" required />
+        <span>I agree to receive emails. <a href="/privacy-policy/">Privacy</a></span>
+      </label>
+    </form>
+  </div>
+)}
 
-      // Clear previous feedback
-      if (successEl) successEl.style.display = 'none';
-      if (errorEl) errorEl.style.display = 'none';
-
-      btn.classList.add('is-loading');
-      btn.disabled = true;
-
-      // 1. Relay data to the global Singleton Relay
-      if (relayEmail) relayEmail.value = emailValue;
-      if (relayOptIn) relayOptIn.checked = true;
-
-      // 2. Trigger global submission
-      if (relaySubmit) relaySubmit.click();
-
-      // 3. Monitor the Singleton Relay state
-      const checkStatus = setInterval(() => {
-        const officialSuccess = document.getElementById('success-message');
-        const officialError = document.getElementById('error-message');
-
-        // Check for success
-        if (officialSuccess && officialSuccess.classList.contains('sib-form-message-panel--active')) {
-          console.log('Newsletter: Success state detected in relay.');
-          clearInterval(checkStatus);
-          clearTimeout(timeoutSafety);
-          btn.classList.remove('is-loading');
-          visibleForm.style.display = 'none';
-          if (successEl) successEl.style.display = 'block';
-          
-          // Reset relay for next potential form use
-          officialSuccess.classList.remove('sib-form-message-panel--active');
-        } 
-        // Check for error
-        else if (officialError && officialError.classList.contains('sib-form-message-panel--active')) {
-          console.log('Newsletter: Error state detected in relay.');
-          clearInterval(checkStatus);
-          clearTimeout(timeoutSafety);
-          btn.classList.remove('is-loading');
-          btn.disabled = false;
-          if (errorEl) errorEl.style.display = 'block';
-
-          // Reset relay
-          officialError.classList.remove('sib-form-message-panel--active');
-        }
-      }, 500);
-
-      // Timeout safety: 12 seconds
-      const timeoutSafety = setTimeout(() => {
-        if (btn.classList.contains('is-loading')) {
-          console.warn('Newsletter: Subscription request timed out.');
-          clearInterval(checkStatus);
-          btn.classList.remove('is-loading');
-          btn.disabled = false;
-          if (errorEl) {
-            errorEl.textContent = "Request timed out. Please try again or check your internet connection.";
-            errorEl.style.display = 'block';
-          }
-        }
-      }, 12000);
-    });
-  });
-})();
-</script>
+<!-- Hidden Iframe to capture the POST redirect and keep user on page -->
+<iframe name="newsletter_silent_frame" id="newsletter_silent_frame" style="display:none;"></iframe>
 
 <style>
 /* ══════════════════════════════════════════
@@ -259,25 +232,6 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
 .newsletter__btn:hover {
   background: var(--color-accent-dark);
 }
-.newsletter__btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-/* Loading state */
-.newsletter__btn-loading {
-  display: none;
-}
-.newsletter__btn.is-loading .newsletter__btn-text {
-  visibility: hidden;
-}
-.newsletter__btn.is-loading .newsletter__btn-loading {
-  display: flex;
-  position: absolute;
-  inset: 0;
-  align-items: center;
-  justify-content: center;
-}
 
 /* Consent checkbox */
 .newsletter__consent {
@@ -303,113 +257,67 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
   color: white;
 }
 
-/* Feedback messages */
+/* Success UI Styling */
+.newsletter__success-ui {
+  animation: feedbackSlide 0.4s ease;
+}
+
+/* Feedback messages from previous iteration used in success UI */
 .newsletter__feedback {
-  display: none;
-  font-size: var(--text-sm);
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-sm);
-  animation: feedbackSlide 0.3s ease;
+  font-size: var(--text-base);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
 }
 .newsletter__feedback--success {
   background: hsla(150, 60%, 40%, 0.15);
   color: #6ee7a0;
   border: 1px solid hsla(150, 60%, 40%, 0.3);
 }
-.newsletter__feedback--error {
-  background: hsla(0, 70%, 50%, 0.15);
-  color: #f87171;
-  border: 1px solid hsla(0, 70%, 50%, 0.3);
-}
+
 @keyframes feedbackSlide {
-  from { opacity: 0; transform: translateY(-4px); }
+  from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ══════════════════════════════════════════
-   FOOTER INLINE VARIANT — overrides
+   NEWSLETTER INLINE (footer version)
    ══════════════════════════════════════════ */
-.footer__newsletter-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+.footer__newsletter-label {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+  color: hsla(0, 0%, 100%, 0.75);
 }
-.footer__newsletter-row {
+.footer__newsletter-form {
   display: flex;
   gap: 0;
 }
 .footer__newsletter-input {
   flex: 1;
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--text-sm);
-  background: hsla(0, 0%, 100%, 0.08);
-  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  background: hsla(0, 0%, 100%, 0.05);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
   border-right: none;
   border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
   color: white;
+  font-size: var(--text-sm);
   outline: none;
-  transition: border-color var(--transition-fast);
-}
-.footer__newsletter-input::placeholder {
-  color: hsla(0, 0%, 100%, 0.35);
 }
 .footer__newsletter-input:focus {
-  border-color: var(--color-accent);
+  border-color: hsla(0, 0%, 100%, 0.3);
 }
 .footer__newsletter-btn {
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--text-xs);
-  font-weight: var(--font-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
   background: var(--color-accent);
   color: white;
-  border: 1px solid var(--color-accent);
+  border: none;
+  padding-inline: var(--space-5);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-weight: var(--font-bold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background var(--transition-fast);
-  white-space: nowrap;
-  position: relative;
 }
 .footer__newsletter-btn:hover {
   background: var(--color-accent-dark);
-}
-.footer__newsletter-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-.footer__newsletter-btn.is-loading .newsletter__btn-text {
-  visibility: hidden;
-}
-.footer__newsletter-btn.is-loading .newsletter__btn-loading {
-  display: flex;
-  position: absolute;
-  inset: 0;
-  align-items: center;
-  justify-content: center;
-}
-.footer__newsletter-consent {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2);
-  font-size: 0.6875rem;
-  color: hsla(0, 0%, 100%, 0.45);
-  cursor: pointer;
-  line-height: var(--leading-relaxed);
-  margin-top: var(--space-2);
-}
-.footer__newsletter-consent input[type="checkbox"] {
-  margin-top: 2px;
-  accent-color: var(--color-accent);
-  flex-shrink: 0;
-}
-.footer__newsletter-consent a {
-  color: hsla(0, 0%, 100%, 0.6);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.footer__newsletter-consent a:hover {
-  color: white;
 }
 
 @media (max-width: 600px) {
@@ -420,9 +328,6 @@ const { variant = 'section', id = 'newsletter' } = Astro.props;
   .newsletter__input {
     border-radius: var(--radius-md);
     border-right: 1px solid hsla(0, 0%, 100%, 0.2);
-  }
-  .newsletter__input:focus {
-    border-color: var(--color-accent);
   }
   .newsletter__btn {
     border-radius: var(--radius-md);

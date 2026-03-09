@@ -33,7 +33,9 @@ const tocItems = [
   { id: 'financial',         label: 'Financial Proof' },
   { id: 'cover-letter',      label: 'Cover Letter Strategy' },
   { id: 'itinerary',         label: 'Travel Itinerary' },
+  { id: 'etias',            label: 'ETIAS 2026 Update' },
   { id: 'refusal',           label: 'Refusal Prevention' },
+  { id: 'misconceptions',    label: 'Common Misconceptions' },
   { id: 'reapplication',     label: 'After a Refusal' },
   { id: 'faq',               label: 'Quick FAQ' },
 ];
@@ -186,7 +188,29 @@ const tocItems = [
             <li>Budget estimates consistent with your financial proof</li>
             <li>Logical route (credible travel order between cities)</li>
           </ul>
-          <p class="mt-4"><a href="/services/itinerary-structuring/" class="link">→ Itinerary Structuring Service</a></p>
+          <p class="mt-4"><a href="/services/itinerary-building/" class="link">→ Itinerary Structuring Service</a></p>
+        </section>
+        <!-- ETIAS 2026 -->
+        <section id="etias" class="guide-section" aria-labelledby="etias-h2">
+          <h2 id="etias-h2">ETIAS: The 2026 Update</h2>
+          <p>
+            Starting in 2026, the European Travel Information and Authorisation System (ETIAS) will be fully operational.
+            It is important to distinguish between an <strong>ETIAS</strong> and a <strong>Schengen Visa</strong>:
+          </p>
+          <div class="comparison-box mt-6">
+            <div class="comparison-box__side">
+              <h4>Who needs ETIAS?</h4>
+              <p>Citizens of visa-exempt countries (e.g., USA, Canada, UK, Australia) who previously traveled with just a passport.</p>
+            </div>
+            <div class="comparison-box__side">
+              <h4>Who needs a Visa?</h4>
+              <p>Citizens of countries that are NOT visa-exempt must still apply for a standard Schengen Type C visa at an embassy.</p>
+            </div>
+          </div>
+          <p class="mt-6">
+            ETIAS is a quick online authorization, while a Schengen visa is a comprehensive embassy process. 
+            If you already have a valid Schengen visa, you do not need an ETIAS to enter the area.
+          </p>
         </section>
 
         <!-- Refusal prevention -->
@@ -221,6 +245,24 @@ const tocItems = [
           <div class="notice notice--warning mt-6">
             <span aria-hidden="true">⚠️</span>
             <span>If your refusal involved legal status, overstay, or violations, consult a qualified immigration lawyer. <a href="/services/refusal-analysis/" class="link">Refusal Analysis service →</a></span>
+          </div>
+        </section>
+        <!-- Common Misconceptions -->
+        <section id="misconceptions" class="guide-section" aria-labelledby="misc-h2">
+          <h2 id="misc-h2">Common Misconceptions</h2>
+          <div class="misconception-list">
+            <div class="misconception-item">
+              <strong>"A booked flight is mandatory."</strong>
+              <p>False. Most embassies explicitly request a flight <em>reservation</em> or <em>itinerary</em>. Avoid paying for non-refundable tickets until the visa is in your hand.</p>
+            </div>
+            <div class="misconception-item">
+              <strong>"More money in the bank always helps."</strong>
+              <p>Not necessarily. Large, unexplained deposits right before applying (often called 'funds padding') are a major red flag for officers. Consistency is more important than the total amount.</p>
+            </div>
+            <div class="misconception-item">
+              <strong>"I should apply to the easiest embassy."</strong>
+              <p>Risky. You must apply to the embassy of your main destination. Applying to a different embassy just because it's 'faster' or 'easier' is called 'visa shopping' and can lead to refusal or entry denial at the border.</p>
+            </div>
           </div>
         </section>
 
@@ -319,4 +361,16 @@ const tocItems = [
 .guide-sidebar-cta { background: var(--color-navy); color: white; border-radius: var(--radius-xl); padding: var(--space-5); }
 .guide-sidebar-cta h3 { color: white; font-size: var(--text-base); margin-bottom: var(--space-2); }
 .guide-sidebar-cta p  { font-size: var(--text-sm); color: hsl(220 30% 80%); }
+
+/* Comparison and Misconception boxes */
+.comparison-box { display: flex; gap: var(--space-6); background: var(--color-surface-2); border-radius: var(--radius-xl); padding: var(--space-6); border: 1px solid var(--color-border); }
+.comparison-box__side { flex: 1; }
+.comparison-box__side h4 { font-size: var(--text-sm); margin-bottom: var(--space-2); color: var(--color-primary); text-transform: uppercase; }
+.comparison-box__side p { font-size: var(--text-sm); }
+@media (max-width: 600px) { .comparison-box { flex-direction: column; } }
+
+.misconception-list { display: flex; flex-direction: column; gap: var(--space-4); }
+.misconception-item { padding: var(--space-4); border-left: 4px solid var(--color-accent); background: white; box-shadow: var(--shadow-sm); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+.misconception-item strong { display: block; margin-bottom: var(--space-2); font-size: var(--text-base); color: var(--color-navy); }
+.misconception-item p { font-size: var(--text-sm); margin: 0; }
 </style>

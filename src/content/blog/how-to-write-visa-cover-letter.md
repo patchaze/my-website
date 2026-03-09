@@ -98,6 +98,8 @@ Sincerely,
 - **Using generic templates verbatim** — officers read hundreds; yours should be specific to your situation
 - **Claiming too much** — avoid inflated language about your status or finances
 
+Need expert eyes on your draft? [→ Book a Cover Letter Strategy Session](/services/cover-letter-strategy/)
+
 ---
 
 *This guide is for educational purposes only. Requirements vary by embassy and individual situation. Last reviewed: February 2026.*
