@@ -2,7 +2,7 @@
 keywords: "Aviation, Middle East Conflict, Flight Rerouting, Europe Asia Flights, Airspace Closure 2026"
 title: "Flights to Europe Amid Middle East Conflict: Airspace Closures & Traveler Advisory (2026)"
 description: "A comprehensive guide on how the 2026 Middle East conflict affects flights between Europe and Asia, including airspace closures, airline status, and traveler tips."
-pubDate: "2026-03-09"
+pubDate: "2026-03-05"
 author: "Patricia Azevedo"
 tags: ["Aviation", "Travel Advisory", "Middle East", "Europe"]
 ogImage: "https://www.duriantravel.com/images/middle-east-airspace-conflict-2026.png"
