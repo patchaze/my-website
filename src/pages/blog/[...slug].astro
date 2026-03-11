@@ -21,6 +21,19 @@ const modDateISO        = (post.data.modDate ?? post.data.pubDate).toISOString()
 const pubDateISO        = post.data.pubDate.toISOString();
 const canonicalURL      = `https://www.duriantravel.com/blog/${post.slug}/`;
 
+// Related posts: find posts sharing the most tags with the current post
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const currentTags = new Set(post.data.tags.map((t: string) => t.toLowerCase()));
+const relatedPosts = allPosts
+  .filter(p => p.slug !== post.slug)
+  .map(p => ({
+    post: p,
+    overlap: p.data.tags.filter((t: string) => currentTags.has(t.toLowerCase())).length
+  }))
+  .sort((a, b) => b.overlap - a.overlap || b.post.data.pubDate.getTime() - a.post.data.pubDate.getTime())
+  .slice(0, 3)
+  .map(r => r.post);
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -110,6 +123,21 @@ const faqSchema = {
           <a href="/about-us/" class="link" style="font-size:var(--text-sm)">About the consultant →</a>
         </div>
       </aside>
+
+      <!-- Related Posts (Internal Cross-linking) -->
+      {relatedPosts.length > 0 && (
+        <section class="related-posts" aria-label="Related articles">
+          <h2 class="related-posts__title">Related Articles</h2>
+          <div class="related-posts__grid">
+            {relatedPosts.map(rp => (
+              <a href={`/blog/${rp.slug}/`} class="related-posts__card">
+                <span class="related-posts__card-title">{rp.data.title}</span>
+                <span class="related-posts__card-meta">{rp.data.readTime} min read</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       <!-- Related links -->
       <nav class="post-related" aria-label="Related services">
@@ -209,4 +237,46 @@ const faqSchema = {
 .post-related__card--cta  { background: var(--color-primary); color: white; border-color: var(--color-primary); }
 .post-related__card--cta:hover { background: var(--color-primary-dark); }
 .post-related__icon { font-size: 1.1rem; }
+
+/* Related Posts (Internal Cross-linking) */
+.related-posts { margin-top: var(--space-10); }
+.related-posts__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+}
+.related-posts__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+@media (max-width: 768px) { .related-posts__grid { grid-template-columns: 1fr; } }
+.related-posts__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  background: white;
+  transition: all var(--transition-fast);
+}
+.related-posts__card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+.related-posts__card-title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  line-height: 1.4;
+}
+.related-posts__card:hover .related-posts__card-title {
+  color: var(--color-primary);
+}
+.related-posts__card-meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
 </style>
