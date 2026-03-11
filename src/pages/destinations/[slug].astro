@@ -112,6 +112,10 @@ const breadcrumb = [
           <p>{country.bestTimeToVisitExtended}</p>
         </div>
       )}
+
+      {country.articleHtml && (
+        <div class="prose mt-12 seo-article" set:html={country.articleHtml}></div>
+      )}
       
       <div class="prose mt-12">
         <h2 class="text-navy">Visa Requirements</h2>
