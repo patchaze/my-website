@@ -1,6 +1,26 @@
 {
     "redirects": [
         {
+            "source": "/blog/europe-travel-guide",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/europe-travel-guide/",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/most-visited-countries-in-europe",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/most-visited-countries-in-europe/",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
             "source": "/:path((?!_assets|api|_next).*[^/])$",
             "destination": "/:path/",
             "permanent": true

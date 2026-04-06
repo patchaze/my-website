@@ -13,6 +13,10 @@ const blogCollection = defineCollection({
         readTime: z.number().default(5),
         draft: z.boolean().default(false),
         keywords: z.string().optional(),
+        faq: z.array(z.object({
+            question: z.string(),
+            answer: z.string(),
+        })).optional(),
     }),
 });
 

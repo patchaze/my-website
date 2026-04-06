@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTABanner from '../../components/CTABanner.astro';
 import countriesData from '../../data/countries.json';
+import destinationOverrides from '../../data/destination-overrides';
 import { Image } from 'astro:assets';
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,gif}');
@@ -13,7 +14,17 @@ export async function getStaticPaths() {
   }));
 }
 
-const { country } = Astro.props;
+const baseCountry = Astro.props.country;
+const override = destinationOverrides[baseCountry.slug] ?? {};
+const country = {
+  ...baseCountry,
+  ...override,
+  facts: {
+    ...baseCountry.facts,
+    ...(override.facts ?? {})
+  }
+};
+const heroTitle = country.heroTitle || country.name;
 
 const breadcrumb = [
   { name: 'Destinations', url: 'https://www.duriantravel.com/destinations/' },
@@ -54,7 +65,7 @@ const breadcrumb = [
     </div>
     <div class="container hero-country-content">
       <div class="hero__badge">📍 {country.region.toUpperCase()}</div>
-      <h1 class="hero__title">{country.name}</h1>
+      <h1 class="hero__title">{heroTitle}</h1>
       <p class="hero__description">{country.metaLine}</p>
     </div>
   </section>

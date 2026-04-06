@@ -1,8 +1,9 @@
 ---
 keywords: "Health, Europe, Pharmacist"
-title: "Travel Health Kit for Europe: A Pharmacist-Style Checklist (Plus Medication Travel Rules)"
+title: "Travel Health Kit for Europe: Meds, Packing & Medication Rules"
 description: "A practical Europe travel health kit checklist: meds, prescriptions, packing rules, and the habits that prevent common travel health problems."
 pubDate: "2026-03-02"
+modDate: "2026-04-06"
 author: "Patricia Azevedo"
 tags: ["Health", "Europe", "Pharmacist"]
 readTime: 9

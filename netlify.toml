@@ -67,3 +67,23 @@
   from = "/services/strategy-call"
   to   = "/services/strategy-call/"
   status = 301
+
+[[redirects]]
+  from = "/blog/europe-travel-guide"
+  to   = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/europe-travel-guide/"
+  to   = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/most-visited-countries-in-europe"
+  to   = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/most-visited-countries-in-europe/"
+  to   = "/blog/"
+  status = 301

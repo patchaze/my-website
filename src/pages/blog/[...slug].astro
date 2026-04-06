@@ -34,15 +34,20 @@ const relatedPosts = allPosts
   .slice(0, 3)
   .map(r => r.post);
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Is this visa guidance legal advice?",
-    "acceptedAnswer": { "@type": "Answer", "text": "No. DURIAN provides educational content only. We are not immigration lawyers and do not provide legal advice or representation." }
-  }]
-};
+const faqSchema = post.data.faq?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": post.data.faq.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    }
+  : undefined;
 ---
 
 <BaseLayout
@@ -57,6 +62,7 @@ const faqSchema = {
     dateModified: modDateISO,
     tags: post.data.tags
   }}
+  schema={faqSchema}
   keywords={post.data.keywords || post.data.tags?.join(', ')}
   breadcrumb={[
     { name: 'Blog', url: 'https://www.duriantravel.com/blog/' },
