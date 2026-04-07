@@ -17,7 +17,7 @@ export interface DestinationOverride {
 
 const destinationOverrides: Record<string, DestinationOverride> = {
   lithuania: {
-    heroTitle: 'Lithuania Travel Guide 2026',
+    heroTitle: 'Lithuania Travel Guide 2026: Visa, Costs & Tips',
     metaTitle: 'Lithuania Travel Guide 2026: Visa, Costs & Tips',
     metaDescription: 'Plan Lithuania with realistic budgets, Schengen visa notes, Vilnius vs Kaunas advice, and practical travel logic for first-time visitors.',
     metaLine: 'Schengen • Baltic city break + culture • Best in May-Sep',
@@ -49,7 +49,7 @@ const destinationOverrides: Record<string, DestinationOverride> = {
     `
   },
   sweden: {
-    heroTitle: 'Sweden Travel Guide 2026',
+    heroTitle: 'Sweden Travel Guide 2026: Costs, Visa & When to Go',
     metaTitle: 'Sweden Travel Guide 2026: Costs, Visa & When to Go',
     metaDescription: 'Plan a Sweden trip with realistic costs, Stockholm and Lapland route ideas, seasonal advice, and practical Schengen prep for first-time visitors.',
     metaLine: 'Schengen • Nordic cities + nature • Best in Jun-Sep',
@@ -77,7 +77,7 @@ const destinationOverrides: Record<string, DestinationOverride> = {
     `
   },
   bulgaria: {
-    heroTitle: 'Bulgaria Travel Guide 2026',
+    heroTitle: 'Bulgaria Travel Guide 2026: Budget, Visa & Best Places',
     metaTitle: 'Bulgaria Travel Guide 2026: Budget, Visa & Best Places',
     metaDescription: 'Use this Bulgaria travel guide to plan Sofia, Plovdiv, the Black Sea coast, realistic costs, and updated Schengen-era travel notes for 2026.',
     metaLine: 'Schengen • Budget-friendly Balkans • Best in May-Sep',

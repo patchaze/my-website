@@ -17,7 +17,7 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="hero-sm hero-gradient">
     <div class="container relative">
       <span class="section-label" style="color:var(--color-accent-light)">Insights & Education</span>
-      <h1 class="hero-sm__title" style="color:white">Visa Strategy Blog</h1>
+      <h1 class="hero-sm__title" style="color:white">Europe Travel Blog: Planning Guides & Checklists</h1>
       <p class="hero-sm__subtitle" style="color:hsl(150 30% 75%); max-width:60ch; line-height:var(--leading-relaxed); font-size:var(--text-lg)">
         Evidence-based guidance on visa document preparation, financial proof,
         cover letter strategy, and refusal analysis. All content cites official sources.
@@ -27,6 +27,9 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
 
   <section class="section">
     <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Latest Articles</h2>
+      </header>
       {allPosts.length === 0 ? (
         <p class="text-muted text-center">No posts published yet. Check back soon.</p>
       ) : (
