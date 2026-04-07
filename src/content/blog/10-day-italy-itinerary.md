@@ -104,7 +104,7 @@ If you're flying into the EU, remember:
 - Spare lithium batteries carried and protected in hand baggage (check airline specifics)
 - Medications in carry-on; original containers recommended
 
-[→ Read our full EU Airport Rules guide](/blog/eu-airport-liquids-batteries-rules/)
+[→ Read the EU Airport Rules section](/blog/europe-packing-list/#eu-airport-rules)
 
 ## FAQ
 

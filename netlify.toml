@@ -104,3 +104,43 @@
   from = "/blog/planning-first-europe-trip/"
   to   = "/blog/europe-trip-planning-timeline/"
   status = 301
+
+[[redirects]]
+  from = "/blog/visaeuro-pro-vs-schengenmasters"
+  to   = "/blog/best-schengen-travel-agency/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/visaeuro-pro-vs-schengenmasters/"
+  to   = "/blog/best-schengen-travel-agency/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-schengen-travel-agency-for-digital-nomads"
+  to   = "/blog/best-schengen-travel-agency/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-schengen-travel-agency-for-digital-nomads/"
+  to   = "/blog/best-schengen-travel-agency/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-schengen-travel-agency-for-families"
+  to   = "/blog/best-schengen-travel-agency/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-schengen-travel-agency-for-families/"
+  to   = "/blog/best-schengen-travel-agency/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/eu-airport-liquids-batteries-rules"
+  to   = "/blog/europe-packing-list/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/eu-airport-liquids-batteries-rules/"
+  to   = "/blog/europe-packing-list/"
+  status = 301

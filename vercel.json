@@ -31,6 +31,46 @@
             "permanent": true
         },
         {
+            "source": "/blog/visaeuro-pro-vs-schengenmasters",
+            "destination": "/blog/best-schengen-travel-agency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/visaeuro-pro-vs-schengenmasters/",
+            "destination": "/blog/best-schengen-travel-agency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-schengen-travel-agency-for-digital-nomads",
+            "destination": "/blog/best-schengen-travel-agency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-schengen-travel-agency-for-digital-nomads/",
+            "destination": "/blog/best-schengen-travel-agency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-schengen-travel-agency-for-families",
+            "destination": "/blog/best-schengen-travel-agency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-schengen-travel-agency-for-families/",
+            "destination": "/blog/best-schengen-travel-agency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/eu-airport-liquids-batteries-rules",
+            "destination": "/blog/europe-packing-list/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/eu-airport-liquids-batteries-rules/",
+            "destination": "/blog/europe-packing-list/",
+            "permanent": true
+        },
+        {
             "source": "/:path((?!_assets|api|_next).*[^/])$",
             "destination": "/:path/",
             "permanent": true

@@ -4,9 +4,10 @@ title: "The Ultimate Europe Packing List (Plus EU Airport Rules You'll Actually 
 seoTitle: "Europe Packing List + Airport Rules"
 description: "A practical Europe packing list with carry-on rules for liquids, batteries, and meds. Capsule wardrobe approach that won't ruin you."
 pubDate: "2026-03-05"
+modDate: "2026-04-08"
 author: "Patricia Azevedo"
 tags: ["Packing", "Europe", "Airport"]
-readTime: 10
+readTime: 11
 ---
 
 Packing for Europe is like making a sandwich: the ingredients are simple, but somehow people still end up with chaos and regret.
@@ -22,6 +23,8 @@ Use a three-part system:
 3. **Daily essentials** (the things you'll use every day)
 
 If you want a rule of thumb: **pack for 7 days. Do laundry. Repeat.**
+
+If you only need the airport-security part, jump to the [EU Airport Rules](#eu-airport-rules) section below.
 
 ## Capsule Wardrobe Checklist by Season
 
@@ -58,7 +61,7 @@ Keep colors neutral so everything matches. You want "mix-and-match," not "I pack
 - Gloves + beanie
 - Shoes that handle wet streets
 
-## Carry-On Rules in the EU: Liquids, Batteries, Meds
+## EU Airport Rules
 
 Here's where the "packing list" becomes "not getting your toiletries thrown away."
 
@@ -84,7 +87,9 @@ The CDC recommends:
 
 The World Health Organization similarly notes travelers should continue needed chronic medications and pay attention to travel risk factors.
 
-[→ Read more about EU Airport Security Rules](/blog/eu-airport-liquids-batteries-rules/)
+If your route includes controlled medication or injectables, a short doctor's note can make screening smoother.
+
+This is the section to bookmark if you want one quick reference before airport day.
 
 ## Tech and Documents
 
