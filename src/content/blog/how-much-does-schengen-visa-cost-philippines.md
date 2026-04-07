@@ -1,13 +1,13 @@
 ---
 keywords: "Schengen visa cost Philippines 2026, Schengen visa fee Philippines, Schengen visa cost, Filipino travelers"
-title: "How Much Does a Schengen Visa Cost for Filipinos in 2026?"
+title: "How Much Does a Schengen Visa Cost for Filipinos? (2026 Updated Fees)"
 seoTitle: "How Much Does a Schengen Visa Cost for Filipinos? (2026 Updated Fees)"
-description: "The Schengen visa fee went up to EUR 90 in October 2025. Here is the full cost breakdown: visa fee, VFS service fee, insurance, and what you will actually spend before you leave."
+description: "The Schengen visa fee went up to EUR 90 in June 2024. Here is the full cost breakdown: visa fee, VFS service fee, insurance, and what you will actually spend before you leave."
 pubDate: "2026-04-07"
 modDate: "2026-04-07"
 author: "Patricia Azevedo"
 tags: ["Schengen", "Philippines", "Costs"]
-readTime: 8
+readTime: 9
 faq:
   - question: "How much is a Schengen visa for adults in 2026?"
     answer: "The standard Schengen visa fee for adults is EUR 90. Children aged 6-12 pay EUR 45, and children under 6 are exempt."
@@ -17,9 +17,9 @@ faq:
     answer: "No. Schengen-compliant travel insurance is a separate cost and must meet the minimum medical coverage requirements for your trip."
 ---
 
-The Schengen visa fee increased from EUR 80 to EUR 90 in October 2025. If you are planning your Europe trip based on older advice, that is the first number to update.
+The Schengen visa fee increased from EUR 80 to EUR 90 in June 2024, and that number is still the one most Filipino applicants need to budget for in 2026. If you are planning your Europe trip based on older advice, that is the first number to update.
 
-But the visa fee is only one part of the budget. By the time you add the visa centre fee, travel insurance, document preparation, and small application expenses, the real total is noticeably higher than most first-time applicants expect.
+But the visa fee is only one part of the budget. By the time you add the visa-centre fee, travel insurance, document preparation, and small application expenses, the real total is noticeably higher than most first-time applicants expect.
 
 ## The official Schengen visa fee
 
@@ -34,6 +34,8 @@ According to the European Commission's Schengen visa guidance, the current short
 That fee is non-refundable. If your application is refused, the visa fee is still gone.
 
 For Philippine applicants, the peso equivalent changes with the exchange rate on the day you pay.
+
+For the official EU guidance, see [Applying for a Schengen visa](https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_pl) and the Commission news note on the [Schengen visa fee increase](https://home-affairs.ec.europa.eu/news/schengen-visa-fee-increased-11-june-2024-2024-06-13_lt).
 
 ## The visa-centre fee
 
@@ -138,6 +140,6 @@ Yes. Sponsorship covers your trip costs, not the visa application fee itself.
 **Should I buy insurance before or after booking my appointment?**
 You should have insurance ready before submission, because it is part of the required file.
 
-*Sources: European Commission Schengen visa application guidance; European Commission visa fee page; visa-centre fee schedules in the Philippines.*
+*Sources: [Applying for a Schengen visa](https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_pl), European Commission news note on the [Schengen visa fee increase](https://home-affairs.ec.europa.eu/news/schengen-visa-fee-increased-11-june-2024-2024-06-13_lt), and visa-centre fee schedules in the Philippines.*
 
 *Last updated: April 2026.*
