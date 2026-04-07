@@ -1,6 +1,7 @@
 ---
 keywords: "best schengen travel agency for digital nomads, digital nomad visa europe, remote work schengen"
 title: "The Best Schengen Travel Agency for Digital Nomads (2026 Guide)"
+seoTitle: "Best Schengen Agency for Digital Nomads"
 description: "Discover which travel agencies have adapted to the needs of remote workers in 2026. Compare setups for digital nomads looking to secure long-stay Schengen visas."
 pubDate: "2026-03-26"
 author: "Patricia Azevedo"

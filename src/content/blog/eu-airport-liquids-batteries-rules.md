@@ -1,6 +1,7 @@
 ---
 keywords: "Airport, Packing, Rules"
 title: "EU Airport Packing Rules: Liquids, Power Banks & Medication"
+seoTitle: "EU Airport Packing Rules: Liquids, Batteries & Meds"
 description: "EU carry-on rules for liquids, lithium batteries, and medication exceptions plus a packing checklist to avoid security confiscations."
 pubDate: "2026-02-10"
 modDate: "2026-04-06"

@@ -20,6 +20,7 @@ const modDateFormatted  = (post.data.modDate ?? post.data.pubDate).toLocaleDateS
 const modDateISO        = (post.data.modDate ?? post.data.pubDate).toISOString();
 const pubDateISO        = post.data.pubDate.toISOString();
 const canonicalURL      = `https://www.duriantravel.com/blog/${post.slug}/`;
+const pageTitle         = post.data.seoTitle ?? post.data.title;
 
 // Related posts: find posts sharing the most tags with the current post
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -51,7 +52,7 @@ const faqSchema = post.data.faq?.length
 ---
 
 <BaseLayout
-  title={`${post.data.title} | DURIAN Travel`}
+  title={pageTitle}
   description={post.data.description}
   canonical={canonicalURL}
   ogImage={post.data.ogImage}

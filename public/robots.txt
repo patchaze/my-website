@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 
 Disallow: /api/
+Disallow: /_assets/
+Disallow: /_astro/
 
 Sitemap: https://www.duriantravel.com/sitemap-index.xml

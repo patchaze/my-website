@@ -1,6 +1,7 @@
 ---
 keywords: "Packing, Europe, Airport"
 title: "The Ultimate Europe Packing List (Plus EU Airport Rules You'll Actually Meet)"
+seoTitle: "Europe Packing List + Airport Rules"
 description: "A practical Europe packing list with carry-on rules for liquids, batteries, and meds. Capsule wardrobe approach that won't ruin you."
 pubDate: "2026-03-05"
 author: "Patricia Azevedo"

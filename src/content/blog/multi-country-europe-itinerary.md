@@ -1,6 +1,7 @@
 ---
 keywords: "Itinerary, Europe, Planning"
 title: "How to Build a Multi-Country Europe Itinerary That Actually Makes Sense"
+seoTitle: "Multi-Country Europe Itinerary That Works"
 description: "A practical method for building a Europe itinerary: pacing rules, route logic, trains vs flights, and how to avoid the too many cities trap."
 pubDate: "2026-02-25"
 author: "Patricia Azevedo"

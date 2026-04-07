@@ -1,6 +1,7 @@
 ---
 keywords: "Schengen, Documents, Checklist"
 title: "Schengen Visa Document Checklist 2026 — Complete & Updated"
+seoTitle: "Schengen Visa Document Checklist 2026"
 description: "Everything you need in your Schengen visa document package, explained step by step with official embassy references. Updated February 2026."
 pubDate: "2026-02-01"
 modDate: "2026-04-06"

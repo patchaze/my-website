@@ -18,7 +18,7 @@ export interface DestinationOverride {
 const destinationOverrides: Record<string, DestinationOverride> = {
   lithuania: {
     heroTitle: 'Lithuania Travel Guide 2026',
-    metaTitle: 'Lithuania Travel Guide 2026: Visa, Costs & Best Things to Do | DURIAN',
+    metaTitle: 'Lithuania Travel Guide 2026: Visa, Costs & Tips',
     metaDescription: 'Plan Lithuania with realistic budgets, Schengen visa notes, Vilnius vs Kaunas advice, and practical travel logic for first-time visitors.',
     metaLine: 'Schengen • Baltic city break + culture • Best in May-Sep',
     articleHtml: `
@@ -43,11 +43,14 @@ const destinationOverrides: Record<string, DestinationOverride> = {
       <h3>Visa Notes for Lithuania</h3>
       <p>Lithuania is part of the Schengen area, so the normal short-stay Schengen rules apply. That means your passport, insurance, financial proof, accommodation evidence, and route logic all matter more than generic travel enthusiasm. A lot of weak applications fail because the traveler has a vague plan rather than a bad intention.</p>
       <p>If Lithuania is part of your first Schengen attempt, pair this page with our <a href="/blog/schengen-document-checklist/">document checklist</a>, <a href="/blog/how-to-write-visa-cover-letter/">cover letter guide</a>, and <a href="/blog/visa-refusal-reasons/">refusal reasons breakdown</a>. Those three pages cover the practical work that actually gets the file into shape.</p>
+      <h3>Lithuania FAQ for First-Time Travelers</h3>
+      <p><strong>Is Lithuania safe for first-time visitors?</strong> For most travelers, Lithuania feels straightforward and low-friction. Vilnius is compact, the old town is easy to navigate, and the country works well for visitors who want a calmer first Schengen stop. Use the same normal precautions you would use in any European city: stay alert in crowded transport areas, protect your phone and wallet, and avoid turning late arrivals into complicated logistics.</p>
+      <p><strong>Do you need a Schengen visa for Lithuania?</strong> Lithuania follows the normal Schengen short-stay visa rules. If Lithuania is your main destination by number of nights, it is normally the country you apply through. If another Schengen country gets more nights, the application should usually follow the actual route rather than your preferred embassy. Our <a href="/blog/schengen-visa-requirements-philippine-passport-holders/">Philippines Schengen guide</a> explains the rule in plain language.</p>
     `
   },
   sweden: {
     heroTitle: 'Sweden Travel Guide 2026',
-    metaTitle: 'Sweden Travel Guide 2026: Costs, Visa Notes & Best Time to Visit | DURIAN',
+    metaTitle: 'Sweden Travel Guide 2026: Costs, Visa & When to Go',
     metaDescription: 'Plan a Sweden trip with realistic costs, Stockholm and Lapland route ideas, seasonal advice, and practical Schengen prep for first-time visitors.',
     metaLine: 'Schengen • Nordic cities + nature • Best in Jun-Sep',
     articleHtml: `
@@ -69,11 +72,13 @@ const destinationOverrides: Record<string, DestinationOverride> = {
       <h3>A Simple First Sweden Route</h3>
       <p>The cleanest first route is four nights in Stockholm with one archipelago day and one museum-heavy city day. If you have six to seven nights, add Gothenburg or a focused northern extension. What you should not do is try to combine Stockholm, Gothenburg, Lapland, and multiple day trips in under a week. Sweden rewards depth much more than collection.</p>
       <p>If you are pairing Sweden with another country, keep the route realistic and avoid using Sweden as the expensive, exhausting leg inside an already overloaded itinerary. Our <a href="/blog/multi-country-europe-itinerary/">multi-country Europe itinerary guide</a> is a better starting point than guessing your way through rail and flight combinations.</p>
+      <h3>Best Sweden Posts for Philippine Travelers</h3>
+      <p>If Sweden is showing up in your Search Console already, the next move is to support this page with more specific intent-matching content. Start with our <a href="/blog/sweden-itinerary-from-the-philippines/">Sweden itinerary from the Philippines</a> for route planning and <a href="/blog/is-sweden-worth-it-for-filipino-travelers/">Sweden cost reality check for Filipino travelers</a> for budget framing.</p>
     `
   },
   bulgaria: {
     heroTitle: 'Bulgaria Travel Guide 2026',
-    metaTitle: 'Bulgaria Travel Guide 2026: Budget, Visa Info & Best Places | DURIAN',
+    metaTitle: 'Bulgaria Travel Guide 2026: Budget, Visa & Best Places',
     metaDescription: 'Use this Bulgaria travel guide to plan Sofia, Plovdiv, the Black Sea coast, realistic costs, and updated Schengen-era travel notes for 2026.',
     metaLine: 'Schengen • Budget-friendly Balkans • Best in May-Sep',
     region: 'Central & Eastern Europe',

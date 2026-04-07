@@ -1,9 +1,10 @@
 ---
 keywords: "Schengen visa Philippines, Philippine passport Schengen, Europe visa for Filipinos"
 title: "Schengen Visa Requirements for Philippine Passport Holders (2026)"
+seoTitle: "Schengen Visa for Philippine Passport Holders"
 description: "A practical Schengen visa guide for Philippine passport holders: main-destination rule, document stack, finances, insurance, and the mistakes that trigger refusals."
 pubDate: "2026-04-06"
-modDate: "2026-04-06"
+modDate: "2026-04-07"
 author: "Patricia Azevedo"
 tags: ["Schengen", "Philippines", "Visa"]
 readTime: 11
@@ -161,7 +162,7 @@ That order prevents the most common contradiction: a traveler changing the route
 
 Do not separate the visa from the itinerary. The better the trip design, the easier the application becomes.
 
-If you still need a route idea, start with our [10-day Europe itinerary from the Philippines](/blog/10-day-europe-itinerary-from-the-philippines/). If you want lower-cost destination ideas than the standard Western Europe circuit, compare [Lithuania](/destinations/lithuania/) and [Bulgaria](/destinations/bulgaria/) before you book.
+If you still need a route idea, start with our [10-day Europe itinerary from the Philippines](/blog/10-day-europe-itinerary-from-the-philippines/). If Sweden is one of the countries already surfacing in your search research, compare this guide with our [Sweden itinerary from the Philippines](/blog/sweden-itinerary-from-the-philippines/). If you want lower-cost destination ideas than the standard Western Europe circuit, compare [Lithuania](/destinations/lithuania/) and [Bulgaria](/destinations/bulgaria/) before you book.
 
 ---
 

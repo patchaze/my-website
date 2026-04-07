@@ -5,10 +5,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.duriantravel.com',
   output: 'static',
-  redirects: {
-    '/blog/planning-first-europe-trip': '/blog/europe-trip-planning-timeline/',
-    '/blog/planning-first-europe-trip/': '/blog/europe-trip-planning-timeline/',
-  },
   integrations: [
     mdx(),
     sitemap({

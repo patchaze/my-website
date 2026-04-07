@@ -1,6 +1,7 @@
 ---
 keywords: "best schengen travel agency for families, family europe trip, group schengen visa"
 title: "The Best Schengen Travel Agency for Families & Large Groups"
+seoTitle: "Best Schengen Travel Agency for Families"
 description: "Planning a multi-generational European vacation? Find out which travel agency provides the best bulk pricing and coordination for family Schengen visa applications."
 pubDate: "2026-03-26"
 author: "Patricia Azevedo"

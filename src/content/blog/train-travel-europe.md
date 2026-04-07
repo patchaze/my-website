@@ -1,6 +1,7 @@
 ---
 keywords: "Trains, Europe, Rail"
 title: "Train Travel in Europe: Tickets, Reservations & Delay Tips"
+seoTitle: "Train Travel in Europe: Tickets, Routes & Delays"
 description: "A Europe train travel guide: when trains beat flights, ticket types, reservation strategy, and EU rail passenger rights basics."
 pubDate: "2026-02-14"
 modDate: "2026-04-06"

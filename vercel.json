@@ -21,6 +21,16 @@
             "permanent": true
         },
         {
+            "source": "/blog/planning-first-europe-trip",
+            "destination": "/blog/europe-trip-planning-timeline/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/planning-first-europe-trip/",
+            "destination": "/blog/europe-trip-planning-timeline/",
+            "permanent": true
+        },
+        {
             "source": "/:path((?!_assets|api|_next).*[^/])$",
             "destination": "/:path/",
             "permanent": true
@@ -54,6 +64,23 @@
                 {
                     "key": "Cache-Control",
                     "value": "public, max-age=31536000, immutable"
+                },
+                {
+                    "key": "X-Robots-Tag",
+                    "value": "noindex, nofollow"
+                }
+            ]
+        },
+        {
+            "source": "/_astro/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                },
+                {
+                    "key": "X-Robots-Tag",
+                    "value": "noindex, nofollow"
                 }
             ]
         }

@@ -9,6 +9,11 @@
             "source": "/blog/planning-first-europe-trip",
             "destination": "/blog/europe-trip-planning-timeline/",
             "permanent": true
+        },
+        {
+            "source": "/blog/planning-first-europe-trip/",
+            "destination": "/blog/europe-trip-planning-timeline/",
+            "permanent": true
         }
     ],
     "headers": [
