@@ -3,7 +3,7 @@ keywords: "Schengen visa Philippines, Philippine passport Schengen, Europe visa 
 title: "Schengen Visa Requirements for Philippine Passport Holders (2026)"
 seoTitle: "Schengen Visa for Philippine Passport Holders (2026 Guide)"
 description: "A practical Schengen visa guide for Philippine passport holders: main-destination rule, fee update, document stack, EES, ETIAS, and the mistakes that trigger refusals."
-pubDate: "2026-04-06"
+pubDate: "2026-03-29"
 modDate: "2026-04-08"
 author: "Patricia Azevedo"
 tags: ["Schengen", "Philippines", "Visa"]

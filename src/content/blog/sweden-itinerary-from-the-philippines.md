@@ -2,7 +2,7 @@
 keywords: "Sweden itinerary Philippines, Sweden trip planner, trip planner Sweden"
 title: "Sweden Itinerary: 10 Days from the Philippines"
 description: "A practical Sweden itinerary from the Philippines, with route logic for Stockholm, Gothenburg, and Lapland plus Schengen planning notes."
-pubDate: "2026-04-07"
+pubDate: "2026-04-06"
 modDate: "2026-04-07"
 author: "Patricia Azevedo"
 tags: ["Sweden", "Itinerary", "Philippines"]

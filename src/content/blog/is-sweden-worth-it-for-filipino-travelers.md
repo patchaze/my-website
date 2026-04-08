@@ -3,7 +3,7 @@ keywords: "is Sweden worth it, Sweden cost Filipino travelers, Sweden travel cos
 title: "Is Sweden Worth It? Cost Reality Check for Filipino Travelers"
 seoTitle: "Is Sweden Worth It? Cost Check for Filipino Travelers"
 description: "A practical Sweden cost reality check for Filipino travelers deciding whether Sweden is worth the budget compared with other first-Europe options."
-pubDate: "2026-04-07"
+pubDate: "2026-04-08"
 modDate: "2026-04-07"
 author: "Patricia Azevedo"
 tags: ["Sweden", "Budget", "Philippines"]

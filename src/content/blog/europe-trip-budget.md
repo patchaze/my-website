@@ -3,7 +3,7 @@ keywords: "Budget, Europe, Planning"
 title: "Europe Budget Blueprint: Build a Realistic Daily Budget (Without Becoming Miserable)"
 seoTitle: "Europe Trip Budget: Real Daily Costs"
 description: "Build a Europe trip budget with fixed costs, daily spending, pre-trip fees, and a simple spreadsheet approach to prevent surprise poverty."
-pubDate: "2026-02-28"
+pubDate: "2026-03-02"
 author: "Patricia Azevedo"
 tags: ["Budget", "Europe", "Planning"]
 modDate: "2026-04-08"

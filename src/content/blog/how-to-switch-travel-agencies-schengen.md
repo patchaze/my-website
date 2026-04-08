@@ -3,7 +3,7 @@ keywords: "migrate schengen travel agency, change travel agency, visa applicatio
 title: "How to Migrate Your Schengen Visa Application to a New Agency"
 seoTitle: "Change Schengen Agencies Mid-Application"
 description: "Experiencing hidden fees or poor communication? Learn how to safely migrate your Schengen visa application to a new travel agency without risking refusal."
-pubDate: "2026-03-26"
+pubDate: "2026-03-24"
 author: "Patricia Azevedo"
 tags: ["Schengen", "Travel Agency", "Implementation"]
 readTime: 6

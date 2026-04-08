@@ -3,7 +3,7 @@ keywords: "Aviation, Middle East Conflict, Flight Rerouting, Europe Asia Flights
 title: "Flights to Europe: Middle East Conflict Impact Guide (Updated April 2026)"
 seoTitle: "Flights to Europe: Middle East Conflict Impact Guide (Updated April 2026)"
 description: "The EASA advisory runs to April 10. Here is what is closed, which airlines are affected, how rerouting adds time and cost, and what to do if your booking is hit."
-pubDate: "2026-03-11"
+pubDate: "2026-03-18"
 modDate: "2026-04-07"
 author: "Patricia Azevedo"
 tags: ["Aviation", "Travel Advisory", "Middle East", "Europe"]

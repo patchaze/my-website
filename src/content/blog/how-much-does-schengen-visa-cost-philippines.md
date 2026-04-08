@@ -3,7 +3,7 @@ keywords: "Schengen visa cost Philippines 2026, Schengen visa fee Philippines, S
 title: "How Much Does a Schengen Visa Cost for Filipinos? (2026 Updated Fees)"
 seoTitle: "How Much Does a Schengen Visa Cost for Filipinos? (2026 Updated Fees)"
 description: "The Schengen visa fee went up to EUR 90 in June 2024. Here is the full cost breakdown: visa fee, VFS service fee, insurance, and what you will actually spend before you leave."
-pubDate: "2026-04-07"
+pubDate: "2026-04-01"
 modDate: "2026-04-07"
 author: "Patricia Azevedo"
 tags: ["Schengen", "Philippines", "Costs"]

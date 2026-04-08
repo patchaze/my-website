@@ -3,7 +3,7 @@ keywords: "Planning, Europe, Itinerary"
 title: "Europe Trip Planning Timeline: A Week-by-Week Plan for First-Time Travelers"
 seoTitle: "Europe Trip Planning Timeline for First-Timers"
 description: "A realistic Europe planning timeline for first-time travelers, with a Philippines-friendly version that covers visas, flights, trains, hotels, insurance, and packing."
-pubDate: "2026-03-03"
+pubDate: "2026-03-10"
 author: "Patricia Azevedo"
 tags: ["Planning", "Europe", "Itinerary"]
 modDate: "2026-04-08"

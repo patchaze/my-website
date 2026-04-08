@@ -3,7 +3,7 @@ keywords: "10 day Europe itinerary Philippines, Europe itinerary for Filipinos, 
 title: "10-Day Europe Itinerary from the Philippines for First-Time Travelers"
 seoTitle: "10-Day Europe Itinerary from the Philippines"
 description: "A realistic first Europe itinerary for travelers from the Philippines, with Schengen entry logic, Manila flight routing, and a grounded budget."
-pubDate: "2026-04-06"
+pubDate: "2026-03-26"
 modDate: "2026-04-08"
 author: "Patricia Azevedo"
 tags: ["Itinerary", "Europe", "Philippines"]

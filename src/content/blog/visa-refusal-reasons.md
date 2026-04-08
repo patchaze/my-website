@@ -3,7 +3,7 @@ keywords: "Refusal, Tips, Schengen"
 title: "Top 7 Reasons Schengen Visa Applications Are Refused"
 seoTitle: "Top Reasons Schengen Visa Applications Are Refused"
 description: "The official refusal grounds behind Schengen visa rejections, plus the fixes that usually strengthen a reapplication."
-pubDate: "2026-02-15"
+pubDate: "2026-02-23"
 modDate: "2026-04-08"
 author: "Patricia Azevedo"
 tags: ["Refusal", "Tips", "Schengen"]
