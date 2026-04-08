@@ -110,7 +110,7 @@ The visa fee is non-refundable. The visa-centre fee is also usually non-refundab
 
 This is why a clean application matters so much. A refused file can easily cost more than the application fee alone.
 
-If you want to reduce that risk, start with our [Schengen visa requirements for Philippine passport holders](/blog/schengen-visa-requirements-philippine-passport-holders/), then check the [Schengen document checklist](/blog/schengen-document-checklist/). If you want a second set of eyes before you submit, our [document review service](/services/document-review/) is built for exactly that.
+If you want to reduce that risk, start with our [Schengen visa requirements for Philippine passport holders](/blog/schengen-visa-requirements-philippine-passport-holders/), then check the [Schengen document checklist](/blog/schengen-document-checklist/). If you want a second set of eyes before you submit, our [Schengen Blueprint package](/services/#schengen-blueprint) is built for exactly that.
 
 ## Does paying more improve your approval chances?
 

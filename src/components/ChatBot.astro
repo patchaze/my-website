@@ -121,7 +121,7 @@ const geminiApiKey = import.meta.env.PUBLIC_GEMINI_API_KEY || '';
 </style>
 
 <script>
-  const SYSTEM_PROMPT = "You are the DURIAN Travel Assistant, a friendly and knowledgeable travel concierge for Durian Travel — a boutique European travel agency based online at duriantravel.com. You help users plan luxury European getaways. You are professional, knowledgeable about Schengen visas, boutique hotels, and off-the-beaten-path destinations. Keep responses concise (2-3 paragraphs max) and helpful. Focus on Durian Travel services: custom itineraries (starting from €69), document review for visa applications (starting from €49), travel health consultations (starting from €39), and luxury stays. If asked about non-European destinations, politely redirect to European options. Always be warm and enthusiastic about travel. Use emojis sparingly to keep a professional yet friendly tone.\n\nIMPORTANT: When mentioning pages or services on the site, always embed a clickable markdown link on a relevant keyword or phrase — do NOT display raw URLs. Use this format: [anchor text](url). Here are the available pages you can link to:\n- Services overview: /services\n- Itinerary Building: /services/itinerary-building\n- Document Review: /services/document-review\n- Travel Health Consult: /services/travel-health-consult\n- Visa Strategy Call: /services/visa-strategy-call\n- Cover Letter Strategy: /services/cover-letter-strategy\n- Financial Proof Review: /services/financial-proof-review\n- Refusal Analysis: /services/refusal-analysis\n- Schengen Visa Guide: /schengen-visa-guide\n- Free Visa Audit: /free-visa-audit\n- Destinations: /destinations\n- Blog: /blog\n- Contact: /contact\n- FAQ: /faq\n- About Us: /about-us\n\nExamples of good link usage:\n- 'Check out our [Schengen Visa Guide](/schengen-visa-guide) for everything you need.'\n- 'Our [Itinerary Building](/services/itinerary-building) service starts from just €69.'\n- 'Browse our [European destinations](/destinations) for inspiration.'\nNever display a raw URL like /services — always wrap it in a markdown link on a descriptive keyword.";
+  const SYSTEM_PROMPT = "You are the DURIAN Travel Assistant, a friendly and practical travel concierge for Durian Travel at duriantravel.com. You help users plan smoother Europe trips with strong Schengen visa guidance, realistic itineraries, and health-aware preparation. Keep responses concise and helpful, usually 2 short paragraphs max. Durian Travel now uses package-based support rather than old single-service pages. The main packages are: [The Schengen Blueprint](/services/#schengen-blueprint), [The First Journey Package](/services/#first-journey), [The Nomad Infrastructure Plan](/services/#nomad-infrastructure), [The Family Expedition Bundle](/services/#family-expedition), [The Recovery Route](/services/#recovery-route), [The Wellness Journey](/services/#wellness-journey), and [The Grand Circuit](/services/#grand-circuit). If asked about non-European destinations, politely redirect to Europe-focused help unless the question is about transit or comparative planning.\n\nIMPORTANT: When mentioning pages or services on the site, always embed a clickable markdown link on a relevant keyword or phrase. Do not display raw URLs. Use this format: [anchor text](url). Available pages include: [Services](/services), [Schengen Visa Guide](/schengen-visa-guide), [Free Visa Audit](/free-visa-audit), [Destinations](/destinations), [Blog](/blog), [Contact](/contact), [FAQ](/faq), and [About Us](/about-us). Never display a raw URL like /services. Always wrap it in a descriptive markdown link.";
 
   // Pollinations AI — free, no API key required
   const POLLINATIONS_URL = "https://text.pollinations.ai/openai";
@@ -305,49 +305,49 @@ const geminiApiKey = import.meta.env.PUBLIC_GEMINI_API_KEY || '';
     const msg = userMessage.toLowerCase();
 
     if (msg.includes('visa') || msg.includes('schengen')) {
-      return "Great question about visas! 🛂 For Schengen visa applications, you'll typically need a valid passport, travel insurance, proof of accommodation, and a detailed itinerary. Our [Schengen Visa Guide](/schengen-visa-guide) has everything you need. We also offer a professional [Document Review](/services/document-review) service starting from €49 to make sure your application is spotless!";
+      return "Great question about visas! 🛂 For Schengen applications, you will usually need a valid passport, travel insurance, proof of accommodation, financial documents, and a credible itinerary. Our [Schengen Visa Guide](/schengen-visa-guide) is the best place to start, and our [Schengen Blueprint package](/services/#schengen-blueprint) is the right fit if you want hands-on support with documents, cover letters, and route logic.";
     }
     if (msg.includes('itinerar') || msg.includes('plan') || msg.includes('trip')) {
-      return "I'd love to help you plan your dream European trip! ✈️ At Durian Travel, we create bespoke itineraries tailored to your interests — whether you're into art, food, history, or hidden gems. Our [Itinerary Building](/services/itinerary-building) service starts from just €69 for a fully personalized travel plan crafted by our experts!";
+      return "I can help with that! ✈️ If this is your first big international trip, the [First Journey package](/services/#first-journey) is usually the best match. If the route is more complex or spans multiple regions, compare it with the [Grand Circuit](/services/#grand-circuit) on our [services page](/services).";
     }
     if (msg.includes('hotel') || msg.includes('stay') || msg.includes('accommodat') || msg.includes('where to')) {
       return "We specialize in finding the most charming boutique hotels and unique stays across Europe! 🏨 From converted castles in Portugal to cozy alpine chalets in Switzerland, we'll match you with the perfect accommodation. Browse our [destinations](/destinations) and let us know your budget — we'll curate the best options for you.";
     }
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('service')) {
-      return "Our services are designed to give you the best value for luxury European travel! 💎 [Itinerary Building](/services/itinerary-building) starts from €69, [Document Review](/services/document-review) from €49, and [Travel Health Consultations](/services/travel-health-consult) from €39. Visit our [Services page](/services) for the full breakdown!";
+      return "We now organize support as packages rather than the old single-service menu. The easiest next step is to compare the packages on our [services page](/services) or start with a [Free Visa Audit](/free-visa-audit) if you want help figuring out which one fits your situation.";
     }
     if (msg.includes('health') || msg.includes('insurance') || msg.includes('medical') || msg.includes('vaccine')) {
-      return "Travel health is so important! 🏥 We offer [Travel Health Consultations](/services/travel-health-consult) starting from €39 to make sure you're fully prepared — from required vaccinations to travel insurance recommendations. Get [personalized advice](/services/travel-health-consult) before your trip!";
+      return "Travel health matters more than most people expect. 🏥 Our [Wellness Journey package](/services/#wellness-journey) is built for medication rules, insurance fit, vaccines, and destination-specific health prep. If you mainly need Schengen insurance and visa compliance, the [Schengen Blueprint](/services/#schengen-blueprint) may also be relevant.";
     }
     if (msg.includes('portugal') || msg.includes('lisbon') || msg.includes('porto')) {
-      return "Portugal is absolutely stunning! 🇵🇹 From Lisbon's colorful Alfama district to Porto's port wine cellars and the breathtaking Algarve coast, there's so much to explore. We can build you a [custom itinerary](/services/itinerary-building) covering the best of Portugal — pastéis de nata included! 😄 Explore our [destinations](/destinations) for more.";
+      return "Portugal is a great choice. 🇵🇹 Lisbon, Porto, and the Algarve can work beautifully in one trip if the pacing is right. For route help, compare the [First Journey package](/services/#first-journey) and the [Grand Circuit](/services/#grand-circuit), then browse our [destinations](/destinations) for ideas.";
     }
     if (msg.includes('italy') || msg.includes('rome') || msg.includes('florence') || msg.includes('venice')) {
-      return "Italy is a timeless classic! 🇮🇹 Whether it's the Colosseum in Rome, Renaissance art in Florence, or gondolas in Venice, every corner is magical. We can create a [personalized Italian adventure](/services/itinerary-building) that goes beyond the tourist spots. Explore [all our destinations](/destinations)!";
+      return "Italy is one of the easiest places to fall in love with on a first Europe trip. 🇮🇹 Rome, Florence, and Venice can work well together if your transit days are realistic. If you want help shaping the route, start with the [First Journey package](/services/#first-journey) and browse [all our destinations](/destinations).";
     }
     if (msg.includes('france') || msg.includes('paris') || msg.includes('french')) {
-      return "France is pure magic! 🇫🇷 Beyond Paris, there's the lavender fields of Provence, Normandy's historic beaches, and Bordeaux's world-class vineyards. We'd love to craft a [French itinerary](/services/itinerary-building) that captures both iconic landmarks and hidden treasures! See all [destinations](/destinations).";
+      return "France gives you a lot of range, from Paris and Normandy to Provence and the Riviera. 🇫🇷 If you want help balancing city time, train legs, and budget, the [First Journey package](/services/#first-journey) is a strong place to start. You can also explore our [destinations](/destinations) for more inspiration.";
     }
     if (msg.includes('spain') || msg.includes('barcelona') || msg.includes('madrid')) {
-      return "Spain is incredible! 🇪🇸 From Gaudí's masterpieces in Barcelona to the flamenco culture of Seville and the culinary wonders of San Sebastián, Spain has it all. Let us design a [Spanish adventure](/services/itinerary-building) full of tapas, sunshine, and unforgettable experiences! Browse [destinations](/destinations).";
+      return "Spain can be fantastic for first-timers because the cities feel distinct without being hard to combine. 🇪🇸 If you want help building a route that actually breathes, have a look at the [First Journey package](/services/#first-journey) and browse our [destinations](/destinations).";
     }
     if (msg.includes('greece') || msg.includes('athens') || msg.includes('santorini') || msg.includes('greek')) {
-      return "Greece is absolutely breathtaking! 🇬🇷 From the ancient wonders of Athens to the iconic blue domes of Santorini and the beaches of Crete, Greece offers a perfect blend of history, culture, and relaxation. Let us craft your dream [Greek island-hopping itinerary](/services/itinerary-building)!";
+      return "Greece is beautiful, especially if you want a mix of cities, islands, and slower pacing. 🇬🇷 Because ferry timing and seasonal logistics matter, the [Grand Circuit package](/services/#grand-circuit) is useful for more layered routes. You can also compare options on our [services page](/services).";
     }
     if (msg.includes('germany') || msg.includes('berlin') || msg.includes('munich') || msg.includes('bavaria')) {
-      return "Germany is fantastic! 🇩🇪 From Berlin's vibrant culture and history to Munich's beer gardens and the fairy-tale castles of Bavaria, there's so much to discover. Let us help you explore the best of Germany with a [tailored itinerary](/services/itinerary-building)!";
+      return "Germany works well when you want strong rail infrastructure and very different city personalities in one trip. 🇩🇪 If you want help structuring the route cleanly, start with the [First Journey package](/services/#first-journey) or compare it with the [Grand Circuit](/services/#grand-circuit).";
     }
     if (msg.includes('netherlands') || msg.includes('amsterdam') || msg.includes('dutch')) {
-      return "The Netherlands is wonderful! 🇳🇱 Amsterdam's canals, world-class museums like the Rijksmuseum, the tulip fields of Keukenhof, and charming cities like Utrecht and The Hague make it a must-visit. Let us help you plan the perfect [Dutch adventure](/services/itinerary-building)!";
+      return "The Netherlands is a strong pick if you want an easy-moving first Europe trip with great rail links. 🇳🇱 Amsterdam, Utrecht, and The Hague combine well. If you want help building the route, the [First Journey package](/services/#first-journey) is a good fit.";
     }
     if (msg.includes('switzerland') || msg.includes('zurich') || msg.includes('geneva') || msg.includes('alps')) {
-      return "Switzerland is pure paradise! 🇨🇭 From the majestic Alps and pristine lakes to charming cities like Zurich, Geneva, and Lucerne, every view is postcard-perfect. Whether you want adventure or relaxation, we can design an unforgettable [Swiss experience](/services/itinerary-building) for you!";
+      return "Switzerland is stunning, but the pacing and budget need to be handled carefully because transport and hotels add up fast. 🇨🇭 If you want help shaping the route around cost and movement, look at the [First Journey package](/services/#first-journey) or the [Grand Circuit](/services/#grand-circuit).";
     }
     if (msg.includes('croatia') || msg.includes('dubrovnik') || msg.includes('split')) {
-      return "Croatia is a hidden gem! 🇭🇷 Dubrovnik's stunning old town, Split's Diocletian's Palace, the beautiful Plitvice Lakes, and the Adriatic coastline make it one of Europe's most enchanting [destinations](/destinations). Let us build your ideal [Croatian coastal adventure](/services/itinerary-building)!";
+      return "Croatia is a great route-building destination because you can mix coast, cities, and ferry or overland legs. 🇭🇷 If you want help structuring a cleaner multi-stop trip, the [Grand Circuit package](/services/#grand-circuit) is the closest fit. You can also browse our [destinations](/destinations).";
     }
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg.includes('good')) {
-      return "Hello there! 👋 Welcome to Durian Travel! I'm here to help you plan your perfect European getaway. Whether you need [visa guidance](/schengen-visa-guide), [custom itineraries](/services/itinerary-building), or hotel recommendations — just ask! Where are you dreaming of traveling to? 🌍";
+      return "Hello there! 👋 I can help with [Schengen visa guidance](/schengen-visa-guide), Europe trip planning, and finding the right [travel package](/services) for your situation. Tell me where you're thinking of going or what part of the process feels confusing right now.";
     }
     if (msg.includes('thank') || msg.includes('thanks')) {
       return "You're very welcome! 😊 It's my pleasure to help. If you have any more questions about European travel, visas, or our [services](/services), don't hesitate to ask. Happy travels! ✈️🌍";
@@ -363,6 +363,6 @@ const geminiApiKey = import.meta.env.PUBLIC_GEMINI_API_KEY || '';
     }
 
     // Default response
-    return "That's a great question! 🌟 I can help with European travel planning, [Schengen visa guidance](/schengen-visa-guide), hotel recommendations, and information about our [services](/services). Try asking about a specific European country, our visa guide, or our [itinerary building service](/services/itinerary-building)! What would you like to know?";
+    return "That is a great question! 🌟 I can help with [Schengen visa guidance](/schengen-visa-guide), Europe trip planning, and choosing the right [travel package](/services). Try asking about a destination, a visa concern, or which package best fits your trip.";
   }
 </script>

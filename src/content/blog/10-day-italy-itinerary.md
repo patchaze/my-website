@@ -164,4 +164,4 @@ April to June and September to October. July and August are hot and crowded (but
 
 *This post may contain affiliate links.*
 
-**If you want a day-by-day itinerary that aligns with your bookings and pace**, our [Itinerary Building service](/services/itinerary-building/) exists for exactly that structure. Or check our [Europe Packing List](/blog/europe-packing-list/) before you go.
+**If you want a day-by-day itinerary that aligns with your bookings and pace**, our [First Journey package](/services/#first-journey) is built for exactly that structure. Or check our [Europe Packing List](/blog/europe-packing-list/) before you go.

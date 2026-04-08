@@ -139,4 +139,4 @@ If the answer feels fuzzy, the route probably needs to be simpler.
 
 *This post may contain affiliate links.*
 
-**If you want a day-by-day plan that aligns accommodations, finances, and transport logic**, our [Itinerary Building service](/services/itinerary-building/) covers exactly this. Or check our [Europe Budget Blueprint](/blog/europe-trip-budget/) for the financial planning side.
+**If you want a day-by-day plan that aligns accommodations, finances, and transport logic**, our [Grand Circuit package](/services/#grand-circuit) covers exactly this kind of route-building. Or check our [Europe Budget Blueprint](/blog/europe-trip-budget/) for the financial planning side.

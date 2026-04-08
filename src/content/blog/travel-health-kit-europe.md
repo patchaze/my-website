@@ -101,7 +101,7 @@ If you can, bring a list of your medicines by generic name, not just brand name.
 
 If you're unsure about what to bring for your specific route, destinations, or health situation, a pharmacist can help you think through your kit without over-packing or missing something.
 
-Our [Travel Health Consult](/services/travel-health-consult/) is educational guidance from a qualified pharmacist. It's explicitly not a medical consultation. It helps you prepare practically.
+Our [Wellness Journey package](/services/#wellness-journey) is educational guidance shaped with pharmacist input. It's explicitly not a medical consultation. It helps you prepare practically.
 
 ## When to See a Clinician Before You Go
 
@@ -119,4 +119,4 @@ The point is not to over-medicalize the trip. It is to make sure a small issue d
 
 *This post may contain affiliate links. We may earn a commission at no extra cost to you.*
 
-**For destination-specific medication rules and packing guidance**, [book a Travel Health Consult](/services/travel-health-consult/). Or check our [Europe Packing List](/blog/europe-packing-list/) for the full carry-on strategy.
+**For destination-specific medication rules and packing guidance**, [explore the Wellness Journey package](/services/#wellness-journey). Or check our [Europe Packing List](/blog/europe-packing-list/) for the full carry-on strategy.

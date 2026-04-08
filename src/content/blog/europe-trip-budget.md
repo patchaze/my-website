@@ -126,4 +126,4 @@ Columns you need:
 
 *This post may contain affiliate links.*
 
-**If your budget doesn't match your current itinerary pace**, our [Itinerary Building service](/services/itinerary-building/) aligns route logic with realistic spend. Or start with our [Europe Trip Planning Timeline](/blog/europe-trip-planning-timeline/) for the full planning framework and our [Europe travel insurance guide](/blog/europe-travel-insurance/) for the pre-trip risk layer.
+**If your budget doesn't match your current itinerary pace**, our [First Journey package](/services/#first-journey) helps align route logic with realistic spend. Or start with our [Europe Trip Planning Timeline](/blog/europe-trip-planning-timeline/) for the full planning framework and our [Europe travel insurance guide](/blog/europe-travel-insurance/) for the pre-trip risk layer.

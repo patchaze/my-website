@@ -47,32 +47,92 @@
 # Redirects
 [[redirects]]
   from = "/services/document-review"
-  to   = "/services/document-review/"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/document-review/"
+  to   = "/services/#schengen-blueprint"
   status = 301
 
 [[redirects]]
   from = "/services/cover-letter-strategy"
-  to   = "/services/cover-letter-strategy/"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/cover-letter-strategy/"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/itinerary-building"
+  to   = "/services/#first-journey"
+  status = 301
+
+[[redirects]]
+  from = "/services/itinerary-building/"
+  to   = "/services/#first-journey"
   status = 301
 
 [[redirects]]
   from = "/services/itinerary-structuring"
-  to   = "/services/itinerary-structuring/"
+  to   = "/services/#first-journey"
+  status = 301
+
+[[redirects]]
+  from = "/services/itinerary-structuring/"
+  to   = "/services/#first-journey"
   status = 301
 
 [[redirects]]
   from = "/services/financial-proof-review"
-  to   = "/services/financial-proof-review/"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/financial-proof-review/"
+  to   = "/services/#schengen-blueprint"
   status = 301
 
 [[redirects]]
   from = "/services/refusal-analysis"
-  to   = "/services/refusal-analysis/"
+  to   = "/services/#recovery-route"
+  status = 301
+
+[[redirects]]
+  from = "/services/refusal-analysis/"
+  to   = "/services/#recovery-route"
   status = 301
 
 [[redirects]]
   from = "/services/strategy-call"
-  to   = "/services/strategy-call/"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/strategy-call/"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/visa-strategy-call"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/visa-strategy-call/"
+  to   = "/services/#schengen-blueprint"
+  status = 301
+
+[[redirects]]
+  from = "/services/travel-health-consult"
+  to   = "/services/#wellness-journey"
+  status = 301
+
+[[redirects]]
+  from = "/services/travel-health-consult/"
+  to   = "/services/#wellness-journey"
   status = 301
 
 [[redirects]]

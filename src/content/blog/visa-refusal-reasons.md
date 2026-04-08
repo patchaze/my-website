@@ -200,7 +200,7 @@ Only if your real itinerary changes. If you are still taking the same trip, forc
 
 No. It means the next file needs to answer the previous one better. The refusal itself is a clue, not a permanent outcome.
 
-[→ Book a Refusal Analysis Consultation](/services/refusal-analysis/) to review your specific refusal letter and build a stronger reapplication strategy.
+[→ Explore the Recovery Route package](/services/#recovery-route) to review your refusal letter and build a stronger reapplication strategy.
 
 ---
 

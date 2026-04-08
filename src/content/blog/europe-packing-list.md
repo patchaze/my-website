@@ -116,7 +116,7 @@ The CDC provides general "Pack Smart" guidance for health-related items and medi
 
 (And yes: ask your doctor for personal medical advice. This is not that.)
 
-[→ Book a Travel Health Consult](/services/travel-health-consult/)
+[→ Explore the Wellness Journey package](/services/#wellness-journey)
 
 ## Packing for Trains and City Travel
 
@@ -146,4 +146,4 @@ Choose luggage you can lift without performing a dramatic solo deadlift in publi
 
 *This post may contain affiliate links. If you purchase through them, we may earn a small commission at no extra cost to you.*
 
-**Planning your packing around your route?** [Our Itinerary Building service](/services/itinerary-building/) aligns your luggage needs with your actual travel plan. Or check our [Travel Health Kit guide](/blog/travel-health-kit-europe/) for what medications and health items to bring.
+**Planning your packing around your route?** [Our First Journey package](/services/#first-journey) aligns luggage decisions with your actual route. Or check our [Travel Health Kit guide](/blog/travel-health-kit-europe/) for what medications and health items to bring.

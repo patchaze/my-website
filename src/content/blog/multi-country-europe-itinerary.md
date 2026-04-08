@@ -134,4 +134,4 @@ The best multi-country route is not the one with the most transport options. It 
 
 *Some links may be affiliate links. We may earn a commission at no extra cost to you.*
 
-**Want a route that aligns with your bookings and pace?** [Use our Itinerary Building service](/services/itinerary-building/) for a day-by-day plan designed around your trip.
+**Want a route that aligns with your bookings and pace?** [Explore the Grand Circuit package](/services/#grand-circuit) for multi-stop planning designed around your real trip.

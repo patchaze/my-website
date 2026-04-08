@@ -133,4 +133,4 @@ If your route or connection passes through a disrupted region, read the exclusio
 
 *This post may contain affiliate links. We may earn a commission at no extra cost to you.*
 
-**If your application depends on coherent documentation**, our [Document Review service](/services/document-review/) explicitly includes checking insurance compliance in your pack. Or [read our Schengen Visa Guide](/schengen-visa-guide/) for the full document requirements.
+**If your application depends on coherent documentation**, our [Schengen Blueprint package](/services/#schengen-blueprint) explicitly includes checking insurance compliance in your pack. Or [read our Schengen Visa Guide](/schengen-visa-guide/) for the full document requirements.

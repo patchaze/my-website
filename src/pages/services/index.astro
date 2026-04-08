@@ -1,81 +1,421 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
 import CTABanner from '../../components/CTABanner.astro';
 
-const services = [
+const packages = [
   {
-    icon: '📞',
-    title: 'Visa Strategy Call',
-    description: 'A focused 60-minute 1-on-1 call to review your entire visa application plan — documents, cover letter, financial proof, itinerary, and timeline.',
-    href: '/services/visa-strategy-call/',
-    tags: ['60 min', '1-on-1', 'Strategy'],
-    price: '€59',
+    slug: 'schengen-blueprint',
+    name: 'The Schengen Blueprint',
+    sub: 'Europe visa + itinerary',
+    icon: '✦',
+    tone: 'blueprint',
+    target:
+      'First-time Schengen applicants, especially Filipino, Southeast Asian, and South Asian travelers dealing with embassy-specific requirements, financial proof scrutiny, and unfamiliar itinerary logic.',
+    tagline:
+      'Europe, planned to the document. Your visa application, itinerary, and trip architecture handled by people who understand both the embassy and the destination.',
+    included: [
+      'Full Schengen visa strategy session (60 min)',
+      'Document stack review with a written gap report',
+      'Cover letter writing and review',
+      'Itinerary built for both visa logic and actual travel flow',
+      'Financial proof coaching, including bank statement structure and balance guidance',
+      'Multi-country routing logic, entry-point selection, and 90/180-day planning',
+      'Unlimited email Q&A through your submission date',
+    ],
+    differentiators: [
+      'Embassy-specific coaching because France, Germany, Italy, and others do not assess files the same way',
+      'Cover letters written to sound credible and human, not templated',
+      'Real refusal-prevention review rather than a generic checklist pass',
+    ],
+    healthLabel: 'Travel health layer included',
+    healthItems:
+      'Pre-departure pharmacist briefing on Schengen insurance requirements, OTC medication allowances by country, and medication import rules for prescription travelers.',
+    addons: [
+      'Refusal analysis and reapplication strategy',
+      'Additional destination added to the itinerary',
+      'Express 48-hour document review',
+      'Airport transit coaching for Schengen entry ports',
+      'Family application bundle for 2+ travelers',
+    ],
+    geo: [
+      {
+        region: 'Philippine and Southeast Asian applicants',
+        items: [
+          'VFS Global appointment prep',
+          'BIR and ITR document structuring',
+          'OFW-specific financial proof guidance',
+          'PSA document checklist',
+        ],
+      },
+      {
+        region: 'North American applicants',
+        items: [
+          'Home-country versus abroad embassy options',
+          'US and Canadian financial equivalence documents',
+          'ESTA versus Schengen overlap planning',
+        ],
+      },
+    ],
   },
   {
-    icon: '📄',
-    title: 'Document Checklist Review',
-    description: 'We check every document in your visa package against the embassy\'s published requirements and flag gaps, inconsistencies, or weak points.',
-    href: '/services/document-review/',
-    tags: ['Checklist', 'Gap Analysis'],
-    price: '€19',
+    slug: 'first-journey',
+    name: 'The First Journey Package',
+    sub: 'First-time international traveler',
+    icon: '◈',
+    tone: 'journey',
+    target:
+      'Anyone planning a first international trip who feels overwhelmed by visa logistics, budgeting, and airline rules and wants a calmer step-by-step path from passport to departure day.',
+    tagline:
+      'For the traveler who has never done this before. We take you from passport in hand to boarding gate, step by step, without jargon or guesswork.',
+    included: [
+      'Trip-readiness assessment covering what you already have and what is missing',
+      'Destination selection based on passport strength, budget, and timeline',
+      'Visa application strategy for your chosen destination',
+      'A first-timer itinerary with realistic pacing and flexible booking logic',
+      'Pre-departure checklist for documents, currency, insurance, and health prep',
+      'WhatsApp or email support for 2 weeks before and 1 week after departure',
+      'Emergency contact list and what-to-do-if plan',
+    ],
+    differentiators: [
+      'Starts from zero with no assumed travel knowledge',
+      'Travel anxiety is addressed directly instead of brushed aside',
+      'Human, practical communication throughout the process',
+    ],
+    healthLabel: 'First-timer health briefing included',
+    healthItems:
+      'Destination-specific vaccine review, pharmacy starter-kit guidance, jet-lag planning, and first-time long-haul health prep reviewed with a licensed pharmacist.',
+    addons: [
+      'Travel SIM and eSIM guidance',
+      'Luggage allowance and airline rule coaching',
+      'Currency exchange strategy session',
+      'Airport meet-and-greet referral coordination',
+      'Post-trip debrief for next-trip planning',
+    ],
+    geo: [
+      {
+        region: 'Southeast Asian first-timers',
+        items: [
+          'Visa-required routes from the Philippines, Indonesia, and Vietnam',
+          'Budget-airline versus full-service carrier coaching',
+          'Remittance-friendly financial proof strategies',
+        ],
+      },
+      {
+        region: 'African first-timers',
+        items: [
+          'High-scrutiny embassy preparation',
+          'Invitation-letter and host-document coaching',
+          'Ties-to-home documentation support',
+        ],
+      },
+    ],
   },
   {
-    icon: '🗺️',
-    title: 'Itinerary Building',
-    description: 'We help you build a visa-compliant travel itinerary that aligns with your accommodation, financial proof, and stated purpose of travel.',
-    href: '/services/itinerary-building/',
-    tags: ['Planning', 'Structure'],
-    price: '€24',
+    slug: 'nomad-infrastructure',
+    name: 'The Nomad Infrastructure Plan',
+    sub: 'Long-stay + digital nomads',
+    icon: '◎',
+    tone: 'nomad',
+    target:
+      'Remote workers and digital nomads planning extended stays in Europe or multi-country routes who need visa sequencing, health continuity, and long-haul travel systems that hold up beyond a short vacation.',
+    tagline:
+      'Built for people who travel for months, not weeks. Visa architecture, health continuity, and itinerary logic designed for the long haul.',
+    included: [
+      'Multi-destination Schengen 90/180-day planning',
+      'Non-Schengen buffer strategy using countries such as the UK, Balkans, Georgia, or Morocco',
+      'Multi-entry visa strategy by passport type',
+      'Extended-stay insurance gap analysis',
+      'Prescription medication supply planning for 3+ month trips',
+      'Remote work visa option assessment, including Portugal D8 and Spain nomad pathways',
+      'Accommodation strategy across rentals, coliving, and short stays',
+    ],
+    differentiators: [
+      'Solves the 90-day Schengen limit instead of simply warning about it',
+      'Medication-supply continuity built into the plan',
+      'Designed around both visa law and pharmacy logistics',
+    ],
+    healthLabel: 'Extended-stay health protocol included',
+    healthItems:
+      'Medication continuity planning, pharmacy equivalents abroad, long-stay insurance analysis, and burnout-prevention guidance for long-haul remote work.',
+    addons: [
+      'Tax residency awareness brief',
+      'International banking and money-movement guidance',
+      'Coworking and coliving research',
+      'Emergency repatriation planning',
+    ],
+    geo: [
+      {
+        region: 'Philippine and Southeast Asian nomads',
+        items: [
+          'Portugal D8 eligibility screening',
+          'Schengen entry-point optimization',
+          'Philippine BIR compliance awareness',
+        ],
+      },
+      {
+        region: 'North American nomads',
+        items: [
+          'US reporting awareness brief',
+          'Canadian health-coverage gap analysis',
+          'ESTA plus Schengen sequencing strategy',
+        ],
+      },
+    ],
   },
   {
-    icon: '💊',
-    title: 'Travel Health Consult',
-    description: 'Pre-trip health preparation: which medications need prescriptions in Europe, vaccine requirements, pharmacy access, and what to pack in your travel kit.',
-    href: '/services/travel-health-consult/',
-    tags: ['Health', 'Preparation'],
-    price: '€29',
+    slug: 'family-expedition',
+    name: 'The Family Expedition Bundle',
+    sub: 'Multi-member + family groups',
+    icon: '⬡',
+    tone: 'family',
+    target:
+      'Families of 2 to 6, especially those traveling with children, elderly relatives, or health-specific needs where one missing document or medication issue can disrupt the whole group.',
+    tagline:
+      'When one person\'s document or health issue can ground the whole family, you need a plan built for everyone, not just the lead traveler.',
+    included: [
+      'Group visa strategy with coordinated timelines',
+      'Minor travel documentation guidance including DSWD clearance and parental consent',
+      'Elderly traveler mobility and health planning',
+      'Family itinerary pacing that works beyond solo-traveler speed',
+      'Destination and accommodation research brief for the whole group',
+      'Insurance coordination for multiple travelers',
+      'Emergency contact planning and split-group contingencies',
+    ],
+    differentiators: [
+      'Designed for the family unit as a system, not only the primary applicant',
+      'Pediatric and elderly considerations are built in by default',
+      'Rarely covered processes like DSWD and parental consent are handled upfront',
+    ],
+    healthLabel: 'Family health layer included',
+    healthItems:
+      'Per-member medication review, pediatric dosing and food-safety guidance, elderly traveler planning, and a family-sized first-aid kit reviewed with a pharmacist.',
+    addons: [
+      'School clearance letter template',
+      'Family insurance comparison brief',
+      'Accessible accommodation research',
+      'Child-friendly city add-ons',
+      'Multi-generational trip arbitration support',
+    ],
+    geo: [
+      {
+        region: 'Southeast Asian families',
+        items: [
+          'DSWD minor travel clearance process',
+          'Multi-member VFS coordination',
+          'OFW parent and child joint application strategy',
+        ],
+      },
+      {
+        region: 'Diaspora-sponsored families',
+        items: [
+          'Invitation and sponsorship letter package',
+          'Sponsor financial proof structure',
+          'Family reunion documentation logic',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'recovery-route',
+    name: 'The Recovery Route',
+    sub: 'Post-refusal reapplication',
+    icon: '◇',
+    tone: 'recovery',
+    target:
+      'Travelers who have already received a refusal and need to understand the real reason, fix the weak points, and rebuild the application without guessing.',
+    tagline:
+      'A refusal is not the end. Most are fixable if you decode what the embassy actually meant and respond with a materially stronger file.',
+    included: [
+      'Refusal letter interpretation in plain language',
+      'Root-cause analysis of the financial, itinerary, ties, or documentation issues',
+      'Reapplication strategy with a revised document plan',
+      'New cover letter written to address the refusal reason directly',
+      'Strengthened financial-proof coaching',
+      'Ties-to-home documentation upgrade plan',
+      'Advice on when to reapply and which embassy route makes sense',
+    ],
+    differentiators: [
+      'Treats the refusal as diagnostic data rather than a dead end',
+      'Translates embassy code into practical next steps',
+      'Prevents the common mistake of reapplying too fast with the same weak file',
+    ],
+    healthLabel: 'Health documentation check included',
+    healthItems:
+      'Travel insurance compliance review, medical-document coaching where relevant, and reapplication insurance guidance if health evidence was flagged.',
+    addons: [
+      'Appeal-letter drafting where permitted',
+      'Alternative destination strategy',
+      'Urgent 48-hour turnaround for time-sensitive reapplications',
+      'Referral onward if the case needs legal advice',
+    ],
+    geo: [
+      {
+        region: 'Philippine applicants',
+        items: [
+          'PH-specific refusal patterns such as financial proof and first-time traveler scrutiny',
+          'Embassy-switching strategy where appropriate',
+          'BIR and employment document restructuring',
+        ],
+      },
+      {
+        region: 'African applicants',
+        items: [
+          'High-refusal-rate embassy strategy',
+          'Invitation-letter and sponsor-document rebuilds',
+          'Travel-history presentation for thin-passport applicants',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'wellness-journey',
+    name: 'The Wellness Journey',
+    sub: 'Health-led travel planning',
+    icon: '✿',
+    tone: 'wellness',
+    target:
+      'Travelers with chronic conditions, prescription complexity, elderly travelers, post-surgery plans, or anyone whose health needs should shape the trip rather than be treated as an afterthought.',
+    tagline:
+      'Travel planning from the inside out. Built for travelers whose health is not a footnote. It is the starting point.',
+    included: [
+      'Medical travel-readiness assessment',
+      'Destination risk briefing covering disease, altitude, heat, food safety, and water quality',
+      'Prescription medication authorization guidance',
+      'Controlled-substance travel documentation by country',
+      'Insurance specification with pre-existing conditions handled correctly',
+      'In-destination pharmacy and hospital mapping',
+      'Emergency medical information card prepared for travel',
+      'Vaccine status review and update suggestions',
+    ],
+    differentiators: [
+      'Built with licensed pharmacist input rather than generic travel advice',
+      'Medication import rules handled country by country',
+      'Pre-existing conditions are treated as planning inputs, not buried disclaimers',
+    ],
+    healthLabel: 'This is the health package',
+    healthItems:
+      'Complete medication review, declaration-letter planning, country-specific OTC versus prescription rules, and prevention protocols for diarrhea, altitude, malaria, heat, and other common trip disruptors.',
+    addons: [
+      'Medevac insurance comparison brief',
+      'Destination-specialist research for complex care needs',
+      'Custom medication packing list',
+      'Health condition-based destination alternatives',
+      'Medical translation card support',
+    ],
+    geo: [
+      {
+        region: 'Travel to Asia and Southeast Asia',
+        items: [
+          'Dengue, typhoid, and hepatitis review',
+          'Heat and humidity management',
+          'Counterfeit medication risk by country',
+        ],
+      },
+      {
+        region: 'Travel to Africa and South America',
+        items: [
+          'Malaria prophylaxis planning',
+          'Yellow fever certificate requirements',
+          'High-altitude health protocols',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'grand-circuit',
+    name: 'The Grand Circuit',
+    sub: 'Multi-region premium planning',
+    icon: '◉',
+    tone: 'circuit',
+    target:
+      'Experienced travelers or high-complexity cases building a multi-region trip such as Philippines to Europe to Morocco and back, where visa logic, health continuity, and transport sequencing all have to work together.',
+    tagline:
+      'For travelers who do not stay in one region. Visa logic, health coverage, and itinerary design that works across jurisdictions without gaps, overlaps, or expensive mistakes.',
+    included: [
+      'Full multi-region visa architecture with every required visa mapped and timed',
+      'Passport-validity and entry-rule checks across destinations',
+      'Insurance review across multiple jurisdictions',
+      'Overland and multi-modal transport logic',
+      'Schengen 90/180-day management inside the wider trip',
+      'Currency and financial logistics brief',
+      'Emergency contingency planning if a later-leg connection fails',
+      'Complete trip health brief covering all destination profiles',
+    ],
+    differentiators: [
+      'Designed for the arc of a whole journey, not one isolated trip',
+      'Visa sequencing matters and is built into the planning order',
+      'Health continuity is managed across climate zones and travel styles',
+    ],
+    healthLabel: 'Multi-region health continuity included',
+    healthItems:
+      'Cross-region vaccine and prophylaxis planning, full-trip medication quantity strategy, transition guidance between climates, and a multi-country medical emergency protocol.',
+    addons: [
+      'Luxury and boutique accommodation brief by region',
+      'Private guide recommendations',
+      'Restricted-site and permit guidance',
+      'Detailed day-by-day premium itinerary',
+      'Pre-trip briefing call with the full Durian team',
+    ],
+    geo: [
+      {
+        region: 'Philippine multi-region travelers',
+        items: [
+          'Balikbayan versus Schengen sequencing',
+          'Multi-currency financial proof strategy',
+          'Philippine re-entry requirement tracking',
+        ],
+      },
+      {
+        region: 'Western outbound travelers',
+        items: [
+          'ETIAS plus Schengen plus non-EU visa stacking',
+          'Visa-on-arrival versus pre-approval planning by region',
+          'Travel-advisory monitoring across the full route',
+        ],
+      },
+    ],
   },
 ];
 
-const serviceSchema = services.map(s => ({
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": s.title,
-  "description": s.description,
-  "provider": {
-    "@type": "Organization",
-    "name": "DURIAN Travel",
-    "url": "https://www.duriantravel.com"
+const serviceSchema = packages.map((pkg) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: pkg.name,
+  description: pkg.tagline,
+  provider: {
+    '@type': 'Organization',
+    name: 'DURIAN Travel',
+    url: 'https://www.duriantravel.com',
   },
-  "url": `https://www.duriantravel.com${s.href}`,
-  "offers": {
-    "@type": "Offer",
-    "price": s.price.replace('€', ''),
-    "priceCurrency": "EUR"
-  }
+  url: `https://www.duriantravel.com/services/#${pkg.slug}`,
+  areaServed: ['Europe', 'Philippines', 'Southeast Asia', 'North America'],
 }));
 
-const breadcrumb = [
-  { name: 'Services', url: 'https://www.duriantravel.com/services/' }
-];
+const breadcrumb = [{ name: 'Services', url: 'https://www.duriantravel.com/services/' }];
 ---
 
 <BaseLayout
-  title="Europe Travel Services: Documents, Plans & Strategy"
-  description="Choose the right service for your European trip: strategy consultations, document review, itinerary design, and travel health guidance. Practical, personalised support."
+  title="Travel Packages for Visa Strategy, Itineraries, and Health Planning"
+  description="Compare Durian Travel packages for Schengen applicants, first-time travelers, families, refusal recoveries, wellness-led trips, digital nomads, and multi-region journeys."
   breadcrumb={breadcrumb}
   schema={serviceSchema}
-  keywords="DURIAN travel services, Schengen visa consultation, Europe trip planner, travel document review, custom Europe itinerary building, travel health consult"
+  keywords="Durian Travel packages, Schengen visa package, Europe itinerary planning package, refusal reapplication support, travel wellness planning, family travel planning, digital nomad trip planning"
 >
-
   <section class="hero-sm hero-gradient">
-    <div class="container">
-      <span class="section-label" style="color:var(--color-accent-light)">Our Services</span>
-      <h1 class="hero-sm__title" style="color:white">Europe Travel Services: Documents, Plans & Strategy</h1>
-      <p class="hero-sm__subtitle">
-        We educate and empower. We don't submit applications on your behalf and we don't guarantee outcomes.
-        Each service is designed to help you present the strongest possible application.
+    <div class="container services-hero">
+      <span class="section-label services-hero__label">Travel Packages</span>
+      <h1 class="hero-sm__title services-hero__title">Choose the package that matches how you travel</h1>
+      <p class="hero-sm__subtitle services-hero__subtitle">
+        These packages replace the old single-service pages. Pick the track that fits your trip,
+        your risk level, and your application complexity, then we will shape the support around that.
+      </p>
+      <div class="services-hero__actions">
+        <a href="/free-visa-audit/" class="btn btn--primary">Start With a Free Audit</a>
+        <a href="/contact/" class="btn btn--secondary">Send an Inquiry</a>
+      </div>
+      <p class="services-hero__note">
+        We provide educational planning support. We do not submit visa applications on your behalf
+        and we do not guarantee embassy outcomes.
       </p>
     </div>
   </section>
@@ -83,101 +423,576 @@ const breadcrumb = [
   <section class="section">
     <div class="container">
       <div class="notice notice--info mb-8">
-        <span>📋</span>
+        <span aria-hidden="true">📍</span>
         <p>
-          <strong>Not sure where to start?</strong>
-          Book a <a href="/free-visa-audit/" class="link">free 15-minute audit</a> first.
-          We'll review your situation and recommend the right service.
+          <strong>Quick way to choose:</strong> start with <strong>Schengen Blueprint</strong> if
+          your biggest stress is the visa file, <strong>First Journey</strong> if this is your first
+          international trip, <strong>Recovery Route</strong> if you already have a refusal, and
+          <strong>Wellness Journey</strong> if your health needs should shape the plan.
         </p>
       </div>
 
-      <div class="services-grid">
-        {services.map(s => (
-          <div class="service-full-card">
-            <div class="service-full-card__header">
-              <span class="service-full-card__icon">{s.icon}</span>
-              <div>
-                <h2 class="service-full-card__title">{s.title}</h2>
-                <div class="service-full-card__tags">
-                  {s.tags.map(t => <span class="tag">{t}</span>)}
+      <div class="package-picker">
+        <div class="package-picker__header">
+          <div>
+            <span class="section-label">Choose a Package</span>
+            <h2 class="package-picker__title">Compare all seven packages</h2>
+          </div>
+          <p class="package-picker__copy">
+            Each option keeps the same Durian approach: strategy first, practical documents, and a
+            route that still makes sense after the visa is approved.
+          </p>
+        </div>
+
+        <div class="package-grid" role="tablist" aria-label="Durian Travel packages">
+          {packages.map((pkg, index) => (
+            <button
+              id={`tab-${pkg.slug}`}
+              class={`package-tab package-tab--${pkg.tone}`}
+              type="button"
+              role="tab"
+              aria-selected={index === 0 ? 'true' : 'false'}
+              aria-controls={pkg.slug}
+              tabindex={index === 0 ? '0' : '-1'}
+              data-package-button={pkg.slug}
+            >
+              <span class="package-tab__name">{pkg.name}</span>
+              <span class="package-tab__sub">{pkg.sub}</span>
+            </button>
+          ))}
+        </div>
+
+        <div class="package-panels">
+          {packages.map((pkg, index) => (
+            <section
+              id={pkg.slug}
+              class={`package-panel package-panel--${pkg.tone}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${pkg.slug}`}
+              data-package-panel={pkg.slug}
+              hidden={index !== 0}
+            >
+              <div class="package-panel__header">
+                <div class="package-panel__accent" aria-hidden="true">{pkg.icon}</div>
+                <div>
+                  <h3 class="package-panel__title">{pkg.name}</h3>
+                  <p class="package-panel__tagline">{pkg.tagline}</p>
                 </div>
               </div>
-            </div>
-            <p class="service-full-card__desc">{s.description}</p>
-            <div class="service-full-card__footer">
-              <span class="service-full-card__price">Starting at {s.price}</span>
-              <a href={s.href} class="btn btn--primary btn--sm">Learn More →</a>
-            </div>
-          </div>
-        ))}
+
+              <div class="package-panel__section">
+                <span class="section-label">Ideal Client</span>
+                <p class="package-panel__target">{pkg.target}</p>
+              </div>
+
+              <div class="package-health">
+                <strong class="package-health__title">{pkg.healthLabel}</strong>
+                <p class="package-health__copy">{pkg.healthItems}</p>
+              </div>
+
+              <div class="package-panel__columns">
+                <div>
+                  <span class="section-label">What&apos;s Included</span>
+                  <div class="package-card">
+                    {pkg.included.map((item) => <p class="package-item">{item}</p>)}
+                  </div>
+                </div>
+                <div>
+                  <span class="section-label">Unique Differentiators</span>
+                  <div class="package-card package-card--spaced">
+                    {pkg.differentiators.map((item) => <p class="package-item">{item}</p>)}
+                  </div>
+                  <span class="section-label">Optional Add-ons</span>
+                  <div class="package-addon-row">
+                    {pkg.addons.map((item) => <span class="package-addon">{item}</span>)}
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-panel__section">
+                <span class="section-label">Geo-Based Customization</span>
+                <div class="package-geo-grid">
+                  {pkg.geo.map((region) => (
+                    <div class="package-geo-card">
+                      <h4 class="package-geo-card__title">{region.region}</h4>
+                      {region.items.map((item) => <p class="package-geo-card__item">{item}</p>)}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div class="package-panel__actions">
+                <a href="/contact/" class="btn btn--primary">Ask About This Package</a>
+                <a href="/free-visa-audit/" class="btn btn--secondary">Free Audit First</a>
+              </div>
+            </section>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- What's included across all services -->
   <section class="section section--tinted">
     <div class="container container--narrow">
       <header class="section-header text-center">
-        <span class="section-label">What's Included</span>
-        <h2 class="section-title">Every Service Comes With</h2>
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">One package, then a tighter plan</h2>
       </header>
-      <div class="grid-3">
-        <div class="feature-mini">
-          <span class="feature-mini__icon">📝</span>
-          <h3 class="feature-mini__title">Written Summary</h3>
-          <p class="feature-mini__desc">Actionable notes and next steps delivered after every session.</p>
+      <div class="services-steps">
+        <div class="services-step">
+          <span class="services-step__num">01</span>
+          <h3 class="services-step__title">Choose your track</h3>
+          <p class="services-step__copy">
+            Pick the package that best matches your biggest source of risk or confusion.
+          </p>
         </div>
-        <div class="feature-mini">
-          <span class="feature-mini__icon">🔒</span>
-          <h3 class="feature-mini__title">Confidential</h3>
-          <p class="feature-mini__desc">Your personal information is handled securely and never shared.</p>
+        <div class="services-step">
+          <span class="services-step__num">02</span>
+          <h3 class="services-step__title">Send context</h3>
+          <p class="services-step__copy">
+            We review your passport context, route, documents, timeline, and any health or family
+            constraints before shaping the work.
+          </p>
         </div>
-        <div class="feature-mini">
-          <span class="feature-mini__icon">⚡</span>
-          <h3 class="feature-mini__title">24h Turnaround</h3>
-          <p class="feature-mini__desc">Document reviews completed within 24 hours of submission.</p>
+        <div class="services-step">
+          <span class="services-step__num">03</span>
+          <h3 class="services-step__title">Build the strongest version</h3>
+          <p class="services-step__copy">
+            The outcome is a clearer application, a cleaner itinerary, and fewer avoidable mistakes
+            before money gets locked into the trip.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <CTABanner />
-
 </BaseLayout>
 
 <style>
-.hero-sm { padding-block: var(--space-16); }
-.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
-.hero-sm__subtitle { font-size: var(--text-lg); color: hsl(150 30% 75%); max-width: 60ch; line-height: var(--leading-relaxed); }
+  .hero-sm {
+    padding-block: var(--space-16);
+  }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-6);
-}
-@media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+  .services-hero {
+    max-width: 72rem;
+  }
 
-.service-full-card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-8);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
-}
-.service-full-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.service-full-card__header { display: flex; align-items: flex-start; gap: var(--space-4); }
-.service-full-card__icon { font-size: 2rem; }
-.service-full-card__title { font-size: var(--text-xl); font-weight: var(--font-bold); margin-bottom: var(--space-2); }
-.service-full-card__tags { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-.service-full-card__desc { font-size: var(--text-base); line-height: var(--leading-relaxed); color: var(--color-text-muted); flex: 1; }
-.service-full-card__footer { display: flex; align-items: center; justify-content: space-between; padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
-.service-full-card__price { font-size: var(--text-lg); font-weight: var(--font-bold); color: var(--color-primary); }
+  .services-hero__label {
+    color: hsl(150 30% 82%);
+  }
 
-.feature-mini { text-align: center; }
-.feature-mini__icon { font-size: 2rem; display: block; margin-bottom: var(--space-3); }
-.feature-mini__title { font-size: var(--text-base); font-weight: var(--font-semibold); margin-bottom: var(--space-2); }
-.feature-mini__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+  .services-hero__title {
+    color: var(--color-text-inverse);
+    max-width: 14ch;
+  }
+
+  .services-hero__subtitle {
+    color: hsl(150 25% 78%);
+    max-width: 62ch;
+  }
+
+  .services-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  .services-hero__note {
+    margin-top: var(--space-5);
+    font-size: var(--text-sm);
+    color: hsl(150 18% 80%);
+    max-width: 60ch;
+  }
+
+  .package-picker {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .package-picker__header {
+    display: grid;
+    gap: var(--space-4);
+    align-items: end;
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .package-picker__title {
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+    line-height: var(--leading-tight);
+  }
+
+  .package-picker__copy {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: 44ch;
+  }
+
+  .package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-3);
+  }
+
+  .package-tab {
+    appearance: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-4);
+    background: var(--color-surface);
+    color: var(--color-text);
+    text-align: left;
+    cursor: pointer;
+    display: grid;
+    gap: var(--space-1);
+    transition:
+      border-color var(--transition-fast),
+      background-color var(--transition-fast),
+      box-shadow var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .package-tab:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .package-tab:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+    outline-offset: 2px;
+  }
+
+  .package-tab[aria-selected='true'] {
+    border-width: 2px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .package-tab--blueprint[aria-selected='true'] {
+    border-color: var(--color-primary);
+    background: var(--color-primary-bg);
+  }
+
+  .package-tab--journey[aria-selected='true'] {
+    border-color: var(--color-warning);
+    background: #fff7e8;
+  }
+
+  .package-tab--nomad[aria-selected='true'],
+  .package-tab--family[aria-selected='true'],
+  .package-tab--circuit[aria-selected='true'] {
+    border-color: var(--color-primary-light);
+    background: var(--color-bg-alt);
+  }
+
+  .package-tab--recovery[aria-selected='true'] {
+    border-color: var(--color-error);
+    background: #fff0f0;
+  }
+
+  .package-tab--wellness[aria-selected='true'] {
+    border-color: var(--color-success);
+    background: #eef9f3;
+  }
+
+  .package-tab__name {
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+  }
+
+  .package-tab__sub {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .package-panels {
+    display: grid;
+  }
+
+  .package-panel {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    background: var(--color-surface);
+    padding: clamp(var(--space-6), 3vw, var(--space-8));
+    box-shadow: var(--shadow-sm);
+  }
+
+  .package-panel--blueprint {
+    --package-accent: var(--color-primary);
+    --package-surface: var(--color-primary-bg);
+  }
+
+  .package-panel--journey {
+    --package-accent: var(--color-warning);
+    --package-surface: #fff7e8;
+  }
+
+  .package-panel--nomad,
+  .package-panel--family,
+  .package-panel--circuit {
+    --package-accent: var(--color-primary-light);
+    --package-surface: var(--color-bg-alt);
+  }
+
+  .package-panel--recovery {
+    --package-accent: var(--color-error);
+    --package-surface: #fff0f0;
+  }
+
+  .package-panel--wellness {
+    --package-accent: var(--color-success);
+    --package-surface: #eef9f3;
+  }
+
+  .package-panel__header {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-6);
+  }
+
+  .package-panel__accent {
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-lg);
+    background: var(--package-surface);
+    color: var(--package-accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .package-panel__title {
+    font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-2);
+  }
+
+  .package-panel__tagline,
+  .package-panel__target {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .package-panel__section {
+    margin-bottom: var(--space-6);
+  }
+
+  .package-health {
+    background: var(--package-surface);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+
+  .package-health__title {
+    display: block;
+    color: var(--package-accent);
+    margin-bottom: var(--space-2);
+  }
+
+  .package-health__copy {
+    color: color-mix(in srgb, var(--package-accent) 76%, black 24%);
+    line-height: var(--leading-relaxed);
+    font-size: var(--text-sm);
+  }
+
+  .package-panel__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+
+  .package-card {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+  }
+
+  .package-card--spaced {
+    margin-bottom: var(--space-4);
+  }
+
+  .package-item {
+    padding-block: var(--space-2);
+    border-bottom: 1px solid var(--color-border-light);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+  }
+
+  .package-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .package-item::before {
+    content: '— ';
+    color: var(--package-accent);
+  }
+
+  .package-addon-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .package-addon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+  }
+
+  .package-geo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .package-geo-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-4);
+    background: var(--color-surface);
+  }
+
+  .package-geo-card__title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-3);
+  }
+
+  .package-geo-card__item {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    padding-block: var(--space-1);
+  }
+
+  .package-geo-card__item::before {
+    content: '· ';
+    color: var(--package-accent);
+  }
+
+  .package-panel__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .services-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+  .services-step {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+
+  .services-step__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-bg);
+    color: var(--color-primary);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+  }
+
+  .services-step__title {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-3);
+  }
+
+  .services-step__copy {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  @media (max-width: 900px) {
+    .package-picker__header,
+    .package-panel__columns,
+    .package-geo-grid,
+    .services-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .package-panel__header {
+      flex-direction: column;
+    }
+
+    .services-hero__actions,
+    .package-panel__actions {
+      flex-direction: column;
+    }
+
+    .services-hero__actions .btn,
+    .package-panel__actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 </style>
+
+<script>
+  const buttons = Array.from(document.querySelectorAll('[data-package-button]'));
+  const panels = Array.from(document.querySelectorAll('[data-package-panel]'));
+
+  function getValidSlug(slug) {
+    return buttons.some((button) => button.dataset.packageButton === slug)
+      ? slug
+      : buttons[0]?.dataset.packageButton;
+  }
+
+  function activatePackage(slug, shouldUpdateHash = true, shouldFocus = shouldUpdateHash) {
+    const nextSlug = getValidSlug(slug);
+    if (!nextSlug) return;
+
+    buttons.forEach((button) => {
+      const isActive = button.dataset.packageButton === nextSlug;
+      button.setAttribute('aria-selected', String(isActive));
+      button.setAttribute('tabindex', isActive ? '0' : '-1');
+      if (isActive && shouldFocus) button.focus({ preventScroll: true });
+    });
+
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.packagePanel !== nextSlug;
+    });
+
+    if (shouldUpdateHash && window.location.hash !== `#${nextSlug}`) {
+      window.history.replaceState(null, '', `#${nextSlug}`);
+    }
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      activatePackage(button.dataset.packageButton);
+    });
+  });
+
+  window.addEventListener('hashchange', () => {
+    activatePackage(window.location.hash.replace('#', ''), false, false);
+  });
+
+  activatePackage(window.location.hash.replace('#', ''), false, false);
+</script>
