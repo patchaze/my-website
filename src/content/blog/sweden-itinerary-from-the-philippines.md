@@ -3,7 +3,7 @@ keywords: "Sweden itinerary Philippines, Sweden trip planner, trip planner Swede
 title: "Sweden Itinerary: 10 Days from the Philippines"
 description: "A practical Sweden itinerary from the Philippines, with route logic for Stockholm, Gothenburg, and Lapland plus Schengen planning notes."
 pubDate: "2026-04-06"
-modDate: "2026-04-07"
+modDate: "2026-04-09"
 author: "Patricia Azevedo"
 tags: ["Sweden", "Itinerary", "Philippines"]
 readTime: 9
@@ -19,6 +19,8 @@ faq:
 Sweden already shows up on the site’s radar for queries like "sweden trip planner" and "trip planner sweden." The clearest way to match that intent is to stop treating Sweden as a generic destination page and start giving searchers an actual route.
 
 This itinerary is written for travelers flying from the Philippines or another Southeast Asian hub who want a first Sweden trip that feels coherent, visa-friendly, and realistic on both time and budget.
+
+If you are planning from outside the Philippines, use our broader [Sweden Itinerary for Non-European Travelers](/blog/sweden-itinerary/) instead. This version stays focused on Philippine departure logic and Schengen application context.
 
 ## The Best First Sweden Structure
 
@@ -137,7 +139,7 @@ The strongest move is often:
 - one better-located hotel
 - fewer paid logistics mistakes
 
-If you need the broader question answered before you book, read our [Sweden cost reality check for Filipino travelers](/blog/is-sweden-worth-it-for-filipino-travelers/).
+If you need the broader question answered before you book, read our [Sweden cost breakdown for non-European travelers](/blog/is-sweden-worth-it-for-filipino-travelers/).
 
 ## Which Sweden Trip Fits You Best?
 
@@ -156,7 +158,7 @@ The point is not to force the longest route. The point is to choose the Sweden t
 - Budget in euro first, then convert closer to booking week
 - Make sure your cover letter and itinerary tell the same story
 
-For the wider route logic, pair this post with our [10-day Europe itinerary from the Philippines](/blog/10-day-europe-itinerary-from-the-philippines/) and the main [Sweden travel guide](/destinations/sweden/).
+For the wider route logic, pair this post with our [10-day Europe itinerary from the Philippines](/blog/10-day-europe-itinerary-from-the-philippines/), the broader [Sweden Itinerary for Non-European Travelers](/blog/sweden-itinerary/), and the main [Sweden travel guide](/destinations/sweden/).
 
 ---
 

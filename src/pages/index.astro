@@ -73,29 +73,40 @@ const recentPosts = allPosts
 
 const strategySpotlight = [
   {
-    label: 'Philippines Visa',
-    title: 'Schengen Visa for Philippine Passport Holders',
-    desc: 'Main-destination rule, financial proof, cover letter logic, and the mistakes that trigger refusals.',
-    href: '/blog/schengen-visa-requirements-philippine-passport-holders/'
+    label: 'Checklist',
+    title: 'Schengen Document Checklist',
+    desc: 'The cleanest universal starting point for passports, insurance, bookings, and financial proof.',
+    href: '/blog/schengen-document-checklist/'
   },
   {
     label: 'Itinerary',
-    title: '10-Day Europe Itinerary from the Philippines',
+    title: '10-Day Europe Itinerary for First-Time Travelers',
     desc: 'A cleaner first-Europe route built around two strong bases instead of exhausting one-night stops.',
-    href: '/blog/10-day-europe-itinerary-from-the-philippines/'
+    href: '/blog/10-day-europe-itinerary/'
   },
   {
-    label: 'Sweden',
-    title: 'Sweden Itinerary from the Philippines',
-    desc: 'A practical Sweden route for first-timers choosing between Stockholm, Gothenburg, and Lapland.',
-    href: '/blog/sweden-itinerary-from-the-philippines/'
+    label: 'Route Logic',
+    title: 'Multi-Country Europe Itinerary',
+    desc: 'How to sequence cities, borders, and transfer days without turning the trip into luggage churn.',
+    href: '/blog/multi-country-europe-itinerary/'
   },
   {
-    label: 'Destination',
-    title: 'Lithuania Travel Guide 2026',
-    desc: 'One of the cleanest lower-stress Schengen routes for first-time travelers from Southeast Asia.',
-    href: '/destinations/lithuania/'
+    label: 'Budget',
+    title: 'Europe Trip Budget Guide',
+    desc: 'A realistic breakdown of flights, hotels, rail, food, and buffer money before you book.',
+    href: '/blog/europe-trip-budget/'
   }
+];
+
+const audiences = [
+  'United States',
+  'Canada',
+  'Brazil',
+  'Mexico',
+  'India',
+  'Southeast Asia',
+  'Australia',
+  'South Africa'
 ];
 
 const faqSchema = {
@@ -154,13 +165,13 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
 ---
 
 <BaseLayout
-  title="Europe Trip Planning & Visa Support | DURIAN Travel"
-  description="Custom Europe itineraries, practical visa guidance, and smarter trip planning for smoother Schengen travel."
+  title="Europe Trip Planning for Non-Europeans | Itineraries & Schengen Visa Strategy | DURIAN Travel"
+  description="Custom Europe itineraries and Schengen visa strategy for non-European travelers - wherever in the world you're planning from."
   ogImage="https://www.duriantravel.com/dolomites-sunset.webp"
   schema={faqSchema}
   lcpImageSrcset={lcpAvifSrcset}
   lcpImageSizes="100vw"
-  keywords="Europe trip planning, custom Europe itineraries, Schengen visa strategy, boutique European hotels, local European tours, Europe travel consultancy"
+  keywords="Europe trip planning for non-Europeans, custom Europe itineraries, Schengen visa strategy, first Europe trip planning, Europe travel consultancy"
 >
 
   <!-- HERO — Full-bleed with floating glass cards -->
@@ -178,11 +189,11 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
           EUROPE TRAVEL
         </div>
         <h1 id="hero-heading" class="hero__title">
-          Europe Trip Planning<br />
-          <span class="hero__title-glow">& Visa Strategy Support</span>
+          Europe Travel Planning<br />
+          <span class="hero__title-glow">for First-Time Travelers Outside Europe</span>
         </h1>
         <p class="hero__description">
-          Custom Europe itineraries, practical visa guidance, and smarter trip planning for smoother Schengen travel.
+          Whether you're planning from North America, South America, Africa, Asia, or Australia - we build your Europe itinerary, handle Schengen visa strategy, and make sure your trip actually works.
         </p>
         <div class="hero__buttons">
           <a href="/services/" class="btn-primary">Explore Our Services</a>
@@ -225,6 +236,19 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
             <a href={e.link} class="expertise-card__link">{e.linkText} →</a>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="audience-heading">
+    <div class="container container--narrow">
+      <header class="section-header text-center">
+        <span class="section-label">Who We Help</span>
+        <h2 id="audience-heading" class="section-title">Europe Planning for Travelers Outside Europe</h2>
+        <p class="section-intro">We help travelers from the Americas, Africa, Asia, and Australia plan cleaner Schengen trips with stronger route logic and practical support.</p>
+      </header>
+      <div class="audience-pills" aria-label="Primary traveler markets">
+        {audiences.map(audience => <span class="audience-pill">{audience}</span>)}
       </div>
     </div>
   </section>
@@ -416,6 +440,26 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
     padding-top: 80px;
     padding-bottom: var(--space-8);
   }
+}
+
+.audience-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.audience-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid var(--color-border);
+  color: var(--color-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  box-shadow: 0 8px 24px hsl(0 0% 0% / 0.05);
 }
 
 @media (max-width: 768px) {

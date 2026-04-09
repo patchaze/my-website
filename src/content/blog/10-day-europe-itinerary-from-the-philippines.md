@@ -4,7 +4,7 @@ title: "10-Day Europe Itinerary from the Philippines for First-Time Travelers"
 seoTitle: "10-Day Europe Itinerary from the Philippines"
 description: "A realistic first Europe itinerary for travelers from the Philippines, with Schengen entry logic, Manila flight routing, and a grounded budget."
 pubDate: "2026-03-26"
-modDate: "2026-04-08"
+modDate: "2026-04-09"
 author: "Patricia Azevedo"
 tags: ["Itinerary", "Europe", "Philippines"]
 readTime: 13
@@ -15,6 +15,8 @@ Your first Europe trip does not need to cover half the continent to feel success
 In fact, the opposite is usually true. The best first Europe itinerary from the Philippines is the one that gives you enough time to adjust, keeps border logic clean for the visa, and does not waste half your budget on unnecessary transfers.
 
 This sample route is built for exactly that.
+
+If you are planning from outside the Philippines, use our universal [10-Day Europe Itinerary for First-Time Travelers](/blog/10-day-europe-itinerary/) instead. This version stays focused on Philippine departure logic and Schengen application context.
 
 ## Why This Route Works
 
@@ -168,7 +170,7 @@ A good first Europe trip is not measured by how many flags you collect.
 
 It is measured by whether the route was believable, the pace felt human, the costs stayed under control, and the trip still left room for joy.
 
-If you want a faster route-planning foundation before you start comparing flights, read our [multi-country Europe itinerary guide](/blog/multi-country-europe-itinerary/) and [Europe trip budget guide](/blog/europe-trip-budget/). They pair well with this post and make the rest of the planning process much less messy.
+If you want a faster route-planning foundation before you start comparing flights, read our [multi-country Europe itinerary guide](/blog/multi-country-europe-itinerary/) and [Europe trip budget guide](/blog/europe-trip-budget/). If you need the broader non-Philippines version of this same search intent, use our [10-Day Europe Itinerary for First-Time Travelers](/blog/10-day-europe-itinerary/). They pair well with this post and make the rest of the planning process much less messy.
 
 ---
 

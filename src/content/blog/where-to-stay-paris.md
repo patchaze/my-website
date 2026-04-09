@@ -27,7 +27,7 @@ This guide covers the seven neighborhoods that make the most sense for first-tim
 - The 11th, 18th, and parts of Montparnasse can offer better value without sacrificing Metro access.
 - Hotel star ratings matter less than exact location. A great hotel near a useful Metro line beats a prettier hotel in the wrong pocket of the city.
 
-If Paris is just one stop on a longer Europe trip, you may also want our [France destination page](/destinations/france/), our [10-day Europe itinerary from the Philippines](/blog/10-day-europe-itinerary-from-the-philippines/), and our [Europe trip budget guide](/blog/europe-trip-budget/). If you are still planning your visa file, keep our [Schengen visa guide](/schengen-visa-guide/) open too.
+If Paris is just one stop on a longer Europe trip, you may also want our [France destination page](/destinations/france/), our [10-day Europe itinerary for first-time travelers](/blog/10-day-europe-itinerary/), and our [Europe trip budget guide](/blog/europe-trip-budget/). If you are still planning your visa file, keep our [Schengen visa guide](/schengen-visa-guide/) open too.
 
 ## Why your neighborhood choice matters more than you think
 
@@ -228,7 +228,7 @@ If you want the most classic, elegant version of Paris and budget is less of a c
 
 If you want value without losing a central base, choose the Latin Quarter.
 
-And if your Paris stay is just one stop on a larger Europe itinerary, use this guide together with our [France destination page](/destinations/france/), our [10-day Europe itinerary from the Philippines](/blog/10-day-europe-itinerary-from-the-philippines/), and our [Europe trip budget guide](/blog/europe-trip-budget/).
+And if your Paris stay is just one stop on a larger Europe itinerary, use this guide together with our [France destination page](/destinations/france/), our [10-day Europe itinerary for first-time travelers](/blog/10-day-europe-itinerary/), and our [Europe trip budget guide](/blog/europe-trip-budget/).
 
 ## Frequently asked questions
 

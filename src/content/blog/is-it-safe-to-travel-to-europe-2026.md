@@ -4,7 +4,7 @@ title: "Is It Safe to Travel to Europe in 2026? Honest Answer for Nervous Travel
 seoTitle: "Is It Safe to Travel to Europe in 2026? Honest Answer for Nervous Travelers"
 description: "The Middle East conflict affects flights, not European safety. Here is what is actually disrupted, what is not, and how to plan a Europe trip in 2026 without unnecessary panic."
 pubDate: "2026-04-04"
-modDate: "2026-04-07"
+modDate: "2026-04-09"
 author: "Patricia Azevedo"
 tags: ["Europe", "Safety", "Travel Advisory"]
 readTime: 9
@@ -50,7 +50,7 @@ That is normal Europe travel guidance. It is not a warning that the Middle East 
 
 The advisory language is about petty crime, terrorism awareness, demonstrations, and routine city-level caution. It is not about a continent-wide war threat.
 
-If you want to check the source pages directly, use the official [Travel Advisories page](https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html), plus the country pages for [Germany](https://travel.state.gov/en/international-travel/travel-advisories/germany.html), [Spain](https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/spain-travel-advisory.html), and [Portugal](https://travel.state.gov/en/international-travel/travel-advisories/portugal.html).
+If you want to check the source pages directly, use the official [Travel Advisories page](https://travel.state.gov/en/international-travel/travel-advisories.html), plus the country pages for [Germany](https://travel.state.gov/en/international-travel/travel-advisories/germany.html), [Spain](https://travel.state.gov/en/international-travel/travel-advisories/spain.html), and [Portugal](https://travel.state.gov/en/international-travel/travel-advisories/portugal.html).
 
 ## Specific concerns travelers are asking about
 
@@ -129,12 +129,6 @@ If you want the simplest mental model, use this:
 
 That is a much better plan than cancelling a Europe trip out of vague fear.
 
-## A note on Philippine DFA travel advisories
-
-The Philippine Department of Foreign Affairs maintains current travel advisories at [dfa.gov.ph](https://dfa.gov.ph). For Europe, these advisories do not indicate elevated risk at mainstream tourist destinations. The DFA advisories covering the Middle East region are separate.
-
-Check the DFA site before your trip for any last-minute updates, but as of April 2026, there is no DFA advisory restricting travel to Western Europe.
-
 ## Frequently asked questions
 
 **Should I cancel my Europe trip because of the Middle East conflict?**
@@ -149,6 +143,6 @@ Yes. Current U.S. State Department advisories for Portugal are still at Level 1,
 **What should I check before departure?**
 Check your airline, your insurance exclusions, your route, and the current advisory for the country you are visiting.
 
-*Sources: [EASA Conflict Zones Advisories](https://www.easa.europa.eu/en/domains/air-operations/czibs), [Travel Advisories](https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html), [Germany](https://travel.state.gov/en/international-travel/travel-advisories/germany.html), [Spain](https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/spain-travel-advisory.html), [Portugal](https://travel.state.gov/en/international-travel/travel-advisories/portugal.html), and the Philippine DFA at [dfa.gov.ph](https://dfa.gov.ph).*
+*Sources: [EASA Conflict Zones Advisories](https://www.easa.europa.eu/en/domains/air-operations/czibs), [Travel Advisories](https://travel.state.gov/en/international-travel/travel-advisories.html), [Germany](https://travel.state.gov/en/international-travel/travel-advisories/germany.html), [Spain](https://travel.state.gov/en/international-travel/travel-advisories/spain.html), and [Portugal](https://travel.state.gov/en/international-travel/travel-advisories/portugal.html).*
 
 *Last updated: April 2026.*
