@@ -34,9 +34,9 @@ const country = {
   }
 };
 const defaultMetaTitle = `${country.name} Travel Guide 2026: Visa, Budget & Tips`;
-const pageTitle = override.metaTitle || destinationEntry?.data.metaTitle || country.metaTitle || defaultMetaTitle;
-const heroTitle = override.heroTitle || destinationEntry?.data.title || country.heroTitle || pageTitle;
-const pageDescription = override.metaDescription || destinationEntry?.data.metaDescription || country.metaDescription || `Plan your trip to ${country.name} with expert itinerary design, accommodation guidance, and practical travel notes. Capital: ${country.facts.capital}. Best months: ${country.facts.bestMonths}.`;
+const pageTitle = destinationEntry?.data.metaTitle || override.metaTitle || country.metaTitle || defaultMetaTitle;
+const heroTitle = destinationEntry?.data.title || override.heroTitle || country.heroTitle || pageTitle;
+const pageDescription = destinationEntry?.data.metaDescription || override.metaDescription || country.metaDescription || `Plan your trip to ${country.name} with expert itinerary design, accommodation guidance, and practical travel notes. Capital: ${country.facts.capital}. Best months: ${country.facts.bestMonths}.`;
 const pageKeywords = destinationEntry?.data.keywords || country.seoKeywords || `${country.name} travel planning, ${country.name} itinerary, ${country.name} visa requirements, visit ${country.name}, ${country.region.toLowerCase()} destinations`;
 const hasReplacementContent = Boolean(DestinationContent);
 
