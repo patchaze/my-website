@@ -3,43 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 import CTABanner from '../components/CTABanner.astro';
 
-import { Image, Picture, getImage } from 'astro:assets';
+import { Picture, getImage } from 'astro:assets';
 import heroImg from '../assets/images/dolomites-sunset.jpg';
 import amalfiImg from '../assets/images/amalfi-coast-italy.png';
 import alpsImg from '../assets/images/zermatt-matterhorn.png';
-
-const expertise = [
-  {
-    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><path d="M24 14v6l4 4" stroke="#C44B36" stroke-width="2" stroke-linecap="round"/><path d="M16 30h16M18 34h12" stroke="#C44B36" stroke-width="1.5" stroke-linecap="round"/></svg>`,
-    title: 'Custom Europe Itineraries',
-    desc: 'Each European trip is custom-built to your interests. We design optimized daily routes, timing, and unique local recommendations for every tailored itinerary.',
-    link: '/services/first-international-trip/',
-    linkText: 'Learn more'
-  },
-  {
-    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><rect x="16" y="18" width="16" height="12" rx="2" stroke="#C44B36" stroke-width="2"/><path d="M20 18v-2a4 4 0 018 0v2" stroke="#C44B36" stroke-width="2"/></svg>`,
-    title: 'Handpicked European Stays',
-    desc: 'Boutique European hotels, private luxury villas, and exclusive resorts. We hand-select accommodations that offer authentic character and premium comfort.',
-    link: '/services/multi-region-trip-planning/',
-    linkText: 'Discover stays'
-  },
-  {
-    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><path d="M16 20c0-4 3.5-6 8-6s8 2 8 6c0 6-8 12-8 12s-8-6-8-12z" stroke="#C44B36" stroke-width="2"/></svg>`,
-    title: 'Local Cultural Experiences',
-    desc: 'Experience curated local tours and private dining at off-the-beaten-path European destinations. Connect with authentic traditions only insiders know.',
-    link: '/services/multi-region-trip-planning/',
-    linkText: 'See experiences'
-  },
-  {
-    icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#C44B36" stroke-width="2"/><path d="M24 16v16M16 24h16" stroke="#C44B36" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="#C44B36" stroke-width="1.5"/></svg>`,
-    title: 'Schengen Visa Expert Strategy',
-    desc: 'Our expert visa document review ensures your application meets strict Schengen requirements. We provide document strategy sessions to maximize approval rates.',
-    link: '/services/schengen-visa-help/',
-    linkText: 'Find out how'
-  },
-];
-
-
 
 const testimonials = [
   {
@@ -165,7 +132,7 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
 ---
 
 <BaseLayout
-  title="Europe Trip Planning for Non-Europeans | Itineraries & Schengen Visa Strategy | DURIAN Travel"
+  title="Europe Trip Planning & Visa Support | DURIAN Travel"
   description="Custom Europe itineraries and Schengen visa strategy for non-European travelers - wherever in the world you're planning from."
   ogImage="https://www.duriantravel.com/dolomites-sunset.webp"
   schema={faqSchema}
@@ -219,25 +186,6 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
       </div>
     </div>
 
-  </section>
-
-  <!-- OUR EXPERTISE — 4 cards with circular icons -->
-  <section class="section" aria-labelledby="expertise-heading">
-    <div class="container">
-      <header class="section-header text-center">
-        <span class="section-label">Expert Europe Travel Planning</span>
-      </header>
-      <div class="expertise-grid">
-        {expertise.map(e => (
-          <div class="expertise-card">
-            <div class="expertise-card__icon" set:html={e.icon}></div>
-            <h3 class="expertise-card__title">{e.title}</h3>
-            <p class="expertise-card__desc">{e.desc}</p>
-            <a href={e.link} class="expertise-card__link">{e.linkText} →</a>
-          </div>
-        ))}
-      </div>
-    </div>
   </section>
 
   <section class="section section--alt" aria-labelledby="audience-heading">
@@ -841,65 +789,6 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
   background: var(--color-accent);
   transform: translateY(-2px);
 }
-
-/* ══════════════════════════════════════════
-   OUR EXPERTISE — Circular icon cards
-   ══════════════════════════════════════════ */
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-6);
-}
-@media (max-width: 900px) { .expertise-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .expertise-grid { grid-template-columns: 1fr; } }
-
-.expertise-card {
-  text-align: center;
-  padding: var(--space-6) var(--space-4);
-}
-.expertise-card__icon {
-  display: flex;
-  justify-content: center;
-  margin-bottom: var(--space-4);
-}
-.expertise-card__title {
-  font-family: var(--font-serif);
-  font-size: var(--text-lg);
-  font-weight: 400;
-  color: var(--color-text);
-  margin-bottom: var(--space-3);
-}
-.expertise-card__desc {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-4);
-}
-.expertise-card__tags {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-3);
-}
-.expertise-tag {
-  display: inline-block;
-  padding: 2px var(--space-3);
-  font-size: var(--text-xs);
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-full);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.expertise-card__link {
-  display: inline-block;
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-.expertise-card__link:hover { color: var(--color-accent-dark); }
 
 /* ══════════════════════════════════════════
    DURIAN PROCESS — Large serif numbers
