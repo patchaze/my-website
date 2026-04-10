@@ -2,92 +2,92 @@
     "redirects": [
         {
             "source": "/services/document-review",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/document-review/",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/cover-letter-strategy",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/cover-letter-strategy/",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/financial-proof-review",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/financial-proof-review/",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/visa-strategy-call",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/visa-strategy-call/",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/strategy-call",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/strategy-call/",
-            "destination": "/services/#schengen-blueprint",
+            "destination": "/services/schengen-visa-help/",
             "permanent": true
         },
         {
             "source": "/services/itinerary-building",
-            "destination": "/services/#first-journey",
+            "destination": "/services/first-international-trip/",
             "permanent": true
         },
         {
             "source": "/services/itinerary-building/",
-            "destination": "/services/#first-journey",
+            "destination": "/services/first-international-trip/",
             "permanent": true
         },
         {
             "source": "/services/itinerary-structuring",
-            "destination": "/services/#first-journey",
+            "destination": "/services/first-international-trip/",
             "permanent": true
         },
         {
             "source": "/services/itinerary-structuring/",
-            "destination": "/services/#first-journey",
+            "destination": "/services/first-international-trip/",
             "permanent": true
         },
         {
             "source": "/services/refusal-analysis",
-            "destination": "/services/#recovery-route",
+            "destination": "/services/visa-refusal-reapplication/",
             "permanent": true
         },
         {
             "source": "/services/refusal-analysis/",
-            "destination": "/services/#recovery-route",
+            "destination": "/services/visa-refusal-reapplication/",
             "permanent": true
         },
         {
             "source": "/services/travel-health-consult",
-            "destination": "/services/#wellness-journey",
+            "destination": "/services/travel-health-planning/",
             "permanent": true
         },
         {
             "source": "/services/travel-health-consult/",
-            "destination": "/services/#wellness-journey",
+            "destination": "/services/travel-health-planning/",
             "permanent": true
         },
         {

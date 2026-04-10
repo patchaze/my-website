@@ -99,7 +99,7 @@ Health prep is not glamorous, but it is the difference between a normal trip and
 
 The CDC recommends preparing travel medications in advance, carrying them in original labeled containers, and keeping them in your carry-on rather than checked baggage. It also recommends planning a travel health appointment 4 to 6 weeks before departure.
 
-[→ Explore the Wellness Journey package](/services/#wellness-journey)
+[→ Explore the Wellness Journey package](/services/travel-health-planning/)
 
 ### Weeks 4 to 2: Packing and Airport Rules
 
@@ -160,4 +160,4 @@ After the route is stable and before you submit visa documents or buy non-refund
 
 *Some links in this post may be affiliate links. If you buy through them, we may earn a small commission at no extra cost to you. We only recommend tools we'd use ourselves.*
 
-**Need help building your route?** [Explore our First Journey package](/services/#first-journey) or [get a Free Travel Readiness Audit](/free-visa-audit/).
+**Need help building your route?** [Explore our First Journey package](/services/first-international-trip/) or [get a Free Travel Readiness Audit](/free-visa-audit/).

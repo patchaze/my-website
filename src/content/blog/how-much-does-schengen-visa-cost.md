@@ -110,7 +110,7 @@ The visa fee is non-refundable. The visa-centre fee is also usually non-refundab
 
 This is why a clean application matters so much. A refused file can easily cost more than the application fee alone.
 
-If you want to reduce that risk, start with our [Schengen visa requirements guide for non-European travelers](/blog/schengen-visa-requirements-non-european-travelers/), then check the [Schengen document checklist](/blog/schengen-document-checklist/). If you want a second set of eyes before you submit, our [Schengen Blueprint package](/services/#schengen-blueprint) is built for exactly that.
+If you want to reduce that risk, start with our [Schengen visa requirements guide for non-European travelers](/blog/schengen-visa-requirements-non-european-travelers/), then check the [Schengen document checklist](/blog/schengen-document-checklist/). If you want a second set of eyes before you submit, our [Schengen Blueprint package](/services/schengen-visa-help/) is built for exactly that.
 
 ## Does paying more improve your approval chances?
 

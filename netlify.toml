@@ -47,92 +47,92 @@
 # Redirects
 [[redirects]]
   from = "/services/document-review"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/document-review/"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/cover-letter-strategy"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/cover-letter-strategy/"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/itinerary-building"
-  to   = "/services/#first-journey"
+  to   = "/services/first-international-trip/"
   status = 301
 
 [[redirects]]
   from = "/services/itinerary-building/"
-  to   = "/services/#first-journey"
+  to   = "/services/first-international-trip/"
   status = 301
 
 [[redirects]]
   from = "/services/itinerary-structuring"
-  to   = "/services/#first-journey"
+  to   = "/services/first-international-trip/"
   status = 301
 
 [[redirects]]
   from = "/services/itinerary-structuring/"
-  to   = "/services/#first-journey"
+  to   = "/services/first-international-trip/"
   status = 301
 
 [[redirects]]
   from = "/services/financial-proof-review"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/financial-proof-review/"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/refusal-analysis"
-  to   = "/services/#recovery-route"
+  to   = "/services/visa-refusal-reapplication/"
   status = 301
 
 [[redirects]]
   from = "/services/refusal-analysis/"
-  to   = "/services/#recovery-route"
+  to   = "/services/visa-refusal-reapplication/"
   status = 301
 
 [[redirects]]
   from = "/services/strategy-call"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/strategy-call/"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/visa-strategy-call"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/visa-strategy-call/"
-  to   = "/services/#schengen-blueprint"
+  to   = "/services/schengen-visa-help/"
   status = 301
 
 [[redirects]]
   from = "/services/travel-health-consult"
-  to   = "/services/#wellness-journey"
+  to   = "/services/travel-health-planning/"
   status = 301
 
 [[redirects]]
   from = "/services/travel-health-consult/"
-  to   = "/services/#wellness-journey"
+  to   = "/services/travel-health-planning/"
   status = 301
 
 [[redirects]]

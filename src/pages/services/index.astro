@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTABanner from '../../components/CTABanner.astro';
+import { serviceHrefByOldSlug, servicePositioning } from '../../data/service-pages';
 
 const packages = [
   {
@@ -441,7 +442,7 @@ const serviceSchema = packages.map((pkg) => ({
     name: 'DURIAN Travel',
     url: 'https://www.duriantravel.com',
   },
-  url: `https://www.duriantravel.com/services/#${pkg.slug}`,
+  url: `https://www.duriantravel.com${serviceHrefByOldSlug[pkg.slug]}`,
   areaServed: ['Europe', 'North America', 'South America', 'Africa', 'Asia', 'Australia'],
 }));
 
@@ -464,8 +465,8 @@ const breadcrumb = [{ name: 'Services', url: 'https://www.duriantravel.com/servi
 ---
 
 <BaseLayout
-  title="Visa Strategy + Itinerary Planning, Backed by a Licensed Pharmacist"
-  description="Compare Durian Travel packages for Schengen strategy, first-time international trips, family travel, refusal recoveries, health-led planning, digital nomads, and multi-region journeys."
+  title="Travel Planning Packages | Visa Strategy, Health & Itinerary Support | DURIAN Travel"
+  description="Compare Durian Travel packages for Schengen visa help, first international trips, family travel, refusal recovery, travel health planning, digital nomads, and multi-region journeys."
   breadcrumb={breadcrumb}
   schema={serviceSchema}
   keywords="visa strategy package, itinerary planning package, pharmacist-backed travel planning, schengen strategy package, first-time international travel package, refusal reapplication support, travel wellness planning"
@@ -475,8 +476,8 @@ const breadcrumb = [{ name: 'Services', url: 'https://www.duriantravel.com/servi
       <span class="section-label services-hero__label">Visa Strategy + Travel Planning</span>
       <h1 class="hero-sm__title services-hero__title">Choose the package that fits your level of complexity</h1>
       <p class="hero-sm__subtitle services-hero__subtitle">
-        Visa strategy + itinerary planning, backed by a licensed pharmacist. These packages replace
-        the old single-service pages and group support by the kind of trip risk you are actually managing.
+        {servicePositioning} These packages group support by the kind of trip risk you are actually managing,
+        not by generic destination buckets.
       </p>
       <div class="services-hero__actions">
         <a href="/free-visa-audit/" class="btn btn--primary">Start With a Free Audit</a>
@@ -510,7 +511,7 @@ const breadcrumb = [{ name: 'Services', url: 'https://www.duriantravel.com/servi
           </div>
           <p class="package-picker__copy">
             Every package combines visa logic, route planning, and a pharmacist-informed health layer.
-            Choose the track that matches your real bottleneck, then we shape the work around that.
+            Choose the track that matches your real bottleneck, then open the dedicated package page for the full fit.
           </p>
         </div>
 
@@ -610,8 +611,8 @@ const breadcrumb = [{ name: 'Services', url: 'https://www.duriantravel.com/servi
               </div>
 
               <div class="package-panel__actions">
-                <a href="/contact/" class="btn btn--primary">Ask About This Package</a>
-                <a href="/free-visa-audit/" class="btn btn--secondary">Free Audit First</a>
+                <a href={serviceHrefByOldSlug[pkg.slug]} class="btn btn--primary">View Package Details</a>
+                <a href="/contact/" class="btn btn--secondary">Ask About This Package</a>
               </div>
             </section>
           ))}
