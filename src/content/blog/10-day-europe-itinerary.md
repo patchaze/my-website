@@ -1,20 +1,18 @@
 ---
-keywords: "10 day Europe itinerary, first Europe trip itinerary, Europe itinerary for first-time travelers"
+keywords: "10 day Europe itinerary, first Europe trip itinerary, Europe itinerary for first-time travelers, non-European travelers"
 title: "10-Day Europe Itinerary for First-Time Travelers"
 seoTitle: "10-Day Europe Itinerary for First-Time Travelers"
 description: "A realistic 10-day Europe itinerary for first-time travelers, with two strong bases, humane pacing, and route logic that works before you book."
 pubDate: "2026-04-09"
-modDate: "2026-04-09"
+modDate: "2026-04-10"
 author: "Patricia Azevedo"
-tags: ["Itinerary", "Europe", "First Trip"]
+tags: ["Itinerary", "Europe", "First-Time Travelers", "Non-European Travelers"]
 readTime: 10
 ---
 
-Your first Europe trip does not need to feel like a speedrun.
+Your first Europe trip does not need to cover half the continent to feel successful. In fact, the opposite is usually true. The best first Europe itinerary is the one that gives you enough time to adjust, keeps Schengen entry logic clean for your visa file, and does not waste half your budget on unnecessary transfers.
 
-The best 10-day Europe itinerary is usually the one that gives you enough time to settle in, keeps hotel changes under control, and still leaves room for actual enjoyment instead of constant transit.
-
-If you are planning specifically from the Philippines, read our [10-Day Europe Itinerary from the Philippines](/blog/10-day-europe-itinerary-from-the-philippines/) for the flight and visa angle. This version is the broader template for first-time travelers planning from anywhere outside Europe.
+This route works for first-time travelers arriving from any long-haul origin — whether you're flying from Nairobi, Buenos Aires, Mumbai, or Sydney. The planning principles are the same.
 
 ## The Core Rule: Use Two Strong Bases
 
@@ -149,7 +147,7 @@ If you want one simple rule to remember, use this:
 
 That is usually what separates a memorable first Europe trip from a ten-day luggage operation.
 
-For the next step, pair this guide with our [multi-country Europe itinerary guide](/blog/multi-country-europe-itinerary/). If you are planning specifically from Manila or another Philippine departure point, use the more targeted [Philippines version here](/blog/10-day-europe-itinerary-from-the-philippines/).
+For the next step, pair this guide with our [multi-country Europe itinerary guide](/blog/multi-country-europe-itinerary/), [Europe trip budget guide](/blog/europe-trip-budget/), and [Schengen visa requirements guide](/blog/schengen-visa-requirements-non-european-travelers/).
 
 ---
 

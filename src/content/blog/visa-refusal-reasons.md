@@ -20,7 +20,7 @@ A Schengen visa refusal is usually not random. It is the system telling you that
 
 That can be a weak bank statement, a vague itinerary, missing return-tie evidence, or a mismatch between the story and the documents. The good news is that most refusals are fixable if you treat the refusal letter as a diagnosis, not a verdict.
 
-If you are applying from the Philippines, the same refusal patterns still apply. The strongest reapplications usually tighten both the paperwork and the explanation. Our [Philippines Schengen guide](/blog/schengen-visa-requirements-philippine-passport-holders/) walks through that file structure from the start.
+If you are applying from outside Europe, the same refusal patterns still apply. The strongest reapplications usually tighten both the paperwork and the explanation. Our [Schengen guide for non-European travelers](/blog/schengen-visa-requirements-non-european-travelers/) walks through that file structure from the start.
 
 ## What the Visa Code Actually Looks At
 

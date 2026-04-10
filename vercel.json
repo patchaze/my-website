@@ -161,6 +161,66 @@
             "permanent": true
         },
         {
+            "source": "/blog/schengen-visa-requirements-philippine-passport-holders",
+            "destination": "/blog/schengen-visa-requirements-non-european-travelers/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/schengen-visa-requirements-philippine-passport-holders/",
+            "destination": "/blog/schengen-visa-requirements-non-european-travelers/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10-day-europe-itinerary-from-the-philippines",
+            "destination": "/blog/10-day-europe-itinerary/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10-day-europe-itinerary-from-the-philippines/",
+            "destination": "/blog/10-day-europe-itinerary/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sweden-itinerary",
+            "destination": "/blog/sweden-itinerary-first-time-visitors/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sweden-itinerary/",
+            "destination": "/blog/sweden-itinerary-first-time-visitors/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sweden-itinerary-from-the-philippines",
+            "destination": "/blog/sweden-itinerary-first-time-visitors/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sweden-itinerary-from-the-philippines/",
+            "destination": "/blog/sweden-itinerary-first-time-visitors/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/is-sweden-worth-it-for-filipino-travelers",
+            "destination": "/blog/is-sweden-worth-it/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/is-sweden-worth-it-for-filipino-travelers/",
+            "destination": "/blog/is-sweden-worth-it/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-does-schengen-visa-cost-philippines",
+            "destination": "/blog/how-much-does-schengen-visa-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-does-schengen-visa-cost-philippines/",
+            "destination": "/blog/how-much-does-schengen-visa-cost/",
+            "permanent": true
+        },
+        {
             "source": "/:path((?!_assets|api|_next).*[^/])$",
             "destination": "/:path/",
             "permanent": true

@@ -237,7 +237,7 @@ What the cover letter does is reduce doubt. A clear, factual letter that matches
 
 If you have had a previous refusal, the cover letter becomes more important - you will need to directly address the reason for refusal and explain what has changed. Our [Recovery Route package](/services/#recovery-route) can help you identify what went wrong and structure your reapplication.
 
-For a full breakdown of what goes in your application, see the [Schengen document checklist](/blog/schengen-document-checklist/) and our [Schengen Blueprint package](/services/#schengen-blueprint). If you are applying from the Philippines, the [Schengen visa guide for Philippine passport holders](/blog/schengen-visa-requirements-philippine-passport-holders/) is the best companion piece.
+For a full breakdown of what goes in your application, see the [Schengen document checklist](/blog/schengen-document-checklist/) and our [Schengen Blueprint package](/services/#schengen-blueprint). If you are applying from outside Europe, the [Schengen visa guide for non-European travelers](/blog/schengen-visa-requirements-non-european-travelers/) is the best companion piece.
 
 ## Frequently asked questions
 

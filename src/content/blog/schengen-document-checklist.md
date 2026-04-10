@@ -25,7 +25,7 @@ The Schengen Area is a zone of 27 European countries that have abolished passpor
 
 Getting the document package right is the single most controllable factor in a successful application. If you need a complete overview of the process, [→ Read our Ultimate Schengen Visa Guide](/schengen-visa-guide/).
 
-If you are applying from the Philippines, read this together with our [Schengen visa guide for Philippine passport holders](/blog/schengen-visa-requirements-philippine-passport-holders/). The checklist stays broadly the same, but the strongest files also explain local income patterns, sponsorship logic, and trip intent clearly.
+If you are applying from outside Europe, read this together with our [Schengen visa guide for non-European travelers](/blog/schengen-visa-requirements-non-european-travelers/). The checklist stays broadly the same, but the strongest files also explain local income patterns, sponsorship logic, and trip intent clearly.
 
 ## The Core Schengen Visa Document Checklist
 
@@ -128,7 +128,7 @@ Usually no. Many consulates ask for a **reservation or flight itinerary**, not a
 
 ### If I am applying from the Philippines, does the checklist change?
 
-The core checklist stays the same, but the supporting explanation matters more. Philippine applicants often need to present finances, employment, sponsorship, and return ties with extra clarity. Use this checklist with our [Philippines-focused Schengen guide](/blog/schengen-visa-requirements-philippine-passport-holders/).
+The core checklist stays the same, but the supporting explanation matters more. Many long-haul applicants need to present finances, employment, sponsorship, and return ties with extra clarity. Use this checklist with our [Schengen guide for non-European travelers](/blog/schengen-visa-requirements-non-european-travelers/).
 
 ## After You've Gathered Everything
 

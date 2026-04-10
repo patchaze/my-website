@@ -145,7 +145,7 @@ Watch the bulletin, but do not build your whole plan around a single predicted o
 
 ### If you are still applying for a visa
 
-Do not let a flight-routing issue distract you from the visa timeline. Your embassy still wants a coherent itinerary, hotel plan, and travel logic. Our [Schengen visa requirements for Philippine passport holders](/blog/schengen-visa-requirements-philippine-passport-holders/) and [Europe trip planning timeline](/blog/europe-trip-planning-timeline/) are the best next reads.
+Do not let a flight-routing issue distract you from the visa timeline. Your embassy still wants a coherent itinerary, hotel plan, and travel logic. Our [Schengen visa requirements guide for non-European travelers](/blog/schengen-visa-requirements-non-european-travelers/) and [Europe trip planning timeline](/blog/europe-trip-planning-timeline/) are the best next reads.
 
 ## What is still unaffected
 
