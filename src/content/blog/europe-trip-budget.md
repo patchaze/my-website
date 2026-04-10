@@ -93,7 +93,7 @@ And if you are applying for Schengen, the EU overview explicitly lists evidence 
 
 Not every Europe route costs the same.
 
-- Western Europe cities such as Paris, Amsterdam, Rome, and Venice usually need a higher accommodation and meals budget
+- Western Europe cities such as [Paris](/blog/where-to-stay-paris/), Amsterdam, Rome, and Venice usually need a higher accommodation and meals budget
 - lower-cost European destinations such as Lithuania and Bulgaria can reduce hotel and daily spending without making the trip feel cheap
 - rail-heavy routes can save money if they replace unnecessary flights and extra hotel nights
 

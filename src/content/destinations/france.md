@@ -135,7 +135,7 @@ French regional cuisine is one of the world's great culinary traditions — and 
 
 **Pickpockets:** Paris is one of Europe's top pickpocket locations, concentrated around the Eiffel Tower, Louvre, Sacré-Cœur, and on the Metro. Travel with a crossbody bag, keep phones in pockets, and be alert to distraction techniques.
 
-**Best areas to stay in Paris:** The Marais and Saint-Germain-des-Prés are ideal for first-timers — central, walkable, safe, and full of character. Montmartre is picturesque but hilly and slightly removed. The Latin Quarter is studenty and atmospheric. Avoid the 18th arrondissement above Montmartre and the area around Gare du Nord for accommodation unless you know the city well.
+**Best areas to stay in Paris:** The Marais and Saint-Germain-des-Prés are ideal for first-timers — central, walkable, safe, and full of character. Montmartre is picturesque but hilly and slightly removed. The Latin Quarter is studenty and atmospheric. Avoid the 18th arrondissement above Montmartre and the area around Gare du Nord for accommodation unless you know the city well. For a fuller neighborhood breakdown, read our [Where to Stay in Paris guide](/blog/where-to-stay-paris/).
 
 ---
 

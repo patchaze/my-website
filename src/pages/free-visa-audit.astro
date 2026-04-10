@@ -1,23 +1,68 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const auditSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Free Visa Audit",
+  "description": "A free 20-minute consultation with Patricia Azevedo to review your Schengen visa documents, identify gaps specific to your nationality and situation, and clarify your next steps.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DURIAN Travel",
+    "url": "https://www.duriantravel.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free visa audit call"
+  },
+  "areaServed": "Worldwide",
+  "url": "https://www.duriantravel.com/free-visa-audit/"
+};
+
+const callCovers = [
+  'Your document stack and what is missing for your nationality and embassy',
+  'Whether your financial documents tell the right story to a visa officer',
+  'Whether your itinerary logic supports the embassy you are applying to',
+  'Whether your timeline is realistic given current appointment pressure',
+  'The specific weak points most likely to cause problems in your situation'
+];
+
+const scenarios = [
+  {
+    title: "You're planning your first Europe trip",
+    text: 'You have read online guides, but they feel generic, contradictory, or clearly written for a different audience. You want someone to look at your actual case.'
+  },
+  {
+    title: "You're preparing to apply",
+    text: 'You have gathered documents but want a second opinion before you submit. It is better to find gaps now than after a refusal letter.'
+  },
+  {
+    title: "You've been refused before",
+    text: 'You have a refusal letter with a specific ground and want help understanding what it means and how a stronger reapplication would look.'
+  },
+  {
+    title: "Your situation is not straightforward",
+    text: 'A recent job change, irregular income, a complicated multi-country route, or unusual travel history can all change what matters in your file.'
+  }
+];
 ---
 
 <BaseLayout
-  title="Free Visa Audit: 15-Minute Strategy Review"
-  description="Book a free 20-minute travel and visa readiness audit with a European travel consultant. We'll identify gaps in your documents and recommend next steps."
+  title="Free Visa Audit | Europe Trip Review for Non-European Travelers"
+  description="Book a free 20-minute call with Patricia. She'll review your Schengen documents, flag what's missing for your nationality, and tell you exactly what to fix before you apply."
+  canonical="https://www.duriantravel.com/free-visa-audit/"
   breadcrumb={[{ name: 'Free Audit', url: 'https://www.duriantravel.com/free-visa-audit/' }]}
-  keywords="free visa audit, Schengen visa consult, free travel consultation, check visa documents for free"
+  schema={auditSchema}
+  keywords="free visa audit, Schengen visa review, Europe trip review, Patricia Azevedo, free travel consultation"
 >
-
   <section class="hero-sm hero-gradient">
-    <div class="container text-center">
-      <span class="section-label" style="color:var(--color-accent-light)">Free — No Commitment</span>
-      <h1 class="hero-sm__title" style="color:white;max-width:44ch;margin-inline:auto">
-        Free Visa Audit: 15-Minute Strategy Review
-      </h1>
-      <p class="hero-sm__subtitle" style="margin-inline:auto;text-align:center">
-        Tell us about your upcoming application. We'll identify the biggest risks
-        and tell you exactly what to prioritise — in 15 minutes.
+    <div class="container container--narrow">
+      <span class="section-label" style="color:var(--color-accent-light)">Free Call</span>
+      <h1 class="hero-sm__title" style="color:white">Free Visa Audit: Find Out Where Your Application Stands</h1>
+      <p class="hero-sm__subtitle">
+        A free 20-minute call with Patricia. Your nationality, your itinerary, your documents — reviewed directly.
       </p>
     </div>
   </section>
@@ -25,79 +70,121 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="audit-layout">
-        <!-- Form -->
-        <div class="audit-form-wrap">
-          <h2 style="margin-bottom:var(--space-6)">Book Your Free Audit</h2>
-
-          <!-- Calendly inline widget begin -->
-          <div class="calendly-inline-widget" data-url="https://calendly.com/contact-duriantravel/durian-travel-15-minute-audit?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          <!-- Calendly inline widget end -->
-        </div>
-
-        <!-- What's included sidebar -->
-        <div class="audit-sidebar">
-          <div class="audit-card">
-            <h3 style="margin-bottom:var(--space-4)">What's Included</h3>
-            <ul class="check-list">
-              <li>Quick review of your travel plan</li>
-              <li>Document gap identification</li>
-              <li>Risk assessment for your profile</li>
-              <li>Honest assessment — we'll tell you if you don't need our services</li>
-              <li>Recommendation for next steps</li>
-            </ul>
-          </div>
-
-          <div class="audit-card">
-            <h3 style="margin-bottom:var(--space-4)">What This Is Not</h3>
-            <ul class="x-list">
-              <li>A sales call</li>
-              <li>A guarantee of visa approval</li>
-              <li>Legal advice or representation</li>
-              <li>Application submission</li>
-            </ul>
-          </div>
-
-          <div class="notice notice--info">
-            <span>💡</span>
+        <div>
+          <div class="prose">
+            <h2>What the audit is</h2>
             <p>
-              <strong>Why free?</strong> Because most visa mistakes are preventable.
-              A 15-minute review can save you weeks of delay and hundreds in reapplication fees.
+              Schengen visa requirements are not the same for everyone. The documents an embassy asks for, the financial benchmarks it applies, and the weight it gives to employment, property, or travel history vary depending on where you are from and where you are applying.
             </p>
+            <p>
+              The Free Visa Audit is a focused review of your specific situation. Patricia looks at your nationality, destination, document stack, and timeline, then tells you what looks solid, what looks weak, and what to fix before you submit.
+            </p>
+
+            <h2>What the call covers</h2>
+          </div>
+          <div class="cover-card">
+            <ul class="check-list">
+              {callCovers.map(item => <li>{item}</li>)}
+            </ul>
           </div>
         </div>
+
+        <aside class="audit-sidebar">
+          <div class="audit-card">
+            <h3>Book your audit</h3>
+            <p>
+              The call is scheduled through Calendly and kept focused around the information you share before booking.
+            </p>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/contact-duriantravel/durian-travel-15-minute-audit?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
+  <section class="section section--alt">
+    <div class="container">
+      <header class="section-header text-center">
+        <span class="section-label">Best Fit</span>
+        <h2 class="section-title">Who This Is For</h2>
+      </header>
+      <div class="scenario-grid">
+        {scenarios.map(item => (
+          <article class="scenario-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow prose">
+      <h2>What happens</h2>
+      <p>
+        Before the call, you will be asked for a short summary: your nationality, destination, travel dates, employment status, and any specific concerns. That gives Patricia enough context to spend the call diagnosing your file rather than collecting basics.
+      </p>
+      <p>
+        The conversation itself is direct. She will tell you what looks strong, what worries her, and what she would change. If your case needs more than a short audit, such as a full document review or deeper strategy support, she will explain which <a href="/services/">service package</a> fits and what it includes. There is no pressure to book further support.
+      </p>
+
+      <h2>What the audit doesn't include</h2>
+      <ul class="x-list">
+        <li>It is a review and diagnosis, not a document preparation service</li>
+        <li>It does not include rewriting documents live on the call</li>
+        <li>It is not a guarantee of visa approval</li>
+        <li>It is not legal advice</li>
+      </ul>
+
+      <div class="notice notice--info" style="margin-top:var(--space-7)">
+        <span aria-hidden="true">ℹ️</span>
+        <span>If you have a question before booking, <a href="/contact/" class="link">contact Patricia directly</a>. Sessions are conducted in English.</span>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
 .hero-sm { padding-block: var(--space-16); }
-.hero-sm__title { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-4); }
-.hero-sm__subtitle { font-size: var(--text-lg); color: hsl(150 30% 75%); max-width: 52ch; line-height: var(--leading-relaxed); }
-
+.hero-sm__title {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  margin-bottom: var(--space-4);
+}
+.hero-sm__subtitle {
+  font-size: var(--text-lg);
+  color: hsl(150 30% 75%);
+  max-width: 60ch;
+  line-height: var(--leading-relaxed);
+}
 .audit-layout {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: var(--space-12);
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: var(--space-8);
   align-items: start;
 }
-@media (max-width: 860px) { .audit-layout { grid-template-columns: 1fr; } }
-
-.audit-form-wrap {
+.cover-card,
+.audit-card,
+.scenario-card {
   background: white;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: var(--space-8);
+  padding: var(--space-7);
 }
-.audit-form { display: flex; flex-direction: column; gap: var(--space-5); }
-
-.audit-sidebar { display: flex; flex-direction: column; gap: var(--space-6); }
-.audit-card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+.scenario-card p,
+.audit-card p {
+  color: var(--color-text-muted);
+}
+@media (max-width: 960px) {
+  .audit-layout,
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

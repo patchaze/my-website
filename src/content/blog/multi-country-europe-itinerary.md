@@ -56,6 +56,8 @@ Build like this:
 
 If you want the route to feel coherent, keep the cities on the same rail or flight spine instead of scattering them across the continent.
 
+If Paris is one of your bases, choose your hotel with the same care you choose the route. Our [Where to Stay in Paris guide](/blog/where-to-stay-paris/) breaks down which neighborhoods actually work for first-time visitors.
+
 ## How to Count Schengen Nights
 
 This part matters if you need a visa.

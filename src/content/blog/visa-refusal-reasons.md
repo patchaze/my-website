@@ -206,4 +206,4 @@ No. It means the next file needs to answer the previous one better. The refusal 
 
 *Sources: European Commission Visa Policy and Article 32 of Regulation (EC) No 810/2009; European Commission short-stay visa statistics for 2024; official embassy and visa-center guidance. Last reviewed: April 2026.*
 
-*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/about-us/)*
+*Author: Patricia Azevedo, Visa Strategy Consultant | [About the Author](/patricia-azevedo/)*

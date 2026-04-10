@@ -21,6 +21,7 @@ const modDateISO        = (post.data.modDate ?? post.data.pubDate).toISOString()
 const pubDateISO        = post.data.pubDate.toISOString();
 const canonicalURL      = `https://www.duriantravel.com/blog/${post.slug}/`;
 const pageTitle         = post.data.seoTitle ?? post.data.title;
+const visibleTitle      = post.data.h1 ?? post.data.title;
 
 // Related posts: find posts sharing the most tags with the current post
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -85,13 +86,13 @@ const faqSchema = post.data.faq?.length
         <div class="post-header__tags">
           {post.data.tags.map(tag => <span class="tag">{tag}</span>)}
         </div>
-        <h1 class="post-header__title">{pageTitle}</h1>
+        <h1 class="post-header__title">{visibleTitle}</h1>
         <p class="post-header__desc">{post.data.description}</p>
         <div class="post-header__meta">
           <div class="post-meta-author">
             <div class="post-meta-avatar" aria-hidden="true">PA</div>
             <div class="post-meta-info">
-              <a href="/about-us/" class="post-meta-name">{post.data.author}</a>
+              <a href="/patricia-azevedo/" class="post-meta-name">{post.data.author}</a>
               <div class="post-meta-dates">
                 <time datetime={pubDateISO}>Published: {pubDateFormatted}</time>
                 {post.data.modDate && (
@@ -123,11 +124,10 @@ const faqSchema = post.data.faq?.length
         <div class="author-box__info">
           <strong class="author-box__name">{post.data.author}</strong>
           <p class="author-box__bio">
-            Visa Application Strategy Consultant at DURIAN. Specialises in
-            document preparation guidance, cover letter strategy, and refusal analysis.
-            <strong>Not a lawyer.</strong> Educational guidance only.
+            Patricia Azevedo is a European travel consultant and the founder of DURIAN Travel.
+            She works with non-European travelers worldwide on Schengen visa strategy and Europe itinerary planning.
           </p>
-          <a href="/about-us/" class="link" style="font-size:var(--text-sm)">About the consultant →</a>
+          <a href="/patricia-azevedo/" class="link" style="font-size:var(--text-sm)">Read her full bio →</a>
         </div>
       </aside>
 

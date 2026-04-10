@@ -47,7 +47,7 @@ const schemas: object[] = [];
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "DURIAN",
+  "name": "DURIAN Travel",
   "url": "https://www.duriantravel.com",
   "logo": "https://www.duriantravel.com/favicon.svg",
   "description": "Visa strategy, itinerary planning, and pharmacist-backed travel preparation for non-European travelers planning trips to Europe.",
@@ -117,11 +117,11 @@ if (article) {
     "author": {
       "@type": "Person",
       "name": article.author,
-      "url": "https://www.duriantravel.com/about-us/"
+      "url": "https://www.duriantravel.com/patricia-azevedo/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "DURIAN",
+      "name": "DURIAN Travel",
       "url": "https://www.duriantravel.com",
       "logo": {
         "@type": "ImageObject",
@@ -201,4 +201,3 @@ if (schema) {
 {schemas.map(s => (
   <script type="application/ld+json" set:html={JSON.stringify(s)} />
 ))}
-
