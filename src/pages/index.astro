@@ -188,7 +188,7 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
       <div class="hero__overlay-dark"></div>
     </div>
     
-    <div class="container hero__grid hero__grid--single">
+    <div class="container hero__grid">
       <!-- Left: Content Overlay -->
       <div class="hero__info">
         <div class="hero__badge">
@@ -206,6 +206,24 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
           <a href="/contact/" class="btn-primary">Get a Custom Itinerary</a>
           <a href="#how-it-works" class="hero__secondary-link">See How It Works →</a>
         </div>
+      </div>
+
+      <!-- Right: Floating destination cards -->
+      <div class="hero__visuals">
+        <a href="/destinations/italy/" class="glass-card glass-card--1 hero-link" aria-label="Explore Italy">
+          <Picture src={amalfiImg} alt="Amalfi Coast cliffside over Mediterranean Sea." widths={[300, 600]} sizes="(max-width: 600px) 300px, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} loading="lazy" decoding="async" />
+          <div class="glass-card__info">
+            <p class="glass-card__location">📍 Amalfi Coast, Italy</p>
+          </div>
+          <div class="hero-link-overlay"><span class="explore-btn">Explore Italy</span></div>
+        </a>
+        <a href="/destinations/switzerland/" class="glass-card glass-card--2 hero-link" aria-label="Explore Switzerland">
+          <Picture src={alpsImg} alt="Zermatt and Matterhorn in Swiss Alps, Switzerland." widths={[300, 600]} sizes="(max-width: 600px) 300px, 300px" formats={['avif', 'webp']} fallbackFormat="png" height={400} loading="lazy" decoding="async" />
+          <div class="glass-card__info">
+            <p class="glass-card__location">📍 Swiss Alps, Switzerland</p>
+          </div>
+          <div class="hero-link-overlay"><span class="explore-btn">Explore Switzerland</span></div>
+        </a>
       </div>
     </div>
   </section>
@@ -536,9 +554,6 @@ const lcpAvifSrcset = `${heroAvif480.src} 480w, ${heroAvif800.src} 800w, ${heroA
   align-items: center;
   gap: var(--space-8);
   width: 100%;
-}
-.hero__grid--single {
-  grid-template-columns: minmax(0, 820px);
 }
 @media (max-width: 992px) {
   .hero__grid {
