@@ -219,25 +219,25 @@ const seoByUrlSlug: Record<string, SeoConfig> = {
     ],
   },
   'travel-health-planning': {
-    h1: "Medical Travel Planning - For Travelers Who Can't Afford to Wing It",
-    metaTitle: 'Travel Health Planning | Chronic Illness & Medication | Durian Travel',
+    h1: "Schengen Travel Health Planning - For Travelers Who Can't Afford to Wing It",
+    metaTitle: 'Schengen Travel Health Planning | Medication & Chronic Conditions | Durian Travel',
     metaDescription:
-      'Travel planning for chronic conditions, complex medication needs, and health-sensitive itineraries - reviewed by a licensed pharmacist. Controlled substance documentation included.',
+      'Planning a Europe trip with chronic conditions or prescription medication? We align Schengen health prep, insurance, medication documents, and safer itinerary pacing.',
     personas: [
-      'Travelers with chronic conditions who need health to shape the route, not follow it.',
-      'People carrying prescription or controlled medications across borders and unsure what paperwork is required.',
-      'Families or solo travelers who need pharmacy-informed planning before they book anything irreversible.',
+      'Travelers with chronic conditions who need health to shape a Schengen route, not follow it.',
+      'People carrying prescription or controlled medications into Europe and unsure what paperwork is required.',
+      'Families or solo travelers who need pharmacist-informed Schengen planning before they book anything irreversible.',
     ],
     faq: [
       {
-        question: 'Can you help me travel internationally with prescription medication?',
+        question: 'Can you help me travel to Europe with prescription medication?',
         answer:
-          'Yes. This package is built for medication legality, quantity planning, documentation, and destination-specific rules that standard travel planning usually ignores.',
+          'Yes. This package is built for medication legality, quantity planning, documentation, and Schengen-country rules that standard travel planning usually ignores.',
       },
       {
-        question: 'Do I need a pharmacist letter to travel with medication?',
+        question: 'Do I need a pharmacist letter to travel with medication in Schengen countries?',
         answer:
-          'Sometimes supporting documentation is extremely helpful, especially for controlled substances, injectable items, or large quantities. The right paperwork depends on the drug and destination.',
+          'Sometimes supporting documentation is extremely helpful, especially for controlled substances, injectable items, or large quantities. The right paperwork depends on the drug, your route, and any transit points.',
       },
       {
         question: 'Is this a medical consultation or a travel-planning service?',
@@ -245,9 +245,9 @@ const seoByUrlSlug: Record<string, SeoConfig> = {
           'It is travel planning informed by pharmacist expertise. It does not replace your doctor, but it helps translate health constraints into a safer, more workable trip.',
       },
       {
-        question: 'Can you help with vaccine planning and destination health risks?',
+        question: 'Can you help with Europe-specific health risks and pacing issues?',
         answer:
-          'Yes. The package includes destination risk briefings, vaccine review, and preparation guidance for issues such as heat, altitude, malaria, food safety, or travel fatigue.',
+          'Yes. The package includes Schengen-focused risk briefings and preparation guidance for issues such as altitude, heat, food safety, dehydration, walking load, and travel fatigue.',
       },
     ],
   },

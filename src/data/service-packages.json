@@ -316,9 +316,9 @@
       "seo_keywords": ["travel planning chronic illness", "traveling with prescription medication internationally", "medical travel consultation service", "travel health pharmacist consultation"],
       "included": [
         "Medical travel readiness assessment (condition vs. destination risk)",
-        "Destination health risk briefing: disease, altitude, heat, food safety, water quality",
-        "Prescription medication travel authorization documentation",
-        "Controlled substance travel documentation (country-by-country)",
+        "Europe health risk briefing: altitude, heat, food safety, hydration, and walking-load planning",
+        "Prescription medication travel authorization documentation for Schengen travel",
+        "Controlled substance travel documentation for Schengen and transit rules",
         "Travel health insurance specification (pre-existing conditions declared correctly)",
         "In-destination pharmacy + hospital mapping for your itinerary",
         "Emergency medical information card (multilingual, pharmacist-prepared)",
@@ -335,33 +335,33 @@
         "items": [
           "Complete medication review for travel suitability",
           "Controlled substance declaration letters (pharmacist-signed)",
-          "Country-specific OTC vs. prescription drug status",
+          "Schengen-country OTC vs. prescription drug status",
           "Post-travel health monitoring brief",
-          "Traveler's diarrhea, altitude, malaria, and heat illness prevention"
+          "Traveler's diarrhea, altitude, dehydration, and heat illness prevention"
         ]
       },
       "addons": [
         "Medevac insurance comparison brief",
-        "Specialist referral research in destination country",
+        "Specialist referral research in destination city",
         "Custom medication packing list with pharmacy alternatives",
-        "Health condition-specific destination alternatives",
+        "Health condition-specific Europe route alternatives",
         "Medical translation card (your conditions in destination language)"
       ],
       "geo_customization": [
         {
-          "segment": "Traveling to Asia / Southeast Asia",
+          "segment": "Traveling through multiple Schengen countries",
           "items": [
-            "Dengue, typhoid, hepatitis A/B vaccine review",
-            "Heat + humidity management brief",
-            "Counterfeit medication risk by country"
+            "Prescription and controlled medication rules across your Schengen route",
+            "Schengen-compliant travel insurance review for pre-existing conditions",
+            "Pharmacy and hospital access planning by city sequence"
           ]
         },
         {
-          "segment": "Traveling to Africa / South America",
+          "segment": "Travelers with chronic conditions or mobility concerns",
           "items": [
-            "Malaria prophylaxis planning (country-specific)",
-            "Yellow fever certificate requirements",
-            "High-altitude destination protocol (Peru, Ethiopia, etc.)"
+            "Flight timing, rest-day pacing, and jet-lag risk planning",
+            "Altitude, walking-load, and temperature adjustments within Europe",
+            "Multilingual medical documentation and emergency backup plan"
           ]
         }
       ]
